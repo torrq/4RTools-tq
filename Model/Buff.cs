@@ -45,23 +45,23 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("Endure", EffectStatusIDs.ENDURE, Resources._4RTools.Icons.sm_endure),
-                new Buff("Auto Beserk", EffectStatusIDs.AUTOBERSERK, Resources._4RTools.Icons.sm_autoberserk),
-                new Buff("Guard", EffectStatusIDs.AUTOGUARD, Resources._4RTools.Icons.cr_autoguard),
-                new Buff("Shield Reflection", EffectStatusIDs.REFLECTSHIELD, Resources._4RTools.Icons.cr_reflectshield),
-                new Buff("Spear Quicken", EffectStatusIDs.SPEARQUICKEN, Resources._4RTools.Icons.cr_spearquicken),
-                new Buff("Defending Aura", EffectStatusIDs.DEFENDER, Resources._4RTools.Icons.cr_defender),
-                new Buff("Dedication", EffectStatusIDs.LKCONCENTRATION, Resources._4RTools.Icons.lk_concentration),
-                new Buff("Frenzy", EffectStatusIDs.BERSERK, Resources._4RTools.Icons.lk_berserk),
-                new Buff("Twohand Quicken", EffectStatusIDs.TWOHANDQUICKEN, Resources._4RTools.Icons.mer_quicken),
-                new Buff("Parry", EffectStatusIDs.PARRYING, Resources._4RTools.Icons.ms_parrying),
-                new Buff("Aura Blade", EffectStatusIDs.AURABLADE, Resources._4RTools.Icons.lk_aurablade),
-                new Buff("Enchant Blade", EffectStatusIDs.ENCHANT_BLADE, Resources._4RTools.Icons.enchant_blade),
-                new Buff("Shrink", EffectStatusIDs.CR_SHRINK, Resources._4RTools.Icons.cr_shrink),
-                new Buff("Inspiration", EffectStatusIDs.INSPIRATION, Resources._4RTools.Icons.lg_inspiration),
+                new Buff("Vigor", EffectStatusIDs.ENDURE, Resources._4RTools.Icons.sm_endure),
+                new Buff("Instinto de Sobrevivência", EffectStatusIDs.AUTOBERSERK, Resources._4RTools.Icons.sm_autoberserk),
+                new Buff("Bloqueio", EffectStatusIDs.AUTOGUARD, Resources._4RTools.Icons.cr_autoguard),
+                new Buff("Escudo Refletor", EffectStatusIDs.REFLECTSHIELD, Resources._4RTools.Icons.cr_reflectshield),
+                new Buff("Rapidez com Lança", EffectStatusIDs.SPEARQUICKEN, Resources._4RTools.Icons.cr_spearquicken),
+                new Buff("Aura Sagrada", EffectStatusIDs.DEFENDER, Resources._4RTools.Icons.cr_defender),
+                new Buff("Dedicação", EffectStatusIDs.LKCONCENTRATION, Resources._4RTools.Icons.lk_concentration),
+                new Buff("Frenesi", EffectStatusIDs.BERSERK, Resources._4RTools.Icons.lk_berserk),
+                new Buff("Rapidez com Duas Mãos", EffectStatusIDs.TWOHANDQUICKEN, Resources._4RTools.Icons.mer_quicken),
+                new Buff("Aparar Golpe", EffectStatusIDs.PARRYING, Resources._4RTools.Icons.ms_parrying),
+                new Buff("Lâmina de Aura", EffectStatusIDs.AURABLADE, Resources._4RTools.Icons.lk_aurablade),
+                new Buff("Encantar Lâmina", EffectStatusIDs.ENCHANT_BLADE, Resources._4RTools.Icons.enchant_blade),
+                new Buff("Submissão", EffectStatusIDs.CR_SHRINK, Resources._4RTools.Icons.cr_shrink),
+                new Buff("Consagração", EffectStatusIDs.INSPIRATION, Resources._4RTools.Icons.lg_inspiration),
                 new Buff("Prestige", EffectStatusIDs.PRESTIGE, Resources._4RTools.Icons.lg_prestige),
                 new Buff("Shield Spell", EffectStatusIDs.SHIELDSPELL, Resources._4RTools.Icons.lg_shieldspell),
-                new Buff("Vanguard Force", EffectStatusIDs.FORCEOFVANGUARD, Resources._4RTools.Icons.vanguard_force),
+                new Buff("Proteção da Vanguarda", EffectStatusIDs.FORCEOFVANGUARD, Resources._4RTools.Icons.vanguard_force),
                 new Buff("Impacto Explosivo", EffectStatusIDs.MAGNUM, Resources._4RTools.Icons.magnum),
                 new Buff("Rapidez com Uma Mão", EffectStatusIDs.ONEHANDQUICKEN, Resources._4RTools.Icons.onehand),
             };
@@ -74,14 +74,14 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("Energy Coat", EffectStatusIDs.ENERGYCOAT, Resources._4RTools.Icons.mg_energycoat),
-                new Buff("Sight Blaster", EffectStatusIDs.SIGHTBLASTER, Resources._4RTools.Icons.wz_sightblaster),
-                new Buff("Autospell", EffectStatusIDs.AUTOSPELL, Resources._4RTools.Icons.sa_autospell),
-                new Buff("Double Casting", EffectStatusIDs.DOUBLECASTING, Resources._4RTools.Icons.pf_doublecasting),
-                new Buff("Memorize", EffectStatusIDs.MEMORIZE, Resources._4RTools.Icons.pf_memorize),
-                new Buff("Telekinesis Intense", EffectStatusIDs.TELEKINESIS_INTENSE, Resources._4RTools.Icons.telecinese),
-                new Buff("Amplification", EffectStatusIDs.MYST_AMPLIFY, Resources._4RTools.Icons.amplify),
-                new Buff("Recognized Spell", EffectStatusIDs.RECOGNIZEDSPELL, Resources._4RTools.Icons.recognized_spell)
+                new Buff("Proteção Arcana", EffectStatusIDs.ENERGYCOAT, Resources._4RTools.Icons.mg_energycoat),
+                new Buff("Explosão Protetora", EffectStatusIDs.SIGHTBLASTER, Resources._4RTools.Icons.wz_sightblaster),
+                new Buff("Desejo Arcano", EffectStatusIDs.AUTOSPELL, Resources._4RTools.Icons.sa_autospell),
+                new Buff("Lanças Duplas", EffectStatusIDs.DOUBLECASTING, Resources._4RTools.Icons.pf_doublecasting),
+                new Buff("Presciência", EffectStatusIDs.MEMORIZE, Resources._4RTools.Icons.pf_memorize),
+                new Buff("Telecinesia", EffectStatusIDs.TELEKINESIS_INTENSE, Resources._4RTools.Icons.telecinese),
+                new Buff("Amplificação Mística", EffectStatusIDs.MYST_AMPLIFY, Resources._4RTools.Icons.amplify),
+                new Buff("Maestria Arcana", EffectStatusIDs.RECOGNIZEDSPELL, Resources._4RTools.Icons.recognized_spell)
             };
 
             return skills;
@@ -92,17 +92,17 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("Crazy Uproar", EffectStatusIDs.CRAZY_UPROAR, Resources._4RTools.Icons.mc_loud),
-                new Buff("Power-Thrust", EffectStatusIDs.OVERTHRUST, Resources._4RTools.Icons.bs_overthrust),
-                new Buff("Adrenaline Rush", EffectStatusIDs.ADRENALINE, Resources._4RTools.Icons.bs_adrenaline),
-                new Buff("Advanced Adrenaline Rush", EffectStatusIDs.ADRENALINE2, Resources._4RTools.Icons.bs_adrenaline2),
-                new Buff("Maximum Power-Thrust", EffectStatusIDs.OVERTHRUSTMAX, Resources._4RTools.Icons.ws_overthrustmax),
-                new Buff("Weapon Perfection", EffectStatusIDs.WEAPONPERFECT, Resources._4RTools.Icons.bs_weaponperfect),
-                new Buff("Power Maximize", EffectStatusIDs.MAXIMIZE, Resources._4RTools.Icons.bs_maximize),
-                new Buff("Cart Boost", EffectStatusIDs.CARTBOOST, Resources._4RTools.Icons.ws_cartboost),
-                new Buff("Meltdown", EffectStatusIDs.MELTDOWN, Resources._4RTools.Icons.ws_meltdown),
-                new Buff("Acceleration", EffectStatusIDs.ACCELERATION, Resources._4RTools.Icons.mec_acceleration),
-                new Buff("Cart Boost", EffectStatusIDs.GN_CARTBOOST, Resources._4RTools.Icons.cart_boost),
+                new Buff("Grito de Guerra", EffectStatusIDs.CRAZY_UPROAR, Resources._4RTools.Icons.mc_loud),
+                new Buff("Força Violenta", EffectStatusIDs.OVERTHRUST, Resources._4RTools.Icons.bs_overthrust),
+                new Buff("Adrenalina Pura", EffectStatusIDs.ADRENALINE, Resources._4RTools.Icons.bs_adrenaline),
+                new Buff("Adrenalina Concentrada", EffectStatusIDs.ADRENALINE2, Resources._4RTools.Icons.bs_adrenaline2),
+                new Buff("Força Violentíssima", EffectStatusIDs.OVERTHRUSTMAX, Resources._4RTools.Icons.ws_overthrustmax),
+                new Buff("Manejo Perfeito", EffectStatusIDs.WEAPONPERFECT, Resources._4RTools.Icons.bs_weaponperfect),
+                new Buff("Amplificar Poder", EffectStatusIDs.MAXIMIZE, Resources._4RTools.Icons.bs_maximize),
+                new Buff("Impulso no Carrinho", EffectStatusIDs.CARTBOOST, Resources._4RTools.Icons.ws_cartboost),
+                new Buff("Golpe Estilhaçante", EffectStatusIDs.MELTDOWN, Resources._4RTools.Icons.ws_meltdown),
+                new Buff("Aceleração", EffectStatusIDs.ACCELERATION, Resources._4RTools.Icons.mec_acceleration),
+                new Buff("Propulsão do Carrinho", EffectStatusIDs.GN_CARTBOOST, Resources._4RTools.Icons.cart_boost),
                 new Buff("Research Report", EffectStatusIDs.RESEARCHREPORT, Resources._4RTools.Icons.researchreport)
             };
 
@@ -132,15 +132,15 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("Gloria", EffectStatusIDs.GLORIA, Resources._4RTools.Icons.pr_gloria),
+                new Buff("Glória", EffectStatusIDs.GLORIA, Resources._4RTools.Icons.pr_gloria),
                 new Buff("Magnificat", EffectStatusIDs.MAGNIFICAT, Resources._4RTools.Icons.pr_magnificat),
                 new Buff("Angelus", EffectStatusIDs.ANGELUS, Resources._4RTools.Icons.al_angelus),
-                new Buff("Rising Dragon", EffectStatusIDs.RAISINGDRAGON, Resources._4RTools.Icons.rising_dragon),
+                new Buff("Dragão Ascendente", EffectStatusIDs.RAISINGDRAGON, Resources._4RTools.Icons.rising_dragon),
                 new Buff("Firm Faith", EffectStatusIDs.FIRM_FAITH, Resources._4RTools.Icons.firm_faith),
                 new Buff("Powerful Faith", EffectStatusIDs.POWERFUL_FAITH, Resources._4RTools.Icons.powerful_faith),
-                new Buff("Gentle Touch-Revitalize", EffectStatusIDs.GENTLETOUCH_REVITALIZE, Resources._4RTools.Icons.gentle_touch_revitalize),
-                new Buff("Gentle Touch-Convert", EffectStatusIDs.GENTLETOUCH_CHANGE, Resources._4RTools.Icons.gentle_touch_convert),
-                new Buff("Fury", EffectStatusIDs.FURY, Resources._4RTools.Icons.fury),
+                new Buff("Chakra do Vigor", EffectStatusIDs.GENTLETOUCH_REVITALIZE, Resources._4RTools.Icons.gentle_touch_revitalize),
+                new Buff("Chakra da Fúria", EffectStatusIDs.GENTLETOUCH_CHANGE, Resources._4RTools.Icons.gentle_touch_convert),
+                new Buff("Fúria Interior", EffectStatusIDs.FURY, Resources._4RTools.Icons.fury),
                 new Buff("Impositio Manus", EffectStatusIDs.IMPOSITIO, Resources._4RTools.Icons.impositio_manus),
                 new Buff("Lauda Agnus", EffectStatusIDs.LAUDA_AGNUS, Resources._4RTools.Icons.lauda_agnus),
                 new Buff("Lauda Ramus", EffectStatusIDs.LAUDA_RAMUS, Resources._4RTools.Icons.lauda_ramus),
@@ -155,9 +155,9 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("Cicada Skin Shed", EffectStatusIDs.PEEL_CHANGE, Resources._4RTools.Icons.nj_utsusemi),
-                new Buff("Ninja Aura", EffectStatusIDs.AURA_NINJA, Resources._4RTools.Icons.nj_nen),
-                new Buff("Izayoi", EffectStatusIDs.IZAYOI, Resources._4RTools.Icons.izayoi),
+                new Buff("Troca de Pele", EffectStatusIDs.PEEL_CHANGE, Resources._4RTools.Icons.nj_utsusemi),
+                new Buff("Aura Ninja", EffectStatusIDs.AURA_NINJA, Resources._4RTools.Icons.nj_nen),
+                new Buff("Inspiração", EffectStatusIDs.IZAYOI, Resources._4RTools.Icons.izayoi),
                 new Buff("Imagem Falsa", EffectStatusIDs.BUNSINJYUTSU, Resources._4RTools.Icons.bunsinjyutsu)
             };
 
@@ -169,14 +169,14 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("Mild Wind (Earth)", EffectStatusIDs.PROPERTYGROUND, Resources._4RTools.Icons.tk_mild_earth),
-                new Buff("Mild Wind (Fire)", EffectStatusIDs.PROPERTYFIRE, Resources._4RTools.Icons.tk_mild_fire),
-                new Buff("Mild Wind (Water)", EffectStatusIDs.PROPERTYWATER, Resources._4RTools.Icons.tk_mild_water),
-                new Buff("Mild Wind (Wind)", EffectStatusIDs.PROPERTYWIND, Resources._4RTools.Icons.tk_mild_wind),
-                new Buff("Mild Wind (Ghost)", EffectStatusIDs.PROPERTYTELEKINESIS, Resources._4RTools.Icons.tk_mild_ghost),
-                new Buff("Mild Wind (Holy)", EffectStatusIDs.ASPERSIO, Resources._4RTools.Icons.tk_mild_holy),
-                new Buff("Mild Wind (Shadow)", EffectStatusIDs.PROPERTYDARK, Resources._4RTools.Icons.tk_mild_shadow),
-                new Buff("Tumbling", EffectStatusIDs.DODGE_ON, Resources._4RTools.Icons.tumbling),
+                new Buff("Brisa Leve (Terra)", EffectStatusIDs.PROPERTYGROUND, Resources._4RTools.Icons.tk_mild_earth),
+                new Buff("Brisa Leve (Fogo)", EffectStatusIDs.PROPERTYFIRE, Resources._4RTools.Icons.tk_mild_fire),
+                new Buff("Brisa Leve (Água)", EffectStatusIDs.PROPERTYWATER, Resources._4RTools.Icons.tk_mild_water),
+                new Buff("Brisa Leve (Vento)", EffectStatusIDs.PROPERTYWIND, Resources._4RTools.Icons.tk_mild_wind),
+                new Buff("Brisa Leve (Fantasma)", EffectStatusIDs.PROPERTYTELEKINESIS, Resources._4RTools.Icons.tk_mild_ghost),
+                new Buff("Brisa Leve (Sagrado)", EffectStatusIDs.ASPERSIO, Resources._4RTools.Icons.tk_mild_holy),
+                new Buff("Brisa Leve (Sombrio)", EffectStatusIDs.PROPERTYDARK, Resources._4RTools.Icons.tk_mild_shadow),
+                new Buff("Cambalhota", EffectStatusIDs.DODGE_ON, Resources._4RTools.Icons.tumbling),
                 new Buff("Milagre Solar, Lunar e Estelar", EffectStatusIDs.SPIRIT, Resources._4RTools.Icons.solar_miracle),
                 new Buff("Calor Solar, Lunar, Estelar", EffectStatusIDs.WARM, Resources._4RTools.Icons.sun_warm),
                 new Buff("Proteção Solar", EffectStatusIDs.SUN_COMFORT, Resources._4RTools.Icons.sun_comfort),
@@ -214,16 +214,16 @@ namespace _4RTools.Model
                 new Buff("Poção do Despertar", EffectStatusIDs.AWAKENING_POTION, Resources._4RTools.Icons.awakening_potion),
                 new Buff("Poção da Fúria Selvagem", EffectStatusIDs.BERSERK_POTION, Resources._4RTools.Icons.berserk_potion),
                 new Buff("Poção de Regeneração", EffectStatusIDs.REGENERATION_POTION, Resources._4RTools.Icons.regeneration),
-                new Buff("HP Increase Potion", EffectStatusIDs.HP_INCREASE_POTION_LARGE, Resources._4RTools.Icons.ghp),
-                new Buff("SP Increase Potion", EffectStatusIDs.SP_INCREASE_POTION_LARGE, Resources._4RTools.Icons.gsp),
-                new Buff("Red Herb Activator", EffectStatusIDs.RED_HERB_ACTIVATOR, Resources._4RTools.Icons.red_herb_activator),
-                new Buff("Blue Herb Activator", EffectStatusIDs.BLUE_HERB_ACTIVATOR, Resources._4RTools.Icons.blue_herb_activator),
-                new Buff("Golden X", EffectStatusIDs.REF_T_POTION, Resources._4RTools.Icons.Golden_X), 
-                new Buff("Energy Drink", EffectStatusIDs.ENERGY_DRINK_RESERCH, Resources._4RTools.Icons.energetic_drink),
-                new Buff("Mega Resist Potion", EffectStatusIDs.TARGET_BLOOD, Resources._4RTools.Icons.mega_resist_potion),
-                new Buff("Full SwingK Potion", EffectStatusIDs.FULL_SWINGK, Resources._4RTools.Icons.swing_k),
-                new Buff("Mana Plus Potion", EffectStatusIDs.MANA_PLUS, Resources._4RTools.Icons.mana_plus),
-                new Buff("Blessing Of Tyr", EffectStatusIDs.BASICHIT, Resources._4RTools.Icons.blessing_of_tyr)
+                new Buff("Poção Grande de HP", EffectStatusIDs.HP_INCREASE_POTION_LARGE, Resources._4RTools.Icons.ghp),
+                new Buff("Poção Grande de SP", EffectStatusIDs.SP_INCREASE_POTION_LARGE, Resources._4RTools.Icons.gsp),
+                new Buff("Ativador de Erva Vermelha", EffectStatusIDs.RED_HERB_ACTIVATOR, Resources._4RTools.Icons.red_herb_activator),
+                new Buff("Ativador de Erva Azul", EffectStatusIDs.BLUE_HERB_ACTIVATOR, Resources._4RTools.Icons.blue_herb_activator),
+                new Buff("Poção X Dourada", EffectStatusIDs.REF_T_POTION, Resources._4RTools.Icons.Golden_X),
+                new Buff("Poção de Mega Resistência", EffectStatusIDs.TARGET_BLOOD, Resources._4RTools.Icons.mega_resist_potion),
+                new Buff("Poção do Furor Físico", EffectStatusIDs.FULL_SWINGK, Resources._4RTools.Icons.swing_k),
+                new Buff("Suco de Gato", EffectStatusIDs.SPELLBREAKER, Resources._4RTools.Icons.spellbreaker),
+                new Buff("Poção Mental", EffectStatusIDs.MENTAL_POTION, Resources._4RTools.Icons.mental_potion),
+                new Buff("Poção Vitata 500", EffectStatusIDs.VITATA_POTION, Resources._4RTools.Icons.vitata_potion),
             };
 
             return skills;
@@ -275,6 +275,8 @@ namespace _4RTools.Model
                 new Buff("Palitos de Chocolate", EffectStatusIDs.VIT_Biscuit_Stick, Resources._4RTools.Icons.VIT_Biscuit),
                 new Buff("Palitos de Limão", EffectStatusIDs.DEX_Biscuit_Stick, Resources._4RTools.Icons.DEX_Biscuit),
                 new Buff("Palitos de Morango", EffectStatusIDs.LUK_Biscuit_Stick, Resources._4RTools.Icons.LUK_Biscuit),
+                new Buff("Salada de Frutas Tropicais", EffectStatusIDs.HALOHALO, Resources._4RTools.Icons.halohalo),
+                new Buff("Cálice da Ilusão", EffectStatusIDs.GLASS_OF_ILLUSION, Resources._4RTools.Icons.Glass_Of_Illusion),
             };
 
 
@@ -315,9 +317,9 @@ namespace _4RTools.Model
                 new Buff("Link Scroll", EffectStatusIDs.SOULLINK, Resources._4RTools.Icons.sl_soullinker),
                 new Buff("Monster Transform",  EffectStatusIDs.MONSTER_TRANSFORM, Resources._4RTools.Icons.mob_transform),
                 new Buff("Assumptio",  EffectStatusIDs.ASSUMPTIO, Resources._4RTools.Icons.assumptio),
+                new Buff("Pergaminho de Esquiva",  EffectStatusIDs.FLEE_SCROLL, Resources._4RTools.Icons.flee_scroll),
+                new Buff("Pergaminho de Precisão",  EffectStatusIDs.ACCURACY_SCROLL, Resources._4RTools.Icons.accuracy_Scroll),
                 
-
-
             };
 
             return skills;
@@ -327,9 +329,6 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("THURISAZ Rune", EffectStatusIDs.THURISAZ, Resources._4RTools.Icons.THURISAZ),
-                new Buff("OTHILA Rune", EffectStatusIDs.OTHILA, Resources._4RTools.Icons.OTHILA),
-                new Buff("HAGALAZ Rune", EffectStatusIDs.HAGALAZ, Resources._4RTools.Icons.HAGALAZ),
                 new Buff("LUX AMINA Rune", EffectStatusIDs.LUX_AMINA, Resources._4RTools.Icons.LUX_AMINA),
                 new Buff("Cat Can", EffectStatusIDs.OVERLAPEXPUP, Resources._4RTools.Icons.cat_can),
                 new Buff("Goma de Mascar", EffectStatusIDs.CASH_RECEIVEITEM, Resources._4RTools.Icons.he_bubble_gum),
@@ -361,6 +360,9 @@ namespace _4RTools.Model
                 new Buff("Sono Profundo", EffectStatusIDs.DEEP_SLEEP, Resources._4RTools.Icons.deep_sleep),
                 new Buff("Envenenamento", EffectStatusIDs.POISON, Resources._4RTools.Icons.poison_status),
                 new Buff("Sentar", EffectStatusIDs.SIT, Resources._4RTools.Icons.sit),
+                new Buff("Incêndio", EffectStatusIDs.BURNING, Resources._4RTools.Icons.burning),
+                new Buff("Grito da Mandrágora", EffectStatusIDs.MANDRAGORA, Resources._4RTools.Icons.mandragora_howling),
+                new Buff("Conjuração Lenta", EffectStatusIDs.SLOW_CAST, Resources._4RTools.Icons.slow_cast),
 
             };
 
