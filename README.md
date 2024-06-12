@@ -92,16 +92,16 @@ Voce pode copiar e substituir a pastar `Profile` de sua versao anterior do 4RToo
 - [x] Novo Debuffs de Conjuração Lenta
 - [x] Adicionado 3 Atk x Def (totalizando 4) (obs: não colocar mesma spammer key para 2 atk x def, algum não irá funcionar)
 - [x] Adicionado nova aba de Config (configurações de perfil)
-	» Ordenar uso de Autobuffs Skill
-	» Pausar autobuffs/pot/skill timer/auto switch na cidade (feito pelo @LordVince)
-	» Pausar autobuff-skill na rédea (feito pelo @LordVince)
+	- Ordenar uso de Autobuffs Skill
+	- Pausar autobuffs/pot/skill timer/auto switch na cidade (feito pelo @LordVince)
+	- Pausar autobuff-skill na rédea (feito pelo @LordVince)
 - [x] Ajustado Doce de Elvira remove debuffs 
-	» Conjuração Lenta
-	» Ferimento Crítico
-	» Hipotermia
-	» Grito da Mandrágora
-	» Incêndio
-	» Sono Profundo
+	- Conjuração Lenta
+	- Ferimento Crítico
+	- Hipotermia
+	- Grito da Mandrágora
+	- Incêndio
+	- Sono Profundo
 
 ### Versão 2.6.9
 - [x] Ajustado ATK x DEF para mesmo item
