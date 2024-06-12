@@ -221,6 +221,7 @@ namespace _4RTools.Model
                 new Buff("Poção X Dourada", EffectStatusIDs.REF_T_POTION, Resources._4RTools.Icons.Golden_X),
                 new Buff("Poção de Mega Resistência", EffectStatusIDs.TARGET_BLOOD, Resources._4RTools.Icons.mega_resist_potion),
                 new Buff("Poção do Furor Físico", EffectStatusIDs.FULL_SWINGK, Resources._4RTools.Icons.swing_k),
+                new Buff("Poção do Furor Mágico", EffectStatusIDs.MANA_PLUS, Resources._4RTools.Icons.mana_plus),
                 new Buff("Suco de Gato", EffectStatusIDs.SPELLBREAKER, Resources._4RTools.Icons.spellbreaker),
                 new Buff("Poção Mental", EffectStatusIDs.MENTAL_POTION, Resources._4RTools.Icons.mental_potion),
                 new Buff("Poção Vitata 500", EffectStatusIDs.VITATA_POTION, Resources._4RTools.Icons.vitata_potion),
