@@ -74,6 +74,41 @@ Voce pode copiar e substituir a pastar `Profile` de sua versao anterior do 4RToo
 - [x] Nova Skill de Espadachim (Rapidez com Uma Mão)
 - [x] Ajustado spam da habilidade Caminho do Vento quando estiver em cima do pântano dos mortos
 
+### Versão 2.6.7
+- [x] Ajustado delay do auto switch de nariz de dissimulado
+- [x] Ajustado desligar bot quando muda de perfil
+
+### Versão 2.6.8
+- [x] Ajustado spam da habilidade Rapidez com Uma Mão quando estiver no pântano dos mortos
+- [x] Novo Autobuff-Stuffs de Suco de Gato
+- [x] Novo Autobuff-Stuffs de Poção Mental
+- [x] Novo Autobuff-Stuffs de Poção Vitata 500
+- [x] Novo Autobuff-Stuffs de Salada de Frutas Tropicais
+- [x] Novo Autobuff-Stuffs de Cálice da Ilusão
+- [x] Novo Autobuff-Stuffs de Pergaminho de Esquiva
+- [x] Novo Autobuff-Stuffs de Pergaminho de Precisão
+- [x] Novo Debuffs de Incêndio
+- [x] Novo Debuffs de Grito da Mandrágora
+- [x] Novo Debuffs de Conjuração Lenta
+- [x] Adicionado 3 Atk x Def (totalizando 4) (obs: não colocar mesma spammer key para 2 atk x def, algum não irá funcionar)
+- [x] Adicionado nova aba de Config (configurações de perfil)
+	» Ordenar uso de Autobuffs Skill
+	» Pausar autobuffs/pot/skill timer/auto switch na cidade (feito pelo @LordVince)
+	» Pausar autobuff-skill na rédea (feito pelo @LordVince)
+- [x] Ajustado Doce de Elvira remove debuffs 
+	» Conjuração Lenta
+	» Ferimento Crítico
+	» Hipotermia
+	» Grito da Mandrágora
+	» Incêndio
+	» Sono Profundo
+
+### Versão 2.6.9
+- [x] Ajustado ATK x DEF para mesmo item
+
+### Versão 2.7.0
+- [x] Corrigido Autobuff-Stuffs de Poção do Furor Mágico
+
 ## Original Features
 - [x] ON/OFF Button (with shortcut key)
 - [x] Autopot
