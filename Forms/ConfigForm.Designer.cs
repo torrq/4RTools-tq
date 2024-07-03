@@ -35,9 +35,11 @@ namespace _4RTools.Forms
             this.listBox1 = new Oli.Controls.DragDropListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.getOffReinCheckBox = new System.Windows.Forms.CheckBox();
             this.chkStopBuffsOnRein = new System.Windows.Forms.CheckBox();
             this.chkStopBuffsOnCity = new System.Windows.Forms.CheckBox();
             this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textReinKey = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -64,20 +66,33 @@ namespace _4RTools.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textReinKey);
+            this.groupBox1.Controls.Add(this.getOffReinCheckBox);
             this.groupBox1.Controls.Add(this.chkStopBuffsOnRein);
             this.groupBox1.Controls.Add(this.chkStopBuffsOnCity);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupBox1.Location = new System.Drawing.Point(163, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 106);
+            this.groupBox1.Size = new System.Drawing.Size(300, 116);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configurações 4RTools";
             // 
+            // getOffReinCheckBox
+            // 
+            this.getOffReinCheckBox.AutoSize = true;
+            this.getOffReinCheckBox.Location = new System.Drawing.Point(13, 87);
+            this.getOffReinCheckBox.Name = "getOffReinCheckBox";
+            this.getOffReinCheckBox.Size = new System.Drawing.Size(175, 17);
+            this.getOffReinCheckBox.TabIndex = 2;
+            this.getOffReinCheckBox.Text = "Desmontar da Rédea ao atacar";
+            this.getOffReinCheckBox.UseVisualStyleBackColor = true;
+            this.getOffReinCheckBox.CheckedChanged += new System.EventHandler(this.getOffReinCheckBox_CheckedChanged);
+            // 
             // chkStopBuffsOnRein
             // 
             this.chkStopBuffsOnRein.AutoSize = true;
-            this.chkStopBuffsOnRein.Location = new System.Drawing.Point(13, 69);
+            this.chkStopBuffsOnRein.Location = new System.Drawing.Point(13, 60);
             this.chkStopBuffsOnRein.Name = "chkStopBuffsOnRein";
             this.chkStopBuffsOnRein.Size = new System.Drawing.Size(166, 17);
             this.chkStopBuffsOnRein.TabIndex = 1;
@@ -99,6 +114,17 @@ namespace _4RTools.Forms
             // clientDTOBindingSource
             // 
             this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
+            // 
+            // textReinKey
+            // 
+            this.textReinKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.textReinKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textReinKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textReinKey.ForeColor = System.Drawing.Color.White;
+            this.textReinKey.Location = new System.Drawing.Point(194, 85);
+            this.textReinKey.Name = "textReinKey";
+            this.textReinKey.Size = new System.Drawing.Size(45, 23);
+            this.textReinKey.TabIndex = 306;
             // 
             // ConfigForm
             // 
@@ -129,5 +155,7 @@ namespace _4RTools.Forms
         private GroupBox groupBox1;
         private CheckBox chkStopBuffsOnRein;
         private CheckBox chkStopBuffsOnCity;
+        private CheckBox getOffReinCheckBox;
+        private TextBox textReinKey;
     }
 }

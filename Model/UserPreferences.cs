@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace _4RTools.Model
 {
@@ -14,6 +15,8 @@ namespace _4RTools.Model
 
         public bool stopBuffsCity { get; set; } = false;
         public bool stopBuffsRein { get; set; } = false;
+        public bool getOffRein { get; set; } = false;
+        public Key getOffReinKey { get; set; }
 
         public UserPreferences()
         {

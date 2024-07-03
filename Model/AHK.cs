@@ -114,6 +114,8 @@ namespace _4RTools.Model
             {
                 while (Keyboard.IsKeyDown(config.key))
                 {
+                    getOffRein(roClient);
+
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                     System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
                     send_click(0);
@@ -125,6 +127,8 @@ namespace _4RTools.Model
             {
                 while (Keyboard.IsKeyDown(config.key))
                 {
+                    getOffRein(roClient);
+
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                     send_click(0);
                     Thread.Sleep(this.AhkDelay);
@@ -136,6 +140,8 @@ namespace _4RTools.Model
         {
             while (Keyboard.IsKeyDown(config.key))
             {
+                getOffRein(roClient);
+
                 Point cursorPos = System.Windows.Forms.Cursor.Position;
                 Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                 mouse_event(Constants.MOUSEEVENTF_LEFTDOWN, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
@@ -143,6 +149,32 @@ namespace _4RTools.Model
                 mouse_event(Constants.MOUSEEVENTF_LEFTUP, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
                 Thread.Sleep(this.AhkDelay);
             }
+        }
+
+        private void getOffRein(Client c)
+        {
+            if (ProfileSingleton.GetCurrent().UserPreferences.getOffRein && isRidding(c))
+            {
+                if (ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString() != String.Empty)
+                {
+                    Key key = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey;
+                    Interop.PostMessage(c.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0); 
+                }
+            }
+        }
+
+        private bool isRidding(Client c)
+        {
+            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
+            {
+                uint currentStatus = c.CurrentBuffStatusCode(i);
+                if (currentStatus == (int)EffectStatusIDs.RIDDING) { return true; }
+            }
+            return false;
+        }
+        private Keys toKeys(Key k)
+        {
+            return (Keys)Enum.Parse(typeof(Keys), k.ToString());
         }
 
         private void _AHKNoClick(Client roClient, KeyConfig config, Keys thisk)

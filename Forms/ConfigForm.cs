@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.ComponentModel;
 using Oli.Controls;
 using System.Linq.Expressions;
+using System.Security.Cryptography;
 
 namespace _4RTools.Forms
 {
@@ -18,6 +19,9 @@ namespace _4RTools.Forms
         public ConfigForm(Subject subject)
         {
             InitializeComponent();
+            this.textReinKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
+            this.textReinKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
+            this.textReinKey.TextChanged += new EventHandler(this.textReinKey_TextChanged);
             var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.autoBuffOrder;
             this.listBox1.MouseLeave += new System.EventHandler(this.listBox1_MouseLeave);
             subject.Attach(this);
@@ -55,6 +59,8 @@ namespace _4RTools.Forms
 
                 this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity;
                 this.chkStopBuffsOnRein.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsRein;
+                this.getOffReinCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.getOffRein;
+                this.textReinKey.Text = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString();
 
             }
             catch { }
@@ -106,5 +112,26 @@ namespace _4RTools.Forms
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
         }
 
+        private void getOffReinCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox chk = sender as CheckBox;
+            ProfileSingleton.GetCurrent().UserPreferences.getOffRein = chk.Checked;
+            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
+        }
+
+        private void textReinKey_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                TextBox txtBox = (TextBox)sender;
+                if (txtBox.Text.ToString() != String.Empty)
+                {
+                    Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
+                    ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey = key;
+                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
+                }
+            }
+            catch { }
+        }
     }
 }

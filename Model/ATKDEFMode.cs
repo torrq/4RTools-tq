@@ -114,6 +114,8 @@ namespace _4RTools.Model
                             }
                             equipAtkItems = true;
                         }
+                        
+                        getOffRein(roClient);
 
                         if (equipConfig.keySpammerWithClick)
                         {
@@ -141,6 +143,28 @@ namespace _4RTools.Model
                 }
             }
             return 0;
+        }
+
+        public void getOffRein(Client c)
+        {
+            if (ProfileSingleton.GetCurrent().UserPreferences.getOffRein && isRidding(c))
+            {
+                if (ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString() != String.Empty)
+                {
+                    Key key = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey;
+                    Interop.PostMessage(c.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                }
+            }
+        }
+
+        public bool isRidding(Client c)
+        {
+            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
+            {
+                uint currentStatus = c.CurrentBuffStatusCode(i);
+                if (currentStatus == (int)EffectStatusIDs.RIDDING) { return true; }
+            }
+            return false;
         }
 
         public void AddSwitchItem(int id, string dictKey, Key k, string type)
