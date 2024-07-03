@@ -112,10 +112,11 @@ namespace _4RTools.Model
 
             if (this.mouseFlick)
             {
+                bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
-                {
+                {                
                     getOffRein(roClient);
-
+                    autoSwitchAmmo(roClient, ref ammo);
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                     System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
                     send_click(0);
@@ -125,10 +126,11 @@ namespace _4RTools.Model
             }
             else
             {
+                bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
-                {
+                {                    
                     getOffRein(roClient);
-
+                    autoSwitchAmmo(roClient, ref ammo);
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                     send_click(0);
                     Thread.Sleep(this.AhkDelay);
@@ -138,9 +140,11 @@ namespace _4RTools.Model
 
         private void _AHKSpeedBoost(Client roClient, KeyConfig config, Keys thisk)
         {
+            bool ammo = false;
             while (Keyboard.IsKeyDown(config.key))
             {
                 getOffRein(roClient);
+                autoSwitchAmmo(roClient, ref ammo);
 
                 Point cursorPos = System.Windows.Forms.Cursor.Position;
                 Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
@@ -148,6 +152,30 @@ namespace _4RTools.Model
                 Thread.Sleep(1);
                 mouse_event(Constants.MOUSEEVENTF_LEFTUP, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
                 Thread.Sleep(this.AhkDelay);
+            }
+        }
+
+        private void autoSwitchAmmo(Client roClient, ref bool ammo)
+        {
+            if (ProfileSingleton.GetCurrent().UserPreferences.switchAmmo)
+            {
+                if (ProfileSingleton.GetCurrent().UserPreferences.ammo1Key.ToString() != String.Empty
+                    && ProfileSingleton.GetCurrent().UserPreferences.ammo2Key.ToString() != String.Empty)
+                {
+                    if (ammo == false)
+                    {
+                        Key key = ProfileSingleton.GetCurrent().UserPreferences.ammo1Key;
+                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        ammo = true;
+                    }
+                    else
+                    {
+                        Key key = ProfileSingleton.GetCurrent().UserPreferences.ammo2Key;
+                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        ammo = false;
+                    }
+
+                }
             }
         }
 

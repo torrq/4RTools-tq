@@ -18,6 +18,10 @@ namespace _4RTools.Model
         public bool getOffRein { get; set; } = false;
         public Key getOffReinKey { get; set; }
 
+        public bool switchAmmo { get; set; } = false;
+        public Key ammo1Key { get; set; }
+        public Key ammo2Key { get; set; }
+
         public UserPreferences()
         {
         }
