@@ -210,6 +210,8 @@ namespace _4RTools.Utils
         WEAPONPROPERTY = 64,
         [Description("Brisa Leve (Sagrado)")]
         ASPERSIO = 17,
+        [Description("Enlouquecedor")]
+        MINDBREAKER = 126,
 
         FULL_SWINGK = 486,
         MANA_PLUS = 487,
