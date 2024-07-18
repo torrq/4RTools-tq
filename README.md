@@ -6,7 +6,7 @@ Este projeto e uma adaptacao do projeto 4RTools para uso pessoal e como objeto d
 
 ## Rodando o projeto
 
-Caso voce queira usar esta versao do 4rTools voce pode baixar 'https://github.com/biancaazuma/4RTools-RagTools/releases/download/v2.6.6/4RTools.-.v2.6.6.rar' com a release que esta na raiz do projeto, ou usando o Visual Studio 2022 abrir o `4RTools.sln` e rodar e gerar suas propias releases.
+Caso voce queira usar esta versao do 4rTools voce pode baixar 'https://github.com/biancaazuma/4RTools-RagTools/releases/download/v2.7.0/4RTools.-.v2.7.0.rar' com a release que esta na raiz do projeto, ou usando o Visual Studio 2022 abrir o `4RTools.sln` e rodar e gerar suas propias releases.
 
 ## Copiando perfil
 
@@ -73,6 +73,41 @@ Voce pode copiar e substituir a pastar `Profile` de sua versao anterior do 4RToo
 - [x] Adicionado nova aba de Auto Switch de baixos (nariz de dissimulado e vajra)
 - [x] Nova Skill de Espadachim (Rapidez com Uma Mão)
 - [x] Ajustado spam da habilidade Caminho do Vento quando estiver em cima do pântano dos mortos
+
+### Versão 2.6.7
+- [x] Ajustado delay do auto switch de nariz de dissimulado
+- [x] Ajustado desligar bot quando muda de perfil
+
+### Versão 2.6.8
+- [x] Ajustado spam da habilidade Rapidez com Uma Mão quando estiver no pântano dos mortos
+- [x] Novo Autobuff-Stuffs de Suco de Gato
+- [x] Novo Autobuff-Stuffs de Poção Mental
+- [x] Novo Autobuff-Stuffs de Poção Vitata 500
+- [x] Novo Autobuff-Stuffs de Salada de Frutas Tropicais
+- [x] Novo Autobuff-Stuffs de Cálice da Ilusão
+- [x] Novo Autobuff-Stuffs de Pergaminho de Esquiva
+- [x] Novo Autobuff-Stuffs de Pergaminho de Precisão
+- [x] Novo Debuffs de Incêndio
+- [x] Novo Debuffs de Grito da Mandrágora
+- [x] Novo Debuffs de Conjuração Lenta
+- [x] Adicionado 3 Atk x Def (totalizando 4) (obs: não colocar mesma spammer key para 2 atk x def, algum não irá funcionar)
+- [x] Adicionado nova aba de Config (configurações de perfil)
+	- Ordenar uso de Autobuffs Skill
+	- Pausar autobuffs/pot/skill timer/auto switch na cidade (feito pelo @LordVince)
+	- Pausar autobuff-skill na rédea (feito pelo @LordVince)
+- [x] Ajustado Doce de Elvira remove debuffs 
+	- Conjuração Lenta
+	- Ferimento Crítico
+	- Hipotermia
+	- Grito da Mandrágora
+	- Incêndio
+	- Sono Profundo
+
+### Versão 2.6.9
+- [x] Ajustado ATK x DEF para mesmo item
+
+### Versão 2.7.0
+- [x] Corrigido Autobuff-Stuffs de Poção do Furor Mágico
 
 ## Original Features
 - [x] ON/OFF Button (with shortcut key)
