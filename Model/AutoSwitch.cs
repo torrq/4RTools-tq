@@ -95,6 +95,15 @@ namespace _4RTools.Model
                                 Thread.Sleep(3000);
                             }
 
+                            if (skill.skillId == EffectStatusIDs.ASSUMPTIO )
+                            {
+                                this.useAutobuff(skill.itemKey, skill.skillKey);
+                                Thread.Sleep(100);
+                                this.equipNextItem(skill.nextItemKey);
+                                equipVajra = false;
+                                Thread.Sleep(3000);
+                            }
+
                             if (skill.skillId == EffectStatusIDs.THURISAZ || skill.skillId == EffectStatusIDs.FIGHTINGSPIRIT)
                             {
                                 contVajra++;

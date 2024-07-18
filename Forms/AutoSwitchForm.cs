@@ -32,27 +32,6 @@ namespace _4RTools.Forms
         {
             InitializeComponent();
 
-
-            this.ITEMin30.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
-            this.ITEMin30.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.ITEMin30.TextChanged += new EventHandler(this.onTextChange);
-
-            this.SKILLin30.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
-            this.SKILLin30.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.SKILLin30.TextChanged += new EventHandler(this.onTextChange);
-
-            this.NEXTITEMin30.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
-            this.NEXTITEMin30.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.NEXTITEMin30.TextChanged += new EventHandler(this.onTextChange);
-
-            this.ITEMin319.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
-            this.ITEMin319.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.ITEMin319.TextChanged += new EventHandler(this.onTextChange);
-
-            this.NEXTITEMin319.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
-            this.NEXTITEMin319.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.NEXTITEMin319.TextChanged += new EventHandler(this.onTextChange);
-
             subject.Attach(this);
         }
 
@@ -66,7 +45,10 @@ namespace _4RTools.Forms
                     this.NEXTITEMin30.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR).nextItemKey.ToString() : Keys.None.ToString();
                     this.ITEMin319.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ || x.skillId == EffectStatusIDs.FIGHTINGSPIRIT) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ || x.skillId == EffectStatusIDs.FIGHTINGSPIRIT).itemKey.ToString() : Keys.None.ToString();
                     this.NEXTITEMin319.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ || x.skillId == EffectStatusIDs.FIGHTINGSPIRIT) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ || x.skillId == EffectStatusIDs.FIGHTINGSPIRIT).nextItemKey.ToString() : Keys.None.ToString();
-                    //doUpdate(this);
+                    this.ITEMin110.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.ASSUMPTIO) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.ASSUMPTIO).itemKey.ToString() : Keys.None.ToString();
+                    this.SKILLin110.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.ASSUMPTIO) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.ASSUMPTIO).skillKey.ToString() : Keys.None.ToString();
+                    this.NEXTITEMin110.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.ASSUMPTIO) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.ASSUMPTIO).nextItemKey.ToString() : Keys.None.ToString();
+
                     break;
                 case MessageCode.TURN_OFF:
                     ProfileSingleton.GetCurrent().AutoSwitch.Stop();
