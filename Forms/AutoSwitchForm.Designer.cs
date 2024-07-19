@@ -187,6 +187,9 @@ namespace _4RTools.Forms
             this.NEXTITEMin319.Name = "NEXTITEMin319";
             this.NEXTITEMin319.Size = new System.Drawing.Size(45, 23);
             this.NEXTITEMin319.TabIndex = 308;
+            this.NEXTITEMin319.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
+            this.NEXTITEMin319.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
+            this.NEXTITEMin319.TextChanged += new EventHandler(this.onTextChange);
             // 
             // pictureBox13
             // 
