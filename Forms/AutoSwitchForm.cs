@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using _4RTools.Utils;
 using _4RTools.Model;
 using System.Linq;
+using static _4RTools.Model.AutoSwitch;
 
 namespace _4RTools.Forms
 {
@@ -63,7 +64,6 @@ namespace _4RTools.Forms
         {
             try
             {
-
                 TextBox txtBox = (TextBox)sender;
                 if (txtBox.Text.ToString() != String.Empty)
                 {
@@ -71,8 +71,31 @@ namespace _4RTools.Forms
                     EffectStatusIDs statusID = (EffectStatusIDs)Int16.Parse(txtBox.Name.Split(new[] { "in" }, StringSplitOptions.None)[1]);
                     string type = txtBox.Name.Split(new[] { "in" }, StringSplitOptions.None)[0];
 
-                    ProfileSingleton.GetCurrent().AutoSwitch.AddKeyToBuff(statusID, key, type);
+                    AutoSwitchConfig config = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Find(cfg => cfg.skillId == statusID);
+                    if (config != null)
+                    {
+                        config.skillId = statusID;
 
+                        switch (type)
+                        {
+                            case item:
+                                config.itemKey = key;
+                                break;
+
+                            case skill:
+                                config.skillKey = key;
+                                break;
+
+                            case nextItem:
+                                config.nextItemKey = key;
+                                break;
+                        }
+
+                    }
+                    else {
+
+                        ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Add(new AutoSwitchConfig(statusID, key, type));
+                    }
 
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
                 }
