@@ -1864,6 +1864,7 @@
             this.delayMac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.delayMac8.ForeColor = System.Drawing.Color.White;
             this.delayMac8.Location = new System.Drawing.Point(41, 43);
+            this.delayMac8.ValueChanged += new System.EventHandler(this.onDelayChange);
             this.delayMac8.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -2174,6 +2175,7 @@
             this.delayMac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.delayMac7.ForeColor = System.Drawing.Color.White;
             this.delayMac7.Location = new System.Drawing.Point(41, 43);
+            this.delayMac7.ValueChanged += new System.EventHandler(this.onDelayChange);
             this.delayMac7.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -2473,6 +2475,7 @@
             this.delayMac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.delayMac6.ForeColor = System.Drawing.Color.White;
             this.delayMac6.Location = new System.Drawing.Point(41, 43);
+            this.delayMac6.ValueChanged += new System.EventHandler(this.onDelayChange);
             this.delayMac6.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -2794,6 +2797,7 @@
             this.delayMac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.delayMac5.ForeColor = System.Drawing.Color.White;
             this.delayMac5.Location = new System.Drawing.Point(41, 43);
+            this.delayMac5.ValueChanged += new System.EventHandler(this.onDelayChange);
             this.delayMac5.Maximum = new decimal(new int[] {
             5000,
             0,
