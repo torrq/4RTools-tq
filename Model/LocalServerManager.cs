@@ -70,6 +70,12 @@ namespace _4RTools.Model
                 return startJson;
             }
             string json = File.ReadAllText(localServerName);
+            if (string.IsNullOrEmpty(json))
+            {
+                string startJson = "[\r\n  {\r\n    \"name\": \"rtales.bin\",\r\n    \"description\": \"Ragna Tales\",\r\n    \"hpAddress\": \"0x00E8E434\",\r\n    \"nameAddress\": \"0x00E90C00\",\r\n    \"mapAddress\": \"0x00E89BD4\"\r\n  }\r\n]";
+                File.WriteAllText(localServerName, startJson);
+                return startJson;
+            }
             return json;
         }
 

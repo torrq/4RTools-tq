@@ -102,11 +102,17 @@ namespace _4RTools.Forms
             String cbName = delayInput.Name.Split(new[] { "delay" }, StringSplitOptions.None)[0];
             try
             {
-                chainConfig.macroEntries[cbName].delay = decimal.ToInt16(delayInput.Value);
+                if(chainConfig.macroEntries.ContainsKey(cbName))
+                {
+                    chainConfig.macroEntries[cbName].delay = decimal.ToInt16(delayInput.Value);
 
-                ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().MacroSwitch);
+                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().MacroSwitch);
+                }
             }
-            catch (Exception ex){ }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
         }
 
         private void updateUi()

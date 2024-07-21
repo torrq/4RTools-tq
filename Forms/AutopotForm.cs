@@ -85,7 +85,11 @@ namespace _4RTools.Forms
                 this.autopot.delay = Int16.Parse(this.txtAutopotDelay.Text);
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
-            catch (Exception) { }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
+        
         }
 
         private void txtHPpctTextChanged(object sender, EventArgs e)
@@ -95,7 +99,10 @@ namespace _4RTools.Forms
                 this.autopot.hpPercent = Int16.Parse(this.txtHPpct.Text);
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
-            catch (Exception) { }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
 
         }
 
@@ -113,7 +120,10 @@ namespace _4RTools.Forms
                 this.autopot.spPercent = Int16.Parse(this.txtSPpct.Text);
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
-            catch (Exception) { }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
         }
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {

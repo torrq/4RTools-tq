@@ -78,8 +78,11 @@ namespace _4RTools.Model
             {
                 chainConfigs[macroId - 1] = new ChainConfig(macroId);
             }
-            catch (Exception) { }
-            
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
+
         }
 
         public string GetActionName()
