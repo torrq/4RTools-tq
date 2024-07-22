@@ -658,6 +658,7 @@
     <Content Include="assets\images\impositio_manus.png" />
     <None Include="assets\images\mental_potion.png" />
     <None Include="assets\images\mandragora_howling.png" />
+    <None Include="assets\images\mindbreaker.png" />
     <Content Include="assets\images\octocat2.png" />
     <None Include="assets\images\spellbreaker.png" />
     <None Include="assets\images\slow_cast.png" />

@@ -81,7 +81,8 @@ namespace _4RTools.Model
                 new Buff("Presciência", EffectStatusIDs.MEMORIZE, Resources._4RTools.Icons.pf_memorize),
                 new Buff("Telecinesia", EffectStatusIDs.TELEKINESIS_INTENSE, Resources._4RTools.Icons.telecinese),
                 new Buff("Amplificação Mística", EffectStatusIDs.MYST_AMPLIFY, Resources._4RTools.Icons.amplify),
-                new Buff("Maestria Arcana", EffectStatusIDs.RECOGNIZEDSPELL, Resources._4RTools.Icons.recognized_spell)
+                new Buff("Maestria Arcana", EffectStatusIDs.RECOGNIZEDSPELL, Resources._4RTools.Icons.recognized_spell),
+                new Buff("Enlouquecedor", EffectStatusIDs.MINDBREAKER, Resources._4RTools.Icons.mindbreaker),
             };
 
             return skills;

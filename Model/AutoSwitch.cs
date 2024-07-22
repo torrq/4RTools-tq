@@ -29,6 +29,25 @@ namespace _4RTools.Model
             public Key itemKey { get; set; }
             public Key skillKey { get; set; }
             public Key nextItemKey { get; set; }
+
+            public AutoSwitchConfig(EffectStatusIDs id , Key key, String type)
+            {
+                this.skillId = id;
+                switch (type)
+                {
+                    case item:
+                        this.itemKey = key;
+                        break;
+
+                    case skill:
+                        this.skillKey = key;
+                        break;
+
+                    case nextItem:
+                        this.nextItemKey = key;
+                        break;
+                }
+            }
         }
 
         public void Start()
@@ -95,6 +114,15 @@ namespace _4RTools.Model
                                 Thread.Sleep(3000);
                             }
 
+                            if (skill.skillId == EffectStatusIDs.ASSUMPTIO )
+                            {
+                                this.useAutobuff(skill.itemKey, skill.skillKey);
+                                Thread.Sleep(100);
+                                this.equipNextItem(skill.nextItemKey);
+                                equipVajra = false;
+                                Thread.Sleep(3000);
+                            }
+
                             if (skill.skillId == EffectStatusIDs.THURISAZ || skill.skillId == EffectStatusIDs.FIGHTINGSPIRIT)
                             {
                                 contVajra++;
@@ -147,46 +175,6 @@ namespace _4RTools.Model
 
             return skillClone;
         }
-
-        public void AddKeyToBuff(EffectStatusIDs status, Key key, string type)
-        {
-
-            AutoSwitchConfig config = new AutoSwitchConfig();
-            if (autoSwitchMapping.Exists(x => x.skillId == status))
-            {
-                config = autoSwitchMapping.FirstOrDefault(x => x.skillId == status);
-            }
-            config.skillId = status;
-
-            if (FormUtils.IsValidKey(key))
-            {
-                switch (type)
-                {
-                    case item:
-                        config.itemKey = key;
-                        break;
-
-                    case skill:
-                        config.skillKey = key;
-                        break;
-
-                    case nextItem:
-                        config.nextItemKey = key;
-                        break;
-                }
-
-            }
-            if (autoSwitchMapping.Exists(x => x.skillId == status))
-            {
-                autoSwitchMapping = autoSwitchMapping.Where(skill => skill.skillId != status).ToList();
-            }
-
-            if (FormUtils.IsValidKey(key))
-            {
-                autoSwitchMapping.Add(config);
-            }
-        }
-
         public void ClearKeyMapping()
         {
             buffMapping.Clear();

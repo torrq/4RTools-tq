@@ -194,6 +194,12 @@ namespace _4RTools.Forms
                         Button resetButton = (Button)c;
                         resetButton.Click += new EventHandler(this.onReset);
                     }
+
+                    if (c is NumericUpDown)
+                    {
+                        NumericUpDown numericUpDown = (NumericUpDown)c;
+                        numericUpDown.ValueChanged += new EventHandler(this.onDelayChange);
+                    }
                 }
             } catch { }
         }

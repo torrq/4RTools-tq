@@ -5,7 +5,6 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Windows.Input;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _4RTools.Utils
 {
@@ -16,7 +15,7 @@ namespace _4RTools.Utils
         {
             try
             {
-                System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)sender;
+                TextBox textBox = (TextBox)sender;
                 Key thisk = (Key)Enum.Parse(typeof(Key), e.KeyCode.ToString());
 
                 switch (thisk)
@@ -56,13 +55,14 @@ namespace _4RTools.Utils
         private static void resetForm(Control control)
         {
 
-            IEnumerable<Control> texts = GetAll(control, typeof(System.Windows.Forms.TextBox));
+            IEnumerable<Control> texts = GetAll(control, typeof(TextBox));
             IEnumerable<Control> checks = GetAll(control, typeof(CheckBox));
-            IEnumerable<Control> combos = GetAll(control, typeof(System.Windows.Forms.ComboBox));
+            IEnumerable<Control> combos = GetAll(control, typeof(ComboBox));
+            IEnumerable<Control> numericUpDown = GetAll(control, typeof(NumericUpDown));
 
-            foreach(Control c in texts)
+            foreach (Control c in texts)
             {
-                System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)c;
+                TextBox textBox = (TextBox)c;
                 textBox.Text = Key.None.ToString();
             }
 
@@ -70,13 +70,20 @@ namespace _4RTools.Utils
             {
                 CheckBox checkBox = (CheckBox)c;
                 checkBox.Checked = false;
+                checkBox.CheckState = 0;
             }
 
             foreach (Control c in combos)
             {
-                System.Windows.Forms.ComboBox comboBox = (System.Windows.Forms.ComboBox)c;
+                ComboBox comboBox = (ComboBox)c;
                 if (comboBox.Items.Count > 0)
                     comboBox.SelectedIndex = 0;
+            }
+
+            foreach (Control n in numericUpDown)
+            {
+                NumericUpDown numeric = (NumericUpDown)n;
+                numeric.Value = 0;
             }
         }
 
@@ -84,7 +91,7 @@ namespace _4RTools.Utils
         {
 
             IEnumerable<Control> checks = GetAll(control, typeof(CheckBox));
-            IEnumerable<Control> combos = GetAll(control, typeof(System.Windows.Forms.ComboBox));
+            IEnumerable<Control> combos = GetAll(control, typeof(ComboBox));
 
             foreach (Control c in checks)
             {
@@ -94,7 +101,7 @@ namespace _4RTools.Utils
 
             foreach (Control c in combos)
             {
-                System.Windows.Forms.ComboBox comboBox = (System.Windows.Forms.ComboBox)c;
+                ComboBox comboBox = (ComboBox)c;
                 if (comboBox.Items.Count > 0)
                     comboBox.SelectedIndex = 0;
             }
