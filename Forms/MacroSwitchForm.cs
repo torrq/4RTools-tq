@@ -11,6 +11,7 @@ namespace _4RTools.Forms
     public partial class MacroSwitchForm : Form, IObserver
     {
         public static int TOTAL_MACRO_LANES = 10;
+
         public MacroSwitchForm(Subject subject)
         {
             subject.Attach(this);
@@ -89,7 +90,7 @@ namespace _4RTools.Forms
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().MacroSwitch);
         }
 
-        private void onDelayChange(object sender, EventArgs e)
+        private void OnDelayChange(object sender, EventArgs e)
         {
 
             NumericUpDown delayInput = (NumericUpDown)sender;
@@ -146,7 +147,7 @@ namespace _4RTools.Forms
                     if (control is NumericUpDown)
                     {
                         NumericUpDown delayInput = (NumericUpDown)control;
-                        delayInput.ValueChanged += new System.EventHandler(this.onDelayChange);
+                        delayInput.ValueChanged += new System.EventHandler(this.OnDelayChange);
                     }
                 }
             }
