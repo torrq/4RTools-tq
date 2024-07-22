@@ -5,20 +5,18 @@ using System.Collections.Generic;
 using _4RTools.Model;
 using _4RTools.Utils;
 using System.Text.RegularExpressions;
-using System.Windows.Ink;
-using System.Linq.Expressions;
-using System.Xml.Linq;
 
 namespace _4RTools.Forms
 {
     public partial class MacroSwitchForm : Form, IObserver
     {
-        public static int TOTAL_MACRO_LANES = 8;
+        public static int TOTAL_MACRO_LANES = 10;
+
         public MacroSwitchForm(Subject subject)
         {
             subject.Attach(this);
             InitializeComponent();
-            configureMacroLanes();
+            ConfigureMacroLanes();
         }
 
         public void Update(ISubject subject)
@@ -26,7 +24,7 @@ namespace _4RTools.Forms
             switch ((subject as Subject).Message.code)
             {
                 case MessageCode.PROFILE_CHANGED:
-                    updateUi();
+                    UpdateUi();
                     break;
                 case MessageCode.TURN_ON:
                     ProfileSingleton.GetCurrent().MacroSwitch.Start();
@@ -75,7 +73,7 @@ namespace _4RTools.Forms
             };
         }
 
-        private void onTextChange(object sender, EventArgs e)
+        private void OnTextChange(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
             int chainID = Int16.Parse(textBox.Parent.Name.Split(new[] { "chainGroup" }, StringSplitOptions.None)[1]);
@@ -92,7 +90,7 @@ namespace _4RTools.Forms
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().MacroSwitch);
         }
 
-        private void onDelayChange(object sender, EventArgs e)
+        private void OnDelayChange(object sender, EventArgs e)
         {
 
             NumericUpDown delayInput = (NumericUpDown)sender;
@@ -115,7 +113,7 @@ namespace _4RTools.Forms
             }
         }
 
-        private void updateUi()
+        private void UpdateUi()
         {
             for (int i = 1; i <= TOTAL_MACRO_LANES; i++)
             {
@@ -123,15 +121,15 @@ namespace _4RTools.Forms
             }
         }
 
-        private void configureMacroLanes()
+        private void ConfigureMacroLanes()
         {
             for (int i = 1; i <= TOTAL_MACRO_LANES; i++)
             {
-                initializeLane(i);
+                InitializeLane(i);
             }
         }
 
-        private void initializeLane(int id)
+        private void InitializeLane(int id)
         {
             try
             {
@@ -143,13 +141,13 @@ namespace _4RTools.Forms
                         TextBox textBox = (TextBox)control;
                         textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
                         textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-                        textBox.TextChanged += new EventHandler(this.onTextChange);
+                        textBox.TextChanged += new EventHandler(this.OnTextChange);
                     }
 
                     if (control is NumericUpDown)
                     {
                         NumericUpDown delayInput = (NumericUpDown)control;
-                        delayInput.ValueChanged += new System.EventHandler(this.onDelayChange);
+                        delayInput.ValueChanged += new System.EventHandler(this.OnDelayChange);
                     }
                 }
             }
