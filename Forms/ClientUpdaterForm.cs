@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 
 namespace _4RTools.Forms
 {
@@ -14,9 +15,6 @@ namespace _4RTools.Forms
 
         public ClientUpdaterForm()
         {
-            var requestAccepts = httpClient.DefaultRequestHeaders.Accept;
-            requestAccepts.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("request"); //Set the User Agent to "request"
             InitializeComponent();
             StartUpdate();
         }
@@ -32,11 +30,8 @@ namespace _4RTools.Forms
             try
             {
                 clients.AddRange(LocalServerManager.GetLocalClients()); //Load Local Servers First
-                                                                        //If fetch successfully update and load local file.
-                httpClient.Timeout = TimeSpan.FromSeconds(5);
-                string remoteServersRaw = await httpClient.GetStringAsync(AppConfig._4RClientsURL);
-                clients.AddRange(JsonConvert.DeserializeObject<List<ClientDTO>>(remoteServersRaw));
-
+                LoadServers(clients);                                              //If fetch successfully update and load local file.
+                Thread.Sleep(100);
             }
             catch(Exception ex)
             {
@@ -46,7 +41,6 @@ namespace _4RTools.Forms
             }
             finally
             {
-                LoadServers(clients);
                 new Container().Show();
                 Hide();
             }

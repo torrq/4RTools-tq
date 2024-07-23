@@ -82,14 +82,13 @@ namespace _4RTools.Forms
                         delayInput.Value = Spammers.skillTimer[id].delay;
                     }
                 }
-                else
-                {
-                    Spammers.skillTimer.Add(id, new MacroKey(Key.None, 5));
-                }
 
                 ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoRefreshSpammer);
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
         }
 
         private void initializeLane(int id)
@@ -133,7 +132,10 @@ namespace _4RTools.Forms
                     delayInput.Value = skillTimer.delay;
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
         }
 
         private void onTextChange(object sender, EventArgs e)
@@ -158,7 +160,10 @@ namespace _4RTools.Forms
 
                 ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoRefreshSpammer);
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
         }
 
 
@@ -184,7 +189,10 @@ namespace _4RTools.Forms
 
                 ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoRefreshSpammer);
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                var exception = ex;
+            }
         }
         
     }

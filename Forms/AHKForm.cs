@@ -37,7 +37,7 @@ namespace _4RTools.Forms
         private void InitializeApplicationForm()
         {
             RemoveHandlers();
-            FormUtils.ResetForm(this);
+            FormUtils.ResetCheckboxForm(this);
             SetLegendDefaultValues();
             this.ahk = ProfileSingleton.GetCurrent().AHK;
             InitializeCheckAsThreeState();
@@ -101,6 +101,7 @@ namespace _4RTools.Forms
                     CheckBox check = (CheckBox)c;
                     check.CheckStateChanged -= onCheckChange;
                 }
+            this.chkNoShift.CheckedChanged -= new System.EventHandler(this.chkNoShift_CheckedChanged);
         }
 
 
@@ -118,6 +119,7 @@ namespace _4RTools.Forms
                     if (check.Enabled)
                         check.CheckStateChanged += onCheckChange;
                 }
+            this.chkNoShift.CheckedChanged += new System.EventHandler(this.chkNoShift_CheckedChanged);
         }
 
         private void SetLegendDefaultValues()

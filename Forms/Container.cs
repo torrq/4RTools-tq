@@ -157,7 +157,7 @@ namespace _4RTools.Forms
                     if (currentProfile != null) {
                         this.frmToggleApplication.TurnOFF();
                     }
-
+                    ProfileSingleton.ClearProfile(this.profileCB.Text);
                     ProfileSingleton.Load(this.profileCB.Text); //LOAD PROFILE
                     subject.Notify(new Utils.Message(MessageCode.PROFILE_CHANGED, null));
                     currentProfile = this.profileCB.Text.ToString();

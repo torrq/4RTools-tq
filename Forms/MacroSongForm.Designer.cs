@@ -628,7 +628,6 @@
             this.delayMac1.Name = "delayMac1";
             this.delayMac1.Size = new System.Drawing.Size(47, 20);
             this.delayMac1.TabIndex = 68;
-            this.delayMac1.ValueChanged += new System.EventHandler(this.onDelayChange);
             // 
             // label4
             // 
@@ -928,7 +927,6 @@
             this.delayMac2.Name = "delayMac2";
             this.delayMac2.Size = new System.Drawing.Size(47, 20);
             this.delayMac2.TabIndex = 69;
-            this.delayMac2.ValueChanged += new System.EventHandler(this.onDelayChange);
             // 
             // inDaggerMacro2
             // 
@@ -1250,7 +1248,6 @@
             this.delayMac3.Name = "delayMac3";
             this.delayMac3.Size = new System.Drawing.Size(47, 20);
             this.delayMac3.TabIndex = 70;
-            this.delayMac3.ValueChanged += new System.EventHandler(this.onDelayChange);
             // 
             // label7
             // 
@@ -1561,7 +1558,6 @@
             this.delayMac4.Name = "delayMac4";
             this.delayMac4.Size = new System.Drawing.Size(47, 20);
             this.delayMac4.TabIndex = 71;
-            this.delayMac4.ValueChanged += new System.EventHandler(this.onDelayChange);
             // 
             // label10
             // 

@@ -41,6 +41,14 @@ namespace _4RTools.Model
                 throw new Exception("Houve um problema ao carregar o perfil. Delete a pasta Profiles e tente novamente.");   
             }
         }
+        public static void ClearProfile(string profileName)
+        {
+            if (profileName != profile.Name)
+            {
+                profile = new Profile(profileName);
+            }
+        }
+
 
         public static void Create(string profileName)
         {
@@ -48,6 +56,7 @@ namespace _4RTools.Model
 
             if (!File.Exists(jsonFileName))
             {
+                ClearProfile(profileName);
                 if (!Directory.Exists(AppConfig.ProfileFolder)) { Directory.CreateDirectory(AppConfig.ProfileFolder); }
                 FileStream fs = File.Create(jsonFileName);
                 fs.Close();
@@ -55,6 +64,7 @@ namespace _4RTools.Model
                 Profile profile = new Profile(profileName);
                 string output = JsonConvert.SerializeObject(profile, Formatting.Indented);
                 File.WriteAllText(jsonFileName, output);
+
             }
 
             ProfileSingleton.Load(profileName);

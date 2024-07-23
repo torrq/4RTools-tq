@@ -71,7 +71,7 @@ namespace _4RTools.Forms
             }
             finally
             {
-                new ClientUpdaterForm().Show();
+                new ClientUpdaterForm();
                 Hide();
             }
         }

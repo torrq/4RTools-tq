@@ -100,7 +100,9 @@ namespace _4RTools.Model
                 bool equipAtkItems = false;
                 bool equipDefItems = false;
                 bool ammo = false;
-                if (equipConfig.keySpammer != Key.None && Keyboard.IsKeyDown(equipConfig.keySpammer))
+
+                if (equipConfig.keySpammer != Key.None && Keyboard.IsKeyDown(equipConfig.keySpammer)
+                   && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 {
                     Keys thisk = toKeys(equipConfig.keySpammer);
 
