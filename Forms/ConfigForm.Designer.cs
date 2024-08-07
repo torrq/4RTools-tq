@@ -43,6 +43,7 @@ namespace _4RTools.Forms
             this.chkStopBuffsOnRein = new System.Windows.Forms.CheckBox();
             this.chkStopBuffsOnCity = new System.Windows.Forms.CheckBox();
             this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chkStopHealOnCity = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +70,7 @@ namespace _4RTools.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkStopHealOnCity);
             this.groupBox1.Controls.Add(this.ammo2textBox);
             this.groupBox1.Controls.Add(this.ammo1textBox);
             this.groupBox1.Controls.Add(this.switchAmmoCheckBox);
@@ -79,7 +81,7 @@ namespace _4RTools.Forms
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupBox1.Location = new System.Drawing.Point(163, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 142);
+            this.groupBox1.Size = new System.Drawing.Size(300, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configurações 4RTools";
@@ -90,7 +92,7 @@ namespace _4RTools.Forms
             this.ammo2textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ammo2textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ammo2textBox.ForeColor = System.Drawing.Color.White;
-            this.ammo2textBox.Location = new System.Drawing.Point(245, 113);
+            this.ammo2textBox.Location = new System.Drawing.Point(245, 127);
             this.ammo2textBox.Name = "ammo2textBox";
             this.ammo2textBox.Size = new System.Drawing.Size(45, 23);
             this.ammo2textBox.TabIndex = 309;
@@ -101,7 +103,7 @@ namespace _4RTools.Forms
             this.ammo1textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ammo1textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ammo1textBox.ForeColor = System.Drawing.Color.White;
-            this.ammo1textBox.Location = new System.Drawing.Point(194, 113);
+            this.ammo1textBox.Location = new System.Drawing.Point(194, 127);
             this.ammo1textBox.Name = "ammo1textBox";
             this.ammo1textBox.Size = new System.Drawing.Size(45, 23);
             this.ammo1textBox.TabIndex = 308;
@@ -109,7 +111,7 @@ namespace _4RTools.Forms
             // switchAmmoCheckBox
             // 
             this.switchAmmoCheckBox.AutoSize = true;
-            this.switchAmmoCheckBox.Location = new System.Drawing.Point(13, 115);
+            this.switchAmmoCheckBox.Location = new System.Drawing.Point(13, 129);
             this.switchAmmoCheckBox.Name = "switchAmmoCheckBox";
             this.switchAmmoCheckBox.Size = new System.Drawing.Size(168, 17);
             this.switchAmmoCheckBox.TabIndex = 307;
@@ -123,7 +125,7 @@ namespace _4RTools.Forms
             this.textReinKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textReinKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textReinKey.ForeColor = System.Drawing.Color.White;
-            this.textReinKey.Location = new System.Drawing.Point(194, 85);
+            this.textReinKey.Location = new System.Drawing.Point(194, 99);
             this.textReinKey.Name = "textReinKey";
             this.textReinKey.Size = new System.Drawing.Size(45, 23);
             this.textReinKey.TabIndex = 306;
@@ -131,7 +133,7 @@ namespace _4RTools.Forms
             // getOffReinCheckBox
             // 
             this.getOffReinCheckBox.AutoSize = true;
-            this.getOffReinCheckBox.Location = new System.Drawing.Point(13, 87);
+            this.getOffReinCheckBox.Location = new System.Drawing.Point(13, 101);
             this.getOffReinCheckBox.Name = "getOffReinCheckBox";
             this.getOffReinCheckBox.Size = new System.Drawing.Size(175, 17);
             this.getOffReinCheckBox.TabIndex = 2;
@@ -142,7 +144,7 @@ namespace _4RTools.Forms
             // chkStopBuffsOnRein
             // 
             this.chkStopBuffsOnRein.AutoSize = true;
-            this.chkStopBuffsOnRein.Location = new System.Drawing.Point(13, 60);
+            this.chkStopBuffsOnRein.Location = new System.Drawing.Point(13, 76);
             this.chkStopBuffsOnRein.Name = "chkStopBuffsOnRein";
             this.chkStopBuffsOnRein.Size = new System.Drawing.Size(166, 17);
             this.chkStopBuffsOnRein.TabIndex = 1;
@@ -153,17 +155,28 @@ namespace _4RTools.Forms
             // chkStopBuffsOnCity
             // 
             this.chkStopBuffsOnCity.AutoSize = true;
-            this.chkStopBuffsOnCity.Location = new System.Drawing.Point(13, 31);
+            this.chkStopBuffsOnCity.Location = new System.Drawing.Point(13, 27);
             this.chkStopBuffsOnCity.Name = "chkStopBuffsOnCity";
-            this.chkStopBuffsOnCity.Size = new System.Drawing.Size(282, 17);
+            this.chkStopBuffsOnCity.Size = new System.Drawing.Size(262, 17);
             this.chkStopBuffsOnCity.TabIndex = 0;
-            this.chkStopBuffsOnCity.Text = "Pausar autobuffs/pot/skill timer/auto switch na cidade";
+            this.chkStopBuffsOnCity.Text = "Pausar autobuffs/skill timer/auto switch na cidade";
             this.chkStopBuffsOnCity.UseVisualStyleBackColor = true;
             this.chkStopBuffsOnCity.CheckedChanged += new System.EventHandler(this.chkStopBuffsOnCity_CheckedChanged);
             // 
             // clientDTOBindingSource
             // 
             this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
+            // 
+            // chkStopHealOnCity
+            // 
+            this.chkStopHealOnCity.AutoSize = true;
+            this.chkStopHealOnCity.Location = new System.Drawing.Point(13, 51);
+            this.chkStopHealOnCity.Name = "chkStopHealOnCity";
+            this.chkStopHealOnCity.Size = new System.Drawing.Size(133, 17);
+            this.chkStopHealOnCity.TabIndex = 310;
+            this.chkStopHealOnCity.Text = "Pausar cura na cidade";
+            this.chkStopHealOnCity.UseVisualStyleBackColor = true;
+            this.chkStopHealOnCity.CheckedChanged += new System.EventHandler(this.chkStopHealOnCity_CheckedChanged);
             // 
             // ConfigForm
             // 
@@ -199,5 +212,6 @@ namespace _4RTools.Forms
         private TextBox ammo2textBox;
         private TextBox ammo1textBox;
         private CheckBox switchAmmoCheckBox;
+        private CheckBox chkStopHealOnCity;
     }
 }

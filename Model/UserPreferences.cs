@@ -15,6 +15,7 @@ namespace _4RTools.Model
 
         public bool stopBuffsCity { get; set; } = false;
         public bool stopBuffsRein { get; set; } = false;
+        public bool stopHealCity { get; set; } = false;
         public bool getOffRein { get; set; } = false;
         public Key getOffReinKey { get; set; }
 

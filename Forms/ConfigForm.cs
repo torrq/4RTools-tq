@@ -68,6 +68,7 @@ namespace _4RTools.Forms
 
                 this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity;
                 this.chkStopBuffsOnRein.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsRein;
+                this.chkStopHealOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopHealCity;
                 this.getOffReinCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.getOffRein;
                 this.textReinKey.Text = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString();
                 this.switchAmmoCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.switchAmmo;
@@ -120,6 +121,12 @@ namespace _4RTools.Forms
         {
             CheckBox chk = sender as CheckBox;
             ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity = chk.Checked;
+            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
+        }
+        private void chkStopHealOnCity_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox chk = sender as CheckBox;
+            ProfileSingleton.GetCurrent().UserPreferences.stopHealCity = chk.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
         }
 
