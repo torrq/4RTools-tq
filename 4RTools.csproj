@@ -655,6 +655,7 @@
     <None Include="assets\images\halohalo.png" />
     <None Include="assets\images\flee_scroll.png" />
     <None Include="assets\images\Glass_Of_Illusion.png" />
+    <None Include="assets\images\fusion.png" />
     <Content Include="assets\images\impositio_manus.png" />
     <None Include="assets\images\mental_potion.png" />
     <None Include="assets\images\mandragora_howling.png" />
@@ -662,6 +663,7 @@
     <Content Include="assets\images\octocat2.png" />
     <None Include="assets\images\spellbreaker.png" />
     <None Include="assets\images\slow_cast.png" />
+    <None Include="assets\images\provoke.png" />
     <Content Include="assets\images\tk_mild_earth.png" />
     <Content Include="assets\images\tk_mild_fire.png" />
     <Content Include="assets\images\tk_mild_ghost.png" />

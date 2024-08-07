@@ -332,7 +332,7 @@ namespace _4RTools.Utils
         MENTAL_POTION = 298,
         VITATA_POTION = 483,
         RIDDING = 613,
-
+        FUSION = 2063,
     }
 
 }
