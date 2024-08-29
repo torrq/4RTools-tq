@@ -30,9 +30,14 @@ namespace _4RTools.Forms
             this.ammo2textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.ammo2textBox.TextChanged += new EventHandler(this.textAmmo2_TextChanged);
 
-
+            
             var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.autoBuffOrder;
             this.listBox1.MouseLeave += new System.EventHandler(this.listBox1_MouseLeave);
+
+            toolTip1.SetToolTip(switchAmmoCheckBox, "Intercala entre as munições");
+            toolTip2.SetToolTip(textReinKey, "atalho rédea");
+            toolTip3.SetToolTip(ammo1textBox, "atalho ammo 1");
+            toolTip4.SetToolTip(ammo2textBox, "atalho ammo 2");
             subject.Attach(this);
         }
 

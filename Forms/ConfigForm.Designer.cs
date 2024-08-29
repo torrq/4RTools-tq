@@ -35,6 +35,7 @@ namespace _4RTools.Forms
             this.listBox1 = new Oli.Controls.DragDropListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkStopHealOnCity = new System.Windows.Forms.CheckBox();
             this.ammo2textBox = new System.Windows.Forms.TextBox();
             this.ammo1textBox = new System.Windows.Forms.TextBox();
             this.switchAmmoCheckBox = new System.Windows.Forms.CheckBox();
@@ -42,8 +43,11 @@ namespace _4RTools.Forms
             this.getOffReinCheckBox = new System.Windows.Forms.CheckBox();
             this.chkStopBuffsOnRein = new System.Windows.Forms.CheckBox();
             this.chkStopBuffsOnCity = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chkStopHealOnCity = new System.Windows.Forms.CheckBox();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +89,17 @@ namespace _4RTools.Forms
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configurações 4RTools";
+            // 
+            // chkStopHealOnCity
+            // 
+            this.chkStopHealOnCity.AutoSize = true;
+            this.chkStopHealOnCity.Location = new System.Drawing.Point(13, 51);
+            this.chkStopHealOnCity.Name = "chkStopHealOnCity";
+            this.chkStopHealOnCity.Size = new System.Drawing.Size(133, 17);
+            this.chkStopHealOnCity.TabIndex = 310;
+            this.chkStopHealOnCity.Text = "Pausar cura na cidade";
+            this.chkStopHealOnCity.UseVisualStyleBackColor = true;
+            this.chkStopHealOnCity.CheckedChanged += new System.EventHandler(this.chkStopHealOnCity_CheckedChanged);
             // 
             // ammo2textBox
             // 
@@ -167,17 +182,6 @@ namespace _4RTools.Forms
             // 
             this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
             // 
-            // chkStopHealOnCity
-            // 
-            this.chkStopHealOnCity.AutoSize = true;
-            this.chkStopHealOnCity.Location = new System.Drawing.Point(13, 51);
-            this.chkStopHealOnCity.Name = "chkStopHealOnCity";
-            this.chkStopHealOnCity.Size = new System.Drawing.Size(133, 17);
-            this.chkStopHealOnCity.TabIndex = 310;
-            this.chkStopHealOnCity.Text = "Pausar cura na cidade";
-            this.chkStopHealOnCity.UseVisualStyleBackColor = true;
-            this.chkStopHealOnCity.CheckedChanged += new System.EventHandler(this.chkStopHealOnCity_CheckedChanged);
-            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,5 +217,9 @@ namespace _4RTools.Forms
         private TextBox ammo1textBox;
         private CheckBox switchAmmoCheckBox;
         private CheckBox chkStopHealOnCity;
+        private ToolTip toolTip1;
+        private ToolTip toolTip2;
+        private ToolTip toolTip3;
+        private ToolTip toolTip4;
     }
 }
