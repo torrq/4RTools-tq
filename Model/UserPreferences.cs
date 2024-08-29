@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace _4RTools.Model
 {
@@ -14,6 +15,13 @@ namespace _4RTools.Model
 
         public bool stopBuffsCity { get; set; } = false;
         public bool stopBuffsRein { get; set; } = false;
+        public bool stopHealCity { get; set; } = false;
+        public bool getOffRein { get; set; } = false;
+        public Key getOffReinKey { get; set; }
+
+        public bool switchAmmo { get; set; } = false;
+        public Key ammo1Key { get; set; }
+        public Key ammo2Key { get; set; }
 
         public UserPreferences()
         {

@@ -13,6 +13,7 @@ namespace _4RTools.Forms
         public CustomButtonForm(Subject subject)
         {
             InitializeComponent();
+            toolTip1.SetToolTip(label1, "Simula alt+botão direito do mouse para transferencia rapida de itens entre armazem e inventario");
             subject.Attach(this);
         }
 

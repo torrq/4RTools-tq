@@ -297,6 +297,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConfigForm.resx">
       <DependentUpon>ConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
@@ -320,6 +321,7 @@
     </Compile>
     <EmbeddedResource Include="Forms\SkillAutoBuffForm.resx">
       <DependentUpon>SkillAutoBuffForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Forms\SkillTimerForm.Designer.cs">
       <DependentUpon>SkillTimerForm.cs</DependentUpon>
@@ -348,6 +350,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomButtonForm.resx">
       <DependentUpon>CustomButtonForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Forms\StuffAutoBuffForm.Designer.cs">
       <DependentUpon>StuffAutoBuffForm.cs</DependentUpon>
@@ -376,6 +379,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StuffAutoBuffForm.resx">
       <DependentUpon>StuffAutoBuffForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Forms\ToggleApplicationStateForm.Designer.cs">
       <DependentUpon>ToggleApplicationStateForm.cs</DependentUpon>
@@ -646,7 +650,9 @@
     <None Include="assets\images\accuracy_Scroll.png" />
     <Content Include="assets\images\ads_placeholder_clean.jpg" />
     <None Include="assets\images\burning.png" />
+    <None Include="assets\images\bovine_potion.png" />
     <Content Include="assets\images\cash_food.png" />
+    <None Include="assets\images\dragon_potion.png" />
     <Content Include="assets\images\ele_earth_converter.png" />
     <Content Include="assets\images\ele_fire_converter.png" />
     <Content Include="assets\images\ele_water_converter.png" />
@@ -655,6 +661,7 @@
     <None Include="assets\images\halohalo.png" />
     <None Include="assets\images\flee_scroll.png" />
     <None Include="assets\images\Glass_Of_Illusion.png" />
+    <None Include="assets\images\fusion.png" />
     <Content Include="assets\images\impositio_manus.png" />
     <None Include="assets\images\mental_potion.png" />
     <None Include="assets\images\mandragora_howling.png" />
@@ -662,6 +669,8 @@
     <Content Include="assets\images\octocat2.png" />
     <None Include="assets\images\spellbreaker.png" />
     <None Include="assets\images\slow_cast.png" />
+    <None Include="assets\images\provoke.png" />
+    <None Include="assets\images\red_booster_potion.png" />
     <Content Include="assets\images\tk_mild_earth.png" />
     <Content Include="assets\images\tk_mild_fire.png" />
     <Content Include="assets\images\tk_mild_ghost.png" />

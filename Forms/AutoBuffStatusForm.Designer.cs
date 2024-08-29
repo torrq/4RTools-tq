@@ -65,7 +65,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(279, 12);
+            this.panel5.Location = new System.Drawing.Point(268, 16);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1, 30);
             this.panel5.TabIndex = 301;
@@ -73,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(122, 21);
+            this.label1.Location = new System.Drawing.Point(102, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 297;
@@ -82,7 +82,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(96, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -95,7 +95,7 @@
             this.txtStatusKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStatusKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtStatusKey.ForeColor = System.Drawing.Color.White;
-            this.txtStatusKey.Location = new System.Drawing.Point(159, 16);
+            this.txtStatusKey.Location = new System.Drawing.Point(139, 15);
             this.txtStatusKey.Name = "txtStatusKey";
             this.txtStatusKey.Size = new System.Drawing.Size(45, 23);
             this.txtStatusKey.TabIndex = 295;
@@ -103,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(387, 21);
+            this.label2.Location = new System.Drawing.Point(402, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 304;
@@ -112,7 +112,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(361, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(376, 15);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +125,7 @@
             this.txtNewStatusKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewStatusKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtNewStatusKey.ForeColor = System.Drawing.Color.White;
-            this.txtNewStatusKey.Location = new System.Drawing.Point(424, 16);
+            this.txtNewStatusKey.Location = new System.Drawing.Point(439, 16);
             this.txtNewStatusKey.Name = "txtNewStatusKey";
             this.txtNewStatusKey.Size = new System.Drawing.Size(45, 23);
             this.txtNewStatusKey.TabIndex = 302;

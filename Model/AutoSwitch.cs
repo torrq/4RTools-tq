@@ -91,12 +91,12 @@ namespace _4RTools.Model
                                 skillClone = skillClone.Where(skill => skill.skillId != status).ToList();
                             }
 
-                            if (status == EffectStatusIDs.THURISAZ || status == EffectStatusIDs.FIGHTINGSPIRIT)
+                            if (status == EffectStatusIDs.THURISAZ)
                             {
                                 if (equipVajra == true)
                                 {
                                     equipVajra = false;
-                                    this.equipNextItem(autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ || x.skillId == EffectStatusIDs.FIGHTINGSPIRIT).nextItemKey);
+                                    this.equipNextItem(autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ).nextItemKey);
                                 }
                                 skillClone = validadeVajraSkills(skillClone, status);
                                 procVajra = true;
@@ -105,25 +105,16 @@ namespace _4RTools.Model
                         }
                         foreach (var skill in skillClone)
                         {
-                            if (skill.skillId == EffectStatusIDs.CRAZY_UPROAR && c.ReadCurrentSp() > 8)
+                            if ((skill.skillId == EffectStatusIDs.CRAZY_UPROAR && c.ReadCurrentSp() > 8) || skill.skillId == EffectStatusIDs.ASSUMPTIO)
                             {
                                 this.useAutobuff(skill.itemKey, skill.skillKey);
-                                Thread.Sleep(100);
+                                Thread.Sleep(1000);
                                 this.equipNextItem(skill.nextItemKey);
                                 equipVajra = false;
                                 Thread.Sleep(3000);
                             }
 
-                            if (skill.skillId == EffectStatusIDs.ASSUMPTIO )
-                            {
-                                this.useAutobuff(skill.itemKey, skill.skillKey);
-                                Thread.Sleep(100);
-                                this.equipNextItem(skill.nextItemKey);
-                                equipVajra = false;
-                                Thread.Sleep(3000);
-                            }
-
-                            if (skill.skillId == EffectStatusIDs.THURISAZ || skill.skillId == EffectStatusIDs.FIGHTINGSPIRIT)
+                            if (skill.skillId == EffectStatusIDs.THURISAZ)
                             {
                                 contVajra++;
 

@@ -36,6 +36,8 @@
             this.ElementalsGP = new System.Windows.Forms.GroupBox();
             this.ScrollBuffsGP = new System.Windows.Forms.GroupBox();
             this.EtcGP = new System.Windows.Forms.GroupBox();
+            this.btnResetAutobuff = new System.Windows.Forms.Button();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // toolTip1
@@ -52,7 +54,7 @@
             this.FoodsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FoodsGP.Location = new System.Drawing.Point(12, 122);
             this.FoodsGP.Name = "FoodsGP";
-            this.FoodsGP.Size = new System.Drawing.Size(522, 33);
+            this.FoodsGP.Size = new System.Drawing.Size(520, 30);
             this.FoodsGP.TabIndex = 293;
             this.FoodsGP.TabStop = false;
             this.FoodsGP.Text = "Foods";
@@ -64,7 +66,7 @@
             this.PotionsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.PotionsGP.Location = new System.Drawing.Point(12, 12);
             this.PotionsGP.Name = "PotionsGP";
-            this.PotionsGP.Size = new System.Drawing.Size(522, 29);
+            this.PotionsGP.Size = new System.Drawing.Size(520, 30);
             this.PotionsGP.TabIndex = 294;
             this.PotionsGP.TabStop = false;
             this.PotionsGP.Text = "Potions";
@@ -76,7 +78,7 @@
             this.BoxesGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.BoxesGP.Location = new System.Drawing.Point(12, 85);
             this.BoxesGP.Name = "BoxesGP";
-            this.BoxesGP.Size = new System.Drawing.Size(522, 31);
+            this.BoxesGP.Size = new System.Drawing.Size(520, 30);
             this.BoxesGP.TabIndex = 295;
             this.BoxesGP.TabStop = false;
             this.BoxesGP.Text = "Boxes / Speed / Status";
@@ -88,7 +90,7 @@
             this.ElementalsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.ElementalsGP.Location = new System.Drawing.Point(12, 47);
             this.ElementalsGP.Name = "ElementalsGP";
-            this.ElementalsGP.Size = new System.Drawing.Size(522, 32);
+            this.ElementalsGP.Size = new System.Drawing.Size(520, 30);
             this.ElementalsGP.TabIndex = 296;
             this.ElementalsGP.TabStop = false;
             this.ElementalsGP.Text = "Elementals";
@@ -100,7 +102,7 @@
             this.ScrollBuffsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.ScrollBuffsGP.Location = new System.Drawing.Point(12, 161);
             this.ScrollBuffsGP.Name = "ScrollBuffsGP";
-            this.ScrollBuffsGP.Size = new System.Drawing.Size(522, 33);
+            this.ScrollBuffsGP.Size = new System.Drawing.Size(520, 30);
             this.ScrollBuffsGP.TabIndex = 297;
             this.ScrollBuffsGP.TabStop = false;
             this.ScrollBuffsGP.Text = "Scroll Buffs";
@@ -112,10 +114,24 @@
             this.EtcGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.EtcGP.Location = new System.Drawing.Point(12, 200);
             this.EtcGP.Name = "EtcGP";
-            this.EtcGP.Size = new System.Drawing.Size(522, 33);
+            this.EtcGP.Size = new System.Drawing.Size(520, 30);
             this.EtcGP.TabIndex = 298;
             this.EtcGP.TabStop = false;
             this.EtcGP.Text = "ETC";
+            // 
+            // btnResetAutobuff
+            // 
+            this.btnResetAutobuff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.btnResetAutobuff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetAutobuff.ForeColor = System.Drawing.Color.White;
+            this.btnResetAutobuff.Location = new System.Drawing.Point(538, 18);
+            this.btnResetAutobuff.Name = "btnResetAutobuff";
+            this.btnResetAutobuff.Size = new System.Drawing.Size(60, 23);
+            this.btnResetAutobuff.TabIndex = 299;
+            this.btnResetAutobuff.Text = "Reset\r\n";
+            this.btnResetAutobuff.UseVisualStyleBackColor = false;
+            this.btnResetAutobuff.Click += new System.EventHandler(this.btnResetAutobuff_Click);
+            this.toolTip2.SetToolTip(this.btnResetAutobuff, "Remove todos os atalhos");
             // 
             // StuffAutoBuffForm
             // 
@@ -123,7 +139,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(563, 248);
+            this.ClientSize = new System.Drawing.Size(607, 248);
+            this.Controls.Add(this.btnResetAutobuff);
             this.Controls.Add(this.EtcGP);
             this.Controls.Add(this.ScrollBuffsGP);
             this.Controls.Add(this.ElementalsGP);
@@ -147,5 +164,7 @@
         private System.Windows.Forms.GroupBox ElementalsGP;
         private System.Windows.Forms.GroupBox ScrollBuffsGP;
         private System.Windows.Forms.GroupBox EtcGP;
+        private System.Windows.Forms.Button btnResetAutobuff;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

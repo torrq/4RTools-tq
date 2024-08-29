@@ -99,6 +99,8 @@ namespace _4RTools.Model
             {
                 bool equipAtkItems = false;
                 bool equipDefItems = false;
+                bool ammo = false;
+
                 if (equipConfig.keySpammer != Key.None && Keyboard.IsKeyDown(equipConfig.keySpammer)
                    && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 {
@@ -115,11 +117,14 @@ namespace _4RTools.Model
                             }
                             equipAtkItems = true;
                         }
+                        
+                        getOffRein(roClient);
 
                         if (equipConfig.keySpammerWithClick)
                         {
                             Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                             Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, 0, 0);
+                            autoSwitchAmmo(roClient, ref ammo);
                             Thread.Sleep(1);
                             Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONUP, 0, 0);
                             Thread.Sleep(equipConfig.ahkDelay);
@@ -142,6 +147,52 @@ namespace _4RTools.Model
                 }
             }
             return 0;
+        }
+
+        private void autoSwitchAmmo(Client roClient, ref bool ammo)
+        {
+            if (ProfileSingleton.GetCurrent().UserPreferences.switchAmmo)
+            {
+                if (ProfileSingleton.GetCurrent().UserPreferences.ammo1Key.ToString() != String.Empty 
+                    && ProfileSingleton.GetCurrent().UserPreferences.ammo2Key.ToString() != String.Empty)
+                {
+                    if (ammo == false)
+                    {
+                        Key key = ProfileSingleton.GetCurrent().UserPreferences.ammo1Key;
+                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        ammo = true;
+                    }
+                    else
+                    {
+                        Key key = ProfileSingleton.GetCurrent().UserPreferences.ammo2Key;
+                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        ammo = false;
+                    }
+
+                }
+            }
+        }
+
+        public void getOffRein(Client c)
+        {
+            if (ProfileSingleton.GetCurrent().UserPreferences.getOffRein && isRidding(c))
+            {
+                if (ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString() != String.Empty)
+                {
+                    Key key = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey;
+                    Interop.PostMessage(c.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                }
+            }
+        }
+
+        public bool isRidding(Client c)
+        {
+            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
+            {
+                uint currentStatus = c.CurrentBuffStatusCode(i);
+                if (currentStatus == (int)EffectStatusIDs.RIDDING) { return true; }
+            }
+            return false;
         }
 
         public void AddSwitchItem(int id, string dictKey, Key k, string type)

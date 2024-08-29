@@ -48,5 +48,12 @@ namespace _4RTools.Forms
                     break;
             }
         }
+
+        private void btnResetAutobuff_Click(object sender, EventArgs e)
+        {
+            ProfileSingleton.GetCurrent().AutobuffSkill.ClearKeyMapping();
+            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutobuffSkill);
+            BuffRenderer.doUpdate(new Dictionary<EffectStatusIDs, Key>(ProfileSingleton.GetCurrent().AutobuffSkill.buffMapping), this);
+        }
     }
 }
