@@ -343,6 +343,16 @@ namespace _4RTools.Resources._4RTools {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bovine_potion {
+            get {
+                object obj = ResourceManager.GetObject("bovine_potion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bs_adrenaline {
             get {
                 object obj = ResourceManager.GetObject("bs_adrenaline", resourceCulture);
@@ -696,6 +706,16 @@ namespace _4RTools.Resources._4RTools {
         internal static System.Drawing.Bitmap dex_food {
             get {
                 object obj = ResourceManager.GetObject("dex_food", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dragon_potion {
+            get {
+                object obj = ResourceManager.GetObject("dragon_potion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

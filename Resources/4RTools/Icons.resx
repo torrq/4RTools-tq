@@ -760,4 +760,10 @@
   <data name="provoke" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\images\provoke.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bovine_potion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\bovine_potion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dragon_potion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\dragon_potion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

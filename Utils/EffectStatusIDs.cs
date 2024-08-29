@@ -333,6 +333,9 @@ namespace _4RTools.Utils
         VITATA_POTION = 483,
         RIDDING = 613,
         FUSION = 2063,
+        BOVINE = 2068,
+        DRAGON = 2069
+,
     }
 
 }

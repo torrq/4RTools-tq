@@ -650,7 +650,9 @@
     <None Include="assets\images\accuracy_Scroll.png" />
     <Content Include="assets\images\ads_placeholder_clean.jpg" />
     <None Include="assets\images\burning.png" />
+    <None Include="assets\images\bovine_potion.png" />
     <Content Include="assets\images\cash_food.png" />
+    <None Include="assets\images\dragon_potion.png" />
     <Content Include="assets\images\ele_earth_converter.png" />
     <Content Include="assets\images\ele_fire_converter.png" />
     <Content Include="assets\images\ele_water_converter.png" />
