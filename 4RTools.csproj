@@ -670,6 +670,7 @@
     <None Include="assets\images\spellbreaker.png" />
     <None Include="assets\images\slow_cast.png" />
     <None Include="assets\images\provoke.png" />
+    <None Include="assets\images\red_booster_potion.png" />
     <Content Include="assets\images\tk_mild_earth.png" />
     <Content Include="assets\images\tk_mild_fire.png" />
     <Content Include="assets\images\tk_mild_ghost.png" />

@@ -228,6 +228,7 @@ namespace _4RTools.Model
                 new Buff("Suco de Gato", EffectStatusIDs.SPELLBREAKER, Resources._4RTools.Icons.spellbreaker),
                 new Buff("Poção Mental", EffectStatusIDs.MENTAL_POTION, Resources._4RTools.Icons.mental_potion),
                 new Buff("Poção Vitata 500", EffectStatusIDs.VITATA_POTION, Resources._4RTools.Icons.vitata_potion),
+                new Buff("Elixir Rubro", EffectStatusIDs.RED_BOOSTER, Resources._4RTools.Icons.red_booster_potion),
                 new Buff("Poção do Bovino Furioso", EffectStatusIDs.BOVINE, Resources._4RTools.Icons.bovine_potion),
                 new Buff("Poção do Dragão Místico", EffectStatusIDs.DRAGON, Resources._4RTools.Icons.dragon_potion),
             };

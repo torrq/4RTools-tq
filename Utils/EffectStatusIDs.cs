@@ -334,7 +334,9 @@ namespace _4RTools.Utils
         RIDDING = 613,
         FUSION = 2063,
         BOVINE = 2068,
-        DRAGON = 2069
+        DRAGON = 2069,
+        RED_BOOSTER = 664
+
 ,
     }
 

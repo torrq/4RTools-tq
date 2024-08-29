@@ -1663,6 +1663,16 @@ namespace _4RTools.Resources._4RTools {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap red_booster_potion {
+            get {
+                object obj = ResourceManager.GetObject("red_booster_potion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap red_herb_activator {
             get {
                 object obj = ResourceManager.GetObject("red_herb_activator", resourceCulture);
