@@ -47,12 +47,12 @@ namespace _4RTools.Forms
                 client.Timeout = TimeSpan.FromSeconds(5);
                 client.DefaultRequestHeaders.Add("User-Agent", "request");
 
-                #region comment this for no att versions
                 string latestVersion = await client.GetStringAsync(AppConfig._4RLatestVersionURL);
                 JObject obj = JsonConvert.DeserializeObject<JObject>(latestVersion);
 
                 string tag = obj["name"].ToString(); //Tag Name
 
+                #region comment this for no att versions
                 if (tag != AppConfig.Version)
                 {
                     string downloadUrl = obj["assets"][0]["browser_download_url"].ToString(); //Latest download url
