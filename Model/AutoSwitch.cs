@@ -30,7 +30,7 @@ namespace _4RTools.Model
             public Key skillKey { get; set; }
             public Key nextItemKey { get; set; }
 
-            public AutoSwitchConfig(EffectStatusIDs id , Key key, String type)
+            public AutoSwitchConfig(EffectStatusIDs id, Key key, String type)
             {
                 this.skillId = id;
                 switch (type)
@@ -69,12 +69,9 @@ namespace _4RTools.Model
         {
             bool equipVajra = false;
             int contVajra = 0;
-            bool procVajra = false;
             _4RThread autobuffItemThread = new _4RThread(_ =>
                 {
-                    procVajra = false;
-
-                    List<AutoSwitchConfig> skillClone = new List<AutoSwitchConfig>(this.autoSwitchMapping);
+                    List<AutoSwitchConfig> skillClone = new List<AutoSwitchConfig>(this.autoSwitchMapping.Where(x => x.itemKey != Key.None));
                     string currentMap = c.ReadCurrentMap();
                     if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                     {
@@ -98,34 +95,17 @@ namespace _4RTools.Model
                                     equipVajra = false;
                                     this.equipNextItem(autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ).nextItemKey);
                                 }
-                                skillClone = validadeVajraSkills(skillClone, status);
-                                procVajra = true;
                             }
 
                         }
                         foreach (var skill in skillClone)
                         {
-                            if ((skill.skillId == EffectStatusIDs.CRAZY_UPROAR && c.ReadCurrentSp() > 8) || skill.skillId == EffectStatusIDs.ASSUMPTIO)
-                            {
-                                this.useAutobuff(skill.itemKey, skill.skillKey);
-                                Thread.Sleep(1000);
-                                this.equipNextItem(skill.nextItemKey);
-                                equipVajra = false;
-                                Thread.Sleep(3000);
-                            }
 
                             if (skill.skillId == EffectStatusIDs.THURISAZ)
                             {
                                 contVajra++;
 
-                                if (contVajra > 100) { contVajra = 0; equipVajra = false; }
-
-                                if (procVajra)
-                                {
-                                    equipVajra = false;
-                                    this.equipNextItem(skill.nextItemKey);
-                                    break;
-                                }
+                                if (contVajra > 50) { contVajra = 0; equipVajra = false; }
 
                                 if (!equipVajra)
                                 {
@@ -134,6 +114,14 @@ namespace _4RTools.Model
                                     equipVajra = true;
                                 }
 
+                            }
+                            else if (c.ReadCurrentSp() > 8)
+                            {
+                                this.useAutobuff(skill.itemKey, skill.skillKey);
+                                Thread.Sleep(1000);
+                                this.equipNextItem(skill.nextItemKey);
+                                equipVajra = false;
+                                Thread.Sleep(3000);
                             }
 
                         }
@@ -146,26 +134,6 @@ namespace _4RTools.Model
             return autobuffItemThread;
         }
 
-        private List<AutoSwitchConfig> validadeVajraSkills(List<AutoSwitchConfig> skillClone, EffectStatusIDs status)
-        {
-            if (status == EffectStatusIDs.THURISAZ)
-            {
-                if (autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.FIGHTINGSPIRIT))
-                {
-                    skillClone = skillClone.Where(skill => skill.skillId != EffectStatusIDs.FIGHTINGSPIRIT).ToList();
-                }
-            }
-
-            if (status == EffectStatusIDs.FIGHTINGSPIRIT)
-            {
-                if (autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ))
-                {
-                    skillClone = skillClone.Where(skill => skill.skillId != EffectStatusIDs.THURISAZ).ToList();
-                }
-            }
-
-            return skillClone;
-        }
         public void ClearKeyMapping()
         {
             buffMapping.Clear();

@@ -105,7 +105,8 @@ namespace _4RTools.Model
                 new Buff("Golpe Estilhaçante", EffectStatusIDs.MELTDOWN, Resources._4RTools.Icons.ws_meltdown),
                 new Buff("Aceleração", EffectStatusIDs.ACCELERATION, Resources._4RTools.Icons.mec_acceleration),
                 new Buff("Propulsão do Carrinho", EffectStatusIDs.GN_CARTBOOST, Resources._4RTools.Icons.cart_boost),
-                new Buff("Research Report", EffectStatusIDs.RESEARCHREPORT, Resources._4RTools.Icons.researchreport)
+                new Buff("Research Report", EffectStatusIDs.RESEARCHREPORT, Resources._4RTools.Icons.researchreport),
+                new Buff("Bater em Retirada", EffectStatusIDs.HOM_AVOID, Resources._4RTools.Icons.hom_avoid)
             };
 
             return skills;

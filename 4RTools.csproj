@@ -662,6 +662,7 @@
     <None Include="assets\images\flee_scroll.png" />
     <None Include="assets\images\Glass_Of_Illusion.png" />
     <None Include="assets\images\fusion.png" />
+    <None Include="assets\images\hom_avoid.png" />
     <Content Include="assets\images\impositio_manus.png" />
     <None Include="assets\images\mental_potion.png" />
     <None Include="assets\images\mandragora_howling.png" />
