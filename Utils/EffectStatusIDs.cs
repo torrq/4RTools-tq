@@ -341,8 +341,15 @@ namespace _4RTools.Utils
         DRAGON = 2069,
         RED_BOOSTER = 664,
         [Description("Bater em Retirada")]
-        HOM_AVOID = 192
-,
+        HOM_AVOID = 192,
+        [Description("Kaupe")]
+        KAUPE = 158,
+        [Description("Kaite")]
+        KAITE = 1402,
+        [Description("Kaizel")]
+        KAIZEL = 156,
+        [Description("Kaahi")]
+        KAAHI = 157
     }
 
 }

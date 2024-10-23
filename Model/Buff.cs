@@ -186,6 +186,10 @@ namespace _4RTools.Model
                 new Buff("Proteção Lunar", EffectStatusIDs.MOON_COMFORT, Resources._4RTools.Icons.moon_comfort),
                 new Buff("Proteção Estelar", EffectStatusIDs.STAR_COMFORT, Resources._4RTools.Icons.star_comfort),
                 new Buff("União Solar, Lunar e Estelar", EffectStatusIDs.FUSION, Resources._4RTools.Icons.fusion),
+                new Buff("Kaupe", EffectStatusIDs.KAUPE, Resources._4RTools.Icons.kaupe),
+                new Buff("Kaite", EffectStatusIDs.KAITE, Resources._4RTools.Icons.kaite),
+                new Buff("Kaizel", EffectStatusIDs.KAIZEL, Resources._4RTools.Icons.kaizel),
+                new Buff("Kaahi", EffectStatusIDs.KAAHI, Resources._4RTools.Icons.kaahi),
 
             };
 

@@ -772,4 +772,16 @@
   <data name="hom_avoid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\images\hom_avoid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kaahi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\kaahi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kaite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\kaite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kaizel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\kaizel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kaupe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\kaupe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

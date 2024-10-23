@@ -667,6 +667,10 @@
     <None Include="assets\images\mental_potion.png" />
     <None Include="assets\images\mandragora_howling.png" />
     <None Include="assets\images\mindbreaker.png" />
+    <None Include="assets\images\kaahi.png" />
+    <None Include="assets\images\kaite.png" />
+    <None Include="assets\images\kaizel.png" />
+    <None Include="assets\images\kaupe.png" />
     <Content Include="assets\images\octocat2.png" />
     <None Include="assets\images\spellbreaker.png" />
     <None Include="assets\images\slow_cast.png" />
