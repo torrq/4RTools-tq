@@ -6,7 +6,7 @@ Este projeto e uma adaptacao do projeto 4RTools para uso pessoal e como objeto d
 
 ## Rodando o projeto
 
-Caso voce queira usar esta versao do 4rTools voce pode baixar 'https://github.com/biancaazuma/4RTools-RagTools/releases/download/v2.7.0/4RTools.-.v2.7.0.rar' com a release que esta na raiz do projeto, ou usando o Visual Studio 2022 abrir o `4RTools.sln` e rodar e gerar suas propias releases.
+Caso voce queira usar esta versao do 4rTools voce pode baixar 'https://github.com/biancaazuma/4RTools-RagTools/releases/download/v2.7.4/4RTools.-.v2.7.4.rar' com a release que esta na raiz do projeto, ou usando o Visual Studio 2022 abrir o `4RTools.sln` e rodar e gerar suas propias releases.
 
 ## Copiando perfil
 
@@ -110,8 +110,26 @@ Voce pode copiar e substituir a pastar `Profile` de sua versao anterior do 4RToo
 - [x] Corrigido Autobuff-Stuffs de Poção do Furor Mágico
 
 ### Versão 2.7.1
-- [x] Inclusão de desmontar da rédea ao usar skill
-- [x] Troca de flecha/munição ao usar skill (tentativa de sincronizar entre os ataques)
+- [x] Adicionado 2 Macro Switch (feito pelo @Fabrin )
+- [x] Adicionado Auto switch GTB
+- [x] Novo Autobuff-Skills de Enlouquecedor
+- [x] Ajustado Bugs AutoSwitch
+- [x] Ajustado Bugs ATK X DEF
+- [x] Ajustado Bugs Macro Songs
+
+### Versão 2.7.4
+- [x] Ajustado Bugs AutoSwitch vajra
+- [x] Ajustado spam da habilidade Rapidez com Duas Mãos quando estiver no pântano dos mortos
+- [x] Separado Parar autobuff/cura na cidade
+- [x] Novo Autobuff-Skills de Provocar
+- [x] Novo Autobuff-Skills de União Solar, Lunar e Estelar
+- [x] Adicionado botão de reset para Autobuff-Skills e Autobuff-Stuffs
+- [x] Adicionado tooltips em algumas funções
+- [x] Novo Autobuff-Stuffs de Elixir Rubro
+- [x] Novo Autobuff-Stuffs de Poção do Dragão Místico
+- [x] Novo Autobuff-Stuffs de Poção do Bovino Furioso
+- [x] Nova config de desmontar da rédea ao atacar (feito pelo @LordVince  )
+- [x] Nova config de troca automatica de munição (feito pelo @LordVince  )
 
 ## Original Features
 - [x] ON/OFF Button (with shortcut key)
