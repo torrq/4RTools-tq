@@ -18,9 +18,10 @@ namespace _4RTools.Model
         public const string nextItem = "NEXTITEM";
 
         private _4RThread thread;
-        public int delay { get; set; } = 1;
+        public int delay { get; set; } = 1000;
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
         public List<AutoSwitchConfig> autoSwitchMapping = new List<AutoSwitchConfig>();
+        public List<AutoSwitchConfig> autoSwitchGenericMapping = new List<AutoSwitchConfig>();
         public List<String> listCities { get; set; }
 
         public class AutoSwitchConfig
@@ -30,24 +31,36 @@ namespace _4RTools.Model
             public Key skillKey { get; set; }
             public Key nextItemKey { get; set; }
 
-            public AutoSwitchConfig(EffectStatusIDs id, Key key, String type)
+            public AutoSwitchConfig (EffectStatusIDs id, Key key, String type = null)
             {
                 this.skillId = id;
-                switch (type)
+                if(type != null)
                 {
-                    case item:
-                        this.itemKey = key;
-                        break;
+                    switch (type)
+                    {
+                        case item:
+                            this.itemKey = key;
+                            break;
 
-                    case skill:
-                        this.skillKey = key;
-                        break;
+                        case skill:
+                            this.skillKey = key;
+                            break;
 
-                    case nextItem:
-                        this.nextItemKey = key;
-                        break;
+                        case nextItem:
+                            this.nextItemKey = key;
+                            break;
+                    }
+
                 }
             }
+
+            //public AutoSwitchConfig (EffectStatusIDs id)
+            //{
+            //    this.skillId = id;
+            //    this.itemKey = 0;
+            //    this.skillKey = 0;
+            //    this.nextItemKey = 0;
+            //}
         }
 
         public void Start()
@@ -72,6 +85,7 @@ namespace _4RTools.Model
             _4RThread autobuffItemThread = new _4RThread(_ =>
                 {
                     List<AutoSwitchConfig> skillClone = new List<AutoSwitchConfig>(this.autoSwitchMapping.Where(x => x.itemKey != Key.None));
+                    List<AutoSwitchConfig> skillCloneGeneric = new List<AutoSwitchConfig>(this.autoSwitchGenericMapping.Where(x => x.itemKey != Key.None));
                     string currentMap = c.ReadCurrentMap();
                     if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                     {
@@ -88,6 +102,11 @@ namespace _4RTools.Model
                                 skillClone = skillClone.Where(skill => skill.skillId != status).ToList();
                             }
 
+                            if (autoSwitchGenericMapping.Exists(x => x.skillId == status))
+                            {
+                                skillCloneGeneric = skillCloneGeneric.Where(skill => skill.skillId != status).ToList();
+                            }
+
                             if (status == EffectStatusIDs.THURISAZ)
                             {
                                 if (equipVajra == true)
@@ -98,6 +117,8 @@ namespace _4RTools.Model
                             }
 
                         }
+
+                        skillClone.AddRange(skillCloneGeneric);
                         foreach (var skill in skillClone)
                         {
 
@@ -118,7 +139,7 @@ namespace _4RTools.Model
                             else if (c.ReadCurrentSp() > 8)
                             {
                                 this.useAutobuff(skill.itemKey, skill.skillKey);
-                                Thread.Sleep(1000);
+                                Thread.Sleep(delay);
                                 this.equipNextItem(skill.nextItemKey);
                                 equipVajra = false;
                                 Thread.Sleep(3000);

@@ -394,6 +394,7 @@
     <Compile Include="Model\AutoRefreshSpammer.cs" />
     <Compile Include="Model\Buff.cs" />
     <Compile Include="Model\BuffContainer.cs" />
+    <Compile Include="Model\AutoSwitchRenderer.cs" />
     <Compile Include="Model\DebuffRenderer.cs" />
     <Compile Include="Model\BuffRenderer.cs" />
     <Compile Include="Model\Custom.cs" />
@@ -648,6 +649,8 @@
     <None Include="assets\etc\Healing_Off.wav" />
     <None Include="assets\etc\Healing_On.wav" />
     <None Include="assets\images\accuracy_Scroll.png" />
+    <None Include="assets\etc\arrowright.png" />
+    <None Include="assets\etc\remove.png" />
     <Content Include="assets\images\ads_placeholder_clean.jpg" />
     <None Include="assets\images\burning.png" />
     <None Include="assets\images\bovine_potion.png" />

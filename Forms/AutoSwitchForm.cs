@@ -6,12 +6,14 @@ using _4RTools.Utils;
 using _4RTools.Model;
 using System.Linq;
 using static _4RTools.Model.AutoSwitch;
+using System.Diagnostics;
 
 namespace _4RTools.Forms
 {
     public partial class AutoSwitchForm : Form, IObserver
     {
-        private List<BuffContainer> debuffContainers = new List<BuffContainer>();
+        private List<Buff> allBuffs = new List<Buff>();
+        private Subject _subject;
         class ComboboxValue
         {
             public int Id { get; private set; }
@@ -32,8 +34,44 @@ namespace _4RTools.Forms
         public AutoSwitchForm(Subject subject)
         {
             InitializeComponent();
+            _subject = subject;
+
+            this.allBuffs.AddRange(Buff.GetArcherSkills());
+            this.allBuffs.AddRange(Buff.GetSwordmanSkill());
+            this.allBuffs.AddRange(Buff.GetMageSkills());
+            this.allBuffs.AddRange(Buff.GetMerchantSkills());
+            this.allBuffs.AddRange(Buff.GetThiefSkills());
+            this.allBuffs.AddRange(Buff.GetAcolyteSkills());
+            this.allBuffs.AddRange(Buff.GetTaekwonSkills());
+            this.allBuffs.AddRange(Buff.GetNinjaSkills());
+            this.allBuffs.AddRange(Buff.GetGunsSkills());
+
+            this.allBuffs.OrderBy(o => o.name).ToList();
+
+            foreach (var skill in this.allBuffs.OrderBy(o => o.name).ToList())
+            {
+                this.skillCB.Items.Add(skill.name);
+            }
 
             subject.Attach(this);
+        }
+
+        private void loadCustomSkills(Subject subject)
+        {
+            List<Buff> filteredBuffs = new List<Buff>();
+
+            var teste = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchGenericMapping;
+            foreach (var skill in ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchGenericMapping)
+            {
+                if (this.allBuffs.Exists(x => x.effectStatusID == skill.skillId))
+                {
+                    filteredBuffs.Add(this.allBuffs.FirstOrDefault(x => x.effectStatusID == skill.skillId));
+                }
+            }
+
+            AutoSwitchContainer skillContainer = new AutoSwitchContainer();
+            skillContainer = new AutoSwitchContainer(this.AutoSwitchGP, filteredBuffs);
+            new AutoSwitchRenderer(skillContainer, toolTip1, subject, this).doRender();
         }
 
         public void Update(ISubject subject)
@@ -41,19 +79,18 @@ namespace _4RTools.Forms
             switch ((subject as Subject).Message.code)
             {
                 case MessageCode.PROFILE_CHANGED:
-                    this.ITEMin30.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR).itemKey.ToString() : Keys.None.ToString();
-                    this.SKILLin30.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR).skillKey.ToString() : Keys.None.ToString();
-                    this.NEXTITEMin30.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.CRAZY_UPROAR).nextItemKey.ToString() : Keys.None.ToString();
                     this.ITEMin319.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ).itemKey.ToString() : Keys.None.ToString();
                     this.NEXTITEMin319.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ).nextItemKey.ToString() : Keys.None.ToString();
-                    
-
+                    loadCustomSkills(subject as Subject);
                     break;
                 case MessageCode.TURN_OFF:
                     ProfileSingleton.GetCurrent().AutoSwitch.Stop();
                     break;
                 case MessageCode.TURN_ON:
                     ProfileSingleton.GetCurrent().AutoSwitch.Start();
+                    break;
+                case MessageCode.CHANGED_AUTOSWITCH_SKILL:
+                    loadCustomSkills(subject as Subject);
                     break;
             }
         }
@@ -90,7 +127,8 @@ namespace _4RTools.Forms
                         }
 
                     }
-                    else {
+                    else
+                    {
 
                         ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Add(new AutoSwitchConfig(statusID, key, type));
                     }
@@ -100,6 +138,21 @@ namespace _4RTools.Forms
                 this.ActiveControl = null;
             }
             catch { }
+        }
+
+        private void btnNewSwitch(object sender, EventArgs e)
+        {
+            var txtSkill = skillCB.Text;
+
+            var skill = this.allBuffs.FirstOrDefault(x => x.name == txtSkill);
+            var _autoSwitchGenericMapping = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchGenericMapping;
+            if (!_autoSwitchGenericMapping.Exists(x => x.skillId == skill.effectStatusID)) {
+                _autoSwitchGenericMapping.Add(new AutoSwitchConfig(skill.effectStatusID, Key.None));
+                ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
+                _subject.Notify(new Utils.Message(Utils.MessageCode.CHANGED_AUTOSWITCH_SKILL, null));
+            }
+
+
         }
 
     }

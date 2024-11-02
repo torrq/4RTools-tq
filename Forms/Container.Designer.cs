@@ -71,6 +71,7 @@ namespace _4RTools.Forms
             // 
             // atkDefMode
             // 
+            atkDefMode.Controls.Add(this.tabPageAutoSwitch);
             atkDefMode.Controls.Add(this.tabPageSpammer);
             atkDefMode.Controls.Add(this.tabPageAutobuffSkill);
             atkDefMode.Controls.Add(this.tabPageAutobuffStuff);
@@ -354,7 +355,6 @@ namespace _4RTools.Forms
             this.tabControlAutopot.Controls.Add(this.tabPageAutopot);
             this.tabControlAutopot.Controls.Add(this.tabPageYggAutopot);
             this.tabControlAutopot.Controls.Add(this.tabPageSkillTimer);
-            this.tabControlAutopot.Controls.Add(this.tabPageAutoSwitch);
             this.tabControlAutopot.Location = new System.Drawing.Point(15, 83);
             this.tabControlAutopot.Name = "tabControlAutopot";
             this.tabControlAutopot.SelectedIndex = 0;
