@@ -34,6 +34,8 @@ namespace _4RTools.Forms
         public AutoSwitchForm(Subject subject)
         {
             InitializeComponent();
+
+            setupInputs();
             _subject = subject;
 
             this.allBuffs.AddRange(Buff.GetArcherSkills());
@@ -54,6 +56,23 @@ namespace _4RTools.Forms
             }
 
             subject.Attach(this);
+        }
+
+        private void setupInputs()
+        {
+            GroupBox group = (GroupBox)this.Controls.Find("ProcSwitchGP", true)[0];
+
+            foreach (Control c in group.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox textBox = (TextBox)c;
+                    textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
+                    textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
+                    textBox.TextChanged += new EventHandler(this.onTextChange);
+                }
+
+            }
         }
 
         private void loadCustomSkills(Subject subject)
@@ -79,8 +98,7 @@ namespace _4RTools.Forms
             switch ((subject as Subject).Message.code)
             {
                 case MessageCode.PROFILE_CHANGED:
-                    this.ITEMin319.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ).itemKey.ToString() : Keys.None.ToString();
-                    this.NEXTITEMin319.Text = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ) ? ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ).nextItemKey.ToString() : Keys.None.ToString();
+                    loadExclusiveSkills();
                     loadCustomSkills(subject as Subject);
                     break;
                 case MessageCode.TURN_OFF:
@@ -92,6 +110,32 @@ namespace _4RTools.Forms
                 case MessageCode.CHANGED_AUTOSWITCH_SKILL:
                     loadCustomSkills(subject as Subject);
                     break;
+            }
+        }
+
+        private void loadExclusiveSkills()
+        {
+            var _autoSwitchMapping = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping;
+
+            GroupBox group = (GroupBox)this.Controls.Find("ProcSwitchGP", true)[0];
+
+            foreach (Control c in group.Controls)
+            {
+                if (c is TextBox)
+                {
+                    string type = c.Name.Split(new[] { "in" }, StringSplitOptions.None)[0];
+                    EffectStatusIDs statID = (EffectStatusIDs)Int16.Parse(c.Name.Split(new[] { "in" }, StringSplitOptions.None)[1]);
+                    switch (type)
+                    {
+                        case item:
+                            c.Text = _autoSwitchMapping.Exists(x => x.skillId == statID) ? _autoSwitchMapping.FirstOrDefault(x => x.skillId == statID).itemKey.ToString() : Keys.None.ToString();
+                            break;
+
+                        case nextItem:
+                            c.Text = _autoSwitchMapping.Exists(x => x.skillId == statID) ? _autoSwitchMapping.FirstOrDefault(x => x.skillId == statID).nextItemKey.ToString() : Keys.None.ToString();
+                            break;
+                    }
+                }
             }
         }
 
@@ -146,7 +190,8 @@ namespace _4RTools.Forms
 
             var skill = this.allBuffs.FirstOrDefault(x => x.name == txtSkill);
             var _autoSwitchGenericMapping = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchGenericMapping;
-            if (!_autoSwitchGenericMapping.Exists(x => x.skillId == skill.effectStatusID)) {
+            if (!_autoSwitchGenericMapping.Exists(x => x.skillId == skill.effectStatusID))
+            {
                 _autoSwitchGenericMapping.Add(new AutoSwitchConfig(skill.effectStatusID, Key.None));
                 ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
                 _subject.Notify(new Utils.Message(Utils.MessageCode.CHANGED_AUTOSWITCH_SKILL, null));
