@@ -71,15 +71,12 @@ namespace _4RTools.Forms
                     textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
                     textBox.TextChanged += new EventHandler(this.onTextChange);
                 }
-
             }
         }
 
         private void loadCustomSkills(Subject subject)
         {
             List<Buff> filteredBuffs = new List<Buff>();
-
-            var teste = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchGenericMapping;
             foreach (var skill in ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchGenericMapping)
             {
                 if (this.allBuffs.Exists(x => x.effectStatusID == skill.skillId))
@@ -136,6 +133,19 @@ namespace _4RTools.Forms
                             break;
                     }
                 }
+            }
+            Control[] cDelay = this.Controls.Find("numDelay", true);
+            if (cDelay.Length > 0)
+            {
+                NumericUpDown numeric = (NumericUpDown)cDelay[0];
+                numeric.Value = Convert.ToInt16(ProfileSingleton.GetCurrent().AutoSwitch.delay);
+            }
+
+            Control[] cSwitchDelay = this.Controls.Find("numSwitchDelay", true);
+            if (cSwitchDelay.Length > 0)
+            {
+                NumericUpDown numeric = (NumericUpDown)cSwitchDelay[0];
+                numeric.Value = Convert.ToInt16(ProfileSingleton.GetCurrent().AutoSwitch.switchEquipDelay);
             }
         }
 
@@ -198,6 +208,26 @@ namespace _4RTools.Forms
             }
 
 
+        }
+
+        private void txtDelay_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ProfileSingleton.GetCurrent().AutoSwitch.delay = Convert.ToInt16(this.numDelay.Value);
+                ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
+            }
+            catch { }
+        }
+
+        private void txtSwitchDelay_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ProfileSingleton.GetCurrent().AutoSwitch.switchEquipDelay = Convert.ToInt16(this.numSwitchDelay.Value);
+                ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
+            }
+            catch { }
         }
 
     }

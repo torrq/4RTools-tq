@@ -19,8 +19,8 @@ namespace _4RTools.Model
         public const string nextItem = "NEXTITEM";
 
         private _4RThread thread;
-        public int delay { get; set; } = 1000;
-        public int delayEquip { get; set; } = 1000;
+        public int delay { get; set; } = 300;
+        public int switchEquipDelay { get; set; } = 1000;
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
         public List<AutoSwitchConfig> autoSwitchMapping = new List<AutoSwitchConfig>();
         public List<AutoSwitchConfig> autoSwitchGenericMapping = new List<AutoSwitchConfig>();
@@ -150,7 +150,7 @@ namespace _4RTools.Model
                             if (!equipedPet && procPet)
                             {
                                 currentPet = skill.skillId;
-                                Thread.Sleep(100);
+                                Thread.Sleep(switchEquipDelay);
                                 this.useAutobuff(skill.itemKey, skill.skillKey);
                                 equipedPet = true;
                                 procPet = false;
@@ -165,7 +165,7 @@ namespace _4RTools.Model
 
                             if (!equipVajra)
                             {
-                                Thread.Sleep(100);
+                                Thread.Sleep(delay);
                                 this.useAutobuff(skill.itemKey, skill.skillKey);
                                 equipVajra = true;
                             }
@@ -174,15 +174,15 @@ namespace _4RTools.Model
                         else if (c.ReadCurrentSp() > 8)
                         {
                             this.useAutobuff(skill.itemKey, skill.skillKey);
-                            Thread.Sleep(delay);
+                            Thread.Sleep(switchEquipDelay);
                             this.equipNextItem(skill.nextItemKey);
                             equipVajra = false;
-                            Thread.Sleep(3000);
+                            Thread.Sleep(switchEquipDelay);
                         }
 
                     }
                 }
-                Thread.Sleep(300);
+                Thread.Sleep(delay);
                 return 0;
 
             });
@@ -227,7 +227,7 @@ namespace _4RTools.Model
         {
             if ((item != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), item.ToString()), 0);
-            Thread.Sleep(100);
+            Thread.Sleep(switchEquipDelay);
             if ((skill != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), skill.ToString()), 0);
         }

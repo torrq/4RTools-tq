@@ -63,8 +63,8 @@ namespace _4RTools.Forms
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.NEXTITEMin2015 = new System.Windows.Forms.TextBox();
-            this.delay = new System.Windows.Forms.NumericUpDown();
-            this.switchDelay = new System.Windows.Forms.NumericUpDown();
+            this.numDelay = new System.Windows.Forms.NumericUpDown();
+            this.numSwitchDelay = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.ProcSwitchGP.SuspendLayout();
@@ -76,8 +76,8 @@ namespace _4RTools.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.switchDelay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDelay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSwitchDelay)).BeginInit();
             this.SuspendLayout();
             // 
             // toolTip1
@@ -96,7 +96,7 @@ namespace _4RTools.Forms
             this.label1.TabIndex = 321;
             this.label1.Tag = "";
             this.label1.Text = "Delay";
-            this.toolTip1.SetToolTip(this.label1, "Delay geral");
+            this.toolTip1.SetToolTip(this.label1, "Delay geral Recomendado 300 ms");
             // 
             // label4
             // 
@@ -106,7 +106,7 @@ namespace _4RTools.Forms
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 322;
             this.label4.Text = "Troca Delay";
-            this.toolTip1.SetToolTip(this.label4, "Delay entre Item e Próximo Item");
+            this.toolTip1.SetToolTip(this.label4, "Delay entre Item e Próximo Item Recomendado 1000 ms");
             // 
             // pictureBox1
             // 
@@ -406,37 +406,49 @@ namespace _4RTools.Forms
             this.NEXTITEMin2015.Size = new System.Drawing.Size(45, 23);
             this.NEXTITEMin2015.TabIndex = 316;
             // 
-            // delay
+            // numDelay
             // 
-            this.delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
-            this.delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.delay.ForeColor = System.Drawing.Color.White;
-            this.delay.Location = new System.Drawing.Point(369, 13);
-            this.delay.Maximum = new decimal(new int[] {
+            this.numDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.numDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numDelay.ForeColor = System.Drawing.Color.White;
+            this.numDelay.Location = new System.Drawing.Point(369, 13);
+            this.numDelay.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
-            this.delay.Name = "delay";
-            this.delay.Size = new System.Drawing.Size(60, 20);
-            this.delay.TabIndex = 319;
-            this.delay.Tag = "delay";
+            this.numDelay.Name = "numDelay";
+            this.numDelay.Size = new System.Drawing.Size(60, 20);
+            this.numDelay.TabIndex = 319;
+            this.numDelay.Tag = "delay";
+            this.numDelay.Value = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.numDelay.ValueChanged += new System.EventHandler(this.txtDelay_TextChanged);
             // 
-            // switchDelay
+            // numSwitchDelay
             // 
-            this.switchDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
-            this.switchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.switchDelay.ForeColor = System.Drawing.Color.White;
-            this.switchDelay.Location = new System.Drawing.Point(517, 13);
-            this.switchDelay.Maximum = new decimal(new int[] {
+            this.numSwitchDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.numSwitchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numSwitchDelay.ForeColor = System.Drawing.Color.White;
+            this.numSwitchDelay.Location = new System.Drawing.Point(517, 13);
+            this.numSwitchDelay.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
-            this.switchDelay.Name = "switchDelay";
-            this.switchDelay.Size = new System.Drawing.Size(60, 20);
-            this.switchDelay.TabIndex = 320;
-            this.switchDelay.Tag = "switchDelay";
+            this.numSwitchDelay.Name = "numSwitchDelay";
+            this.numSwitchDelay.Size = new System.Drawing.Size(60, 20);
+            this.numSwitchDelay.TabIndex = 320;
+            this.numSwitchDelay.Tag = "switchDelay";
+            this.numSwitchDelay.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numSwitchDelay.ValueChanged += new System.EventHandler(this.txtSwitchDelay_TextChanged);
             // 
             // AutoSwitchForm
             // 
@@ -447,8 +459,8 @@ namespace _4RTools.Forms
             this.ClientSize = new System.Drawing.Size(606, 388);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.switchDelay);
-            this.Controls.Add(this.delay);
+            this.Controls.Add(this.numSwitchDelay);
+            this.Controls.Add(this.numDelay);
             this.Controls.Add(this.ProcSwitchGP);
             this.Controls.Add(this.skillCB);
             this.Controls.Add(this.btnAddAutoSwitch);
@@ -469,8 +481,8 @@ namespace _4RTools.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.switchDelay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDelay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSwitchDelay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,8 +500,8 @@ namespace _4RTools.Forms
         private Button btnAddAutoSwitch;
         private ComboBox skillCB;
         private GroupBox ProcSwitchGP;
-        private NumericUpDown delay;
-        private NumericUpDown switchDelay;
+        private NumericUpDown numDelay;
+        private NumericUpDown numSwitchDelay;
         private Label label1;
         private Label label4;
         private TextBox ITEMin25;
