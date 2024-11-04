@@ -73,12 +73,13 @@ namespace _4RTools.Forms
             // 
             // atkDefMode
             // 
-            atkDefMode.Controls.Add(this.tabPageAutoSwitch);
+
             atkDefMode.Controls.Add(this.tabPageSpammer);
             atkDefMode.Controls.Add(this.tabPageAutobuffSkill);
             atkDefMode.Controls.Add(this.tabPageAutobuffStuff);
-            atkDefMode.Controls.Add(this.tabPageMacroSongs);
+            atkDefMode.Controls.Add(this.tabPageAutoSwitch);
             atkDefMode.Controls.Add(this.atkDef);
+            atkDefMode.Controls.Add(this.tabPageMacroSongs);
             atkDefMode.Controls.Add(this.tabMacroSwitch);
             atkDefMode.Controls.Add(this.tabPageDebuffs);
             atkDefMode.Controls.Add(this.tabConfig);

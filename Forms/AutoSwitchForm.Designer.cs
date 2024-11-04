@@ -96,7 +96,7 @@ namespace _4RTools.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(330, 16);
+            this.label1.Location = new System.Drawing.Point(330, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 321;
@@ -107,7 +107,7 @@ namespace _4RTools.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(447, 16);
+            this.label4.Location = new System.Drawing.Point(447, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 322;
@@ -180,7 +180,7 @@ namespace _4RTools.Forms
             this.AutoSwitchGP.AutoSize = true;
             this.AutoSwitchGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AutoSwitchGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.AutoSwitchGP.Location = new System.Drawing.Point(12, 43);
+            this.AutoSwitchGP.Location = new System.Drawing.Point(12, 38);
             this.AutoSwitchGP.Name = "AutoSwitchGP";
             this.AutoSwitchGP.Size = new System.Drawing.Size(302, 37);
             this.AutoSwitchGP.TabIndex = 314;
@@ -192,7 +192,7 @@ namespace _4RTools.Forms
             this.btnAddAutoSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.btnAddAutoSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAutoSwitch.ForeColor = System.Drawing.Color.White;
-            this.btnAddAutoSwitch.Location = new System.Drawing.Point(269, 10);
+            this.btnAddAutoSwitch.Location = new System.Drawing.Point(269, 5);
             this.btnAddAutoSwitch.Name = "btnAddAutoSwitch";
             this.btnAddAutoSwitch.Size = new System.Drawing.Size(45, 23);
             this.btnAddAutoSwitch.TabIndex = 316;
@@ -205,7 +205,7 @@ namespace _4RTools.Forms
             this.skillCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.skillCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.skillCB.ForeColor = System.Drawing.Color.White;
-            this.skillCB.Location = new System.Drawing.Point(12, 12);
+            this.skillCB.Location = new System.Drawing.Point(12, 7);
             this.skillCB.Name = "skillCB";
             this.skillCB.Size = new System.Drawing.Size(251, 21);
             this.skillCB.TabIndex = 317;
@@ -241,9 +241,9 @@ namespace _4RTools.Forms
             this.ProcSwitchGP.Controls.Add(this.NEXTITEMin319);
             this.ProcSwitchGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProcSwitchGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.ProcSwitchGP.Location = new System.Drawing.Point(333, 43);
+            this.ProcSwitchGP.Location = new System.Drawing.Point(333, 38);
             this.ProcSwitchGP.Name = "ProcSwitchGP";
-            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 232);
+            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 222);
             this.ProcSwitchGP.TabIndex = 318;
             this.ProcSwitchGP.TabStop = false;
             this.ProcSwitchGP.Text = "Exclusivos";
@@ -254,7 +254,7 @@ namespace _4RTools.Forms
             this.ITEMin461.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ITEMin461.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ITEMin461.ForeColor = System.Drawing.Color.White;
-            this.ITEMin461.Location = new System.Drawing.Point(51, 158);
+            this.ITEMin461.Location = new System.Drawing.Point(51, 150);
             this.ITEMin461.Name = "ITEMin461";
             this.ITEMin461.Size = new System.Drawing.Size(45, 23);
             this.ITEMin461.TabIndex = 326;
@@ -262,7 +262,7 @@ namespace _4RTools.Forms
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(10, 157);
+            this.pictureBox9.Location = new System.Drawing.Point(10, 149);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(24, 24);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -272,7 +272,7 @@ namespace _4RTools.Forms
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(116, 164);
+            this.pictureBox10.Location = new System.Drawing.Point(116, 156);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(19, 11);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -285,7 +285,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin461.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NEXTITEMin461.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NEXTITEMin461.ForeColor = System.Drawing.Color.White;
-            this.NEXTITEMin461.Location = new System.Drawing.Point(158, 158);
+            this.NEXTITEMin461.Location = new System.Drawing.Point(158, 150);
             this.NEXTITEMin461.Name = "NEXTITEMin461";
             this.NEXTITEMin461.Size = new System.Drawing.Size(45, 23);
             this.NEXTITEMin461.TabIndex = 328;
@@ -296,7 +296,7 @@ namespace _4RTools.Forms
             this.ITEMin355.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ITEMin355.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ITEMin355.ForeColor = System.Drawing.Color.White;
-            this.ITEMin355.Location = new System.Drawing.Point(51, 126);
+            this.ITEMin355.Location = new System.Drawing.Point(51, 120);
             this.ITEMin355.Name = "ITEMin355";
             this.ITEMin355.Size = new System.Drawing.Size(45, 23);
             this.ITEMin355.TabIndex = 322;
@@ -304,7 +304,7 @@ namespace _4RTools.Forms
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(10, 125);
+            this.pictureBox7.Location = new System.Drawing.Point(10, 119);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(24, 24);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,7 +314,7 @@ namespace _4RTools.Forms
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(116, 132);
+            this.pictureBox8.Location = new System.Drawing.Point(116, 128);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(19, 11);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -327,7 +327,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin355.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NEXTITEMin355.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NEXTITEMin355.ForeColor = System.Drawing.Color.White;
-            this.NEXTITEMin355.Location = new System.Drawing.Point(158, 126);
+            this.NEXTITEMin355.Location = new System.Drawing.Point(158, 120);
             this.NEXTITEMin355.Name = "NEXTITEMin355";
             this.NEXTITEMin355.Size = new System.Drawing.Size(45, 23);
             this.NEXTITEMin355.TabIndex = 324;
@@ -338,7 +338,7 @@ namespace _4RTools.Forms
             this.ITEMin25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ITEMin25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ITEMin25.ForeColor = System.Drawing.Color.White;
-            this.ITEMin25.Location = new System.Drawing.Point(51, 94);
+            this.ITEMin25.Location = new System.Drawing.Point(51, 90);
             this.ITEMin25.Name = "ITEMin25";
             this.ITEMin25.Size = new System.Drawing.Size(45, 23);
             this.ITEMin25.TabIndex = 318;
@@ -346,7 +346,7 @@ namespace _4RTools.Forms
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(10, 93);
+            this.pictureBox5.Location = new System.Drawing.Point(10, 89);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -356,7 +356,7 @@ namespace _4RTools.Forms
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(116, 100);
+            this.pictureBox6.Location = new System.Drawing.Point(116, 96);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(19, 11);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -369,7 +369,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NEXTITEMin25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NEXTITEMin25.ForeColor = System.Drawing.Color.White;
-            this.NEXTITEMin25.Location = new System.Drawing.Point(158, 94);
+            this.NEXTITEMin25.Location = new System.Drawing.Point(158, 90);
             this.NEXTITEMin25.Name = "NEXTITEMin25";
             this.NEXTITEMin25.Size = new System.Drawing.Size(45, 23);
             this.NEXTITEMin25.TabIndex = 320;
@@ -380,7 +380,7 @@ namespace _4RTools.Forms
             this.ITEMin2015.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ITEMin2015.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ITEMin2015.ForeColor = System.Drawing.Color.White;
-            this.ITEMin2015.Location = new System.Drawing.Point(51, 62);
+            this.ITEMin2015.Location = new System.Drawing.Point(51, 60);
             this.ITEMin2015.Name = "ITEMin2015";
             this.ITEMin2015.Size = new System.Drawing.Size(45, 23);
             this.ITEMin2015.TabIndex = 314;
@@ -388,7 +388,7 @@ namespace _4RTools.Forms
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(10, 61);
+            this.pictureBox2.Location = new System.Drawing.Point(10, 59);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -398,7 +398,7 @@ namespace _4RTools.Forms
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(116, 68);
+            this.pictureBox3.Location = new System.Drawing.Point(116, 66);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(19, 11);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -411,7 +411,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin2015.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NEXTITEMin2015.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NEXTITEMin2015.ForeColor = System.Drawing.Color.White;
-            this.NEXTITEMin2015.Location = new System.Drawing.Point(158, 62);
+            this.NEXTITEMin2015.Location = new System.Drawing.Point(158, 60);
             this.NEXTITEMin2015.Name = "NEXTITEMin2015";
             this.NEXTITEMin2015.Size = new System.Drawing.Size(45, 23);
             this.NEXTITEMin2015.TabIndex = 316;
@@ -421,7 +421,7 @@ namespace _4RTools.Forms
             this.numDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.numDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numDelay.ForeColor = System.Drawing.Color.White;
-            this.numDelay.Location = new System.Drawing.Point(369, 13);
+            this.numDelay.Location = new System.Drawing.Point(369, 8);
             this.numDelay.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -443,7 +443,7 @@ namespace _4RTools.Forms
             this.numSwitchDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.numSwitchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numSwitchDelay.ForeColor = System.Drawing.Color.White;
-            this.numSwitchDelay.Location = new System.Drawing.Point(517, 13);
+            this.numSwitchDelay.Location = new System.Drawing.Point(517, 8);
             this.numSwitchDelay.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -466,7 +466,7 @@ namespace _4RTools.Forms
             this.ITEMin126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ITEMin126.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ITEMin126.ForeColor = System.Drawing.Color.White;
-            this.ITEMin126.Location = new System.Drawing.Point(51, 190);
+            this.ITEMin126.Location = new System.Drawing.Point(51, 180);
             this.ITEMin126.Name = "ITEMin126";
             this.ITEMin126.Size = new System.Drawing.Size(45, 23);
             this.ITEMin126.TabIndex = 330;
@@ -474,7 +474,7 @@ namespace _4RTools.Forms
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(10, 189);
+            this.pictureBox11.Location = new System.Drawing.Point(10, 179);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(24, 24);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -484,7 +484,7 @@ namespace _4RTools.Forms
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(116, 196);
+            this.pictureBox12.Location = new System.Drawing.Point(116, 186);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(19, 11);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -497,7 +497,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NEXTITEMin126.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NEXTITEMin126.ForeColor = System.Drawing.Color.White;
-            this.NEXTITEMin126.Location = new System.Drawing.Point(158, 190);
+            this.NEXTITEMin126.Location = new System.Drawing.Point(158, 180);
             this.NEXTITEMin126.Name = "NEXTITEMin126";
             this.NEXTITEMin126.Size = new System.Drawing.Size(45, 23);
             this.NEXTITEMin126.TabIndex = 332;
