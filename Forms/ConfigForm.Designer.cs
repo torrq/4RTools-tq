@@ -88,7 +88,7 @@ namespace _4RTools.Forms
             this.groupBox1.Size = new System.Drawing.Size(300, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Configurações 4RTools";
+            this.groupBox1.Text = "Configurações TalesTools";
             // 
             // chkStopHealOnCity
             // 

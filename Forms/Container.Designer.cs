@@ -32,6 +32,7 @@ namespace _4RTools.Forms
         {
             System.Windows.Forms.TabControl atkDefMode;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Container));
+            this.tabPageAutoSwitch = new System.Windows.Forms.TabPage();
             this.tabPageSpammer = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffSkill = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffStuff = new System.Windows.Forms.TabPage();
@@ -39,6 +40,7 @@ namespace _4RTools.Forms
             this.atkDef = new System.Windows.Forms.TabPage();
             this.tabMacroSwitch = new System.Windows.Forms.TabPage();
             this.tabPageDebuffs = new System.Windows.Forms.TabPage();
+            this.tabConfig = new System.Windows.Forms.TabPage();
             this.tabPageProfiles = new System.Windows.Forms.TabPage();
             this.lblProcessName = new System.Windows.Forms.Label();
             this.processCB = new System.Windows.Forms.ComboBox();
@@ -50,6 +52,8 @@ namespace _4RTools.Forms
             this.labelProfile = new System.Windows.Forms.Label();
             this.profileCB = new System.Windows.Forms.ComboBox();
             this.panelFooter = new System.Windows.Forms.Panel();
+            this.livepixLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.websiteLinkLabel = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -61,8 +65,6 @@ namespace _4RTools.Forms
             this.tabPageAutopot = new System.Windows.Forms.TabPage();
             this.tabPageYggAutopot = new System.Windows.Forms.TabPage();
             this.tabPageSkillTimer = new System.Windows.Forms.TabPage();
-            this.tabPageAutoSwitch = new System.Windows.Forms.TabPage();
-            this.tabConfig = new System.Windows.Forms.TabPage();
             atkDefMode = new System.Windows.Forms.TabControl();
             atkDefMode.SuspendLayout();
             this.panelFooter.SuspendLayout();
@@ -81,12 +83,21 @@ namespace _4RTools.Forms
             atkDefMode.Controls.Add(this.tabPageDebuffs);
             atkDefMode.Controls.Add(this.tabConfig);
             atkDefMode.Controls.Add(this.tabPageProfiles);
-
             atkDefMode.Location = new System.Drawing.Point(15, 274);
             atkDefMode.Name = "atkDefMode";
             atkDefMode.SelectedIndex = 0;
             atkDefMode.Size = new System.Drawing.Size(637, 300);
             atkDefMode.TabIndex = 6;
+            // 
+            // tabPageAutoSwitch
+            // 
+            this.tabPageAutoSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
+            this.tabPageAutoSwitch.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAutoSwitch.Name = "tabPageAutoSwitch";
+            this.tabPageAutoSwitch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAutoSwitch.Size = new System.Drawing.Size(629, 274);
+            this.tabPageAutoSwitch.TabIndex = 3;
+            this.tabPageAutoSwitch.Text = "Auto Switch";
             // 
             // tabPageSpammer
             // 
@@ -157,6 +168,16 @@ namespace _4RTools.Forms
             this.tabPageDebuffs.TabIndex = 7;
             this.tabPageDebuffs.Text = "Debuffs";
             this.tabPageDebuffs.UseVisualStyleBackColor = true;
+            // 
+            // tabConfig
+            // 
+            this.tabConfig.Location = new System.Drawing.Point(4, 22);
+            this.tabConfig.Name = "tabConfig";
+            this.tabConfig.Padding = new System.Windows.Forms.Padding(3);
+            this.tabConfig.Size = new System.Drawing.Size(629, 274);
+            this.tabConfig.TabIndex = 10;
+            this.tabConfig.Text = "Config";
+            this.tabConfig.UseVisualStyleBackColor = true;
             // 
             // tabPageProfiles
             // 
@@ -272,22 +293,46 @@ namespace _4RTools.Forms
             // panelFooter
             // 
             this.panelFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(34)))));
+            this.panelFooter.Controls.Add(this.livepixLinkLabel);
+            this.panelFooter.Controls.Add(this.panel2);
             this.panelFooter.Controls.Add(this.websiteLinkLabel);
             this.panelFooter.Controls.Add(this.panel1);
             this.panelFooter.Controls.Add(this.lblLinkGithub);
             this.panelFooter.Controls.Add(this.panelGithubImage);
             this.panelFooter.Controls.Add(this.lblLinkDiscord);
             this.panelFooter.Controls.Add(this.panelDiscImage);
-            this.panelFooter.Location = new System.Drawing.Point(15, 580);
+            this.panelFooter.Location = new System.Drawing.Point(15, 576);
             this.panelFooter.Name = "panelFooter";
             this.panelFooter.Size = new System.Drawing.Size(637, 43);
             this.panelFooter.TabIndex = 16;
+            // 
+            // livepixLinkLabel
+            // 
+            this.livepixLinkLabel.AutoSize = true;
+            this.livepixLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(244)))));
+            this.livepixLinkLabel.Location = new System.Drawing.Point(206, 15);
+            this.livepixLinkLabel.Name = "livepixLinkLabel";
+            this.livepixLinkLabel.Size = new System.Drawing.Size(75, 13);
+            this.livepixLinkLabel.TabIndex = 14;
+            this.livepixLinkLabel.TabStop = true;
+            this.livepixLinkLabel.Text = "Livepix Hanna";
+            this.livepixLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.livepixLinkLabel_LinkClicked);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.panel2.Location = new System.Drawing.Point(169, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(32, 33);
+            this.panel2.TabIndex = 15;
             // 
             // websiteLinkLabel
             // 
             this.websiteLinkLabel.AutoSize = true;
             this.websiteLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(244)))));
-            this.websiteLinkLabel.Location = new System.Drawing.Point(281, 16);
+            this.websiteLinkLabel.Location = new System.Drawing.Point(371, 16);
             this.websiteLinkLabel.Name = "websiteLinkLabel";
             this.websiteLinkLabel.Size = new System.Drawing.Size(82, 13);
             this.websiteLinkLabel.TabIndex = 12;
@@ -299,7 +344,7 @@ namespace _4RTools.Forms
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.panel1.Location = new System.Drawing.Point(244, 6);
+            this.panel1.Location = new System.Drawing.Point(334, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(32, 33);
             this.panel1.TabIndex = 13;
@@ -391,26 +436,6 @@ namespace _4RTools.Forms
             this.tabPageSkillTimer.TabIndex = 2;
             this.tabPageSkillTimer.Text = "Skill Timer";
             // 
-            // tabPageAutoSwitch
-            // 
-            this.tabPageAutoSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.tabPageAutoSwitch.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAutoSwitch.Name = "tabPageAutoSwitch";
-            this.tabPageAutoSwitch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAutoSwitch.Size = new System.Drawing.Size(320, 154);
-            this.tabPageAutoSwitch.TabIndex = 3;
-            this.tabPageAutoSwitch.Text = "Auto Switch";
-            // 
-            // tabConfig
-            // 
-            this.tabConfig.Location = new System.Drawing.Point(4, 22);
-            this.tabConfig.Name = "tabPageConfig";
-            this.tabConfig.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConfig.Size = new System.Drawing.Size(629, 274);
-            this.tabConfig.TabIndex = 10;
-            this.tabConfig.Text = "Config";
-            this.tabConfig.UseVisualStyleBackColor = true;
-            // 
             // Container
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,5 +507,7 @@ namespace _4RTools.Forms
         //private TabPage tabPageServer;
         private TabPage tabPageDebuffs;
         private TabPage tabConfig;
+        private LinkLabel livepixLinkLabel;
+        private Panel panel2;
     }
 }
