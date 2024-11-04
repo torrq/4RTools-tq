@@ -85,7 +85,8 @@ namespace _4RTools.Model
                 EffectStatusIDs.PROVOKE,
                 EffectStatusIDs.OVERTHRUST,
                 EffectStatusIDs.RECOGNIZEDSPELL,
-                EffectStatusIDs.GN_CARTBOOST
+                EffectStatusIDs.GN_CARTBOOST,
+                EffectStatusIDs.MINDBREAKER
             };
             var currentPet = EffectStatusIDs.PROVOKE;
             bool equipedPet = false;

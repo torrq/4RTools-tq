@@ -65,6 +65,10 @@ namespace _4RTools.Forms
             this.NEXTITEMin2015 = new System.Windows.Forms.TextBox();
             this.numDelay = new System.Windows.Forms.NumericUpDown();
             this.numSwitchDelay = new System.Windows.Forms.NumericUpDown();
+            this.ITEMin126 = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.NEXTITEMin126 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.ProcSwitchGP.SuspendLayout();
@@ -78,6 +82,8 @@ namespace _4RTools.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSwitchDelay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // toolTip1
@@ -207,6 +213,10 @@ namespace _4RTools.Forms
             // ProcSwitchGP
             // 
             this.ProcSwitchGP.AutoSize = true;
+            this.ProcSwitchGP.Controls.Add(this.ITEMin126);
+            this.ProcSwitchGP.Controls.Add(this.pictureBox11);
+            this.ProcSwitchGP.Controls.Add(this.pictureBox12);
+            this.ProcSwitchGP.Controls.Add(this.NEXTITEMin126);
             this.ProcSwitchGP.Controls.Add(this.ITEMin461);
             this.ProcSwitchGP.Controls.Add(this.pictureBox9);
             this.ProcSwitchGP.Controls.Add(this.pictureBox10);
@@ -233,7 +243,7 @@ namespace _4RTools.Forms
             this.ProcSwitchGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.ProcSwitchGP.Location = new System.Drawing.Point(333, 43);
             this.ProcSwitchGP.Name = "ProcSwitchGP";
-            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 200);
+            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 232);
             this.ProcSwitchGP.TabIndex = 318;
             this.ProcSwitchGP.TabStop = false;
             this.ProcSwitchGP.Text = "Exclusivos";
@@ -450,6 +460,48 @@ namespace _4RTools.Forms
             0});
             this.numSwitchDelay.ValueChanged += new System.EventHandler(this.txtSwitchDelay_TextChanged);
             // 
+            // ITEMin126
+            // 
+            this.ITEMin126.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.ITEMin126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ITEMin126.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ITEMin126.ForeColor = System.Drawing.Color.White;
+            this.ITEMin126.Location = new System.Drawing.Point(51, 190);
+            this.ITEMin126.Name = "ITEMin126";
+            this.ITEMin126.Size = new System.Drawing.Size(45, 23);
+            this.ITEMin126.TabIndex = 330;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(10, 189);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 331;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(116, 196);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(19, 11);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox12.TabIndex = 333;
+            this.pictureBox12.TabStop = false;
+            // 
+            // NEXTITEMin126
+            // 
+            this.NEXTITEMin126.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.NEXTITEMin126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NEXTITEMin126.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NEXTITEMin126.ForeColor = System.Drawing.Color.White;
+            this.NEXTITEMin126.Location = new System.Drawing.Point(158, 190);
+            this.NEXTITEMin126.Name = "NEXTITEMin126";
+            this.NEXTITEMin126.Size = new System.Drawing.Size(45, 23);
+            this.NEXTITEMin126.TabIndex = 332;
+            // 
             // AutoSwitchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +535,8 @@ namespace _4RTools.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSwitchDelay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,5 +574,9 @@ namespace _4RTools.Forms
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
         private TextBox NEXTITEMin355;
+        private TextBox ITEMin126;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox12;
+        private TextBox NEXTITEMin126;
     }
 }
