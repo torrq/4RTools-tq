@@ -64,34 +64,36 @@ namespace _4RTools.Model
 
         private int AHKThreadExecution(Client roClient)
         {
-            if (ahkMode.Equals(COMPATIBILITY))
+            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
             {
-
-                foreach (KeyConfig config in AhkEntries.Values)
+                if (ahkMode.Equals(COMPATIBILITY))
                 {
-                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
-                    if (!Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
+                    foreach (KeyConfig config in AhkEntries.Values)
                     {
-                        if (config.ClickActive && Keyboard.IsKeyDown(config.key))
+                        Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
+                        if (!Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                         {
-                            if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
-                            _AHKCompatibility(roClient, config, thisk);
-                            if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
+                            if (config.ClickActive && Keyboard.IsKeyDown(config.key))
+                            {
+                                if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
+                                _AHKCompatibility(roClient, config, thisk);
+                                if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
 
-                        }
-                        else
-                        {
-                            this._AHKNoClick(roClient, config, thisk);
+                            }
+                            else
+                            {
+                                this._AHKNoClick(roClient, config, thisk);
+                            }
                         }
                     }
                 }
-            }
-            else
-            {
-                foreach (KeyConfig config in AhkEntries.Values)
+                else
                 {
-                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
-                    this._AHKSpeedBoost(roClient, config, thisk);
+                    foreach (KeyConfig config in AhkEntries.Values)
+                    {
+                        Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
+                        this._AHKSpeedBoost(roClient, config, thisk);
+                    }
                 }
             }
             return 0;
@@ -114,7 +116,7 @@ namespace _4RTools.Model
             {
                 bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
-                {                
+                {
                     getOffRein(roClient);
                     autoSwitchAmmo(roClient, ref ammo);
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
@@ -128,7 +130,7 @@ namespace _4RTools.Model
             {
                 bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
-                {                    
+                {
                     getOffRein(roClient);
                     autoSwitchAmmo(roClient, ref ammo);
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
@@ -181,25 +183,26 @@ namespace _4RTools.Model
 
         private void getOffRein(Client c)
         {
-            if (ProfileSingleton.GetCurrent().UserPreferences.getOffRein && isRidding(c))
+            if (ProfileSingleton.GetCurrent().UserPreferences.getOffRein && hasBuff(c, EffectStatusIDs.RIDDING))
             {
                 if (ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString() != String.Empty)
                 {
                     Key key = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey;
-                    Interop.PostMessage(c.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0); 
+                    Interop.PostMessage(c.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
                 }
             }
         }
 
-        private bool isRidding(Client c)
+        private bool hasBuff(Client c, EffectStatusIDs buff)
         {
             for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
             {
                 uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)EffectStatusIDs.RIDDING) { return true; }
+                if (currentStatus == (int)buff) { return true; }
             }
             return false;
         }
+
         private Keys toKeys(Key k)
         {
             return (Keys)Enum.Parse(typeof(Keys), k.ToString());

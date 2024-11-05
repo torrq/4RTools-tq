@@ -29,20 +29,23 @@ namespace _4RTools.Model
             Client roClient = ClientSingleton.GetClient();
             _4RThread statusEffectsThread = new _4RThread(_ =>
             {
-                for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
+                if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
                 {
-                    uint currentStatus = c.CurrentBuffStatusCode(i);
-
-                    if (currentStatus == uint.MaxValue) { continue; }
-
-                    EffectStatusIDs status = (EffectStatusIDs)currentStatus;
-                    if (buffMapping.ContainsKey((EffectStatusIDs)currentStatus)) //IF FOR REMOVE STATUS - CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
+                    for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
                     {
-                        //IF CONTAINS CURRENT STATUS ON DICT
-                        Key key = buffMapping[(EffectStatusIDs)currentStatus];
-                        if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
+                        uint currentStatus = c.CurrentBuffStatusCode(i);
+
+                        if (currentStatus == uint.MaxValue) { continue; }
+
+                        EffectStatusIDs status = (EffectStatusIDs)currentStatus;
+                        if (buffMapping.ContainsKey((EffectStatusIDs)currentStatus)) //IF FOR REMOVE STATUS - CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
                         {
-                            this.useStatusRecovery(key);
+                            //IF CONTAINS CURRENT STATUS ON DICT
+                            Key key = buffMapping[(EffectStatusIDs)currentStatus];
+                            if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
+                            {
+                                this.useStatusRecovery(key);
+                            }
                         }
                     }
                 }
@@ -51,6 +54,16 @@ namespace _4RTools.Model
             });
 
             return statusEffectsThread;
+        }
+
+        private bool hasBuff(Client c, EffectStatusIDs buff)
+        {
+            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
+            {
+                uint currentStatus = c.CurrentBuffStatusCode(i);
+                if (currentStatus == (int)buff) { return true; }
+            }
+            return false;
         }
 
         public string GetConfiguration()

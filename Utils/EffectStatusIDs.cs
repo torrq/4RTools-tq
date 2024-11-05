@@ -349,7 +349,8 @@ namespace _4RTools.Utils
         [Description("Kaizel")]
         KAIZEL = 156,
         [Description("Kaahi")]
-        KAAHI = 157
+        KAAHI = 157,
+        ANTI_BOT = 5020
     }
 
 }
