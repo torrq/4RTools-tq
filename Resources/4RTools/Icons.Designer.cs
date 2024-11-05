@@ -1293,26 +1293,6 @@ namespace _4RTools.Resources._4RTools {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_4rtools_small {
-            get {
-                object obj = ResourceManager.GetObject("logo_4rtools_small", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo_4rtools_small_2 {
-            get {
-                object obj = ResourceManager.GetObject("logo_4rtools_small_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap luk_3rd_food {
             get {
                 object obj = ResourceManager.GetObject("luk_3rd_food", resourceCulture);

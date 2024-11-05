@@ -7,7 +7,7 @@
     <ProjectGuid>{A7D78B00-6CE1-4B4D-90A3-1D2E93C7F68A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>_4RTools</RootNamespace>
-    <AssemblyName>4RTools</AssemblyName>
+    <AssemblyName>TalesTools</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo-4rtools.ico</ApplicationIcon>
+    <ApplicationIcon>TalesIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -477,6 +477,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\TalesIcon_off.png" />
+    <None Include="Resources\TalesIcon_on.png" />
+    <None Include="Resources\TalesIcon_off.ico" />
+    <None Include="Resources\TalesIcon_on.ico" />
+    <Content Include="TalesIcon.ico" />
     <None Include="assets\images\abrasive.gif" />
     <None Include="assets\images\ac_concentration.gif" />
     <None Include="assets\images\agi_3rd_food.png" />
@@ -531,7 +536,6 @@
     <None Include="assets\images\lk_aurablade.gif" />
     <None Include="assets\images\lk_berserk.gif" />
     <None Include="assets\images\lk_concentration.gif" />
-    <None Include="assets\images\logo-4rtools-small-2.png" />
     <None Include="assets\images\luk_3rd_food.png" />
     <None Include="assets\images\luk_food.gif" />
     <None Include="assets\images\lutie_pancake.gif" />
@@ -576,13 +580,10 @@
     <None Include="assets\images\wz_sightblaster.gif" />
     <None Include="assets\etc\arrowdown.png" />
     <None Include="assets\etc\arrowup.png" />
-    <None Include="assets\etc\logo_4rtools_off.ico" />
-    <None Include="assets\etc\logo_4rtools_on.ico" />
     <None Include="assets\etc\Speech_Off.wav" />
     <None Include="assets\etc\Speech_On.wav" />
     <None Include="assets\etc\supported_servers.txt" />
     <None Include="assets\etc\Yggdrasil.bmp" />
-    <None Include="assets\images\logo-4rtools-small.png" />
     <None Include="assets\images\tk_earth.jpg" />
     <None Include="assets\images\tk_mild_earth.jpg" />
     <None Include="assets\images\tk_mild_fire.jpg" />

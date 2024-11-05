@@ -32,12 +32,12 @@ namespace _4RTools.Forms
         {
             System.Windows.Forms.TabControl atkDefMode;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Container));
-            this.tabPageAutoSwitch = new System.Windows.Forms.TabPage();
             this.tabPageSpammer = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffSkill = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffStuff = new System.Windows.Forms.TabPage();
-            this.tabPageMacroSongs = new System.Windows.Forms.TabPage();
+            this.tabPageAutoSwitch = new System.Windows.Forms.TabPage();
             this.atkDef = new System.Windows.Forms.TabPage();
+            this.tabPageMacroSongs = new System.Windows.Forms.TabPage();
             this.tabMacroSwitch = new System.Windows.Forms.TabPage();
             this.tabPageDebuffs = new System.Windows.Forms.TabPage();
             this.tabConfig = new System.Windows.Forms.TabPage();
@@ -73,7 +73,6 @@ namespace _4RTools.Forms
             // 
             // atkDefMode
             // 
-
             atkDefMode.Controls.Add(this.tabPageSpammer);
             atkDefMode.Controls.Add(this.tabPageAutobuffSkill);
             atkDefMode.Controls.Add(this.tabPageAutobuffStuff);
@@ -89,16 +88,6 @@ namespace _4RTools.Forms
             atkDefMode.SelectedIndex = 0;
             atkDefMode.Size = new System.Drawing.Size(637, 300);
             atkDefMode.TabIndex = 6;
-            // 
-            // tabPageAutoSwitch
-            // 
-            this.tabPageAutoSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.tabPageAutoSwitch.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAutoSwitch.Name = "tabPageAutoSwitch";
-            this.tabPageAutoSwitch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAutoSwitch.Size = new System.Drawing.Size(629, 274);
-            this.tabPageAutoSwitch.TabIndex = 3;
-            this.tabPageAutoSwitch.Text = "Auto Switch";
             // 
             // tabPageSpammer
             // 
@@ -130,15 +119,15 @@ namespace _4RTools.Forms
             this.tabPageAutobuffStuff.TabIndex = 4;
             this.tabPageAutobuffStuff.Text = "Autobuff - Stuffs";
             // 
-            // tabPageMacroSongs
+            // tabPageAutoSwitch
             // 
-            this.tabPageMacroSongs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.tabPageMacroSongs.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMacroSongs.Name = "tabPageMacroSongs";
-            this.tabPageMacroSongs.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMacroSongs.Size = new System.Drawing.Size(629, 274);
-            this.tabPageMacroSongs.TabIndex = 6;
-            this.tabPageMacroSongs.Text = "Macro Songs";
+            this.tabPageAutoSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
+            this.tabPageAutoSwitch.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAutoSwitch.Name = "tabPageAutoSwitch";
+            this.tabPageAutoSwitch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAutoSwitch.Size = new System.Drawing.Size(629, 274);
+            this.tabPageAutoSwitch.TabIndex = 3;
+            this.tabPageAutoSwitch.Text = "Auto Switch";
             // 
             // atkDef
             // 
@@ -149,6 +138,16 @@ namespace _4RTools.Forms
             this.atkDef.Size = new System.Drawing.Size(629, 274);
             this.atkDef.TabIndex = 5;
             this.atkDef.Text = "ATK x DEF";
+            // 
+            // tabPageMacroSongs
+            // 
+            this.tabPageMacroSongs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
+            this.tabPageMacroSongs.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMacroSongs.Name = "tabPageMacroSongs";
+            this.tabPageMacroSongs.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMacroSongs.Size = new System.Drawing.Size(629, 274);
+            this.tabPageMacroSongs.TabIndex = 6;
+            this.tabPageMacroSongs.Text = "Macro Songs";
             // 
             // tabMacroSwitch
             // 
@@ -461,8 +460,7 @@ namespace _4RTools.Forms
             this.MaximizeBox = false;
             this.Name = "Container";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "4ROTools - Versão Beta";
-            this.TransparencyKey = System.Drawing.Color.Red;
+            this.Text = "TalesTools";
             this.Load += new System.EventHandler(this.Container_Load);
             this.Resize += new System.EventHandler(this.containerResize);
             atkDefMode.ResumeLayout(false);

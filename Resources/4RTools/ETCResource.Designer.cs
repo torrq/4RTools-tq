@@ -129,26 +129,6 @@ namespace _4RTools.Resources._4RTools {
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon logo_4rtools_off {
-            get {
-                object obj = ResourceManager.GetObject("logo_4rtools_off", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
-        /// </summary>
-        internal static System.Drawing.Icon logo_4rtools_on {
-            get {
-                object obj = ResourceManager.GetObject("logo_4rtools_on", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap remove {
@@ -224,6 +204,26 @@ namespace _4RTools.Resources._4RTools {
         internal static string supported_servers {
             get {
                 return ResourceManager.GetString("supported_servers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
+        /// </summary>
+        internal static System.Drawing.Icon TalesIcon_off {
+            get {
+                object obj = ResourceManager.GetObject("TalesIcon_off", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
+        /// </summary>
+        internal static System.Drawing.Icon TalesIcon_on {
+            get {
+                object obj = ResourceManager.GetObject("TalesIcon_on", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
