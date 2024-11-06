@@ -94,7 +94,7 @@ namespace _4RTools.Model
 
         private int AHKThreadExecution(Client roClient)
         {
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
+            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
                 foreach (EquipConfig equipConfig in this.equipConfigs)
                 {

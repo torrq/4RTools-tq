@@ -70,7 +70,7 @@ namespace _4RTools.Model
         private int AutopotThreadExecution(Client roClient, int hpPotCount)
         {
             string currentMap = roClient.ReadCurrentMap();
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
+            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
                 if (!ProfileSingleton.GetCurrent().UserPreferences.stopHealCity || this.listCities.Contains(currentMap) == false)
                 {

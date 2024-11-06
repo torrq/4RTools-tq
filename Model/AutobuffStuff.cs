@@ -81,7 +81,7 @@ namespace _4RTools.Model
                         if (status == EffectStatusIDs.DECREASE_AGI) foundDecreaseAgi = true;
                     }
                     buffs.Clear();
-                    if (!buffs.Contains(EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
+                    if (!buffs.Contains(EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                     {
                         foreach (var item in bmClone)
                         {

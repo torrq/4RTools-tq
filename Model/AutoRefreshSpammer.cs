@@ -56,7 +56,7 @@ namespace _4RTools.Model
 
         private int AutoRefreshThreadExecution(Client roClient, int delay, Key rKey)
         {
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
+            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
                 string currentMap = roClient.ReadCurrentMap();
                 if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)

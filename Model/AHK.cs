@@ -64,36 +64,33 @@ namespace _4RTools.Model
 
         private int AHKThreadExecution(Client roClient)
         {
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
+            if (ahkMode.Equals(COMPATIBILITY))
             {
-                if (ahkMode.Equals(COMPATIBILITY))
+                foreach (KeyConfig config in AhkEntries.Values)
                 {
-                    foreach (KeyConfig config in AhkEntries.Values)
+                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
+                    if (!Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                     {
-                        Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
-                        if (!Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
+                        if (config.ClickActive && Keyboard.IsKeyDown(config.key))
                         {
-                            if (config.ClickActive && Keyboard.IsKeyDown(config.key))
-                            {
-                                if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
-                                _AHKCompatibility(roClient, config, thisk);
-                                if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
+                            if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
+                            _AHKCompatibility(roClient, config, thisk);
+                            if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
 
-                            }
-                            else
-                            {
-                                this._AHKNoClick(roClient, config, thisk);
-                            }
+                        }
+                        else
+                        {
+                            this._AHKNoClick(roClient, config, thisk);
                         }
                     }
                 }
-                else
+            }
+            else
+            {
+                foreach (KeyConfig config in AhkEntries.Values)
                 {
-                    foreach (KeyConfig config in AhkEntries.Values)
-                    {
-                        Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
-                        this._AHKSpeedBoost(roClient, config, thisk);
-                    }
+                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
+                    this._AHKSpeedBoost(roClient, config, thisk);
                 }
             }
             return 0;
@@ -117,13 +114,16 @@ namespace _4RTools.Model
                 bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
                 {
-                    getOffRein(roClient);
-                    autoSwitchAmmo(roClient, ref ammo);
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                    System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
-                    send_click(0);
-                    System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
-                    Thread.Sleep(this.AhkDelay);
+                    if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+                    {
+                        getOffRein(roClient);
+                        autoSwitchAmmo(roClient, ref ammo);
+                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                        System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
+                        send_click(0);
+                        System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
+                        Thread.Sleep(this.AhkDelay);
+                    }
                 }
             }
             else
@@ -131,11 +131,14 @@ namespace _4RTools.Model
                 bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
                 {
-                    getOffRein(roClient);
-                    autoSwitchAmmo(roClient, ref ammo);
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                    send_click(0);
-                    Thread.Sleep(this.AhkDelay);
+                    if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+                    {
+                        getOffRein(roClient);
+                        autoSwitchAmmo(roClient, ref ammo);
+                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                        send_click(0);
+                        Thread.Sleep(this.AhkDelay);
+                    }
                 }
             }
         }
@@ -145,15 +148,21 @@ namespace _4RTools.Model
             bool ammo = false;
             while (Keyboard.IsKeyDown(config.key))
             {
-                getOffRein(roClient);
-                autoSwitchAmmo(roClient, ref ammo);
+                if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+                {
+                    getOffRein(roClient);
+                    autoSwitchAmmo(roClient, ref ammo);
 
-                Point cursorPos = System.Windows.Forms.Cursor.Position;
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                mouse_event(Constants.MOUSEEVENTF_LEFTDOWN, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
-                Thread.Sleep(1);
-                mouse_event(Constants.MOUSEEVENTF_LEFTUP, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
-                Thread.Sleep(this.AhkDelay);
+                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                    if (config.ClickActive)
+                    {
+                        Point cursorPos = System.Windows.Forms.Cursor.Position;
+                        mouse_event(Constants.MOUSEEVENTF_LEFTDOWN, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
+                        Thread.Sleep(1);
+                        mouse_event(Constants.MOUSEEVENTF_LEFTUP, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
+                    }
+                    Thread.Sleep(this.AhkDelay);
+                }
             }
         }
 
@@ -212,7 +221,11 @@ namespace _4RTools.Model
         {
             while (Keyboard.IsKeyDown(config.key))
             {
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+                {
+                    getOffRein(roClient);
+                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                }
                 Thread.Sleep(this.AhkDelay);
             }
         }

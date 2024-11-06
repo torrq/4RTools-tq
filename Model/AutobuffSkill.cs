@@ -47,7 +47,7 @@ namespace _4RTools.Model
                 bool foundQuag = false;
                 bool foundDecreaseAgi = false;
                 string currentMap = c.ReadCurrentMap();
-                if (!hasBuff(c, EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
+                if (!hasBuff(c, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                 {
                     if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                     {
@@ -83,7 +83,7 @@ namespace _4RTools.Model
                             if (status == EffectStatusIDs.QUAGMIRE) foundQuag = true;
                             if (status == EffectStatusIDs.DECREASE_AGI) foundDecreaseAgi = true;
                         }
-                        if (!buffs.Contains(EffectStatusIDs.ANTI_BOT) || ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot == false)
+                        if (!buffs.Contains(EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                         {
                             if (!buffs.Contains(EffectStatusIDs.RIDDING) || ProfileSingleton.GetCurrent().UserPreferences.stopBuffsRein == false)
                             {
