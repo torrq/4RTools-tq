@@ -196,11 +196,6 @@
             this.numericDelay.Name = "numericDelay";
             this.numericDelay.Size = new System.Drawing.Size(60, 20);
             this.numericDelay.TabIndex = 302;
-            this.numericDelay.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             this.numericDelay.ValueChanged += new System.EventHandler(this.numericDelay_TextChanged);
             // 
             // label5
