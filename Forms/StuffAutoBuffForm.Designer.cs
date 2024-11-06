@@ -38,6 +38,9 @@
             this.EtcGP = new System.Windows.Forms.GroupBox();
             this.btnResetAutobuff = new System.Windows.Forms.Button();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.numericDelay = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericDelay)).BeginInit();
             this.SuspendLayout();
             // 
             // toolTip1
@@ -124,14 +127,39 @@
             this.btnResetAutobuff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.btnResetAutobuff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetAutobuff.ForeColor = System.Drawing.Color.White;
-            this.btnResetAutobuff.Location = new System.Drawing.Point(538, 18);
+            this.btnResetAutobuff.Location = new System.Drawing.Point(538, 63);
             this.btnResetAutobuff.Name = "btnResetAutobuff";
             this.btnResetAutobuff.Size = new System.Drawing.Size(60, 23);
             this.btnResetAutobuff.TabIndex = 299;
             this.btnResetAutobuff.Text = "Reset\r\n";
+            this.toolTip2.SetToolTip(this.btnResetAutobuff, "Remove todos os atalhos");
             this.btnResetAutobuff.UseVisualStyleBackColor = false;
             this.btnResetAutobuff.Click += new System.EventHandler(this.btnResetAutobuff_Click);
-            this.toolTip2.SetToolTip(this.btnResetAutobuff, "Remove todos os atalhos");
+            // 
+            // numericDelay
+            // 
+            this.numericDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.numericDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericDelay.ForeColor = System.Drawing.Color.White;
+            this.numericDelay.Location = new System.Drawing.Point(538, 34);
+            this.numericDelay.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.numericDelay.Name = "numericDelay";
+            this.numericDelay.Size = new System.Drawing.Size(60, 20);
+            this.numericDelay.TabIndex = 302;
+            this.numericDelay.ValueChanged += new System.EventHandler(this.numericDelay_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(543, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 300;
+            this.label5.Text = "Delay ms";
             // 
             // StuffAutoBuffForm
             // 
@@ -140,6 +168,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(607, 248);
+            this.Controls.Add(this.numericDelay);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnResetAutobuff);
             this.Controls.Add(this.EtcGP);
             this.Controls.Add(this.ScrollBuffsGP);
@@ -151,6 +181,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StuffAutoBuffForm";
             this.Text = "AutobuffSkillForm";
+            ((System.ComponentModel.ISupportInitialize)(this.numericDelay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +197,7 @@
         private System.Windows.Forms.GroupBox EtcGP;
         private System.Windows.Forms.Button btnResetAutobuff;
         private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.NumericUpDown numericDelay;
+        private System.Windows.Forms.Label label5;
     }
 }

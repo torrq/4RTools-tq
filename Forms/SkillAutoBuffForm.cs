@@ -38,12 +38,12 @@ namespace _4RTools.Forms
             {
                 case MessageCode.PROFILE_CHANGED:
                     BuffRenderer.doUpdate(new Dictionary<EffectStatusIDs, Key>(ProfileSingleton.GetCurrent().AutobuffSkill.buffMapping), this);
+                    this.numericDelay.Value = ProfileSingleton.GetCurrent().AutobuffSkill.delay;
                     break;
                 case MessageCode.TURN_OFF:
                     ProfileSingleton.GetCurrent().AutobuffSkill.Stop();
                     break;
                 case MessageCode.TURN_ON:
-                    //ProfileSingleton.GetCurrent().AutobuffSkill.SetBuffMapping(ProfileSingleton.GetCurrent().AutobuffSkill.buffMapping);
                     ProfileSingleton.GetCurrent().AutobuffSkill.Start();
                     break;
             }
@@ -54,6 +54,18 @@ namespace _4RTools.Forms
             ProfileSingleton.GetCurrent().AutobuffSkill.ClearKeyMapping();
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutobuffSkill);
             BuffRenderer.doUpdate(new Dictionary<EffectStatusIDs, Key>(ProfileSingleton.GetCurrent().AutobuffSkill.buffMapping), this);
+            this.numericDelay.Value = 100;
+        }
+
+        private void numericDelay_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ProfileSingleton.GetCurrent().AutobuffSkill.delay = Convert.ToInt16(this.numericDelay.Value);
+                ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutobuffSkill);
+                this.ActiveControl = null;
+            }
+            catch { }
         }
     }
 }

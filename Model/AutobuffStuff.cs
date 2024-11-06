@@ -11,11 +11,10 @@ namespace _4RTools.Model
 
     public class AutoBuffStuff : Action
     {
-        public static string ACTION_NAME_AUTOBUFFSKILL = "AutobuffSkill";
         public static string ACTION_NAME_AUTOBUFFSTUFF = "AutobuffStuff";
         public string actionName { get; set; }
         private _4RThread thread;
-        public int delay { get; set; } = 1;
+        public int delay { get; set; } = 100;
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
         public List<String> listCities { get; set; }
 
@@ -96,7 +95,7 @@ namespace _4RTools.Model
                             else if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
                             {
                                 this.useAutobuff(item.Value);
-                                Thread.Sleep(10);
+                                Thread.Sleep(delay);
                             }
                         }
                     }
