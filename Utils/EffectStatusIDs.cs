@@ -185,6 +185,7 @@ namespace _4RTools.Utils
         IMPOSITIO = 15,
         [Description("Reação Ilimitada")]
         E_CHAIN = 753,
+        [Description("Desejo das Sombras")]
         AUTOSHADOWSPELL = 393,
         [Description("Furtividade")]
         CLOAKING = 5,
