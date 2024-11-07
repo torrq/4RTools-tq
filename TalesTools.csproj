@@ -7,7 +7,7 @@
     <ProjectGuid>{A7D78B00-6CE1-4B4D-90A3-1D2E93C7F68A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>_4RTools</RootNamespace>
-    <AssemblyName>4RTools</AssemblyName>
+    <AssemblyName>TalesTools</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo-4rtools.ico</ApplicationIcon>
+    <ApplicationIcon>TalesIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -394,6 +394,7 @@
     <Compile Include="Model\AutoRefreshSpammer.cs" />
     <Compile Include="Model\Buff.cs" />
     <Compile Include="Model\BuffContainer.cs" />
+    <Compile Include="Model\AutoSwitchRenderer.cs" />
     <Compile Include="Model\DebuffRenderer.cs" />
     <Compile Include="Model\BuffRenderer.cs" />
     <Compile Include="Model\Custom.cs" />
@@ -476,6 +477,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\TalesIcon_off.png" />
+    <None Include="Resources\TalesIcon_on.png" />
+    <None Include="Resources\TalesIcon_off.ico" />
+    <None Include="Resources\TalesIcon_on.ico" />
+    <Content Include="TalesIcon.ico" />
     <None Include="assets\images\abrasive.gif" />
     <None Include="assets\images\ac_concentration.gif" />
     <None Include="assets\images\agi_3rd_food.png" />
@@ -530,7 +536,6 @@
     <None Include="assets\images\lk_aurablade.gif" />
     <None Include="assets\images\lk_berserk.gif" />
     <None Include="assets\images\lk_concentration.gif" />
-    <None Include="assets\images\logo-4rtools-small-2.png" />
     <None Include="assets\images\luk_3rd_food.png" />
     <None Include="assets\images\luk_food.gif" />
     <None Include="assets\images\lutie_pancake.gif" />
@@ -575,13 +580,10 @@
     <None Include="assets\images\wz_sightblaster.gif" />
     <None Include="assets\etc\arrowdown.png" />
     <None Include="assets\etc\arrowup.png" />
-    <None Include="assets\etc\logo_4rtools_off.ico" />
-    <None Include="assets\etc\logo_4rtools_on.ico" />
     <None Include="assets\etc\Speech_Off.wav" />
     <None Include="assets\etc\Speech_On.wav" />
     <None Include="assets\etc\supported_servers.txt" />
     <None Include="assets\etc\Yggdrasil.bmp" />
-    <None Include="assets\images\logo-4rtools-small.png" />
     <None Include="assets\images\tk_earth.jpg" />
     <None Include="assets\images\tk_mild_earth.jpg" />
     <None Include="assets\images\tk_mild_fire.jpg" />
@@ -648,6 +650,8 @@
     <None Include="assets\etc\Healing_Off.wav" />
     <None Include="assets\etc\Healing_On.wav" />
     <None Include="assets\images\accuracy_Scroll.png" />
+    <None Include="assets\etc\arrowright.png" />
+    <None Include="assets\etc\remove.png" />
     <Content Include="assets\images\ads_placeholder_clean.jpg" />
     <None Include="assets\images\burning.png" />
     <None Include="assets\images\bovine_potion.png" />
@@ -662,10 +666,15 @@
     <None Include="assets\images\flee_scroll.png" />
     <None Include="assets\images\Glass_Of_Illusion.png" />
     <None Include="assets\images\fusion.png" />
+    <None Include="assets\images\hom_avoid.png" />
     <Content Include="assets\images\impositio_manus.png" />
     <None Include="assets\images\mental_potion.png" />
     <None Include="assets\images\mandragora_howling.png" />
     <None Include="assets\images\mindbreaker.png" />
+    <None Include="assets\images\kaahi.png" />
+    <None Include="assets\images\kaite.png" />
+    <None Include="assets\images\kaizel.png" />
+    <None Include="assets\images\kaupe.png" />
     <Content Include="assets\images\octocat2.png" />
     <None Include="assets\images\spellbreaker.png" />
     <None Include="assets\images\slow_cast.png" />

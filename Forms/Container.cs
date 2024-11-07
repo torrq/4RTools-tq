@@ -148,6 +148,11 @@ namespace _4RTools.Forms
             Process.Start(AppConfig.Website);
         }
 
+        private void livepixLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(AppConfig.Livepix);
+        }
+
         private void profileCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.profileCB.Text != currentProfile)

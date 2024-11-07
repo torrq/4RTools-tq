@@ -56,16 +56,28 @@ namespace _4RTools.Model
 
         private int AutoRefreshThreadExecution(Client roClient, int delay, Key rKey)
         {
-            string currentMap = roClient.ReadCurrentMap();
-            if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
-                if (rKey != Key.None)
+                string currentMap = roClient.ReadCurrentMap();
+                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                 {
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), rKey.ToString()), 0);
+                    if (rKey != Key.None)
+                    {
+                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), rKey.ToString()), 0);
+                    }
                 }
             }
             Thread.Sleep(delay * 1000);
             return 0;
+        }
+        private bool hasBuff(Client c, EffectStatusIDs buff)
+        {
+            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
+            {
+                uint currentStatus = c.CurrentBuffStatusCode(i);
+                if (currentStatus == (int)buff) { return true; }
+            }
+            return false;
         }
 
         public void Stop()

@@ -37,18 +37,27 @@ namespace _4RTools.Model
 
         private int CustomExecutionThread(Client roClient)
         {
-
-            var TiMode = ProfileSingleton.GetCurrent().Custom.tiMode;
-            if (!TiMode.Equals(Key.None) && Keyboard.IsKeyDown(TiMode))
+            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
-                _AHKTransferBoost(roClient, new KeyConfig(TiMode, true), (Keys)Enum.Parse(typeof(Keys), TiMode.ToString()));
-                return 0;
+                var TiMode = ProfileSingleton.GetCurrent().Custom.tiMode;
+                if (!TiMode.Equals(Key.None) && Keyboard.IsKeyDown(TiMode))
+                {
+                    _AHKTransferBoost(roClient, new KeyConfig(TiMode, true), (Keys)Enum.Parse(typeof(Keys), TiMode.ToString()));
+                    return 0;
+                }
             }
-            
             Thread.Sleep(100);
             return 0;
         }
-
+        private bool hasBuff(Client c, EffectStatusIDs buff)
+        {
+            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
+            {
+                uint currentStatus = c.CurrentBuffStatusCode(i);
+                if (currentStatus == (int)buff) { return true; }
+            }
+            return false;
+        }
         private void _AHKTransferBoost(Client roClient, KeyConfig config, Keys thisk)
         {
             Func<int, int> send_click;

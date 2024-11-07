@@ -11,11 +11,10 @@ namespace _4RTools.Model
 
     public class AutoBuffStuff : Action
     {
-        public static string ACTION_NAME_AUTOBUFFSKILL = "AutobuffSkill";
         public static string ACTION_NAME_AUTOBUFFSTUFF = "AutobuffStuff";
         public string actionName { get; set; }
         private _4RThread thread;
-        public int delay { get; set; } = 1;
+        public int delay { get; set; } = 100;
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
         public List<String> listCities { get; set; }
 
@@ -49,7 +48,7 @@ namespace _4RTools.Model
                 string currentMap = c.ReadCurrentMap();
                 if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                 {
-                    List<uint> buffs = new List<uint>();
+                    List<EffectStatusIDs> buffs = new List<EffectStatusIDs>();
                     Dictionary<EffectStatusIDs, Key> bmClone = new Dictionary<EffectStatusIDs, Key>(this.buffMapping);
                     for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
                     {
@@ -57,7 +56,7 @@ namespace _4RTools.Model
 
                         if (currentStatus == uint.MaxValue) { continue; }
 
-                        buffs.Add(currentStatus);
+                        buffs.Add((EffectStatusIDs)currentStatus);
                         EffectStatusIDs status = (EffectStatusIDs)currentStatus;
 
                         if (status == EffectStatusIDs.OVERTHRUSTMAX)
@@ -72,8 +71,6 @@ namespace _4RTools.Model
                             bmClone.Remove(EffectStatusIDs.EDEN);
                         }
 
-
-
                         if (buffMapping.ContainsKey(status)) //CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
                         {
                             bmClone.Remove(status);
@@ -83,20 +80,23 @@ namespace _4RTools.Model
                         if (status == EffectStatusIDs.DECREASE_AGI) foundDecreaseAgi = true;
                     }
                     buffs.Clear();
-                    foreach (var item in bmClone)
+                    if (!buffs.Contains(EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                     {
-                        if (foundQuag && (item.Key == EffectStatusIDs.CONCENTRATION || item.Key == EffectStatusIDs.INC_AGI || item.Key == EffectStatusIDs.TRUESIGHT || item.Key == EffectStatusIDs.ADRENALINE || item.Key == EffectStatusIDs.SPEARQUICKEN || item.Key == EffectStatusIDs.ONEHANDQUICKEN || item.Key == EffectStatusIDs.WINDWALK))
+                        foreach (var item in bmClone)
                         {
-                            break;
-                        }
-                        else if (foundDecreaseAgi && (item.Key == EffectStatusIDs.TWOHANDQUICKEN || item.Key == EffectStatusIDs.ADRENALINE || item.Key == EffectStatusIDs.ADRENALINE2 || item.Key == EffectStatusIDs.ONEHANDQUICKEN || item.Key == EffectStatusIDs.SPEARQUICKEN))
-                        {
-                            break;
-                        }
-                        else if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
-                        {
-                            this.useAutobuff(item.Value);
-                            Thread.Sleep(10);
+                            if (foundQuag && (item.Key == EffectStatusIDs.CONCENTRATION || item.Key == EffectStatusIDs.INC_AGI || item.Key == EffectStatusIDs.TRUESIGHT || item.Key == EffectStatusIDs.ADRENALINE || item.Key == EffectStatusIDs.SPEARQUICKEN || item.Key == EffectStatusIDs.ONEHANDQUICKEN || item.Key == EffectStatusIDs.WINDWALK))
+                            {
+                                break;
+                            }
+                            else if (foundDecreaseAgi && (item.Key == EffectStatusIDs.TWOHANDQUICKEN || item.Key == EffectStatusIDs.ADRENALINE || item.Key == EffectStatusIDs.ADRENALINE2 || item.Key == EffectStatusIDs.ONEHANDQUICKEN || item.Key == EffectStatusIDs.SPEARQUICKEN))
+                            {
+                                break;
+                            }
+                            else if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
+                            {
+                                this.useAutobuff(item.Value);
+                                Thread.Sleep(delay);
+                            }
                         }
                     }
                 }

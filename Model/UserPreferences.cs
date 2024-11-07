@@ -23,6 +23,8 @@ namespace _4RTools.Model
         public Key ammo1Key { get; set; }
         public Key ammo2Key { get; set; }
 
+        public bool stopSpammersBot { get; set; } = false;
+
         public UserPreferences()
         {
         }

@@ -11,6 +11,7 @@ namespace _4RTools.Utils
         QUAGMIRE = 8,
         HALLUCINATIONWALK = 334,
         HALLUCINATION = 34,
+        [Description("Provocar")]
         PROVOKE = 2015,
         PROPERTYUNDEAD = 97,
 
@@ -103,6 +104,7 @@ namespace _4RTools.Utils
         DEFENDER = 62,
         [Description("Submissão")]
         CR_SHRINK = 197,
+        [Description("Rapidez com Uma Mão")]
         ONEHANDQUICKEN = 161,
         [Description("Rapidez com Duas Mãos")]
         TWOHANDQUICKEN = 2,
@@ -183,11 +185,13 @@ namespace _4RTools.Utils
         IMPOSITIO = 15,
         [Description("Reação Ilimitada")]
         E_CHAIN = 753,
+        [Description("Desejo das Sombras")]
         AUTOSHADOWSPELL = 393,
         [Description("Furtividade")]
         CLOAKING = 5,
         [Description("Esconderijo")]
         HIDING = 4,
+        [Description("Impacto Explosivo")]
         MAGNUM = 131,
         FIGHTINGSPIRIT = 322,
         [Description("Basílica")]
@@ -332,12 +336,22 @@ namespace _4RTools.Utils
         MENTAL_POTION = 298,
         VITATA_POTION = 483,
         RIDDING = 613,
+        [Description("União Solar, Lunar e Estelar")]
         FUSION = 2063,
         BOVINE = 2068,
         DRAGON = 2069,
-        RED_BOOSTER = 664
-
-,
+        RED_BOOSTER = 664,
+        [Description("Bater em Retirada")]
+        HOM_AVOID = 192,
+        [Description("Kaupe")]
+        KAUPE = 158,
+        [Description("Kaite")]
+        KAITE = 1402,
+        [Description("Kaizel")]
+        KAIZEL = 156,
+        [Description("Kaahi")]
+        KAAHI = 157,
+        ANTI_BOT = 5020
     }
 
 }

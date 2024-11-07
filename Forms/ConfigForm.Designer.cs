@@ -48,6 +48,7 @@ namespace _4RTools.Forms
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.chkStopOnAntiBot = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +75,7 @@ namespace _4RTools.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkStopOnAntiBot);
             this.groupBox1.Controls.Add(this.chkStopHealOnCity);
             this.groupBox1.Controls.Add(this.ammo2textBox);
             this.groupBox1.Controls.Add(this.ammo1textBox);
@@ -88,7 +90,7 @@ namespace _4RTools.Forms
             this.groupBox1.Size = new System.Drawing.Size(300, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Configurações 4RTools";
+            this.groupBox1.Text = "Configurações TalesTools";
             // 
             // chkStopHealOnCity
             // 
@@ -182,6 +184,17 @@ namespace _4RTools.Forms
             // 
             this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
             // 
+            // chkStopOnAntiBot
+            // 
+            this.chkStopOnAntiBot.AutoSize = true;
+            this.chkStopOnAntiBot.Location = new System.Drawing.Point(13, 154);
+            this.chkStopOnAntiBot.Name = "chkStopOnAntiBot";
+            this.chkStopOnAntiBot.Size = new System.Drawing.Size(138, 17);
+            this.chkStopOnAntiBot.TabIndex = 311;
+            this.chkStopOnAntiBot.Text = "Pausar durante Anti-Bot";
+            this.chkStopOnAntiBot.UseVisualStyleBackColor = true;
+            this.chkStopOnAntiBot.CheckedChanged += new System.EventHandler(this.chkStopOnAntiBot_CheckedChanged);
+            // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,5 +234,6 @@ namespace _4RTools.Forms
         private ToolTip toolTip2;
         private ToolTip toolTip3;
         private ToolTip toolTip4;
+        private CheckBox chkStopOnAntiBot;
     }
 }

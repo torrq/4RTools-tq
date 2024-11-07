@@ -42,6 +42,7 @@ namespace _4RTools.Forms
             this.txtTransferKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.txtTransferKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.txtTransferKey.TextChanged += new EventHandler(onTransferKeyChange);
+            this.ActiveControl = null;
         }
 
         private void onTransferKeyChange(object sender, EventArgs e)

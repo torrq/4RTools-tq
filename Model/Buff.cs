@@ -105,7 +105,8 @@ namespace _4RTools.Model
                 new Buff("Golpe Estilhaçante", EffectStatusIDs.MELTDOWN, Resources._4RTools.Icons.ws_meltdown),
                 new Buff("Aceleração", EffectStatusIDs.ACCELERATION, Resources._4RTools.Icons.mec_acceleration),
                 new Buff("Propulsão do Carrinho", EffectStatusIDs.GN_CARTBOOST, Resources._4RTools.Icons.cart_boost),
-                new Buff("Research Report", EffectStatusIDs.RESEARCHREPORT, Resources._4RTools.Icons.researchreport)
+                new Buff("Research Report", EffectStatusIDs.RESEARCHREPORT, Resources._4RTools.Icons.researchreport),
+                new Buff("Bater em Retirada", EffectStatusIDs.HOM_AVOID, Resources._4RTools.Icons.hom_avoid)
             };
 
             return skills;
@@ -122,7 +123,8 @@ namespace _4RTools.Model
                 new Buff("Encantar com Veneno Mortal", EffectStatusIDs.EDP, Resources._4RTools.Icons.asc_edp),
                 new Buff("Reflexo de Combate", EffectStatusIDs.WEAPONBLOCKING, Resources._4RTools.Icons.weapon_blocking),
                 new Buff("Esconderijo", EffectStatusIDs.HIDING, Resources._4RTools.Icons.hiding),
-                new Buff("Furtividade", EffectStatusIDs.CLOAKING, Resources._4RTools.Icons.cloaking)
+                new Buff("Furtividade", EffectStatusIDs.CLOAKING, Resources._4RTools.Icons.cloaking),
+                new Buff("Desejo das Sombras", EffectStatusIDs.AUTOSHADOWSPELL, Resources._4RTools.Icons.autoshadowspell)
 
             };
 
@@ -185,6 +187,10 @@ namespace _4RTools.Model
                 new Buff("Proteção Lunar", EffectStatusIDs.MOON_COMFORT, Resources._4RTools.Icons.moon_comfort),
                 new Buff("Proteção Estelar", EffectStatusIDs.STAR_COMFORT, Resources._4RTools.Icons.star_comfort),
                 new Buff("União Solar, Lunar e Estelar", EffectStatusIDs.FUSION, Resources._4RTools.Icons.fusion),
+                new Buff("Kaupe", EffectStatusIDs.KAUPE, Resources._4RTools.Icons.kaupe),
+                new Buff("Kaite", EffectStatusIDs.KAITE, Resources._4RTools.Icons.kaite),
+                new Buff("Kaizel", EffectStatusIDs.KAIZEL, Resources._4RTools.Icons.kaizel),
+                new Buff("Kaahi", EffectStatusIDs.KAAHI, Resources._4RTools.Icons.kaahi),
 
             };
 

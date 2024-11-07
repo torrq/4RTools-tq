@@ -70,21 +70,33 @@ namespace _4RTools.Model
         private int AutopotThreadExecution(Client roClient, int hpPotCount)
         {
             string currentMap = roClient.ReadCurrentMap();
-
-            if (!ProfileSingleton.GetCurrent().UserPreferences.stopHealCity || this.listCities.Contains(currentMap) == false)
+            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
-                bool hasCriticalWound = HasCriticalWound(roClient);
-                if (firstHeal.Equals(FIRSTHP))
+                if (!ProfileSingleton.GetCurrent().UserPreferences.stopHealCity || this.listCities.Contains(currentMap) == false)
                 {
-                    healHPFirst(roClient, hpPotCount, hasCriticalWound);
-                }
-                else
-                {
-                    healSPFirst(roClient, hpPotCount, hasCriticalWound);
+                    bool hasCriticalWound = HasCriticalWound(roClient);
+                    if (firstHeal.Equals(FIRSTHP))
+                    {
+                        healHPFirst(roClient, hpPotCount, hasCriticalWound);
+                    }
+                    else
+                    {
+                        healSPFirst(roClient, hpPotCount, hasCriticalWound);
+                    }
                 }
             }
             Thread.Sleep(this.delay);
             return 0;
+        }
+
+        private bool hasBuff(Client c, EffectStatusIDs buff)
+        {
+            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
+            {
+                uint currentStatus = c.CurrentBuffStatusCode(i);
+                if (currentStatus == (int)buff) { return true; }
+            }
+            return false;
         }
 
         private void healSPFirst(Client roClient, int hpPotCount, bool hasCriticalWound)
