@@ -27,7 +27,7 @@ Voce pode copiar e substituir a pastar `Profile` de sua versao anterior do 4RToo
 - [x] Novo Autobuff-Skills de kaupe
 - [x] Adicionado botões numéricos Skill Spammer
 - [x] Adicionado nova aba grande de Auto Switch
-    - auto switch genérico (se faltar alguma skill me avisem)
+    - auto switch genérico
     - auto switch pets masterball (Eddga, Mestre-ferreiro Howard, Arquimaga Kathryne, Venomorfo Perfeito e Fenrir)
 - [x] Nova config de pausar TalesTools quando aparecer o Anti-Bot (contribuição do id pelo Argilago)
 
