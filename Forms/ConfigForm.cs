@@ -6,11 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Input;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using Oli.Controls;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
 
 namespace _4RTools.Forms
 {
@@ -115,7 +110,26 @@ namespace _4RTools.Forms
             }
             catch { }
         }
+        private void listBox1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (this.listBox1.SelectedItem == null) return;
+            this.listBox1.DoDragDrop(this.listBox1.SelectedItem, DragDropEffects.Move);
+        }
 
+        private void listBox1_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        private void listBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            Point point = listBox1.PointToClient(new Point(e.X, e.Y));
+            int index = this.listBox1.IndexFromPoint(point);
+            if (index < 0) index = this.listBox1.Items.Count - 1;
+            object data = listBox1.SelectedItem;
+            this.listBox1.Items.Remove(data);
+            this.listBox1.Items.Insert(index, data);
+        }
         private void chkStopBuffsOnRein_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;

@@ -32,7 +32,7 @@ namespace _4RTools.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listBox1 = new Oli.Controls.DragDropListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkStopHealOnCity = new System.Windows.Forms.CheckBox();
@@ -63,6 +63,9 @@ namespace _4RTools.Forms
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(127, 225);
             this.listBox1.TabIndex = 1;
+            listBox1.MouseDown += listBox1_MouseDown;
+            listBox1.DragOver += listBox1_DragOver;
+            listBox1.DragDrop += listBox1_DragDrop;
             // 
             // label2
             // 
@@ -219,7 +222,7 @@ namespace _4RTools.Forms
       
         #endregion
         private System.Windows.Forms.BindingSource clientDTOBindingSource;
-        private Oli.Controls.DragDropListBox listBox1;
+        private ListBox listBox1;
         private Label label2;
         private GroupBox groupBox1;
         private CheckBox chkStopBuffsOnRein;
