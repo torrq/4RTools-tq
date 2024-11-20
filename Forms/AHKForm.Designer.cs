@@ -87,6 +87,7 @@ namespace _4RTools.Forms
             this.chkMouseFlick = new System.Windows.Forms.CheckBox();
             this.ahkSpeedBoost = new System.Windows.Forms.RadioButton();
             this.ahkCompatibility = new System.Windows.Forms.RadioButton();
+            this.ahkSynchronous = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbDeactivated = new System.Windows.Forms.CheckBox();
@@ -680,6 +681,7 @@ namespace _4RTools.Forms
             this.groupAhkConfig.Controls.Add(this.ahkSpeedBoost);
             this.groupAhkConfig.Controls.Add(this.groupBox2);
             this.groupAhkConfig.Controls.Add(this.ahkCompatibility);
+            this.groupAhkConfig.Controls.Add(this.ahkSynchronous);
             this.groupAhkConfig.Controls.Add(this.groupBox4);
             this.groupAhkConfig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupAhkConfig.Location = new System.Drawing.Point(14, 190);
@@ -737,7 +739,7 @@ namespace _4RTools.Forms
             // 
             this.ahkSpeedBoost.AutoSize = true;
             this.ahkSpeedBoost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.ahkSpeedBoost.Location = new System.Drawing.Point(17, 48);
+            this.ahkSpeedBoost.Location = new System.Drawing.Point(17, 34);
             this.ahkSpeedBoost.Name = "ahkSpeedBoost";
             this.ahkSpeedBoost.Size = new System.Drawing.Size(85, 17);
             this.ahkSpeedBoost.TabIndex = 37;
@@ -750,7 +752,7 @@ namespace _4RTools.Forms
             // 
             this.ahkCompatibility.AutoSize = true;
             this.ahkCompatibility.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.ahkCompatibility.Location = new System.Drawing.Point(17, 24);
+            this.ahkCompatibility.Location = new System.Drawing.Point(17, 14);
             this.ahkCompatibility.Name = "ahkCompatibility";
             this.ahkCompatibility.Size = new System.Drawing.Size(83, 17);
             this.ahkCompatibility.TabIndex = 35;
@@ -758,6 +760,19 @@ namespace _4RTools.Forms
             this.ahkCompatibility.Text = "Compatibility";
             this.ahkCompatibility.UseVisualStyleBackColor = true;
             this.ahkCompatibility.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // ahkSynchronous
+            // 
+            this.ahkSynchronous.AutoSize = true;
+            this.ahkSynchronous.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
+            this.ahkSynchronous.Location = new System.Drawing.Point(17, 54);
+            this.ahkSynchronous.Name = "ahkSynchronous";
+            this.ahkSynchronous.Size = new System.Drawing.Size(69, 17);
+            this.ahkSynchronous.TabIndex = 35;
+            this.ahkSynchronous.TabStop = true;
+            this.ahkSynchronous.Text = "Síncrono";
+            this.ahkSynchronous.UseVisualStyleBackColor = true;
+            this.ahkSynchronous.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -1080,6 +1095,7 @@ namespace _4RTools.Forms
         private CheckBox chkMouseFlick;
         private PictureBox pictureBox1;
         private RadioButton ahkCompatibility;
+        private RadioButton ahkSynchronous;
         private GroupBox groupBox4;
         private Panel panel1;
         private CheckBox chkNum1;

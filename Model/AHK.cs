@@ -7,8 +7,6 @@ using System.Drawing;
 using _4RTools.Utils;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-using System.Windows.Ink;
 
 namespace _4RTools.Model
 {
@@ -33,10 +31,14 @@ namespace _4RTools.Model
         [DllImport("user32.dll")]
         public static extern void keybd_event(byte bVk, byte bScan, int dwFlags, int dwExtraInfo);
 
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
         private const string ACTION_NAME = "AHK20";
         private _4RThread thread;
         public const string COMPATIBILITY = "ahkCompatibility";
         public const string SPEED_BOOST = "ahkSpeedBoost";
+        public const string SYNCHRONOUS = "ahkSynchronous";
         public Dictionary<string, KeyConfig> AhkEntries { get; set; } = new Dictionary<string, KeyConfig>();
         public int AhkDelay { get; set; } = 10;
         public bool mouseFlick { get; set; } = false;
@@ -85,6 +87,14 @@ namespace _4RTools.Model
                     }
                 }
             }
+            else if (ahkMode.Equals(SYNCHRONOUS))
+            {
+                foreach (KeyConfig config in AhkEntries.Values)
+                {
+                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
+                    _AHKSynchronous(roClient, config, thisk);
+                }
+            }
             else
             {
                 foreach (KeyConfig config in AhkEntries.Values)
@@ -100,7 +110,6 @@ namespace _4RTools.Model
         {
             Func<int, int> send_click;
 
-            //Send Event Directly to Window via PostMessage
             send_click = (evt) =>
             {
                 Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, 0, 0);
@@ -139,6 +148,51 @@ namespace _4RTools.Model
                         send_click(0);
                         Thread.Sleep(this.AhkDelay);
                     }
+                }
+            }
+        }
+
+        private void _AHKSynchronous(Client roClient, KeyConfig config, Keys thisk)
+        {
+            
+            Func<int, int> send_click;
+            bool ammo = false;
+            send_click = (evt) =>
+            {
+                SendMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, IntPtr.Zero, IntPtr.Zero);
+                Thread.Sleep(1);
+                SendMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONUP, IntPtr.Zero, IntPtr.Zero);
+                return 0;
+            };
+
+            if (config.ClickActive)
+            {
+                while (Keyboard.IsKeyDown(config.key))
+                {
+                    if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
+                    if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+                    {
+                        getOffRein(roClient);
+                        autoSwitchAmmo(roClient, ref ammo);
+                        SendMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (IntPtr)thisk, IntPtr.Zero);
+                        Thread.Sleep(1);
+                        SendMessage(roClient.process.MainWindowHandle, Constants.WM_KEYUP_MSG_ID, (IntPtr)thisk, IntPtr.Zero);
+                        if (config.ClickActive)
+                        {
+                            if (this.mouseFlick)
+                            {
+                                System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
+                                send_click(0);
+                                System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
+                            }
+                            else
+                            {
+                                send_click(0);
+                            }
+                        }
+                        Thread.Sleep(this.AhkDelay);
+                    }
+                    if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
                 }
             }
         }
