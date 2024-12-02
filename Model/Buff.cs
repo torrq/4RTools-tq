@@ -191,6 +191,7 @@ namespace _4RTools.Model
                 new Buff("Kaite", EffectStatusIDs.KAITE, Resources._4RTools.Icons.kaite),
                 new Buff("Kaizel", EffectStatusIDs.KAIZEL, Resources._4RTools.Icons.kaizel),
                 new Buff("Kaahi", EffectStatusIDs.KAAHI, Resources._4RTools.Icons.kaahi),
+                new Buff("Corrida", EffectStatusIDs.RUN, Resources._4RTools.Icons.run),
 
             };
 

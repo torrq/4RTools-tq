@@ -478,6 +478,7 @@
     <None Include="Resources\TalesIcon_on.png" />
     <None Include="Resources\TalesIcon_off.ico" />
     <None Include="Resources\TalesIcon_on.ico" />
+    <None Include="assets\images\run.png" />
     <Content Include="TalesIcon.ico" />
     <None Include="assets\images\abrasive.gif" />
     <None Include="assets\images\ac_concentration.gif" />

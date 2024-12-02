@@ -216,6 +216,9 @@ namespace _4RTools.Utils
         ASPERSIO = 17,
         [Description("Enlouquecedor")]
         MINDBREAKER = 126,
+        [Description("Corrida")]
+        RUN = 145,
+
 
         FULL_SWINGK = 486,
         MANA_PLUS = 487,
