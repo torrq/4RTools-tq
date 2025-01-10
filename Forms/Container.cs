@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using _4RTools.Model;
 using _4RTools.Utils;
+using System.Collections.Generic;
 
 namespace _4RTools.Forms
 {
@@ -13,7 +14,7 @@ namespace _4RTools.Forms
 
         private Subject subject = new Subject();
         private string currentProfile;
-
+        List<ClientDTO> clients = new List<ClientDTO>();
         private ToggleApplicationStateForm frmToggleApplication = new ToggleApplicationStateForm();
         public Container()
         {
@@ -21,6 +22,9 @@ namespace _4RTools.Forms
 
             InitializeComponent();
             this.Text = AppConfig.Name + " - " + AppConfig.Version; // Window title
+
+            clients.AddRange(LocalServerManager.GetLocalClients()); //Load Local Servers First
+            LoadServers(clients);
 
             //Container Configuration
             this.IsMdiContainer = true;
@@ -202,6 +206,19 @@ namespace _4RTools.Forms
         private void containerResize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized) { this.Hide(); }
+        }
+
+        private void LoadServers(List<ClientDTO> clients)
+        {
+            foreach (ClientDTO clientDTO in clients)
+            {
+                try
+                {
+                    ClientListSingleton.AddClient(new Client(clientDTO));
+                }
+                catch { }
+
+            }
         }
 
         #region Frames
