@@ -25,6 +25,8 @@ namespace _4RTools.Model
         public List<AutoSwitchConfig> autoSwitchMapping = new List<AutoSwitchConfig>();
         public List<AutoSwitchConfig> autoSwitchGenericMapping = new List<AutoSwitchConfig>();
 
+        public List<EffectStatusIDs> autoSwitchOrder { get; set; } = new List<EffectStatusIDs>();
+
         public List<String> listCities { get; set; }
 
         public class AutoSwitchConfig
@@ -243,6 +245,11 @@ namespace _4RTools.Model
         {
             if ((next != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), next.ToString()), 0);
+        }
+
+        public void SetAutoSwitchOrder(List<EffectStatusIDs> buffs)
+        {
+            this.autoSwitchOrder = buffs;
         }
     }
 }

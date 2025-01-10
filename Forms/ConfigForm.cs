@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Input;
+using static _4RTools.Model.AutoSwitch;
 
 namespace _4RTools.Forms
 {
@@ -25,9 +26,17 @@ namespace _4RTools.Forms
             this.ammo2textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.ammo2textBox.TextChanged += new EventHandler(this.textAmmo2_TextChanged);
 
-            
+
             var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.autoBuffOrder;
-            this.listBox1.MouseLeave += new System.EventHandler(this.listBox1_MouseLeave);
+            this.skillsListBox.MouseLeave += new System.EventHandler(this.skillsListBox_MouseLeave);
+            this.skillsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skillsListBox_MouseDown);
+            this.skillsListBox.DragOver += new DragEventHandler(this.skillsListBox_DragOver);
+            this.skillsListBox.DragDrop += new DragEventHandler(this.skillsListBox_DragDrop);
+
+            this.switchListBox.MouseLeave += new System.EventHandler(this.switchListBox_MouseLeave);
+            this.switchListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.switchListBox_MouseDown);
+            this.switchListBox.DragOver += new DragEventHandler(this.switchListBox_DragOver);
+            this.switchListBox.DragDrop += new DragEventHandler(this.switchListBox_DragDrop);
 
             toolTip1.SetToolTip(switchAmmoCheckBox, "Intercala entre as munições");
             toolTip2.SetToolTip(textReinKey, "atalho rédea");
@@ -42,16 +51,58 @@ namespace _4RTools.Forms
             {
                 case MessageCode.PROFILE_CHANGED:
                 case MessageCode.ADDED_NEW_AUTOBUFF_SKILL:
+                case MessageCode.ADDED_NEW_AUTOSWITCH_PETS:
                     UpdateUI(subject);
                     break;
+                //case MessageCode.ADDED_NEW_AUTOSWITCH_PETS:
+                //    UpdateSwitch();
+                //    break;
             }
         }
+
+        public void UpdateSwitch()
+        {
+            try
+            {
+                var buffsList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Where(x => x.itemKey != Key.None && x.skillId != EffectStatusIDs.THURISAZ).Select(x => x.skillId).ToList();
+                var newBuffList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
+                if (buffsList.Count > ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder.Count)
+                {
+
+                    var newBuffs = buffsList.FindAll(item => !newBuffList.Contains(item));
+                    foreach (var buff in newBuffs)
+                    {
+                        newBuffList.Add(buff);
+                    }
+                    ProfileSingleton.GetCurrent().AutoSwitch.SetAutoSwitchOrder(newBuffList);
+                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
+                }
+                
+                if (ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder.Count > 0)
+                {
+                    var tessste = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
+                    ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder.RemoveAll(item => !buffsList.Contains(item));
+                    buffsList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
+                }
+
+                switchListBox.Items.Clear();
+
+                foreach (var tswitch in buffsList)
+                {
+                    switchListBox.Items.Add(tswitch.ToDescriptionString());
+                }
+            }
+            catch (Exception ex)
+            {
+                var teste = ex;
+            }
+        }
+
         public void UpdateUI(ISubject subject)
         {
             try
             {
                 AutoBuffSkill currentBuffs = (AutoBuffSkill)(subject as Subject).Message.data;
-                listBox1.Items.Clear();
 
                 if (currentBuffs == null)
                 {
@@ -59,12 +110,13 @@ namespace _4RTools.Forms
                 }
 
                 var buffsList = currentBuffs.buffMapping.Keys.ToList();
-                listBox1.Items.Clear();
+                skillsListBox.Items.Clear();
 
                 foreach (var buff in buffsList)
                 {
-                    listBox1.Items.Add(buff.ToDescriptionString());
+                    skillsListBox.Items.Add(buff.ToDescriptionString());
                 }
+                UpdateSwitch();
 
                 this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity;
                 this.chkStopBuffsOnRein.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsRein;
@@ -76,16 +128,19 @@ namespace _4RTools.Forms
                 this.ammo1textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo1Key.ToString();
                 this.ammo2textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo2Key.ToString();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                var teste = ex;
+            }
         }
 
-        private void listBox1_MouseLeave(object sender, EventArgs e)
+        private void skillsListBox_MouseLeave(object sender, EventArgs e)
         {
             try
             {
                 var autoBuffSkill = ProfileSingleton.GetCurrent().AutobuffSkill;
                 var newOrderList = new List<EffectStatusIDs>();
-                var orderedBuffList = listBox1.Items;
+                var orderedBuffList = skillsListBox.Items;
                 Dictionary<EffectStatusIDs, Key> currentList = new Dictionary<EffectStatusIDs, Key>(autoBuffSkill.buffMapping);
                 Dictionary<EffectStatusIDs, Key> newOrderedBuffList = new Dictionary<EffectStatusIDs, Key>();
                 if (currentList.Count > 0)
@@ -110,26 +165,75 @@ namespace _4RTools.Forms
             }
             catch { }
         }
-        private void listBox1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void skillsListBox_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            if (this.listBox1.SelectedItem == null) return;
-            this.listBox1.DoDragDrop(this.listBox1.SelectedItem, DragDropEffects.Move);
+            if (this.skillsListBox.SelectedItem == null) return;
+            this.skillsListBox.DoDragDrop(this.skillsListBox.SelectedItem, DragDropEffects.Move);
         }
 
-        private void listBox1_DragOver(object sender, DragEventArgs e)
+        private void skillsListBox_DragOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Move;
         }
 
-        private void listBox1_DragDrop(object sender, DragEventArgs e)
+        private void skillsListBox_DragDrop(object sender, DragEventArgs e)
         {
-            Point point = listBox1.PointToClient(new Point(e.X, e.Y));
-            int index = this.listBox1.IndexFromPoint(point);
-            if (index < 0) index = this.listBox1.Items.Count - 1;
-            object data = listBox1.SelectedItem;
-            this.listBox1.Items.Remove(data);
-            this.listBox1.Items.Insert(index, data);
+            Point point = skillsListBox.PointToClient(new Point(e.X, e.Y));
+            int index = this.skillsListBox.IndexFromPoint(point);
+            if (index < 0) index = this.skillsListBox.Items.Count - 1;
+            object data = skillsListBox.SelectedItem;
+            this.skillsListBox.Items.Remove(data);
+            this.skillsListBox.Items.Insert(index, data);
         }
+
+        private void switchListBox_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                var autoSwitchPets = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
+                var newOrderList = new List<EffectStatusIDs>();
+                var orderedBuffList = switchListBox.Items;
+                List<EffectStatusIDs> currentList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Where(x => x.itemKey != Key.None && x.skillId != EffectStatusIDs.THURISAZ).Select(x => x.skillId).ToList();
+
+                List<EffectStatusIDs> newOrderedBuffList = new List<EffectStatusIDs>();
+                if (currentList.Count > 0)
+                {
+
+                    foreach (var buff in orderedBuffList)
+                    {
+                        var buffId = buff.ToString().ToEffectStatusId();
+                        newOrderList.Add(buffId);
+                        var findBuff = currentList.FirstOrDefault(t => t == buffId);
+                        newOrderedBuffList.Add(findBuff);
+                    }
+                    ProfileSingleton.GetCurrent().AutoSwitch.SetAutoSwitchOrder(newOrderList);
+                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
+                    newOrderedBuffList.Clear();
+                }
+            }
+            catch { }
+        }
+        private void switchListBox_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (this.switchListBox.SelectedItem == null) return;
+            this.switchListBox.DoDragDrop(this.switchListBox.SelectedItem, DragDropEffects.Move);
+        }
+
+        private void switchListBox_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        private void switchListBox_DragDrop(object sender, DragEventArgs e)
+        {
+            Point point = switchListBox.PointToClient(new Point(e.X, e.Y));
+            int index = this.switchListBox.IndexFromPoint(point);
+            if (index < 0) index = this.switchListBox.Items.Count - 1;
+            object data = switchListBox.SelectedItem;
+            this.switchListBox.Items.Remove(data);
+            this.switchListBox.Items.Insert(index, data);
+        }
+
         private void chkStopBuffsOnRein_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
