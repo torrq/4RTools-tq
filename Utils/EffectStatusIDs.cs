@@ -354,7 +354,10 @@ namespace _4RTools.Utils
         KAIZEL = 156,
         [Description("Kaahi")]
         KAAHI = 157,
-        ANTI_BOT = 5020
+        ANTI_BOT = 5020,
+        [Description("Espreitar")]
+        CHASEWALK = 182,
+
     }
 
 }

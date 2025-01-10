@@ -479,6 +479,7 @@
     <None Include="Resources\TalesIcon_off.ico" />
     <None Include="Resources\TalesIcon_on.ico" />
     <None Include="assets\images\run.png" />
+    <None Include="assets\images\chase_walk.png" />
     <Content Include="TalesIcon.ico" />
     <None Include="assets\images\abrasive.gif" />
     <None Include="assets\images\ac_concentration.gif" />
