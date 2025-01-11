@@ -433,6 +433,16 @@ namespace _4RTools.Resources._4RTools {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap canto_candidus {
+            get {
+                object obj = ResourceManager.GetObject("canto_candidus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cart_boost {
             get {
                 object obj = ResourceManager.GetObject("cart_boost", resourceCulture);
@@ -496,6 +506,16 @@ namespace _4RTools.Resources._4RTools {
         internal static System.Drawing.Bitmap class_combat {
             get {
                 object obj = ResourceManager.GetObject("class_combat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clementia {
+            get {
+                object obj = ResourceManager.GetObject("clementia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

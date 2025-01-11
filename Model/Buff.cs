@@ -150,6 +150,8 @@ namespace _4RTools.Model
                 new Buff("Lauda Agnus", EffectStatusIDs.LAUDA_AGNUS, Resources._4RTools.Icons.lauda_agnus),
                 new Buff("Lauda Ramus", EffectStatusIDs.LAUDA_RAMUS, Resources._4RTools.Icons.lauda_ramus),
                 new Buff("Basílica", EffectStatusIDs.BASILICA, Resources._4RTools.Icons.basilica),
+                new Buff("Clementia", EffectStatusIDs.BLESSING, Resources._4RTools.Icons.clementia),
+                new Buff("Canto Candidus", EffectStatusIDs.INC_AGI, Resources._4RTools.Icons.canto_candidus),
             };
 
             return skills;

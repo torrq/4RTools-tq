@@ -277,7 +277,9 @@ namespace _4RTools.Utils
         TARGET_BLOOD = 301,
 
         //Scrolls
+        [Description("Canto Candidus")]
         INC_AGI = 12,
+        [Description("Clementia")]
         BLESSING = 10,
 
         //3RD foods
