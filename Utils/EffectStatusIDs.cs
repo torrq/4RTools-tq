@@ -193,6 +193,7 @@ namespace _4RTools.Utils
         HIDING = 4,
         [Description("Impacto Explosivo")]
         MAGNUM = 131,
+        [Description("Aura de Combate")]
         FIGHTINGSPIRIT = 322,
         [Description("Basílica")]
         BASILICA = 1122,

@@ -65,6 +65,7 @@ namespace _4RTools.Model
                 new Buff("Impacto Explosivo", EffectStatusIDs.MAGNUM, Resources._4RTools.Icons.magnum),
                 new Buff("Rapidez com Uma Mão", EffectStatusIDs.ONEHANDQUICKEN, Resources._4RTools.Icons.onehand),
                 new Buff("Provocar", EffectStatusIDs.PROVOKE, Resources._4RTools.Icons.provoke),
+                new Buff("Aura de Combate", EffectStatusIDs.FIGHTINGSPIRIT, Resources._4RTools.Icons.fighting_spirit),
             };
 
             return skills;

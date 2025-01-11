@@ -482,6 +482,7 @@
     <None Include="assets\images\chase_walk.png" />
     <None Include="assets\images\clementia.png" />
     <None Include="assets\images\canto_candidus.png" />
+    <None Include="assets\images\fighting_spirit.png" />
     <Content Include="TalesIcon.ico" />
     <None Include="assets\images\abrasive.gif" />
     <None Include="assets\images\ac_concentration.gif" />
