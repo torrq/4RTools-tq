@@ -12,6 +12,6 @@ namespace _4RTools.Utils
         public static string DiscordLink = "https://discord.com/invite/bkG2RPGjEu";
         public static string _4RLatestVersionURL = "https://api.github.com/repos/biancaazuma/TalesTools/releases/latest";
         public static string Livepix = "https://livepix.gg/hannamori";
-        public static string Version = "v3.0.0";
+        public static string Version = "v3.0.1";
     }
 }

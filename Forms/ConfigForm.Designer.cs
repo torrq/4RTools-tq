@@ -55,14 +55,14 @@ namespace _4RTools.Forms
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // skillsListBox
             // 
             this.skillsListBox.AllowDrop = true;
             this.skillsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.skillsListBox.ForeColor = System.Drawing.Color.White;
             this.skillsListBox.FormattingEnabled = true;
             this.skillsListBox.Location = new System.Drawing.Point(13, 25);
-            this.skillsListBox.Name = "listBox1";
+            this.skillsListBox.Name = "skillsListBox";
             this.skillsListBox.Size = new System.Drawing.Size(127, 225);
             this.skillsListBox.TabIndex = 1;
             // 
@@ -201,17 +201,19 @@ namespace _4RTools.Forms
             this.label1.Size = new System.Drawing.Size(140, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Ordem de uso de MasterBall";
+            this.label1.Visible = false;
             // 
-            // listBox2
+            // switchListBox
             // 
             this.switchListBox.AllowDrop = true;
             this.switchListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.switchListBox.ForeColor = System.Drawing.Color.White;
             this.switchListBox.FormattingEnabled = true;
             this.switchListBox.Location = new System.Drawing.Point(161, 25);
-            this.switchListBox.Name = "listBox2";
+            this.switchListBox.Name = "switchListBox";
             this.switchListBox.Size = new System.Drawing.Size(127, 225);
             this.switchListBox.TabIndex = 4;
+            this.switchListBox.Visible = false;
             // 
             // clientDTOBindingSource
             // 
