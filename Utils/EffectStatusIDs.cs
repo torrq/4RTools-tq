@@ -32,6 +32,7 @@ namespace _4RTools.Utils
         SHIELDSPELL = 1316,
 
         [Description("Milagre Solar, Lunar e Estelar")]
+        MIRACLE= 2113,
         SPIRIT = 1401,
         [Description("Calor Solar, Lunar, Estelar")]
         WARM = 165,
