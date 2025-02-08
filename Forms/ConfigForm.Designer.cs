@@ -213,7 +213,6 @@ namespace _4RTools.Forms
             this.switchListBox.Name = "switchListBox";
             this.switchListBox.Size = new System.Drawing.Size(127, 225);
             this.switchListBox.TabIndex = 4;
-            this.switchListBox.Visible = false;
             // 
             // clientDTOBindingSource
             // 

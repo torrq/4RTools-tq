@@ -49,8 +49,6 @@ namespace _4RTools.Forms
             this.allBuffs.AddRange(Buff.GetNinjaSkills());
             this.allBuffs.AddRange(Buff.GetGunsSkills());
 
-            this.allBuffs.OrderBy(o => o.name).ToList();
-
             foreach (var skill in this.allBuffs.OrderBy(o => o.name).ToList())
             {
                 this.skillCB.Items.Add(skill.name);

@@ -144,8 +144,15 @@ namespace _4RTools.Model
                                 procVajra = true;
                             }
                         }
-
+                        var order = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
                         skillClone.AddRange(skillCloneGeneric);
+
+                        skillClone = skillClone
+                        .OrderBy(p => order.IndexOf(p.skillId) == -1 ? int.MaxValue : order.IndexOf(p.skillId))
+                        .ToList();
+
+                        skillClone = skillClone.Where(p => p == skillClone.FirstOrDefault() || !order.Contains(p.skillId)).ToList();
+
                         foreach (var skill in skillClone)
                         {
                             if (effectStatusProcMapping.Contains(skill.skillId) && skill.itemKey != Key.None)
