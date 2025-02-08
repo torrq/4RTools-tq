@@ -483,6 +483,7 @@
     <None Include="assets\images\clementia.png" />
     <None Include="assets\images\canto_candidus.png" />
     <None Include="assets\images\fighting_spirit.png" />
+    <None Include="assets\images\providence.png" />
     <Content Include="TalesIcon.ico" />
     <None Include="assets\images\abrasive.gif" />
     <None Include="assets\images\ac_concentration.gif" />

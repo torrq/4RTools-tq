@@ -343,6 +343,8 @@ namespace _4RTools.Utils
         MENTAL_POTION = 298,
         VITATA_POTION = 483,
         RIDDING = 613,
+        [Description("Divina Providência")]
+        PROVIDENCE = 61,
         [Description("União Solar, Lunar e Estelar")]
         FUSION = 2063,
         BOVINE = 2068,
