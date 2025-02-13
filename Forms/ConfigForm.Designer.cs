@@ -32,9 +32,10 @@ namespace _4RTools.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listBox1 = new Oli.Controls.DragDropListBox();
+            this.skillsListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkStopOnAntiBot = new System.Windows.Forms.CheckBox();
             this.chkStopHealOnCity = new System.Windows.Forms.CheckBox();
             this.ammo2textBox = new System.Windows.Forms.TextBox();
             this.ammo1textBox = new System.Windows.Forms.TextBox();
@@ -44,25 +45,26 @@ namespace _4RTools.Forms
             this.chkStopBuffsOnRein = new System.Windows.Forms.CheckBox();
             this.chkStopBuffsOnCity = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
-            this.chkStopOnAntiBot = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.switchListBox = new System.Windows.Forms.ListBox();
+            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // skillsListBox
             // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 25);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(127, 225);
-            this.listBox1.TabIndex = 1;
+            this.skillsListBox.AllowDrop = true;
+            this.skillsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.skillsListBox.ForeColor = System.Drawing.Color.White;
+            this.skillsListBox.FormattingEnabled = true;
+            this.skillsListBox.Location = new System.Drawing.Point(13, 25);
+            this.skillsListBox.Name = "skillsListBox";
+            this.skillsListBox.Size = new System.Drawing.Size(127, 225);
+            this.skillsListBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -85,12 +87,23 @@ namespace _4RTools.Forms
             this.groupBox1.Controls.Add(this.chkStopBuffsOnRein);
             this.groupBox1.Controls.Add(this.chkStopBuffsOnCity);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.groupBox1.Location = new System.Drawing.Point(163, 20);
+            this.groupBox1.Location = new System.Drawing.Point(309, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(300, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configurações TalesTools";
+            // 
+            // chkStopOnAntiBot
+            // 
+            this.chkStopOnAntiBot.AutoSize = true;
+            this.chkStopOnAntiBot.Location = new System.Drawing.Point(13, 154);
+            this.chkStopOnAntiBot.Name = "chkStopOnAntiBot";
+            this.chkStopOnAntiBot.Size = new System.Drawing.Size(138, 17);
+            this.chkStopOnAntiBot.TabIndex = 311;
+            this.chkStopOnAntiBot.Text = "Pausar durante Anti-Bot";
+            this.chkStopOnAntiBot.UseVisualStyleBackColor = true;
+            this.chkStopOnAntiBot.CheckedChanged += new System.EventHandler(this.chkStopOnAntiBot_CheckedChanged);
             // 
             // chkStopHealOnCity
             // 
@@ -180,30 +193,42 @@ namespace _4RTools.Forms
             this.chkStopBuffsOnCity.UseVisualStyleBackColor = true;
             this.chkStopBuffsOnCity.CheckedChanged += new System.EventHandler(this.chkStopBuffsOnCity_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(157, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Ordem de uso de MasterBall";
+            this.label1.Visible = false;
+            // 
+            // switchListBox
+            // 
+            this.switchListBox.AllowDrop = true;
+            this.switchListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
+            this.switchListBox.ForeColor = System.Drawing.Color.White;
+            this.switchListBox.FormattingEnabled = true;
+            this.switchListBox.Location = new System.Drawing.Point(161, 25);
+            this.switchListBox.Name = "switchListBox";
+            this.switchListBox.Size = new System.Drawing.Size(127, 225);
+            this.switchListBox.TabIndex = 4;
+            // 
             // clientDTOBindingSource
             // 
             this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
-            // 
-            // chkStopOnAntiBot
-            // 
-            this.chkStopOnAntiBot.AutoSize = true;
-            this.chkStopOnAntiBot.Location = new System.Drawing.Point(13, 154);
-            this.chkStopOnAntiBot.Name = "chkStopOnAntiBot";
-            this.chkStopOnAntiBot.Size = new System.Drawing.Size(138, 17);
-            this.chkStopOnAntiBot.TabIndex = 311;
-            this.chkStopOnAntiBot.Text = "Pausar durante Anti-Bot";
-            this.chkStopOnAntiBot.UseVisualStyleBackColor = true;
-            this.chkStopOnAntiBot.CheckedChanged += new System.EventHandler(this.chkStopOnAntiBot_CheckedChanged);
             // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(500, 256);
+            this.ClientSize = new System.Drawing.Size(674, 256);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.switchListBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.skillsListBox);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfigForm";
@@ -219,7 +244,7 @@ namespace _4RTools.Forms
       
         #endregion
         private System.Windows.Forms.BindingSource clientDTOBindingSource;
-        private Oli.Controls.DragDropListBox listBox1;
+        private ListBox skillsListBox;
         private Label label2;
         private GroupBox groupBox1;
         private CheckBox chkStopBuffsOnRein;
@@ -235,5 +260,7 @@ namespace _4RTools.Forms
         private ToolTip toolTip3;
         private ToolTip toolTip4;
         private CheckBox chkStopOnAntiBot;
+        private Label label1;
+        private ListBox switchListBox;
     }
 }

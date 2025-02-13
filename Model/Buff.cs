@@ -65,6 +65,8 @@ namespace _4RTools.Model
                 new Buff("Impacto Explosivo", EffectStatusIDs.MAGNUM, Resources._4RTools.Icons.magnum),
                 new Buff("Rapidez com Uma Mão", EffectStatusIDs.ONEHANDQUICKEN, Resources._4RTools.Icons.onehand),
                 new Buff("Provocar", EffectStatusIDs.PROVOKE, Resources._4RTools.Icons.provoke),
+                new Buff("Aura de Combate", EffectStatusIDs.FIGHTINGSPIRIT, Resources._4RTools.Icons.fighting_spirit),
+                new Buff("Divina Providência", EffectStatusIDs.PROVIDENCE, Resources._4RTools.Icons.providence),
             };
 
             return skills;
@@ -124,7 +126,8 @@ namespace _4RTools.Model
                 new Buff("Reflexo de Combate", EffectStatusIDs.WEAPONBLOCKING, Resources._4RTools.Icons.weapon_blocking),
                 new Buff("Esconderijo", EffectStatusIDs.HIDING, Resources._4RTools.Icons.hiding),
                 new Buff("Furtividade", EffectStatusIDs.CLOAKING, Resources._4RTools.Icons.cloaking),
-                new Buff("Desejo das Sombras", EffectStatusIDs.AUTOSHADOWSPELL, Resources._4RTools.Icons.autoshadowspell)
+                new Buff("Desejo das Sombras", EffectStatusIDs.AUTOSHADOWSPELL, Resources._4RTools.Icons.autoshadowspell),
+                new Buff("Espreitar", EffectStatusIDs.CHASEWALK, Resources._4RTools.Icons.chase_walk)
 
             };
 
@@ -149,6 +152,8 @@ namespace _4RTools.Model
                 new Buff("Lauda Agnus", EffectStatusIDs.LAUDA_AGNUS, Resources._4RTools.Icons.lauda_agnus),
                 new Buff("Lauda Ramus", EffectStatusIDs.LAUDA_RAMUS, Resources._4RTools.Icons.lauda_ramus),
                 new Buff("Basílica", EffectStatusIDs.BASILICA, Resources._4RTools.Icons.basilica),
+                new Buff("Clementia", EffectStatusIDs.BLESSING, Resources._4RTools.Icons.clementia),
+                new Buff("Canto Candidus", EffectStatusIDs.INC_AGI, Resources._4RTools.Icons.canto_candidus),
             };
 
             return skills;
@@ -181,7 +186,7 @@ namespace _4RTools.Model
                 new Buff("Brisa Leve (Sagrado)", EffectStatusIDs.ASPERSIO, Resources._4RTools.Icons.tk_mild_holy),
                 new Buff("Brisa Leve (Sombrio)", EffectStatusIDs.PROPERTYDARK, Resources._4RTools.Icons.tk_mild_shadow),
                 new Buff("Cambalhota", EffectStatusIDs.DODGE_ON, Resources._4RTools.Icons.tumbling),
-                new Buff("Milagre Solar, Lunar e Estelar", EffectStatusIDs.SPIRIT, Resources._4RTools.Icons.solar_miracle),
+                new Buff("Milagre Solar, Lunar e Estelar", EffectStatusIDs.MIRACLE, Resources._4RTools.Icons.solar_miracle),
                 new Buff("Calor Solar, Lunar, Estelar", EffectStatusIDs.WARM, Resources._4RTools.Icons.sun_warm),
                 new Buff("Proteção Solar", EffectStatusIDs.SUN_COMFORT, Resources._4RTools.Icons.sun_comfort),
                 new Buff("Proteção Lunar", EffectStatusIDs.MOON_COMFORT, Resources._4RTools.Icons.moon_comfort),
@@ -191,6 +196,7 @@ namespace _4RTools.Model
                 new Buff("Kaite", EffectStatusIDs.KAITE, Resources._4RTools.Icons.kaite),
                 new Buff("Kaizel", EffectStatusIDs.KAIZEL, Resources._4RTools.Icons.kaizel),
                 new Buff("Kaahi", EffectStatusIDs.KAAHI, Resources._4RTools.Icons.kaahi),
+                new Buff("Corrida", EffectStatusIDs.RUN, Resources._4RTools.Icons.run),
 
             };
 

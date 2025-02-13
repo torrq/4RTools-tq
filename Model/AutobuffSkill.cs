@@ -60,7 +60,7 @@ namespace _4RTools.Model
                             if (currentStatus == uint.MaxValue) { continue; }
 
                             buffs.Add((EffectStatusIDs)currentStatus);
-                            EffectStatusIDs status = (EffectStatusIDs)currentStatus;
+                            EffectStatusIDs status = (EffectStatusIDs)currentStatus;    
 
                             if (status == EffectStatusIDs.OVERTHRUSTMAX)
                             {

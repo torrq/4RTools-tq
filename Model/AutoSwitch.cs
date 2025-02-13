@@ -25,6 +25,8 @@ namespace _4RTools.Model
         public List<AutoSwitchConfig> autoSwitchMapping = new List<AutoSwitchConfig>();
         public List<AutoSwitchConfig> autoSwitchGenericMapping = new List<AutoSwitchConfig>();
 
+        public List<EffectStatusIDs> autoSwitchOrder { get; set; } = new List<EffectStatusIDs>();
+
         public List<String> listCities { get; set; }
 
         public class AutoSwitchConfig
@@ -80,6 +82,7 @@ namespace _4RTools.Model
             bool equipVajra = false;
             int contVajra = 0;
             int contPet = 0;
+            bool procVajra = false;
             List<EffectStatusIDs> effectStatusProcMapping = new List<EffectStatusIDs>
             {
                 EffectStatusIDs.PROVOKE,
@@ -93,6 +96,7 @@ namespace _4RTools.Model
             bool procPet = true;
             _4RThread autobuffItemThread = new _4RThread(_ =>
             {
+                procVajra = false;
                 List<AutoSwitchConfig> skillClone = new List<AutoSwitchConfig>(this.autoSwitchMapping.Where(x => x.itemKey != Key.None));
                 List<AutoSwitchConfig> skillCloneGeneric = new List<AutoSwitchConfig>(this.autoSwitchGenericMapping.Where(x => x.itemKey != Key.None));
                 string currentMap = c.ReadCurrentMap();
@@ -128,17 +132,27 @@ namespace _4RTools.Model
                                 skillCloneGeneric = skillCloneGeneric.Where(skill => skill.skillId != status).ToList();
                             }
 
-                            if (status == EffectStatusIDs.THURISAZ)
+                            if (status == EffectStatusIDs.THURISAZ || status == EffectStatusIDs.FIGHTINGSPIRIT)
                             {
+
                                 if (equipVajra)
                                 {
                                     equipVajra = false;
                                     this.equipNextItem(autoSwitchMapping.FirstOrDefault(x => x.skillId == EffectStatusIDs.THURISAZ).nextItemKey);
                                 }
+                                skillClone = validadeVajraSkills(skillClone, status);
+                                procVajra = true;
                             }
                         }
-
+                        var order = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
                         skillClone.AddRange(skillCloneGeneric);
+
+                        skillClone = skillClone
+                        .OrderBy(p => order.IndexOf(p.skillId) == -1 ? int.MaxValue : order.IndexOf(p.skillId))
+                        .ToList();
+
+                        skillClone = skillClone.Where(p => p == skillClone.FirstOrDefault() || !order.Contains(p.skillId)).ToList();
+
                         foreach (var skill in skillClone)
                         {
                             if (effectStatusProcMapping.Contains(skill.skillId) && skill.itemKey != Key.None)
@@ -156,7 +170,7 @@ namespace _4RTools.Model
                                     procPet = false;
                                 }
                             }
-                            else if (skill.skillId == EffectStatusIDs.THURISAZ)
+                            else if (skill.skillId == EffectStatusIDs.THURISAZ || skill.skillId == EffectStatusIDs.FIGHTINGSPIRIT)
                             {
                                 contVajra++;
 
@@ -187,6 +201,27 @@ namespace _4RTools.Model
 
             return autobuffItemThread;
         }
+        private List<AutoSwitchConfig> validadeVajraSkills(List<AutoSwitchConfig> skillClone, EffectStatusIDs status)
+        {
+            if (status == EffectStatusIDs.THURISAZ)
+            {
+                if (autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.FIGHTINGSPIRIT))
+                {
+                    skillClone = skillClone.Where(skill => skill.skillId != EffectStatusIDs.FIGHTINGSPIRIT).ToList();
+                }
+            }
+
+            if (status == EffectStatusIDs.FIGHTINGSPIRIT)
+            {
+                if (autoSwitchMapping.Exists(x => x.skillId == EffectStatusIDs.THURISAZ))
+                {
+                    skillClone = skillClone.Where(skill => skill.skillId != EffectStatusIDs.THURISAZ).ToList();
+                }
+            }
+
+            return skillClone;
+        }
+
         private bool hasBuff(Client c, EffectStatusIDs buff)
         {
             for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
@@ -243,6 +278,11 @@ namespace _4RTools.Model
         {
             if ((next != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), next.ToString()), 0);
+        }
+
+        public void SetAutoSwitchOrder(List<EffectStatusIDs> buffs)
+        {
+            this.autoSwitchOrder = buffs;
         }
     }
 }

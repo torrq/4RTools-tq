@@ -32,6 +32,7 @@ namespace _4RTools.Utils
         SHIELDSPELL = 1316,
 
         [Description("Milagre Solar, Lunar e Estelar")]
+        MIRACLE= 2113,
         SPIRIT = 1401,
         [Description("Calor Solar, Lunar, Estelar")]
         WARM = 165,
@@ -193,6 +194,7 @@ namespace _4RTools.Utils
         HIDING = 4,
         [Description("Impacto Explosivo")]
         MAGNUM = 131,
+        [Description("Aura de Combate")]
         FIGHTINGSPIRIT = 322,
         [Description("Basílica")]
         BASILICA = 1122,
@@ -216,6 +218,9 @@ namespace _4RTools.Utils
         ASPERSIO = 17,
         [Description("Enlouquecedor")]
         MINDBREAKER = 126,
+        [Description("Corrida")]
+        RUN = 145,
+
 
         FULL_SWINGK = 486,
         MANA_PLUS = 487,
@@ -274,7 +279,9 @@ namespace _4RTools.Utils
         TARGET_BLOOD = 301,
 
         //Scrolls
+        [Description("Canto Candidus")]
         INC_AGI = 12,
+        [Description("Clementia")]
         BLESSING = 10,
 
         //3RD foods
@@ -336,6 +343,8 @@ namespace _4RTools.Utils
         MENTAL_POTION = 298,
         VITATA_POTION = 483,
         RIDDING = 613,
+        [Description("Divina Providência")]
+        PROVIDENCE = 61,
         [Description("União Solar, Lunar e Estelar")]
         FUSION = 2063,
         BOVINE = 2068,
@@ -351,7 +360,10 @@ namespace _4RTools.Utils
         KAIZEL = 156,
         [Description("Kaahi")]
         KAAHI = 157,
-        ANTI_BOT = 5020
+        ANTI_BOT = 5020,
+        [Description("Espreitar")]
+        CHASEWALK = 182,
+
     }
 
 }

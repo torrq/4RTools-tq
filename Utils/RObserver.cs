@@ -28,6 +28,7 @@ namespace _4RTools.Utils
         TURN_HEAL_OFF,
         ADDED_NEW_AUTOBUFF_SKILL,
         CHANGED_AUTOSWITCH_SKILL,
+        ADDED_NEW_AUTOSWITCH_PETS,
     }
 
     public class Message

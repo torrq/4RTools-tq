@@ -16,15 +16,32 @@ namespace _4RTools.Utils
             try
             {
                 TextBox textBox = (TextBox)sender;
-                Key thisk = (Key)Enum.Parse(typeof(Key), e.KeyCode.ToString());
+                Key thisk;
+
+                if (e.KeyCode.ToString() == "Oemplus")
+                {
+                    thisk = Key.OemPlus;
+                }else if(e.KeyCode.ToString() == "Oemtilde")
+                {
+                    thisk = Key.OemTilde;
+                }
+                else if (e.KeyCode.ToString() == "Oemcomma")
+                {
+                    thisk = Key.OemComma;
+                }
+                else
+                {
+                    thisk = (Key)Enum.Parse(typeof(Key), e.KeyCode.ToString());
+                }
 
                 switch (thisk)
                 {
-                    case Key.Escape: case Key.Back:
+                    case Key.Escape:
+                    case Key.Back:
                         textBox.Text = Key.None.ToString();
                         break;
                     default:
-                        textBox.Text = e.KeyCode.ToString();
+                        textBox.Text = thisk.ToString();
                         break;
                 }
                 textBox.Parent.Focus();

@@ -14,6 +14,7 @@ namespace _4RTools.Forms
     {
         private List<Buff> allBuffs = new List<Buff>();
         private Subject _subject;
+        string OldTextKey = string.Empty;
         class ComboboxValue
         {
             public int Id { get; private set; }
@@ -48,8 +49,6 @@ namespace _4RTools.Forms
             this.allBuffs.AddRange(Buff.GetNinjaSkills());
             this.allBuffs.AddRange(Buff.GetGunsSkills());
 
-            this.allBuffs.OrderBy(o => o.name).ToList();
-
             foreach (var skill in this.allBuffs.OrderBy(o => o.name).ToList())
             {
                 this.skillCB.Items.Add(skill.name);
@@ -70,6 +69,7 @@ namespace _4RTools.Forms
                     textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
                     textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
                     textBox.TextChanged += new EventHandler(this.onTextChange);
+                    textBox.GotFocus += new EventHandler(this.onFocus);
                 }
             }
         }
@@ -148,13 +148,19 @@ namespace _4RTools.Forms
                 numeric.Value = Convert.ToInt16(ProfileSingleton.GetCurrent().AutoSwitch.switchEquipDelay);
             }
         }
+        private void onFocus(object sender, EventArgs e)
+        { 
+            TextBox txtBox = (TextBox)sender;
+            OldTextKey = txtBox.Text;
+        }
 
         private void onTextChange(object sender, EventArgs e)
         {
             try
             {
                 TextBox txtBox = (TextBox)sender;
-                if (txtBox.Text.ToString() != String.Empty)
+                bool textChanged = this.OldTextKey != String.Empty && this.OldTextKey != txtBox.Text.ToString();
+                if ((txtBox.Text.ToString() != String.Empty) && textChanged)
                 {
                     Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
                     EffectStatusIDs statusID = (EffectStatusIDs)Int16.Parse(txtBox.Name.Split(new[] { "in" }, StringSplitOptions.None)[1]);
@@ -179,7 +185,7 @@ namespace _4RTools.Forms
                                 config.nextItemKey = key;
                                 break;
                         }
-
+                        
                     }
                     else
                     {
@@ -188,6 +194,7 @@ namespace _4RTools.Forms
                     }
 
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
+                    _subject.Notify(new Utils.Message(Utils.MessageCode.ADDED_NEW_AUTOSWITCH_PETS, null));
                 }
                 this.ActiveControl = null;
             }
