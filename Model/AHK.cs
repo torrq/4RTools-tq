@@ -125,7 +125,6 @@ namespace _4RTools.Model
                 {
                     if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                     {
-                        getOffRein(roClient);
                         autoSwitchAmmo(roClient, ref ammo);
                         Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                         System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
@@ -142,7 +141,6 @@ namespace _4RTools.Model
                 {
                     if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                     {
-                        getOffRein(roClient);
                         autoSwitchAmmo(roClient, ref ammo);
                         Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                         send_click(0);
@@ -172,7 +170,6 @@ namespace _4RTools.Model
                     if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
                     if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                     {
-                        getOffRein(roClient);
                         autoSwitchAmmo(roClient, ref ammo);
                         SendMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (IntPtr)thisk, IntPtr.Zero);
                         Thread.Sleep(1);
@@ -204,7 +201,6 @@ namespace _4RTools.Model
             {
                 if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                 {
-                    getOffRein(roClient);
                     autoSwitchAmmo(roClient, ref ammo);
 
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
@@ -244,18 +240,6 @@ namespace _4RTools.Model
             }
         }
 
-        private void getOffRein(Client c)
-        {
-            if (ProfileSingleton.GetCurrent().UserPreferences.getOffRein && hasBuff(c, EffectStatusIDs.RIDDING))
-            {
-                if (ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString() != String.Empty)
-                {
-                    Key key = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey;
-                    Interop.PostMessage(c.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
-                }
-            }
-        }
-
         private bool hasBuff(Client c, EffectStatusIDs buff)
         {
             for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
@@ -277,7 +261,6 @@ namespace _4RTools.Model
             {
                 if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                 {
-                    getOffRein(roClient);
                     Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                 }
                 Thread.Sleep(this.AhkDelay);

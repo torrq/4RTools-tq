@@ -179,5 +179,115 @@ namespace _4RTools.Forms
                 this.chkNoShift.Enabled = true;
             }
         }
+
+        private void AHKForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF9_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkF1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkNum8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkL_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkNum7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

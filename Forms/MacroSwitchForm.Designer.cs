@@ -545,9 +545,7 @@
             // 
             // in1mac1
             // 
-            this.in1mac1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac1.ForeColor = System.Drawing.Color.White;
             this.in1mac1.Location = new System.Drawing.Point(63, 34);
             this.in1mac1.Name = "in1mac1";
             this.in1mac1.Size = new System.Drawing.Size(49, 20);
@@ -598,9 +596,7 @@
             // 
             // in1mac1delay
             // 
-            this.in1mac1delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac1delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac1delay.ForeColor = System.Drawing.Color.White;
             this.in1mac1delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac1delay.Maximum = new decimal(new int[] {
             5000,
@@ -613,9 +609,7 @@
             // 
             // in2mac1delay
             // 
-            this.in2mac1delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac1delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac1delay.ForeColor = System.Drawing.Color.White;
             this.in2mac1delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac1delay.Maximum = new decimal(new int[] {
             5000,
@@ -648,9 +642,7 @@
             // 
             // in2mac1
             // 
-            this.in2mac1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac1.ForeColor = System.Drawing.Color.White;
             this.in2mac1.Location = new System.Drawing.Point(132, 34);
             this.in2mac1.Name = "in2mac1";
             this.in2mac1.Size = new System.Drawing.Size(49, 20);
@@ -658,9 +650,7 @@
             // 
             // in4mac1delay
             // 
-            this.in4mac1delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac1delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac1delay.ForeColor = System.Drawing.Color.White;
             this.in4mac1delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac1delay.Maximum = new decimal(new int[] {
             5000,
@@ -693,9 +683,7 @@
             // 
             // in4mac1
             // 
-            this.in4mac1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac1.ForeColor = System.Drawing.Color.White;
             this.in4mac1.Location = new System.Drawing.Point(270, 34);
             this.in4mac1.Name = "in4mac1";
             this.in4mac1.Size = new System.Drawing.Size(49, 20);
@@ -703,9 +691,7 @@
             // 
             // in3mac1delay
             // 
-            this.in3mac1delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac1delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac1delay.ForeColor = System.Drawing.Color.White;
             this.in3mac1delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac1delay.Maximum = new decimal(new int[] {
             5000,
@@ -738,9 +724,7 @@
             // 
             // in3mac1
             // 
-            this.in3mac1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac1.ForeColor = System.Drawing.Color.White;
             this.in3mac1.Location = new System.Drawing.Point(201, 34);
             this.in3mac1.Name = "in3mac1";
             this.in3mac1.Size = new System.Drawing.Size(49, 20);
@@ -748,9 +732,7 @@
             // 
             // in7mac1delay
             // 
-            this.in7mac1delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac1delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac1delay.ForeColor = System.Drawing.Color.White;
             this.in7mac1delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac1delay.Maximum = new decimal(new int[] {
             5000,
@@ -773,9 +755,7 @@
             // 
             // in7mac1
             // 
-            this.in7mac1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac1.ForeColor = System.Drawing.Color.White;
             this.in7mac1.Location = new System.Drawing.Point(477, 34);
             this.in7mac1.Name = "in7mac1";
             this.in7mac1.Size = new System.Drawing.Size(49, 20);
@@ -783,9 +763,7 @@
             // 
             // in6mac1delay
             // 
-            this.in6mac1delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac1delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac1delay.ForeColor = System.Drawing.Color.White;
             this.in6mac1delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac1delay.Maximum = new decimal(new int[] {
             5000,
@@ -818,9 +796,7 @@
             // 
             // in6mac1
             // 
-            this.in6mac1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac1.ForeColor = System.Drawing.Color.White;
             this.in6mac1.Location = new System.Drawing.Point(408, 34);
             this.in6mac1.Name = "in6mac1";
             this.in6mac1.Size = new System.Drawing.Size(49, 20);
@@ -828,9 +804,7 @@
             // 
             // in5mac1delay
             // 
-            this.in5mac1delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac1delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac1delay.ForeColor = System.Drawing.Color.White;
             this.in5mac1delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac1delay.Maximum = new decimal(new int[] {
             5000,
@@ -863,9 +837,7 @@
             // 
             // in5mac1
             // 
-            this.in5mac1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac1.ForeColor = System.Drawing.Color.White;
             this.in5mac1.Location = new System.Drawing.Point(339, 34);
             this.in5mac1.Name = "in5mac1";
             this.in5mac1.Size = new System.Drawing.Size(49, 20);
@@ -873,7 +845,6 @@
             // 
             // chainGroup1
             // 
-            this.chainGroup1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup1.Controls.Add(this.in1mac1);
             this.chainGroup1.Controls.Add(this.in7mac1);
             this.chainGroup1.Controls.Add(this.in6mac1);
@@ -904,7 +875,6 @@
             this.chainGroup1.Controls.Add(this.pictureBox14);
             this.chainGroup1.Controls.Add(this.pictureBox12);
             this.chainGroup1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup1.Location = new System.Drawing.Point(1, 12);
             this.chainGroup1.Name = "chainGroup1";
             this.chainGroup1.Size = new System.Drawing.Size(533, 118);
@@ -914,7 +884,6 @@
             // 
             // chainGroup2
             // 
-            this.chainGroup2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup2.Controls.Add(this.in1mac2);
             this.chainGroup2.Controls.Add(this.in7mac2);
             this.chainGroup2.Controls.Add(this.in6mac2);
@@ -945,7 +914,6 @@
             this.chainGroup2.Controls.Add(this.pictureBox25);
             this.chainGroup2.Controls.Add(this.pictureBox26);
             this.chainGroup2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup2.Location = new System.Drawing.Point(1, 136);
             this.chainGroup2.Name = "chainGroup2";
             this.chainGroup2.Size = new System.Drawing.Size(533, 118);
@@ -955,9 +923,7 @@
             // 
             // in1mac2
             // 
-            this.in1mac2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac2.ForeColor = System.Drawing.Color.White;
             this.in1mac2.Location = new System.Drawing.Point(63, 34);
             this.in1mac2.Name = "in1mac2";
             this.in1mac2.Size = new System.Drawing.Size(49, 20);
@@ -965,9 +931,7 @@
             // 
             // in7mac2
             // 
-            this.in7mac2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac2.ForeColor = System.Drawing.Color.White;
             this.in7mac2.Location = new System.Drawing.Point(477, 34);
             this.in7mac2.Name = "in7mac2";
             this.in7mac2.Size = new System.Drawing.Size(49, 20);
@@ -975,9 +939,7 @@
             // 
             // in6mac2
             // 
-            this.in6mac2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac2.ForeColor = System.Drawing.Color.White;
             this.in6mac2.Location = new System.Drawing.Point(408, 34);
             this.in6mac2.Name = "in6mac2";
             this.in6mac2.Size = new System.Drawing.Size(49, 20);
@@ -985,9 +947,7 @@
             // 
             // in2mac2
             // 
-            this.in2mac2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac2.ForeColor = System.Drawing.Color.White;
             this.in2mac2.Location = new System.Drawing.Point(132, 34);
             this.in2mac2.Name = "in2mac2";
             this.in2mac2.Size = new System.Drawing.Size(49, 20);
@@ -995,9 +955,7 @@
             // 
             // in5mac2
             // 
-            this.in5mac2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac2.ForeColor = System.Drawing.Color.White;
             this.in5mac2.Location = new System.Drawing.Point(339, 34);
             this.in5mac2.Name = "in5mac2";
             this.in5mac2.Size = new System.Drawing.Size(49, 20);
@@ -1005,9 +963,7 @@
             // 
             // in3mac2
             // 
-            this.in3mac2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac2.ForeColor = System.Drawing.Color.White;
             this.in3mac2.Location = new System.Drawing.Point(201, 34);
             this.in3mac2.Name = "in3mac2";
             this.in3mac2.Size = new System.Drawing.Size(49, 20);
@@ -1015,9 +971,7 @@
             // 
             // in4mac2
             // 
-            this.in4mac2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac2.ForeColor = System.Drawing.Color.White;
             this.in4mac2.Location = new System.Drawing.Point(270, 34);
             this.in4mac2.Name = "in4mac2";
             this.in4mac2.Size = new System.Drawing.Size(49, 20);
@@ -1025,9 +979,7 @@
             // 
             // in7mac2delay
             // 
-            this.in7mac2delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac2delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac2delay.ForeColor = System.Drawing.Color.White;
             this.in7mac2delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac2delay.Maximum = new decimal(new int[] {
             5000,
@@ -1060,9 +1012,7 @@
             // 
             // in6mac2delay
             // 
-            this.in6mac2delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac2delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac2delay.ForeColor = System.Drawing.Color.White;
             this.in6mac2delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac2delay.Maximum = new decimal(new int[] {
             5000,
@@ -1103,9 +1053,7 @@
             // 
             // in1mac2delay
             // 
-            this.in1mac2delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac2delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac2delay.ForeColor = System.Drawing.Color.White;
             this.in1mac2delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac2delay.Maximum = new decimal(new int[] {
             5000,
@@ -1118,9 +1066,7 @@
             // 
             // in5mac2delay
             // 
-            this.in5mac2delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac2delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac2delay.ForeColor = System.Drawing.Color.White;
             this.in5mac2delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac2delay.Maximum = new decimal(new int[] {
             5000,
@@ -1153,9 +1099,7 @@
             // 
             // in2mac2delay
             // 
-            this.in2mac2delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac2delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac2delay.ForeColor = System.Drawing.Color.White;
             this.in2mac2delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac2delay.Maximum = new decimal(new int[] {
             5000,
@@ -1168,9 +1112,7 @@
             // 
             // in4mac2delay
             // 
-            this.in4mac2delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac2delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac2delay.ForeColor = System.Drawing.Color.White;
             this.in4mac2delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac2delay.Maximum = new decimal(new int[] {
             5000,
@@ -1203,9 +1145,7 @@
             // 
             // in3mac2delay
             // 
-            this.in3mac2delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac2delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac2delay.ForeColor = System.Drawing.Color.White;
             this.in3mac2delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac2delay.Maximum = new decimal(new int[] {
             5000,
@@ -1278,7 +1218,6 @@
             // 
             // chainGroup3
             // 
-            this.chainGroup3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup3.Controls.Add(this.in1mac3);
             this.chainGroup3.Controls.Add(this.in7mac3);
             this.chainGroup3.Controls.Add(this.in6mac3);
@@ -1309,7 +1248,6 @@
             this.chainGroup3.Controls.Add(this.pictureBox38);
             this.chainGroup3.Controls.Add(this.pictureBox39);
             this.chainGroup3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup3.Location = new System.Drawing.Point(1, 260);
             this.chainGroup3.Name = "chainGroup3";
             this.chainGroup3.Size = new System.Drawing.Size(533, 118);
@@ -1319,9 +1257,7 @@
             // 
             // in1mac3
             // 
-            this.in1mac3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac3.ForeColor = System.Drawing.Color.White;
             this.in1mac3.Location = new System.Drawing.Point(63, 34);
             this.in1mac3.Name = "in1mac3";
             this.in1mac3.Size = new System.Drawing.Size(49, 20);
@@ -1329,9 +1265,7 @@
             // 
             // in7mac3
             // 
-            this.in7mac3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac3.ForeColor = System.Drawing.Color.White;
             this.in7mac3.Location = new System.Drawing.Point(477, 34);
             this.in7mac3.Name = "in7mac3";
             this.in7mac3.Size = new System.Drawing.Size(49, 20);
@@ -1339,9 +1273,7 @@
             // 
             // in6mac3
             // 
-            this.in6mac3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac3.ForeColor = System.Drawing.Color.White;
             this.in6mac3.Location = new System.Drawing.Point(408, 34);
             this.in6mac3.Name = "in6mac3";
             this.in6mac3.Size = new System.Drawing.Size(49, 20);
@@ -1349,9 +1281,7 @@
             // 
             // in2mac3
             // 
-            this.in2mac3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac3.ForeColor = System.Drawing.Color.White;
             this.in2mac3.Location = new System.Drawing.Point(132, 34);
             this.in2mac3.Name = "in2mac3";
             this.in2mac3.Size = new System.Drawing.Size(49, 20);
@@ -1359,9 +1289,7 @@
             // 
             // in5mac3
             // 
-            this.in5mac3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac3.ForeColor = System.Drawing.Color.White;
             this.in5mac3.Location = new System.Drawing.Point(339, 34);
             this.in5mac3.Name = "in5mac3";
             this.in5mac3.Size = new System.Drawing.Size(49, 20);
@@ -1369,9 +1297,7 @@
             // 
             // in3mac3
             // 
-            this.in3mac3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac3.ForeColor = System.Drawing.Color.White;
             this.in3mac3.Location = new System.Drawing.Point(201, 34);
             this.in3mac3.Name = "in3mac3";
             this.in3mac3.Size = new System.Drawing.Size(49, 20);
@@ -1379,9 +1305,7 @@
             // 
             // in4mac3
             // 
-            this.in4mac3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac3.ForeColor = System.Drawing.Color.White;
             this.in4mac3.Location = new System.Drawing.Point(270, 34);
             this.in4mac3.Name = "in4mac3";
             this.in4mac3.Size = new System.Drawing.Size(49, 20);
@@ -1389,9 +1313,7 @@
             // 
             // in7mac3delay
             // 
-            this.in7mac3delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac3delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac3delay.ForeColor = System.Drawing.Color.White;
             this.in7mac3delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac3delay.Maximum = new decimal(new int[] {
             5000,
@@ -1424,9 +1346,7 @@
             // 
             // in6mac3delay
             // 
-            this.in6mac3delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac3delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac3delay.ForeColor = System.Drawing.Color.White;
             this.in6mac3delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac3delay.Maximum = new decimal(new int[] {
             5000,
@@ -1467,9 +1387,7 @@
             // 
             // in1mac3delay
             // 
-            this.in1mac3delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac3delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac3delay.ForeColor = System.Drawing.Color.White;
             this.in1mac3delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac3delay.Maximum = new decimal(new int[] {
             5000,
@@ -1482,9 +1400,7 @@
             // 
             // in5mac3delay
             // 
-            this.in5mac3delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac3delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac3delay.ForeColor = System.Drawing.Color.White;
             this.in5mac3delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac3delay.Maximum = new decimal(new int[] {
             5000,
@@ -1517,9 +1433,7 @@
             // 
             // in2mac3delay
             // 
-            this.in2mac3delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac3delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac3delay.ForeColor = System.Drawing.Color.White;
             this.in2mac3delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac3delay.Maximum = new decimal(new int[] {
             5000,
@@ -1532,9 +1446,7 @@
             // 
             // in4mac3delay
             // 
-            this.in4mac3delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac3delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac3delay.ForeColor = System.Drawing.Color.White;
             this.in4mac3delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac3delay.Maximum = new decimal(new int[] {
             5000,
@@ -1567,9 +1479,7 @@
             // 
             // in3mac3delay
             // 
-            this.in3mac3delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac3delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac3delay.ForeColor = System.Drawing.Color.White;
             this.in3mac3delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac3delay.Maximum = new decimal(new int[] {
             5000,
@@ -1642,7 +1552,6 @@
             // 
             // chainGroup4
             // 
-            this.chainGroup4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup4.Controls.Add(this.in1mac4);
             this.chainGroup4.Controls.Add(this.in7mac4);
             this.chainGroup4.Controls.Add(this.in6mac4);
@@ -1673,7 +1582,6 @@
             this.chainGroup4.Controls.Add(this.pictureBox51);
             this.chainGroup4.Controls.Add(this.pictureBox52);
             this.chainGroup4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup4.Location = new System.Drawing.Point(1, 384);
             this.chainGroup4.Name = "chainGroup4";
             this.chainGroup4.Size = new System.Drawing.Size(533, 118);
@@ -1683,9 +1591,7 @@
             // 
             // in1mac4
             // 
-            this.in1mac4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac4.ForeColor = System.Drawing.Color.White;
             this.in1mac4.Location = new System.Drawing.Point(63, 34);
             this.in1mac4.Name = "in1mac4";
             this.in1mac4.Size = new System.Drawing.Size(49, 20);
@@ -1693,9 +1599,7 @@
             // 
             // in7mac4
             // 
-            this.in7mac4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac4.ForeColor = System.Drawing.Color.White;
             this.in7mac4.Location = new System.Drawing.Point(477, 34);
             this.in7mac4.Name = "in7mac4";
             this.in7mac4.Size = new System.Drawing.Size(49, 20);
@@ -1703,9 +1607,7 @@
             // 
             // in6mac4
             // 
-            this.in6mac4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac4.ForeColor = System.Drawing.Color.White;
             this.in6mac4.Location = new System.Drawing.Point(408, 34);
             this.in6mac4.Name = "in6mac4";
             this.in6mac4.Size = new System.Drawing.Size(49, 20);
@@ -1713,9 +1615,7 @@
             // 
             // in2mac4
             // 
-            this.in2mac4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac4.ForeColor = System.Drawing.Color.White;
             this.in2mac4.Location = new System.Drawing.Point(132, 34);
             this.in2mac4.Name = "in2mac4";
             this.in2mac4.Size = new System.Drawing.Size(49, 20);
@@ -1723,9 +1623,7 @@
             // 
             // in5mac4
             // 
-            this.in5mac4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac4.ForeColor = System.Drawing.Color.White;
             this.in5mac4.Location = new System.Drawing.Point(339, 34);
             this.in5mac4.Name = "in5mac4";
             this.in5mac4.Size = new System.Drawing.Size(49, 20);
@@ -1733,9 +1631,7 @@
             // 
             // in3mac4
             // 
-            this.in3mac4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac4.ForeColor = System.Drawing.Color.White;
             this.in3mac4.Location = new System.Drawing.Point(201, 34);
             this.in3mac4.Name = "in3mac4";
             this.in3mac4.Size = new System.Drawing.Size(49, 20);
@@ -1743,9 +1639,7 @@
             // 
             // in4mac4
             // 
-            this.in4mac4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac4.ForeColor = System.Drawing.Color.White;
             this.in4mac4.Location = new System.Drawing.Point(270, 34);
             this.in4mac4.Name = "in4mac4";
             this.in4mac4.Size = new System.Drawing.Size(49, 20);
@@ -1753,9 +1647,7 @@
             // 
             // in7mac4delay
             // 
-            this.in7mac4delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac4delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac4delay.ForeColor = System.Drawing.Color.White;
             this.in7mac4delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac4delay.Maximum = new decimal(new int[] {
             5000,
@@ -1788,9 +1680,7 @@
             // 
             // in6mac4delay
             // 
-            this.in6mac4delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac4delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac4delay.ForeColor = System.Drawing.Color.White;
             this.in6mac4delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac4delay.Maximum = new decimal(new int[] {
             5000,
@@ -1831,9 +1721,7 @@
             // 
             // in1mac4delay
             // 
-            this.in1mac4delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac4delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac4delay.ForeColor = System.Drawing.Color.White;
             this.in1mac4delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac4delay.Maximum = new decimal(new int[] {
             5000,
@@ -1846,9 +1734,7 @@
             // 
             // in5mac4delay
             // 
-            this.in5mac4delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac4delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac4delay.ForeColor = System.Drawing.Color.White;
             this.in5mac4delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac4delay.Maximum = new decimal(new int[] {
             5000,
@@ -1881,9 +1767,7 @@
             // 
             // in2mac4delay
             // 
-            this.in2mac4delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac4delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac4delay.ForeColor = System.Drawing.Color.White;
             this.in2mac4delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac4delay.Maximum = new decimal(new int[] {
             5000,
@@ -1896,9 +1780,7 @@
             // 
             // in4mac4delay
             // 
-            this.in4mac4delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac4delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac4delay.ForeColor = System.Drawing.Color.White;
             this.in4mac4delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac4delay.Maximum = new decimal(new int[] {
             5000,
@@ -1931,9 +1813,7 @@
             // 
             // in3mac4delay
             // 
-            this.in3mac4delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac4delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac4delay.ForeColor = System.Drawing.Color.White;
             this.in3mac4delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac4delay.Maximum = new decimal(new int[] {
             5000,
@@ -2006,7 +1886,6 @@
             // 
             // chainGroup5
             // 
-            this.chainGroup5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup5.Controls.Add(this.in1mac5);
             this.chainGroup5.Controls.Add(this.in7mac5);
             this.chainGroup5.Controls.Add(this.in6mac5);
@@ -2037,7 +1916,6 @@
             this.chainGroup5.Controls.Add(this.pictureBox64);
             this.chainGroup5.Controls.Add(this.pictureBox65);
             this.chainGroup5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup5.Location = new System.Drawing.Point(1, 508);
             this.chainGroup5.Name = "chainGroup5";
             this.chainGroup5.Size = new System.Drawing.Size(533, 118);
@@ -2047,9 +1925,7 @@
             // 
             // in1mac5
             // 
-            this.in1mac5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac5.ForeColor = System.Drawing.Color.White;
             this.in1mac5.Location = new System.Drawing.Point(63, 34);
             this.in1mac5.Name = "in1mac5";
             this.in1mac5.Size = new System.Drawing.Size(49, 20);
@@ -2057,9 +1933,7 @@
             // 
             // in7mac5
             // 
-            this.in7mac5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac5.ForeColor = System.Drawing.Color.White;
             this.in7mac5.Location = new System.Drawing.Point(477, 34);
             this.in7mac5.Name = "in7mac5";
             this.in7mac5.Size = new System.Drawing.Size(49, 20);
@@ -2067,9 +1941,7 @@
             // 
             // in6mac5
             // 
-            this.in6mac5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac5.ForeColor = System.Drawing.Color.White;
             this.in6mac5.Location = new System.Drawing.Point(408, 34);
             this.in6mac5.Name = "in6mac5";
             this.in6mac5.Size = new System.Drawing.Size(49, 20);
@@ -2077,9 +1949,7 @@
             // 
             // in2mac5
             // 
-            this.in2mac5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac5.ForeColor = System.Drawing.Color.White;
             this.in2mac5.Location = new System.Drawing.Point(132, 34);
             this.in2mac5.Name = "in2mac5";
             this.in2mac5.Size = new System.Drawing.Size(49, 20);
@@ -2087,9 +1957,7 @@
             // 
             // in5mac5
             // 
-            this.in5mac5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac5.ForeColor = System.Drawing.Color.White;
             this.in5mac5.Location = new System.Drawing.Point(339, 34);
             this.in5mac5.Name = "in5mac5";
             this.in5mac5.Size = new System.Drawing.Size(49, 20);
@@ -2097,9 +1965,7 @@
             // 
             // in3mac5
             // 
-            this.in3mac5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac5.ForeColor = System.Drawing.Color.White;
             this.in3mac5.Location = new System.Drawing.Point(201, 34);
             this.in3mac5.Name = "in3mac5";
             this.in3mac5.Size = new System.Drawing.Size(49, 20);
@@ -2107,9 +1973,7 @@
             // 
             // in4mac5
             // 
-            this.in4mac5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac5.ForeColor = System.Drawing.Color.White;
             this.in4mac5.Location = new System.Drawing.Point(270, 34);
             this.in4mac5.Name = "in4mac5";
             this.in4mac5.Size = new System.Drawing.Size(49, 20);
@@ -2117,9 +1981,7 @@
             // 
             // in7mac5delay
             // 
-            this.in7mac5delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac5delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac5delay.ForeColor = System.Drawing.Color.White;
             this.in7mac5delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac5delay.Maximum = new decimal(new int[] {
             5000,
@@ -2152,9 +2014,7 @@
             // 
             // in6mac5delay
             // 
-            this.in6mac5delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac5delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac5delay.ForeColor = System.Drawing.Color.White;
             this.in6mac5delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac5delay.Maximum = new decimal(new int[] {
             5000,
@@ -2195,9 +2055,7 @@
             // 
             // in1mac5delay
             // 
-            this.in1mac5delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac5delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac5delay.ForeColor = System.Drawing.Color.White;
             this.in1mac5delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac5delay.Maximum = new decimal(new int[] {
             5000,
@@ -2210,9 +2068,7 @@
             // 
             // in5mac5delay
             // 
-            this.in5mac5delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac5delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac5delay.ForeColor = System.Drawing.Color.White;
             this.in5mac5delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac5delay.Maximum = new decimal(new int[] {
             5000,
@@ -2245,9 +2101,7 @@
             // 
             // in2mac5delay
             // 
-            this.in2mac5delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac5delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac5delay.ForeColor = System.Drawing.Color.White;
             this.in2mac5delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac5delay.Maximum = new decimal(new int[] {
             5000,
@@ -2260,9 +2114,7 @@
             // 
             // in4mac5delay
             // 
-            this.in4mac5delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac5delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac5delay.ForeColor = System.Drawing.Color.White;
             this.in4mac5delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac5delay.Maximum = new decimal(new int[] {
             5000,
@@ -2295,9 +2147,7 @@
             // 
             // in3mac5delay
             // 
-            this.in3mac5delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac5delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac5delay.ForeColor = System.Drawing.Color.White;
             this.in3mac5delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac5delay.Maximum = new decimal(new int[] {
             5000,
@@ -2370,7 +2220,6 @@
             // 
             // chainGroup6
             // 
-            this.chainGroup6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup6.Controls.Add(this.in1mac6);
             this.chainGroup6.Controls.Add(this.in7mac6);
             this.chainGroup6.Controls.Add(this.in6mac6);
@@ -2401,7 +2250,6 @@
             this.chainGroup6.Controls.Add(this.pictureBox77);
             this.chainGroup6.Controls.Add(this.pictureBox78);
             this.chainGroup6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup6.Location = new System.Drawing.Point(1, 632);
             this.chainGroup6.Name = "chainGroup6";
             this.chainGroup6.Size = new System.Drawing.Size(533, 118);
@@ -2411,9 +2259,7 @@
             // 
             // in1mac6
             // 
-            this.in1mac6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac6.ForeColor = System.Drawing.Color.White;
             this.in1mac6.Location = new System.Drawing.Point(63, 34);
             this.in1mac6.Name = "in1mac6";
             this.in1mac6.Size = new System.Drawing.Size(49, 20);
@@ -2421,9 +2267,7 @@
             // 
             // in7mac6
             // 
-            this.in7mac6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac6.ForeColor = System.Drawing.Color.White;
             this.in7mac6.Location = new System.Drawing.Point(477, 34);
             this.in7mac6.Name = "in7mac6";
             this.in7mac6.Size = new System.Drawing.Size(49, 20);
@@ -2431,9 +2275,7 @@
             // 
             // in6mac6
             // 
-            this.in6mac6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac6.ForeColor = System.Drawing.Color.White;
             this.in6mac6.Location = new System.Drawing.Point(408, 34);
             this.in6mac6.Name = "in6mac6";
             this.in6mac6.Size = new System.Drawing.Size(49, 20);
@@ -2441,9 +2283,7 @@
             // 
             // in2mac6
             // 
-            this.in2mac6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac6.ForeColor = System.Drawing.Color.White;
             this.in2mac6.Location = new System.Drawing.Point(132, 34);
             this.in2mac6.Name = "in2mac6";
             this.in2mac6.Size = new System.Drawing.Size(49, 20);
@@ -2451,9 +2291,7 @@
             // 
             // in5mac6
             // 
-            this.in5mac6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac6.ForeColor = System.Drawing.Color.White;
             this.in5mac6.Location = new System.Drawing.Point(339, 34);
             this.in5mac6.Name = "in5mac6";
             this.in5mac6.Size = new System.Drawing.Size(49, 20);
@@ -2461,9 +2299,7 @@
             // 
             // in3mac6
             // 
-            this.in3mac6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac6.ForeColor = System.Drawing.Color.White;
             this.in3mac6.Location = new System.Drawing.Point(201, 34);
             this.in3mac6.Name = "in3mac6";
             this.in3mac6.Size = new System.Drawing.Size(49, 20);
@@ -2471,9 +2307,7 @@
             // 
             // in4mac6
             // 
-            this.in4mac6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac6.ForeColor = System.Drawing.Color.White;
             this.in4mac6.Location = new System.Drawing.Point(270, 34);
             this.in4mac6.Name = "in4mac6";
             this.in4mac6.Size = new System.Drawing.Size(49, 20);
@@ -2481,9 +2315,7 @@
             // 
             // in7mac6delay
             // 
-            this.in7mac6delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac6delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac6delay.ForeColor = System.Drawing.Color.White;
             this.in7mac6delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac6delay.Maximum = new decimal(new int[] {
             5000,
@@ -2516,9 +2348,7 @@
             // 
             // in6mac6delay
             // 
-            this.in6mac6delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac6delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac6delay.ForeColor = System.Drawing.Color.White;
             this.in6mac6delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac6delay.Maximum = new decimal(new int[] {
             5000,
@@ -2559,9 +2389,7 @@
             // 
             // in1mac6delay
             // 
-            this.in1mac6delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac6delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac6delay.ForeColor = System.Drawing.Color.White;
             this.in1mac6delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac6delay.Maximum = new decimal(new int[] {
             5000,
@@ -2574,9 +2402,7 @@
             // 
             // in5mac6delay
             // 
-            this.in5mac6delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac6delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac6delay.ForeColor = System.Drawing.Color.White;
             this.in5mac6delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac6delay.Maximum = new decimal(new int[] {
             5000,
@@ -2609,9 +2435,7 @@
             // 
             // in2mac6delay
             // 
-            this.in2mac6delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac6delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac6delay.ForeColor = System.Drawing.Color.White;
             this.in2mac6delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac6delay.Maximum = new decimal(new int[] {
             5000,
@@ -2624,9 +2448,7 @@
             // 
             // in4mac6delay
             // 
-            this.in4mac6delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac6delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac6delay.ForeColor = System.Drawing.Color.White;
             this.in4mac6delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac6delay.Maximum = new decimal(new int[] {
             5000,
@@ -2659,9 +2481,7 @@
             // 
             // in3mac6delay
             // 
-            this.in3mac6delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac6delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac6delay.ForeColor = System.Drawing.Color.White;
             this.in3mac6delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac6delay.Maximum = new decimal(new int[] {
             5000,
@@ -2734,7 +2554,6 @@
             // 
             // chainGroup8
             // 
-            this.chainGroup8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup8.Controls.Add(this.in1mac8);
             this.chainGroup8.Controls.Add(this.in7mac8);
             this.chainGroup8.Controls.Add(this.in6mac8);
@@ -2765,7 +2584,6 @@
             this.chainGroup8.Controls.Add(this.pictureBox90);
             this.chainGroup8.Controls.Add(this.pictureBox91);
             this.chainGroup8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup8.Location = new System.Drawing.Point(1, 880);
             this.chainGroup8.Name = "chainGroup8";
             this.chainGroup8.Size = new System.Drawing.Size(533, 118);
@@ -2775,9 +2593,7 @@
             // 
             // in1mac8
             // 
-            this.in1mac8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac8.ForeColor = System.Drawing.Color.White;
             this.in1mac8.Location = new System.Drawing.Point(63, 34);
             this.in1mac8.Name = "in1mac8";
             this.in1mac8.Size = new System.Drawing.Size(49, 20);
@@ -2785,9 +2601,7 @@
             // 
             // in7mac8
             // 
-            this.in7mac8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac8.ForeColor = System.Drawing.Color.White;
             this.in7mac8.Location = new System.Drawing.Point(477, 34);
             this.in7mac8.Name = "in7mac8";
             this.in7mac8.Size = new System.Drawing.Size(49, 20);
@@ -2795,9 +2609,7 @@
             // 
             // in6mac8
             // 
-            this.in6mac8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac8.ForeColor = System.Drawing.Color.White;
             this.in6mac8.Location = new System.Drawing.Point(408, 34);
             this.in6mac8.Name = "in6mac8";
             this.in6mac8.Size = new System.Drawing.Size(49, 20);
@@ -2805,9 +2617,7 @@
             // 
             // in2mac8
             // 
-            this.in2mac8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac8.ForeColor = System.Drawing.Color.White;
             this.in2mac8.Location = new System.Drawing.Point(132, 34);
             this.in2mac8.Name = "in2mac8";
             this.in2mac8.Size = new System.Drawing.Size(49, 20);
@@ -2815,9 +2625,7 @@
             // 
             // in5mac8
             // 
-            this.in5mac8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac8.ForeColor = System.Drawing.Color.White;
             this.in5mac8.Location = new System.Drawing.Point(339, 34);
             this.in5mac8.Name = "in5mac8";
             this.in5mac8.Size = new System.Drawing.Size(49, 20);
@@ -2825,9 +2633,7 @@
             // 
             // in3mac8
             // 
-            this.in3mac8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac8.ForeColor = System.Drawing.Color.White;
             this.in3mac8.Location = new System.Drawing.Point(201, 34);
             this.in3mac8.Name = "in3mac8";
             this.in3mac8.Size = new System.Drawing.Size(49, 20);
@@ -2835,9 +2641,7 @@
             // 
             // in4mac8
             // 
-            this.in4mac8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac8.ForeColor = System.Drawing.Color.White;
             this.in4mac8.Location = new System.Drawing.Point(270, 34);
             this.in4mac8.Name = "in4mac8";
             this.in4mac8.Size = new System.Drawing.Size(49, 20);
@@ -2845,9 +2649,7 @@
             // 
             // in7mac8delay
             // 
-            this.in7mac8delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac8delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac8delay.ForeColor = System.Drawing.Color.White;
             this.in7mac8delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac8delay.Maximum = new decimal(new int[] {
             5000,
@@ -2880,9 +2682,7 @@
             // 
             // in6mac8delay
             // 
-            this.in6mac8delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac8delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac8delay.ForeColor = System.Drawing.Color.White;
             this.in6mac8delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac8delay.Maximum = new decimal(new int[] {
             5000,
@@ -2923,9 +2723,7 @@
             // 
             // in1mac8delay
             // 
-            this.in1mac8delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac8delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac8delay.ForeColor = System.Drawing.Color.White;
             this.in1mac8delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac8delay.Maximum = new decimal(new int[] {
             5000,
@@ -2938,9 +2736,7 @@
             // 
             // in5mac8delay
             // 
-            this.in5mac8delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac8delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac8delay.ForeColor = System.Drawing.Color.White;
             this.in5mac8delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac8delay.Maximum = new decimal(new int[] {
             5000,
@@ -2973,9 +2769,7 @@
             // 
             // in2mac8delay
             // 
-            this.in2mac8delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac8delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac8delay.ForeColor = System.Drawing.Color.White;
             this.in2mac8delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac8delay.Maximum = new decimal(new int[] {
             5000,
@@ -2988,9 +2782,7 @@
             // 
             // in4mac8delay
             // 
-            this.in4mac8delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac8delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac8delay.ForeColor = System.Drawing.Color.White;
             this.in4mac8delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac8delay.Maximum = new decimal(new int[] {
             5000,
@@ -3023,9 +2815,7 @@
             // 
             // in3mac8delay
             // 
-            this.in3mac8delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac8delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac8delay.ForeColor = System.Drawing.Color.White;
             this.in3mac8delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac8delay.Maximum = new decimal(new int[] {
             5000,
@@ -3098,7 +2888,6 @@
             // 
             // chainGroup7
             // 
-            this.chainGroup7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup7.Controls.Add(this.in1mac7);
             this.chainGroup7.Controls.Add(this.in7mac7);
             this.chainGroup7.Controls.Add(this.in6mac7);
@@ -3129,7 +2918,6 @@
             this.chainGroup7.Controls.Add(this.pictureBox103);
             this.chainGroup7.Controls.Add(this.pictureBox104);
             this.chainGroup7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup7.Location = new System.Drawing.Point(1, 756);
             this.chainGroup7.Name = "chainGroup7";
             this.chainGroup7.Size = new System.Drawing.Size(533, 118);
@@ -3139,9 +2927,7 @@
             // 
             // in1mac7
             // 
-            this.in1mac7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac7.ForeColor = System.Drawing.Color.White;
             this.in1mac7.Location = new System.Drawing.Point(63, 34);
             this.in1mac7.Name = "in1mac7";
             this.in1mac7.Size = new System.Drawing.Size(49, 20);
@@ -3149,9 +2935,7 @@
             // 
             // in7mac7
             // 
-            this.in7mac7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac7.ForeColor = System.Drawing.Color.White;
             this.in7mac7.Location = new System.Drawing.Point(477, 34);
             this.in7mac7.Name = "in7mac7";
             this.in7mac7.Size = new System.Drawing.Size(49, 20);
@@ -3159,9 +2943,7 @@
             // 
             // in6mac7
             // 
-            this.in6mac7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac7.ForeColor = System.Drawing.Color.White;
             this.in6mac7.Location = new System.Drawing.Point(408, 34);
             this.in6mac7.Name = "in6mac7";
             this.in6mac7.Size = new System.Drawing.Size(49, 20);
@@ -3169,9 +2951,7 @@
             // 
             // in2mac7
             // 
-            this.in2mac7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac7.ForeColor = System.Drawing.Color.White;
             this.in2mac7.Location = new System.Drawing.Point(132, 34);
             this.in2mac7.Name = "in2mac7";
             this.in2mac7.Size = new System.Drawing.Size(49, 20);
@@ -3179,9 +2959,7 @@
             // 
             // in5mac7
             // 
-            this.in5mac7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac7.ForeColor = System.Drawing.Color.White;
             this.in5mac7.Location = new System.Drawing.Point(339, 34);
             this.in5mac7.Name = "in5mac7";
             this.in5mac7.Size = new System.Drawing.Size(49, 20);
@@ -3189,9 +2967,7 @@
             // 
             // in3mac7
             // 
-            this.in3mac7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac7.ForeColor = System.Drawing.Color.White;
             this.in3mac7.Location = new System.Drawing.Point(201, 34);
             this.in3mac7.Name = "in3mac7";
             this.in3mac7.Size = new System.Drawing.Size(49, 20);
@@ -3199,9 +2975,7 @@
             // 
             // in4mac7
             // 
-            this.in4mac7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac7.ForeColor = System.Drawing.Color.White;
             this.in4mac7.Location = new System.Drawing.Point(270, 34);
             this.in4mac7.Name = "in4mac7";
             this.in4mac7.Size = new System.Drawing.Size(49, 20);
@@ -3209,9 +2983,7 @@
             // 
             // in7mac7delay
             // 
-            this.in7mac7delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac7delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac7delay.ForeColor = System.Drawing.Color.White;
             this.in7mac7delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac7delay.Maximum = new decimal(new int[] {
             5000,
@@ -3244,9 +3016,7 @@
             // 
             // in6mac7delay
             // 
-            this.in6mac7delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac7delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac7delay.ForeColor = System.Drawing.Color.White;
             this.in6mac7delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac7delay.Maximum = new decimal(new int[] {
             5000,
@@ -3287,9 +3057,7 @@
             // 
             // in1mac7delay
             // 
-            this.in1mac7delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac7delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac7delay.ForeColor = System.Drawing.Color.White;
             this.in1mac7delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac7delay.Maximum = new decimal(new int[] {
             5000,
@@ -3302,9 +3070,7 @@
             // 
             // in5mac7delay
             // 
-            this.in5mac7delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac7delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac7delay.ForeColor = System.Drawing.Color.White;
             this.in5mac7delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac7delay.Maximum = new decimal(new int[] {
             5000,
@@ -3337,9 +3103,7 @@
             // 
             // in2mac7delay
             // 
-            this.in2mac7delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac7delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac7delay.ForeColor = System.Drawing.Color.White;
             this.in2mac7delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac7delay.Maximum = new decimal(new int[] {
             5000,
@@ -3352,9 +3116,7 @@
             // 
             // in4mac7delay
             // 
-            this.in4mac7delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac7delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac7delay.ForeColor = System.Drawing.Color.White;
             this.in4mac7delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac7delay.Maximum = new decimal(new int[] {
             5000,
@@ -3387,9 +3149,7 @@
             // 
             // in3mac7delay
             // 
-            this.in3mac7delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac7delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac7delay.ForeColor = System.Drawing.Color.White;
             this.in3mac7delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac7delay.Maximum = new decimal(new int[] {
             5000,
@@ -3462,7 +3222,6 @@
             // 
             // chainGroup9
             // 
-            this.chainGroup9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup9.Controls.Add(this.in1mac9);
             this.chainGroup9.Controls.Add(this.in7mac9);
             this.chainGroup9.Controls.Add(this.in6mac9);
@@ -3493,7 +3252,6 @@
             this.chainGroup9.Controls.Add(this.pictureBox116);
             this.chainGroup9.Controls.Add(this.pictureBox117);
             this.chainGroup9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup9.Location = new System.Drawing.Point(1, 1004);
             this.chainGroup9.Name = "chainGroup9";
             this.chainGroup9.Size = new System.Drawing.Size(533, 118);
@@ -3503,9 +3261,7 @@
             // 
             // in1mac9
             // 
-            this.in1mac9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac9.ForeColor = System.Drawing.Color.White;
             this.in1mac9.Location = new System.Drawing.Point(63, 34);
             this.in1mac9.Name = "in1mac9";
             this.in1mac9.Size = new System.Drawing.Size(49, 20);
@@ -3513,9 +3269,7 @@
             // 
             // in7mac9
             // 
-            this.in7mac9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac9.ForeColor = System.Drawing.Color.White;
             this.in7mac9.Location = new System.Drawing.Point(477, 34);
             this.in7mac9.Name = "in7mac9";
             this.in7mac9.Size = new System.Drawing.Size(49, 20);
@@ -3523,9 +3277,7 @@
             // 
             // in6mac9
             // 
-            this.in6mac9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac9.ForeColor = System.Drawing.Color.White;
             this.in6mac9.Location = new System.Drawing.Point(408, 34);
             this.in6mac9.Name = "in6mac9";
             this.in6mac9.Size = new System.Drawing.Size(49, 20);
@@ -3533,9 +3285,7 @@
             // 
             // in2mac9
             // 
-            this.in2mac9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac9.ForeColor = System.Drawing.Color.White;
             this.in2mac9.Location = new System.Drawing.Point(132, 34);
             this.in2mac9.Name = "in2mac9";
             this.in2mac9.Size = new System.Drawing.Size(49, 20);
@@ -3543,9 +3293,7 @@
             // 
             // in5mac9
             // 
-            this.in5mac9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac9.ForeColor = System.Drawing.Color.White;
             this.in5mac9.Location = new System.Drawing.Point(339, 34);
             this.in5mac9.Name = "in5mac9";
             this.in5mac9.Size = new System.Drawing.Size(49, 20);
@@ -3553,9 +3301,7 @@
             // 
             // in3mac9
             // 
-            this.in3mac9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac9.ForeColor = System.Drawing.Color.White;
             this.in3mac9.Location = new System.Drawing.Point(201, 34);
             this.in3mac9.Name = "in3mac9";
             this.in3mac9.Size = new System.Drawing.Size(49, 20);
@@ -3563,9 +3309,7 @@
             // 
             // in4mac9
             // 
-            this.in4mac9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac9.ForeColor = System.Drawing.Color.White;
             this.in4mac9.Location = new System.Drawing.Point(270, 34);
             this.in4mac9.Name = "in4mac9";
             this.in4mac9.Size = new System.Drawing.Size(49, 20);
@@ -3573,9 +3317,7 @@
             // 
             // in7mac9delay
             // 
-            this.in7mac9delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac9delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac9delay.ForeColor = System.Drawing.Color.White;
             this.in7mac9delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac9delay.Maximum = new decimal(new int[] {
             5000,
@@ -3608,9 +3350,7 @@
             // 
             // in6mac9delay
             // 
-            this.in6mac9delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac9delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac9delay.ForeColor = System.Drawing.Color.White;
             this.in6mac9delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac9delay.Maximum = new decimal(new int[] {
             5000,
@@ -3651,9 +3391,7 @@
             // 
             // in1mac9delay
             // 
-            this.in1mac9delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac9delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac9delay.ForeColor = System.Drawing.Color.White;
             this.in1mac9delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac9delay.Maximum = new decimal(new int[] {
             5000,
@@ -3666,9 +3404,7 @@
             // 
             // in5mac9delay
             // 
-            this.in5mac9delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac9delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac9delay.ForeColor = System.Drawing.Color.White;
             this.in5mac9delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac9delay.Maximum = new decimal(new int[] {
             5000,
@@ -3701,9 +3437,7 @@
             // 
             // in2mac9delay
             // 
-            this.in2mac9delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac9delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac9delay.ForeColor = System.Drawing.Color.White;
             this.in2mac9delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac9delay.Maximum = new decimal(new int[] {
             5000,
@@ -3716,9 +3450,7 @@
             // 
             // in4mac9delay
             // 
-            this.in4mac9delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac9delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac9delay.ForeColor = System.Drawing.Color.White;
             this.in4mac9delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac9delay.Maximum = new decimal(new int[] {
             5000,
@@ -3751,9 +3483,7 @@
             // 
             // in3mac9delay
             // 
-            this.in3mac9delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac9delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac9delay.ForeColor = System.Drawing.Color.White;
             this.in3mac9delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac9delay.Maximum = new decimal(new int[] {
             5000,
@@ -3886,9 +3616,7 @@
             // 
             // in3mac10delay
             // 
-            this.in3mac10delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac10delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac10delay.ForeColor = System.Drawing.Color.White;
             this.in3mac10delay.Location = new System.Drawing.Point(203, 68);
             this.in3mac10delay.Maximum = new decimal(new int[] {
             5000,
@@ -3921,9 +3649,7 @@
             // 
             // in4mac10delay
             // 
-            this.in4mac10delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac10delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac10delay.ForeColor = System.Drawing.Color.White;
             this.in4mac10delay.Location = new System.Drawing.Point(272, 68);
             this.in4mac10delay.Maximum = new decimal(new int[] {
             5000,
@@ -3936,9 +3662,7 @@
             // 
             // in2mac10delay
             // 
-            this.in2mac10delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac10delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac10delay.ForeColor = System.Drawing.Color.White;
             this.in2mac10delay.Location = new System.Drawing.Point(134, 68);
             this.in2mac10delay.Maximum = new decimal(new int[] {
             5000,
@@ -3971,9 +3695,7 @@
             // 
             // in5mac10delay
             // 
-            this.in5mac10delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac10delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac10delay.ForeColor = System.Drawing.Color.White;
             this.in5mac10delay.Location = new System.Drawing.Point(341, 68);
             this.in5mac10delay.Maximum = new decimal(new int[] {
             5000,
@@ -3986,9 +3708,7 @@
             // 
             // in1mac10delay
             // 
-            this.in1mac10delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac10delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac10delay.ForeColor = System.Drawing.Color.White;
             this.in1mac10delay.Location = new System.Drawing.Point(65, 68);
             this.in1mac10delay.Maximum = new decimal(new int[] {
             5000,
@@ -4029,9 +3749,7 @@
             // 
             // in6mac10delay
             // 
-            this.in6mac10delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac10delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac10delay.ForeColor = System.Drawing.Color.White;
             this.in6mac10delay.Location = new System.Drawing.Point(410, 68);
             this.in6mac10delay.Maximum = new decimal(new int[] {
             5000,
@@ -4064,9 +3782,7 @@
             // 
             // in7mac10delay
             // 
-            this.in7mac10delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac10delay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac10delay.ForeColor = System.Drawing.Color.White;
             this.in7mac10delay.Location = new System.Drawing.Point(479, 68);
             this.in7mac10delay.Maximum = new decimal(new int[] {
             5000,
@@ -4079,9 +3795,7 @@
             // 
             // in4mac10
             // 
-            this.in4mac10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4mac10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4mac10.ForeColor = System.Drawing.Color.White;
             this.in4mac10.Location = new System.Drawing.Point(270, 34);
             this.in4mac10.Name = "in4mac10";
             this.in4mac10.Size = new System.Drawing.Size(49, 20);
@@ -4089,9 +3803,7 @@
             // 
             // in3mac10
             // 
-            this.in3mac10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3mac10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3mac10.ForeColor = System.Drawing.Color.White;
             this.in3mac10.Location = new System.Drawing.Point(201, 34);
             this.in3mac10.Name = "in3mac10";
             this.in3mac10.Size = new System.Drawing.Size(49, 20);
@@ -4099,9 +3811,7 @@
             // 
             // in5mac10
             // 
-            this.in5mac10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in5mac10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in5mac10.ForeColor = System.Drawing.Color.White;
             this.in5mac10.Location = new System.Drawing.Point(339, 34);
             this.in5mac10.Name = "in5mac10";
             this.in5mac10.Size = new System.Drawing.Size(49, 20);
@@ -4109,9 +3819,7 @@
             // 
             // in2mac10
             // 
-            this.in2mac10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2mac10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2mac10.ForeColor = System.Drawing.Color.White;
             this.in2mac10.Location = new System.Drawing.Point(132, 34);
             this.in2mac10.Name = "in2mac10";
             this.in2mac10.Size = new System.Drawing.Size(49, 20);
@@ -4119,9 +3827,7 @@
             // 
             // in6mac10
             // 
-            this.in6mac10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in6mac10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in6mac10.ForeColor = System.Drawing.Color.White;
             this.in6mac10.Location = new System.Drawing.Point(408, 34);
             this.in6mac10.Name = "in6mac10";
             this.in6mac10.Size = new System.Drawing.Size(49, 20);
@@ -4129,9 +3835,7 @@
             // 
             // in7mac10
             // 
-            this.in7mac10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in7mac10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in7mac10.ForeColor = System.Drawing.Color.White;
             this.in7mac10.Location = new System.Drawing.Point(477, 34);
             this.in7mac10.Name = "in7mac10";
             this.in7mac10.Size = new System.Drawing.Size(49, 20);
@@ -4139,9 +3843,7 @@
             // 
             // in1mac10
             // 
-            this.in1mac10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1mac10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1mac10.ForeColor = System.Drawing.Color.White;
             this.in1mac10.Location = new System.Drawing.Point(63, 34);
             this.in1mac10.Name = "in1mac10";
             this.in1mac10.Size = new System.Drawing.Size(49, 20);
@@ -4149,7 +3851,6 @@
             // 
             // chainGroup10
             // 
-            this.chainGroup10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.chainGroup10.Controls.Add(this.in1mac10);
             this.chainGroup10.Controls.Add(this.in7mac10);
             this.chainGroup10.Controls.Add(this.in6mac10);
@@ -4180,7 +3881,6 @@
             this.chainGroup10.Controls.Add(this.pictureBox129);
             this.chainGroup10.Controls.Add(this.pictureBox130);
             this.chainGroup10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chainGroup10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chainGroup10.Location = new System.Drawing.Point(1, 1128);
             this.chainGroup10.Name = "chainGroup10";
             this.chainGroup10.Size = new System.Drawing.Size(533, 118);
@@ -4193,8 +3893,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(542, 1259);
+            this.ClientSize = new System.Drawing.Size(542, 1100);
             this.Controls.Add(this.chainGroup10);
             this.Controls.Add(this.chainGroup9);
             this.Controls.Add(this.chainGroup8);
@@ -4205,7 +3904,6 @@
             this.Controls.Add(this.chainGroup3);
             this.Controls.Add(this.chainGroup2);
             this.Controls.Add(this.chainGroup1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MacroSwitchForm";
             this.Text = "MacroSwitchForm";

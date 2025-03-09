@@ -7,7 +7,7 @@
     <ProjectGuid>{A7D78B00-6CE1-4B4D-90A3-1D2E93C7F68A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>_4RTools</RootNamespace>
-    <AssemblyName>TalesTools</AssemblyName>
+    <AssemblyName>4ROTools-torq</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -436,6 +436,7 @@
     <Compile Include="Utils\KeyboardHook.cs" />
     <Compile Include="Utils\ProcessMemoryReader.cs" />
     <Compile Include="Utils\RObserver.cs" />
+    <Compile Include="Utils\StatusIdLogger.cs" />
     <Compile Include="Utils\_4RThread.cs" />
     <EmbeddedResource Include="Forms\ToggleApplicationStateForm.resx">
       <DependentUpon>ToggleApplicationStateForm.cs</DependentUpon>

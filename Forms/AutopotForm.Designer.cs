@@ -53,10 +53,8 @@
             // 
             // txtHPpct
             // 
-            this.txtHPpct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHPpct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHPpct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtHPpct.ForeColor = System.Drawing.Color.White;
             this.txtHPpct.Location = new System.Drawing.Point(215, 37);
             this.txtHPpct.Name = "txtHPpct";
             this.txtHPpct.Size = new System.Drawing.Size(44, 23);
@@ -85,10 +83,8 @@
             // 
             // txtAutopotDelay
             // 
-            this.txtAutopotDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtAutopotDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAutopotDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtAutopotDelay.ForeColor = System.Drawing.Color.White;
             this.txtAutopotDelay.Location = new System.Drawing.Point(215, 115);
             this.txtAutopotDelay.Name = "txtAutopotDelay";
             this.txtAutopotDelay.Size = new System.Drawing.Size(44, 23);
@@ -112,8 +108,8 @@
             this.picBoxHP.Image = global::_4RTools.Resources._4RTools.ETCResource.HP;
             this.picBoxHP.Location = new System.Drawing.Point(68, 36);
             this.picBoxHP.Name = "picBoxHP";
-            this.picBoxHP.Size = new System.Drawing.Size(25, 25);
-            this.picBoxHP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picBoxHP.Size = new System.Drawing.Size(24, 24);
+            this.picBoxHP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxHP.TabIndex = 34;
             this.picBoxHP.TabStop = false;
             // 
@@ -139,10 +135,8 @@
             // 
             // txtHpKey
             // 
-            this.txtHpKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHpKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHpKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtHpKey.ForeColor = System.Drawing.Color.White;
             this.txtHpKey.Location = new System.Drawing.Point(127, 37);
             this.txtHpKey.Name = "txtHpKey";
             this.txtHpKey.Size = new System.Drawing.Size(61, 23);
@@ -150,10 +144,8 @@
             // 
             // txtSPKey
             // 
-            this.txtSPKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtSPKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSPKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSPKey.ForeColor = System.Drawing.Color.White;
             this.txtSPKey.Location = new System.Drawing.Point(127, 72);
             this.txtSPKey.Name = "txtSPKey";
             this.txtSPKey.Size = new System.Drawing.Size(61, 23);
@@ -179,10 +171,8 @@
             // 
             // txtSPpct
             // 
-            this.txtSPpct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtSPpct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSPpct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSPpct.ForeColor = System.Drawing.Color.White;
             this.txtSPpct.Location = new System.Drawing.Point(215, 72);
             this.txtSPpct.Name = "txtSPpct";
             this.txtSPpct.Size = new System.Drawing.Size(44, 23);
@@ -224,12 +214,11 @@
             // chkStopWitchFC
             // 
             this.chkStopWitchFC.AutoSize = true;
-            this.chkStopWitchFC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.chkStopWitchFC.Location = new System.Drawing.Point(6, 121);
             this.chkStopWitchFC.Name = "chkStopWitchFC";
-            this.chkStopWitchFC.Size = new System.Drawing.Size(157, 17);
+            this.chkStopWitchFC.Size = new System.Drawing.Size(125, 17);
             this.chkStopWitchFC.TabIndex = 50;
-            this.chkStopWitchFC.Text = "Parar com Ferimento Crítico";
+            this.chkStopWitchFC.Text = "Stop on Critical Injury";
             this.chkStopWitchFC.UseVisualStyleBackColor = true;
             this.chkStopWitchFC.CheckedChanged += new System.EventHandler(this.chkStopWitchFC_CheckedChanged);
             // 
@@ -238,7 +227,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(300, 150);
             this.Controls.Add(this.chkStopWitchFC);
             this.Controls.Add(this.firstSP);
@@ -257,7 +245,6 @@
             this.Controls.Add(this.txtAutopotDelay);
             this.Controls.Add(this.picBoxSP);
             this.Controls.Add(this.picBoxHP);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AutopotForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

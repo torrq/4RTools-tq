@@ -72,7 +72,7 @@ namespace _4RTools.Model
             string currentMap = roClient.ReadCurrentMap();
             if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
-                if (!ProfileSingleton.GetCurrent().UserPreferences.stopHealCity || this.listCities.Contains(currentMap) == false)
+                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                 {
                     bool hasCriticalWound = HasCriticalWound(roClient);
                     if (firstHeal.Equals(FIRSTHP))

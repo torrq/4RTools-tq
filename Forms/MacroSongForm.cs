@@ -203,5 +203,360 @@ namespace _4RTools.Forms
                 }
             } catch { }
         }
+
+        private void inTriggerMacro1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in1mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in2mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in4mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in3mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in5mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in6mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in8mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in7mac1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inDaggerMacro1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inInstrumentMacro1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in1mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in2mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in4mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in3mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in5mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in6mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in8mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in7mac2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inDaggerMacro2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inInstrumentMacro2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inDaggerMacro3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inInstrumentMacro3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in7mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in5mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in3mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in1mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inTriggerMacro3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inTriggerMacro2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in2mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in4mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in6mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in8mac3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in1mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in2mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in4mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in3mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inTriggerMacro4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in1mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inTriggerMacro5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inTriggerMacro6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inTriggerMacro7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in1mac7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in3mac7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in5mac7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in7mac7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in8mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in6mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in4mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in2mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in1mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in3mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in5mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in7mac6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in8mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in6mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in4mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in2mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in3mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in5mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in7mac5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in8mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in6mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in5mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void in7mac4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inInstrumentMacro4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inDaggerMacro5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inInstrumentMacro5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inDaggerMacro6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inInstrumentMacro6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inDaggerMacro7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

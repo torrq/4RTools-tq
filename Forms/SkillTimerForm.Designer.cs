@@ -56,10 +56,8 @@
             // 
             // txtAutoRefreshDelay1
             // 
-            this.txtAutoRefreshDelay1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtAutoRefreshDelay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAutoRefreshDelay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtAutoRefreshDelay1.ForeColor = System.Drawing.Color.White;
             this.txtAutoRefreshDelay1.Location = new System.Drawing.Point(176, 12);
             this.txtAutoRefreshDelay1.Maximum = new decimal(new int[] {
             10000,
@@ -82,10 +80,8 @@
             // 
             // txtSkillTimerKey1
             // 
-            this.txtSkillTimerKey1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtSkillTimerKey1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSkillTimerKey1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSkillTimerKey1.ForeColor = System.Drawing.Color.White;
             this.txtSkillTimerKey1.Location = new System.Drawing.Point(66, 12);
             this.txtSkillTimerKey1.Name = "txtSkillTimerKey1";
             this.txtSkillTimerKey1.Size = new System.Drawing.Size(61, 23);
@@ -114,10 +110,8 @@
             // 
             // txtAutoRefreshDelay2
             // 
-            this.txtAutoRefreshDelay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtAutoRefreshDelay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAutoRefreshDelay2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtAutoRefreshDelay2.ForeColor = System.Drawing.Color.White;
             this.txtAutoRefreshDelay2.Location = new System.Drawing.Point(176, 46);
             this.txtAutoRefreshDelay2.Maximum = new decimal(new int[] {
             10000,
@@ -140,10 +134,8 @@
             // 
             // txtSkillTimerKey2
             // 
-            this.txtSkillTimerKey2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtSkillTimerKey2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSkillTimerKey2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSkillTimerKey2.ForeColor = System.Drawing.Color.White;
             this.txtSkillTimerKey2.Location = new System.Drawing.Point(66, 46);
             this.txtSkillTimerKey2.Name = "txtSkillTimerKey2";
             this.txtSkillTimerKey2.Size = new System.Drawing.Size(61, 23);
@@ -172,10 +164,8 @@
             // 
             // txtAutoRefreshDelay4
             // 
-            this.txtAutoRefreshDelay4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtAutoRefreshDelay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAutoRefreshDelay4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtAutoRefreshDelay4.ForeColor = System.Drawing.Color.White;
             this.txtAutoRefreshDelay4.Location = new System.Drawing.Point(176, 113);
             this.txtAutoRefreshDelay4.Maximum = new decimal(new int[] {
             10000,
@@ -198,10 +188,8 @@
             // 
             // txtSkillTimerKey4
             // 
-            this.txtSkillTimerKey4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtSkillTimerKey4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSkillTimerKey4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSkillTimerKey4.ForeColor = System.Drawing.Color.White;
             this.txtSkillTimerKey4.Location = new System.Drawing.Point(66, 113);
             this.txtSkillTimerKey4.Name = "txtSkillTimerKey4";
             this.txtSkillTimerKey4.Size = new System.Drawing.Size(61, 23);
@@ -230,10 +218,8 @@
             // 
             // txtAutoRefreshDelay3
             // 
-            this.txtAutoRefreshDelay3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtAutoRefreshDelay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAutoRefreshDelay3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtAutoRefreshDelay3.ForeColor = System.Drawing.Color.White;
             this.txtAutoRefreshDelay3.Location = new System.Drawing.Point(176, 79);
             this.txtAutoRefreshDelay3.Maximum = new decimal(new int[] {
             10000,
@@ -256,10 +242,8 @@
             // 
             // txtSkillTimerKey3
             // 
-            this.txtSkillTimerKey3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtSkillTimerKey3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSkillTimerKey3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSkillTimerKey3.ForeColor = System.Drawing.Color.White;
             this.txtSkillTimerKey3.Location = new System.Drawing.Point(66, 79);
             this.txtSkillTimerKey3.Name = "txtSkillTimerKey3";
             this.txtSkillTimerKey3.Size = new System.Drawing.Size(61, 23);
@@ -290,7 +274,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(300, 150);
             this.Controls.Add(this.txtAutoRefreshDelay4);
             this.Controls.Add(this.label5);
@@ -312,7 +295,6 @@
             this.Controls.Add(this.txtSkillTimerKey1);
             this.Controls.Add(this.lblAutoRefreshDelay);
             this.Controls.Add(this.lblAutoRefreshKey);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SkillTimerForm";
             this.Text = "SkillTimerForm";

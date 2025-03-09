@@ -56,6 +56,9 @@ namespace _4RTools.Model
 
                         if (currentStatus == uint.MaxValue) { continue; }
 
+                        // Replace the original Console.WriteLine with the new logging method
+                        StatusIdLogger.LogStatusId(i, currentStatus);
+
                         buffs.Add((EffectStatusIDs)currentStatus);
                         EffectStatusIDs status = (EffectStatusIDs)currentStatus;
 

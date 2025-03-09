@@ -1,9 +1,12 @@
 [
   {
-    "name": "rtales.bin",
-    "description": "Ragna Tales",
-    "hpAddress": "0x00E8E434",
-    "nameAddress": "0x00E90C00",
-    "mapAddress": "0x00E89BD4"
+    "index": 0,
+    "name": "OsRO Midrate",
+    "description": null,
+    "hpAddress": "00E8F434",
+    "nameAddress": "0x00E91C00",
+	"mapAddress": "0x00E8ABD4",
+    "hpAddressPointer": 15266868,
+    "nameAddressPointer": 15277056,
   }
 ]

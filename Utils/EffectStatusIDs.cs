@@ -11,43 +11,43 @@ namespace _4RTools.Utils
         QUAGMIRE = 8,
         HALLUCINATIONWALK = 334,
         HALLUCINATION = 34,
-        [Description("Provocar")]
+        [Description("Provoke")]
         PROVOKE = 2015,
         PROPERTYUNDEAD = 97,
 
         MISTY_FROST = 1141,
         OVERHEAT = 373,
-        [Description("Vigor")]
+        [Description("Endure")]
         ENDURE = 1,
         PAINKILLER = 577,
-        [Description("Rapidez com Lança")]
+        [Description("Spear Quicken")]
         SPEARQUICKEN = 68,
 
         MONSTER_TRANSFORM = 621,
-        [Description("Prestígio Divino")]
+        [Description("Prestige")]
         PRESTIGE = 402,
-        [Description("Consagração")]
+        [Description("Inspiration")]
         INSPIRATION = 407,
         [Description("Aegis Domini")]
         SHIELDSPELL = 1316,
 
-        [Description("Milagre Solar, Lunar e Estelar")]
+        [Description("Solar, Lunar and Stellar Miracle")]
         MIRACLE= 2113,
         SPIRIT = 1401,
-        [Description("Calor Solar, Lunar, Estelar")]
+        [Description("Solar, Lunar, Stellar Heat")]
         WARM = 165,
-        [Description("Proteção Solar")]
+        [Description("Comfort of the Sun")]
         SUN_COMFORT = 169,
-        [Description("Proteção Lunar")]
+        [Description("Comfort of the Moon")]
         MOON_COMFORT = 170,
-        [Description("Proteção Estelar")]
+        [Description("Comfort of the Stars")]
         STAR_COMFORT = 171,
         [Description("Disparo Selvagem")]
         FEARBREEZE = 352,
         SOULLINK = 149,
-        [Description("Concentração")]
+        [Description("Concentration")]
         CONCENTRATION = 3,
-        [Description("Visão Real")]
+        [Description("True Sight")]
         TRUESIGHT = 115,
         [Description("Glória")]
         GLORIA = 21,
@@ -59,72 +59,72 @@ namespace _4RTools.Utils
         LAUDA_AGNUS = 331,
         [Description("Lauda Ramus")]
         LAUDA_RAMUS = 332,
-        [Description("Caminho do vento")]
+        [Description("Wind Walk")]
         WINDWALK = 116,
-        [Description("Força Violenta")]
+        [Description("Overthrust")]
         OVERTHRUST = 25,
-        [Description("Força Violentíssima")]
+        [Description("Maximum Overthrust")]
         OVERTHRUSTMAX = 188,
-        [Description("Manejo Perfeito")]
+        [Description("Weapon Perfection")]
         WEAPONPERFECT = 24,
-        [Description("Amplificar Poder")]
+        [Description("Maximize")]
         MAXIMIZE = 26,
-        [Description("Grito de Guerra")]
+        [Description("Crazy Uproar")]
         CRAZY_UPROAR = 30,
-        [Description("Impulso no Carrinho")]
+        [Description("Cart Boost")]
         CARTBOOST = 118,
-        [Description("Golpe Estilhaçante")]
+        [Description("Meltdown")]
         MELTDOWN = 117,
-        [Description("Adrenalina Pura")]
+        [Description("Adrenaline Rush")]
         ADRENALINE = 23,
         [Description("Adrenalina Concentrada")]
         ADRENALINE2 = 147,
-        [Description("Proteção Arcana")]
+        [Description("Energy Coat")]
         ENERGYCOAT = 31,
-        [Description("Explosão Protetora")]
+        [Description("Sight Blaster")]
         SIGHTBLASTER = 198,
-        [Description("Desejo Arcano")]
+        [Description("Auto Spell")]
         AUTOSPELL = 65,
-        [Description("Lanças Duplas")]
+        [Description("Double Casting")]
         DOUBLECASTING = 186,
-        [Description("Presciência")]
+        [Description("Memorize")]
         MEMORIZE = 127,
-        [Description("Preservar")]
+        [Description("Preserve")]
         PRESERVE = 181,
-        [Description("Instinto de Defesa")]
+        [Description("Reject Sword")]
         SWORDREJECT = 120,
         [Description("Encantar com Veneno Mortal")]
         EDP = 114,
         [Description("Refletir Veneno")]
         POISONREACT = 7,
-        [Description("Bloqueio")]
+        [Description("Autoguard")]
         AUTOGUARD = 58,
-        [Description("Escudo Refletor")]
+        [Description("Reflect Shield")]
         REFLECTSHIELD = 59,
-        [Description("Aura Sagrada")]
+        [Description("Defender")]
         DEFENDER = 62,
-        [Description("Submissão")]
+        [Description("Shrink")]
         CR_SHRINK = 197,
-        [Description("Rapidez com Uma Mão")]
+        [Description("One Hand Quicken")]
         ONEHANDQUICKEN = 161,
-        [Description("Rapidez com Duas Mãos")]
+        [Description("Two Hand Quicken")]
         TWOHANDQUICKEN = 2,
         [Description("Lâmina de Aura")]
         AURABLADE = 103,
-        [Description("Dedicação")]
+        [Description("Concentration")]
         LKCONCENTRATION = 105,
-        [Description("Aparar Golpe")]
+        [Description("Parrying")]
         PARRYING = 104,
-        [Description("Frenesi")]
+        [Description("Berserk")]
         BERSERK = 107,
-        [Description("Instinto de Sobrevivência")]
+        [Description("Autoberserk")]
         AUTOBERSERK = 132,
         [Description("Aura Ninja")]
         AURA_NINJA = 208,
-        [Description("Troca de Pele")]
+        [Description("Peel Change")]
         PEEL_CHANGE = 206,
         COMBAT_PILL = 662,
-        [Description("Encantar Lâmina")]
+        [Description("Enchant Blade")]
         ENCHANT_BLADE = 316,
         RWC_2011_SCROLL = 664,
         INFINITY_DRINK = 1065,
@@ -199,7 +199,6 @@ namespace _4RTools.Utils
         [Description("Basílica")]
         BASILICA = 1122,
         EDEN = 9999,
-
         //ELEMENTAL CONVERTERS
         [Description("Brisa Leve (Fogo)")]
         PROPERTYFIRE = 90,
@@ -220,7 +219,51 @@ namespace _4RTools.Utils
         MINDBREAKER = 126,
         [Description("Corrida")]
         RUN = 145,
+        //PADAWAN
+        [Description("Force Element (Earth)")]
+        ELEMENT_EARTH = 1423,
+        [Description("Force Element (Wind)")]
+        ELEMENT_WIND = 1424,
+        [Description("Force Element (Water)")]
+        ELEMENT_WATER = 1425,
+        [Description("Force Element (Fire)")]
+        ELEMENT_FIRE = 1426,
+        [Description("Force Element (Ghost)")]
+        ELEMENT_GHOST = 1427,
+        [Description("Force Element (Shadow)")]
+        ELEMENT_SHADOW = 1428,
+        [Description("Force Element (Holy)")]
+        ELEMENT_HOLY = 1429,
+        //SITH
+        [Description("Saber Parry")]
+        SABERPARRY = 1430,
+        [Description("Force Concentration")]
+        FORCECONCENTRATE = 1432,
+        [Description("Saber Thrust")]
+        SABERTHRUST = 1438,
+        [Description("Cold Skin")]
+        COLDSKIN = 1439,
+        [Description("Force Projection")]
+        PROJECTION = 1441,
+        //JEDI
+        [Description("Force Levitate")]
+        FORCELEVITATE = 1435,
+        [Description("Jedi Frenzy")]
+        JEDIFRENZY = 1433,
+        [Description("Jedi Stealth")]
+        JEDISTEALTH = 1437,
+        [Description("Force Sacrifice")]
+        FORCESACRIFICE = 1434,
+        [Description("Force Persuasion")]
+        FORCEPERSUASION = 1431,
 
+        FALCON_ON = 28,
+        ARROW_ON = 695,
+        PECO_RIDING = 27,
+        GREED_PARRY = 1442,
+
+        [Description("Field Manual 100%")]
+        FIELD_MANUAL = 250,
 
         FULL_SWINGK = 486,
         MANA_PLUS = 487,
@@ -254,9 +297,17 @@ namespace _4RTools.Utils
 
 
         //Boxes
+        // Drowisness Box is also:
+        // - Tasty White Ration (10 mins)
         DROWSINESS_BOX = 151,
+        // Resentment Box is also:
+        // - Tasty Pink Ration (10 min)
+        // - Chewy Ricecake (30 min)
         RESENTMENT_BOX = 150,
         SUNLIGHT_BOX = 184,
+
+        BOX_OF_STORMS = 1405,
+
 
         //Elemental Potions
         RESIST_PROPERTY_WATER = 908,
@@ -337,6 +388,8 @@ namespace _4RTools.Utils
 
         SPELLBREAKER = 300,
         HALOHALO = 2011,
+        // Flee Scroll is also:
+        // -- Spray of Flowers (flee +10, 5 mins) 
         FLEE_SCROLL = 247,
         ACCURACY_SCROLL = 248,
         GLASS_OF_ILLUSION = 296,

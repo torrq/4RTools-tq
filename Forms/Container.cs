@@ -66,6 +66,7 @@ namespace _4RTools.Forms
 
         private void SetBackGroundColorOfMDIForm()
         {
+            /*
             foreach (Control ctl in this.Controls)
             {
                 if ((ctl) is MdiClient)
@@ -74,6 +75,7 @@ namespace _4RTools.Forms
                 }
 
             }
+            */
         }
 
         private void processCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -371,5 +373,10 @@ namespace _4RTools.Forms
         }
 
         #endregion
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

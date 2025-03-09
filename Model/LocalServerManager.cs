@@ -61,7 +61,7 @@ namespace _4RTools.Model
 
         private static string LoadLocalServerFile()
         {
-             string startJson = "[\r\n  {\r\n    \"name\": \"rtales.bin\",\r\n    \"description\": \"Ragna Tales\",\r\n    \"hpAddress\": \"0x00E8E434\",\r\n    \"nameAddress\": \"0x00E90C00\",\r\n    \"mapAddress\": \"0x00E89BD4\"\r\n  }\r\n]";
+             string startJson = "[\r\n  {\r\n    \"name\": \"OsRO MR\",\r\n    \"description\": \"OsRO Midrate\",\r\n    \"hpAddress\": \"00E8F434\",\r\n    \"nameAddress\": \"0x00E91C00\",\r\n    \"mapAddress\": \"0x00E8ABD4\"\r\n  }\r\n]";
                
             if (!File.Exists(localServerName))
             {

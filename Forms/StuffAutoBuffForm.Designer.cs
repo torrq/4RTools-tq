@@ -54,7 +54,6 @@
             // 
             this.FoodsGP.AutoSize = true;
             this.FoodsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FoodsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FoodsGP.Location = new System.Drawing.Point(12, 122);
             this.FoodsGP.Name = "FoodsGP";
             this.FoodsGP.Size = new System.Drawing.Size(520, 30);
@@ -66,19 +65,17 @@
             // 
             this.PotionsGP.AutoSize = true;
             this.PotionsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PotionsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.PotionsGP.Location = new System.Drawing.Point(12, 12);
             this.PotionsGP.Name = "PotionsGP";
             this.PotionsGP.Size = new System.Drawing.Size(520, 30);
             this.PotionsGP.TabIndex = 294;
             this.PotionsGP.TabStop = false;
-            this.PotionsGP.Text = "Potions";
+            this.PotionsGP.Text = "ASPD Potions";
             // 
             // BoxesGP
             // 
             this.BoxesGP.AutoSize = true;
             this.BoxesGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BoxesGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.BoxesGP.Location = new System.Drawing.Point(12, 85);
             this.BoxesGP.Name = "BoxesGP";
             this.BoxesGP.Size = new System.Drawing.Size(520, 30);
@@ -90,7 +87,6 @@
             // 
             this.ElementalsGP.AutoSize = true;
             this.ElementalsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ElementalsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.ElementalsGP.Location = new System.Drawing.Point(12, 47);
             this.ElementalsGP.Name = "ElementalsGP";
             this.ElementalsGP.Size = new System.Drawing.Size(520, 30);
@@ -102,31 +98,27 @@
             // 
             this.ScrollBuffsGP.AutoSize = true;
             this.ScrollBuffsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScrollBuffsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.ScrollBuffsGP.Location = new System.Drawing.Point(12, 161);
             this.ScrollBuffsGP.Name = "ScrollBuffsGP";
             this.ScrollBuffsGP.Size = new System.Drawing.Size(520, 30);
             this.ScrollBuffsGP.TabIndex = 297;
             this.ScrollBuffsGP.TabStop = false;
-            this.ScrollBuffsGP.Text = "Scroll Buffs";
+            this.ScrollBuffsGP.Text = "Scrolls";
             // 
             // EtcGP
             // 
             this.EtcGP.AutoSize = true;
             this.EtcGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EtcGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.EtcGP.Location = new System.Drawing.Point(12, 200);
             this.EtcGP.Name = "EtcGP";
             this.EtcGP.Size = new System.Drawing.Size(520, 30);
             this.EtcGP.TabIndex = 298;
             this.EtcGP.TabStop = false;
-            this.EtcGP.Text = "ETC";
+            this.EtcGP.Text = "Exp Boost";
             // 
             // btnResetAutobuff
             // 
-            this.btnResetAutobuff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.btnResetAutobuff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetAutobuff.ForeColor = System.Drawing.Color.White;
             this.btnResetAutobuff.Location = new System.Drawing.Point(538, 63);
             this.btnResetAutobuff.Name = "btnResetAutobuff";
             this.btnResetAutobuff.Size = new System.Drawing.Size(60, 23);
@@ -138,9 +130,7 @@
             // 
             // numericDelay
             // 
-            this.numericDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.numericDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericDelay.ForeColor = System.Drawing.Color.White;
             this.numericDelay.Location = new System.Drawing.Point(538, 34);
             this.numericDelay.Maximum = new decimal(new int[] {
             5000,
@@ -166,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(607, 248);
             this.Controls.Add(this.numericDelay);
             this.Controls.Add(this.label5);
@@ -177,7 +167,6 @@
             this.Controls.Add(this.BoxesGP);
             this.Controls.Add(this.PotionsGP);
             this.Controls.Add(this.FoodsGP);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StuffAutoBuffForm";
             this.Text = "AutobuffSkillForm";

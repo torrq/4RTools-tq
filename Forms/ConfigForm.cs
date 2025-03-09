@@ -15,9 +15,6 @@ namespace _4RTools.Forms
         public ConfigForm(Subject subject)
         {
             InitializeComponent();
-            this.textReinKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
-            this.textReinKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.textReinKey.TextChanged += new EventHandler(this.textReinKey_TextChanged);
 
             this.ammo1textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.ammo1textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
@@ -38,10 +35,9 @@ namespace _4RTools.Forms
             this.switchListBox.DragOver += new DragEventHandler(this.switchListBox_DragOver);
             this.switchListBox.DragDrop += new DragEventHandler(this.switchListBox_DragDrop);
 
-            toolTip1.SetToolTip(switchAmmoCheckBox, "Intercala entre as munições");
-            toolTip2.SetToolTip(textReinKey, "atalho rédea");
-            toolTip3.SetToolTip(ammo1textBox, "atalho ammo 1");
-            toolTip4.SetToolTip(ammo2textBox, "atalho ammo 2");
+            toolTip1.SetToolTip(switchAmmoCheckBox, "Switch between ammunition");
+            toolTip3.SetToolTip(ammo1textBox, "ammo 1 shortcut");
+            toolTip4.SetToolTip(ammo2textBox, "ammo 2 shortcut");
             subject.Attach(this);
         }
 
@@ -119,11 +115,6 @@ namespace _4RTools.Forms
                 UpdateSwitch();
 
                 this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity;
-                this.chkStopBuffsOnRein.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsRein;
-                this.chkStopHealOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopHealCity;
-                this.chkStopOnAntiBot.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot;
-                this.getOffReinCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.getOffRein;
-                this.textReinKey.Text = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString();
                 this.switchAmmoCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.switchAmmo;
                 this.ammo1textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo1Key.ToString();
                 this.ammo2textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo2Key.ToString();
@@ -234,53 +225,11 @@ namespace _4RTools.Forms
             this.switchListBox.Items.Insert(index, data);
         }
 
-        private void chkStopBuffsOnRein_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox chk = sender as CheckBox;
-            ProfileSingleton.GetCurrent().UserPreferences.stopBuffsRein = chk.Checked;
-            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
-        }
-
         private void chkStopBuffsOnCity_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
             ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity = chk.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
-        }
-        private void chkStopHealOnCity_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox chk = sender as CheckBox;
-            ProfileSingleton.GetCurrent().UserPreferences.stopHealCity = chk.Checked;
-            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
-        }
-
-        private void chkStopOnAntiBot_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox chk = sender as CheckBox;
-            ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot = chk.Checked;
-            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
-        }
-
-        private void getOffReinCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox chk = sender as CheckBox;
-            ProfileSingleton.GetCurrent().UserPreferences.getOffRein = chk.Checked;
-            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
-        }
-
-        private void textReinKey_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                TextBox txtBox = (TextBox)sender;
-                if (txtBox.Text.ToString() != String.Empty)
-                {
-                    Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
-                    ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey = key;
-                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
-                }
-            }
-            catch { }
         }
 
         private void switchAmmoCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -320,5 +269,9 @@ namespace _4RTools.Forms
             catch { }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,7 +54,6 @@
             // 
             this.DebuffsGP.AutoSize = true;
             this.DebuffsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DebuffsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.DebuffsGP.Location = new System.Drawing.Point(12, 52);
             this.DebuffsGP.Name = "DebuffsGP";
             this.DebuffsGP.Size = new System.Drawing.Size(522, 29);
@@ -91,10 +90,8 @@
             // 
             // txtStatusKey
             // 
-            this.txtStatusKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtStatusKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStatusKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtStatusKey.ForeColor = System.Drawing.Color.White;
             this.txtStatusKey.Location = new System.Drawing.Point(139, 15);
             this.txtStatusKey.Name = "txtStatusKey";
             this.txtStatusKey.Size = new System.Drawing.Size(45, 23);
@@ -121,10 +118,8 @@
             // 
             // txtNewStatusKey
             // 
-            this.txtNewStatusKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtNewStatusKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNewStatusKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNewStatusKey.ForeColor = System.Drawing.Color.White;
             this.txtNewStatusKey.Location = new System.Drawing.Point(439, 16);
             this.txtNewStatusKey.Name = "txtNewStatusKey";
             this.txtNewStatusKey.Size = new System.Drawing.Size(45, 23);
@@ -135,7 +130,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(563, 248);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
@@ -145,7 +139,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtStatusKey);
             this.Controls.Add(this.DebuffsGP);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AutoBuffStatusForm";
             this.Text = "AutoBuffStatusForm";

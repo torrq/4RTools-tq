@@ -48,6 +48,7 @@ namespace _4RTools.Forms
             this.allBuffs.AddRange(Buff.GetTaekwonSkills());
             this.allBuffs.AddRange(Buff.GetNinjaSkills());
             this.allBuffs.AddRange(Buff.GetGunsSkills());
+            this.allBuffs.AddRange(Buff.GetPadawanSkills());
 
             foreach (var skill in this.allBuffs.OrderBy(o => o.name).ToList())
             {

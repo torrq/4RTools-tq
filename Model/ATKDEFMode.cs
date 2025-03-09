@@ -119,8 +119,6 @@ namespace _4RTools.Model
                                 equipAtkItems = true;
                             }
 
-                            getOffRein(roClient);
-
                             if (equipConfig.keySpammerWithClick)
                             {
                                 Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
@@ -181,18 +179,6 @@ namespace _4RTools.Model
                         ammo = false;
                     }
 
-                }
-            }
-        }
-
-        public void getOffRein(Client c)
-        {
-            if (ProfileSingleton.GetCurrent().UserPreferences.getOffRein && isRidding(c))
-            {
-                if (ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey.ToString() != String.Empty)
-                {
-                    Key key = ProfileSingleton.GetCurrent().UserPreferences.getOffReinKey;
-                    Interop.PostMessage(c.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
                 }
             }
         }

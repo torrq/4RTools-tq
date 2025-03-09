@@ -32,11 +32,6 @@ namespace _4RTools.Forms
             this.txtStatusToggleKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.txtStatusToggleKey.TextChanged += new EventHandler(this.onStatusToggleKeyChange);
 
-            this.txtStatusHealToggleKey.Text = ProfileSingleton.GetCurrent().UserPreferences.toggleStateHealKey;
-            this.txtStatusHealToggleKey.KeyDown += new KeyEventHandler(FormUtils.OnKeyDown);
-            this.txtStatusHealToggleKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.txtStatusHealToggleKey.TextChanged += new EventHandler(this.onStatusHealToggleKeyChange);
-
             InitializeContextualMenu();
         }
 
@@ -67,12 +62,6 @@ namespace _4RTools.Forms
                     KeyboardHook.AddKeyDown(currentToggleKey, new KeyboardHook.KeyPressed(this.toggleStatus));
                     lastKey = currentToggleKey;
 
-                    Keys currentHealToggleKey = (Keys)Enum.Parse(typeof(Keys), ProfileSingleton.GetCurrent().UserPreferences.toggleStateHealKey);
-                    KeyboardHook.RemoveUp(healLastKey); //Remove last key hook to prevent toggle with last profile key used.
-
-                    this.txtStatusHealToggleKey.Text = currentHealToggleKey.ToString();
-                    KeyboardHook.AddKeyUp(currentHealToggleKey, new KeyboardHook.KeyPressed(this.toggleStatusHeal));
-                    healLastKey = currentHealToggleKey;
                     break;
             }
         }
@@ -138,65 +127,6 @@ namespace _4RTools.Forms
                 this.lblStatusToggle.Text = "Press the key to start!";
                 this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
                 new SoundPlayer(Resources._4RTools.ETCResource.Speech_Off).Play();
-            }
-
-            bool isOnheal = this.btnStatusHealToggle.Text == "ON";
-            if (isOnheal)
-            {
-                this.btnStatusHealToggle.BackColor = Color.Red;
-                this.btnStatusHealToggle.Text = "OFF";
-                this.subject.Notify(new Utils.Message(MessageCode.TURN_HEAL_OFF, null));
-                this.lblStatusHealToggle.Text = "Press the key to start healing!";
-                this.lblStatusHealToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-                new SoundPlayer(Resources._4RTools.ETCResource.Healing_Off).Play();
-            }
-            return true;
-        }
-
-
-        private void btnToggleStatusHealHandler(object sender, EventArgs e) { this.toggleStatusHeal(); }
-
-        private void onStatusHealToggleKeyChange(object sender, EventArgs e)
-        {
-            //Get last key from profile before update it in json
-            Keys currentHealToggleKey = (Keys)Enum.Parse(typeof(Keys), this.txtStatusHealToggleKey.Text);
-            KeyboardHook.RemoveUp(healLastKey);
-            KeyboardHook.AddKeyUp(currentHealToggleKey, new KeyboardHook.KeyPressed(this.toggleStatusHeal));
-            ProfileSingleton.GetCurrent().UserPreferences.toggleStateHealKey = currentHealToggleKey.ToString(); //Update profile key
-            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
-
-            healLastKey = currentHealToggleKey; //Refresh lastKey to update 
-        }
-
-        private bool toggleStatusHeal()
-        {
-            bool isOn = this.btnStatusHealToggle.Text == "ON";
-            if (isOn)
-            {
-                this.btnStatusHealToggle.BackColor = Color.Red;
-                this.btnStatusHealToggle.Text = "OFF";
-                this.subject.Notify(new Utils.Message(MessageCode.TURN_HEAL_OFF, null));
-                this.lblStatusHealToggle.Text = "Press the key to start healing!";
-                this.lblStatusHealToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-                new SoundPlayer(Resources._4RTools.ETCResource.Healing_Off).Play();
-            }
-            else
-            {
-                Client client = ClientSingleton.GetClient();
-                if (client != null)
-                {
-                    this.btnStatusHealToggle.BackColor = Color.Green;
-                    this.btnStatusHealToggle.Text = "ON";
-                    this.subject.Notify(new Utils.Message(MessageCode.TURN_HEAL_ON, null));
-                    this.lblStatusHealToggle.Text = "Press the key to stop healing!";
-                    this.lblStatusHealToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-                    new SoundPlayer(Resources._4RTools.ETCResource.Healing_On).Play();
-                }
-                else
-                {
-                    this.lblStatusHealToggle.Text = "Please select a valid Ragnarok Client!";
-                    this.lblStatusHealToggle.ForeColor = Color.Red;
-                }
             }
 
             return true;
