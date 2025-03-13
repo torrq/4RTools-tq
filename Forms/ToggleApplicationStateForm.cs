@@ -85,7 +85,7 @@ namespace _4RTools.Forms
             {
                 this.btnStatusToggle.BackColor = Color.Red;
                 this.btnStatusToggle.Text = "OFF";
-                this.notifyIconTray.Icon = Resources._4RTools.ETCResource.TalesIcon_off;
+                this.notifyIconTray.Icon = Resources._4RTools.ETCResource.icon4rtools_off;
                 this.subject.Notify(new Utils.Message(MessageCode.TURN_OFF, null));
                 this.lblStatusToggle.Text = "Press the key to start!";
                 this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
@@ -98,7 +98,7 @@ namespace _4RTools.Forms
                 {
                     this.btnStatusToggle.BackColor = Color.Green;
                     this.btnStatusToggle.Text = "ON";
-                    this.notifyIconTray.Icon = Resources._4RTools.ETCResource.TalesIcon_on;
+                    this.notifyIconTray.Icon = Resources._4RTools.ETCResource.icon4rtools_on;
                     this.subject.Notify(new Utils.Message(MessageCode.TURN_ON, null));
                     this.lblStatusToggle.Text = "Press the key to stop!";
                     this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));

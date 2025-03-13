@@ -953,16 +953,6 @@ namespace _4RTools.Resources._4RTools {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap flag_br {
-            get {
-                object obj = ResourceManager.GetObject("flag_br", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap flee_scroll {
             get {
                 object obj = ResourceManager.GetObject("flee_scroll", resourceCulture);
@@ -1576,16 +1566,6 @@ namespace _4RTools.Resources._4RTools {
         internal static System.Drawing.Bitmap mana_plus {
             get {
                 object obj = ResourceManager.GetObject("mana_plus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mandragora_howling {
-            get {
-                object obj = ResourceManager.GetObject("mandragora_howling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

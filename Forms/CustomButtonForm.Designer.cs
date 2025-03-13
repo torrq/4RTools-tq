@@ -74,11 +74,11 @@
             // 
             this.txtAutoClickKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtAutoClickKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAutoClickKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtAutoClickKey.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtAutoClickKey.ForeColor = System.Drawing.Color.White;
             this.txtAutoClickKey.Location = new System.Drawing.Point(216, 8);
             this.txtAutoClickKey.Name = "txtAutoClickKey";
-            this.txtAutoClickKey.Size = new System.Drawing.Size(45, 23);
+            this.txtAutoClickKey.Size = new System.Drawing.Size(45, 25);
             this.txtAutoClickKey.TabIndex = 14;
             // 
             // panel5
@@ -120,6 +120,7 @@
             this.Controls.Add(this.txtAutoClickKey);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTransferKey);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomButtonForm";
             this.Padding = new System.Windows.Forms.Padding(10);
