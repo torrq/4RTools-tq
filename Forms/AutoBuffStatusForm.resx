@@ -133,19 +133,6 @@
         YpcRuLsodrsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAZNJREFUSEutlLFKA0EURfez/AwbWyFgZ2Elgq2lFiIIVoJVwEIhlYWNlRaiWKiN
-        qCDpjAQMWIiMnmHu5u04MxtNLlzI7L53z5vZIdWkul49cDmHkv+LkNHejje/O3OdhqcCqdk6vKplQeHR
-        bLS+suVkQbQOJWW5FsXhx90z9zHsexdBod8tLa4VLQmgcAwsCaBho/fgffT6WbSFWcDV5XM5nObBwNWO
-        g2PTA4RgAMWj0fR4+/bdB+RAPKOOQAGy06MYYA1MIGTDJwLsbnZ9I02P+1UjPDZSaAxIHhHhfHVEwNdL
-        71cozwRGNpx+1rqmjRukcAtIOQYoWP1/AnDeNjw25y8AfRyNAI1wxCIHYOLU9wBgB8MCNMLRwvxyXSSA
-        rqEbnXrHOwJAPZMrnD+6JADZ7Q1vxkH2zgMRCEAcjpPhEi+1bSAWhFMAG56d3ko7ASRI//DC28LiyVkL
-        EDtEj8U3AWB3I0jKCmdH8tvTvXcSgOwEbZBceBFgRdHdyXl9ZNZTh0vaDSALm0m4lUBtDuU/qqpvBLPn
-        gmKgMjgAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

@@ -187,7 +187,7 @@ namespace _4RTools.Forms
             // NEXTITEMin319
             // 
             this.NEXTITEMin319.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NEXTITEMin319.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NEXTITEMin319.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin319.Location = new System.Drawing.Point(158, 30);
             this.NEXTITEMin319.Name = "NEXTITEMin319";
             this.NEXTITEMin319.Size = new System.Drawing.Size(45, 23);
@@ -235,7 +235,7 @@ namespace _4RTools.Forms
             // ITEMin319
             // 
             this.ITEMin319.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ITEMin319.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ITEMin319.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin319.Location = new System.Drawing.Point(51, 30);
             this.ITEMin319.Name = "ITEMin319";
             this.ITEMin319.Size = new System.Drawing.Size(45, 23);
@@ -244,7 +244,7 @@ namespace _4RTools.Forms
             // NEXTITEMin2015
             // 
             this.NEXTITEMin2015.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NEXTITEMin2015.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NEXTITEMin2015.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin2015.Location = new System.Drawing.Point(158, 60);
             this.NEXTITEMin2015.Name = "NEXTITEMin2015";
             this.NEXTITEMin2015.Size = new System.Drawing.Size(45, 23);
@@ -273,7 +273,7 @@ namespace _4RTools.Forms
             // ITEMin2015
             // 
             this.ITEMin2015.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ITEMin2015.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ITEMin2015.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin2015.Location = new System.Drawing.Point(51, 60);
             this.ITEMin2015.Name = "ITEMin2015";
             this.ITEMin2015.Size = new System.Drawing.Size(45, 23);
@@ -282,7 +282,7 @@ namespace _4RTools.Forms
             // NEXTITEMin25
             // 
             this.NEXTITEMin25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NEXTITEMin25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NEXTITEMin25.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin25.Location = new System.Drawing.Point(158, 90);
             this.NEXTITEMin25.Name = "NEXTITEMin25";
             this.NEXTITEMin25.Size = new System.Drawing.Size(45, 23);
@@ -311,7 +311,7 @@ namespace _4RTools.Forms
             // ITEMin25
             // 
             this.ITEMin25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ITEMin25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ITEMin25.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin25.Location = new System.Drawing.Point(51, 90);
             this.ITEMin25.Name = "ITEMin25";
             this.ITEMin25.Size = new System.Drawing.Size(45, 23);
@@ -320,7 +320,7 @@ namespace _4RTools.Forms
             // NEXTITEMin355
             // 
             this.NEXTITEMin355.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NEXTITEMin355.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NEXTITEMin355.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin355.Location = new System.Drawing.Point(158, 120);
             this.NEXTITEMin355.Name = "NEXTITEMin355";
             this.NEXTITEMin355.Size = new System.Drawing.Size(45, 23);
@@ -349,7 +349,7 @@ namespace _4RTools.Forms
             // ITEMin355
             // 
             this.ITEMin355.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ITEMin355.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ITEMin355.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin355.Location = new System.Drawing.Point(51, 120);
             this.ITEMin355.Name = "ITEMin355";
             this.ITEMin355.Size = new System.Drawing.Size(45, 23);
@@ -358,7 +358,7 @@ namespace _4RTools.Forms
             // NEXTITEMin461
             // 
             this.NEXTITEMin461.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NEXTITEMin461.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NEXTITEMin461.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin461.Location = new System.Drawing.Point(158, 150);
             this.NEXTITEMin461.Name = "NEXTITEMin461";
             this.NEXTITEMin461.Size = new System.Drawing.Size(45, 23);
@@ -387,7 +387,7 @@ namespace _4RTools.Forms
             // ITEMin461
             // 
             this.ITEMin461.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ITEMin461.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ITEMin461.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin461.Location = new System.Drawing.Point(51, 150);
             this.ITEMin461.Name = "ITEMin461";
             this.ITEMin461.Size = new System.Drawing.Size(45, 23);
@@ -396,7 +396,7 @@ namespace _4RTools.Forms
             // NEXTITEMin126
             // 
             this.NEXTITEMin126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NEXTITEMin126.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NEXTITEMin126.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin126.Location = new System.Drawing.Point(158, 180);
             this.NEXTITEMin126.Name = "NEXTITEMin126";
             this.NEXTITEMin126.Size = new System.Drawing.Size(45, 23);
@@ -425,7 +425,7 @@ namespace _4RTools.Forms
             // ITEMin126
             // 
             this.ITEMin126.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ITEMin126.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ITEMin126.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin126.Location = new System.Drawing.Point(51, 180);
             this.ITEMin126.Name = "ITEMin126";
             this.ITEMin126.Size = new System.Drawing.Size(45, 23);

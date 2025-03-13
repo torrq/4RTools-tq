@@ -383,7 +383,7 @@ namespace _4RTools.Model
                 new Buff("Poison", EffectStatusIDs.POISON, Resources._4RTools.Icons.poison_status),
                 new Buff("Sit", EffectStatusIDs.SIT, Resources._4RTools.Icons.sit),
                 new Buff("Burning", EffectStatusIDs.BURNING, Resources._4RTools.Icons.burning),
-                new Buff("Mandragora", EffectStatusIDs.MANDRAGORA, Resources._4RTools.Icons.mandragora_howling),
+                //new Buff("Mandragora", EffectStatusIDs.MANDRAGORA, Resources._4RTools.Icons.mandragora_howling),
                 new Buff("Slow Cast", EffectStatusIDs.SLOW_CAST, Resources._4RTools.Icons.slow_cast),
 
             };

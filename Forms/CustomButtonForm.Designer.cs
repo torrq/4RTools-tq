@@ -74,7 +74,7 @@
             // 
             this.txtAutoClickKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtAutoClickKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAutoClickKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtAutoClickKey.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtAutoClickKey.ForeColor = System.Drawing.Color.White;
             this.txtAutoClickKey.Location = new System.Drawing.Point(216, 8);
             this.txtAutoClickKey.Name = "txtAutoClickKey";
