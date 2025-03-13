@@ -475,17 +475,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TalesIcon_off.png" />
-    <None Include="Resources\TalesIcon_on.png" />
-    <None Include="Resources\TalesIcon_off.ico" />
-    <None Include="Resources\TalesIcon_on.ico" />
+    <None Include="Resources\icon4rtools_off.png" />
+    <None Include="Resources\icon4rtools_on.png" />
+    <None Include="Resources\icon4rtools_off.ico" />
+    <None Include="Resources\icon4rtools_on.ico" />
     <None Include="assets\images\run.png" />
     <None Include="assets\images\chase_walk.png" />
     <None Include="assets\images\clementia.png" />
     <None Include="assets\images\canto_candidus.png" />
     <None Include="assets\images\fighting_spirit.png" />
     <None Include="assets\images\providence.png" />
-    <Content Include="TalesIcon.ico" />
+    <Content Include="logo-4rtools.ico" />
     <None Include="assets\images\abrasive.gif" />
     <None Include="assets\images\ac_concentration.gif" />
     <None Include="assets\images\agi_3rd_food.png" />
