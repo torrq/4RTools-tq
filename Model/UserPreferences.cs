@@ -10,14 +10,9 @@ namespace _4RTools.Model
     {
         private string ACTION_NAME = "UserPreferences";
         public string toggleStateKey { get; set; } = Keys.End.ToString();
-        public string toggleStateHealKey { get; set; } = Keys.End.ToString();
         public List<EffectStatusIDs> autoBuffOrder { get; set; } = new List<EffectStatusIDs>();
 
         public bool stopBuffsCity { get; set; } = false;
-        public bool stopBuffsRein { get; set; } = false;
-        public bool stopHealCity { get; set; } = false;
-        public bool getOffRein { get; set; } = false;
-        public Key getOffReinKey { get; set; }
 
         public bool switchAmmo { get; set; } = false;
         public Key ammo1Key { get; set; }

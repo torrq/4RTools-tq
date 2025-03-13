@@ -44,17 +44,16 @@
             // 
             // txtTransferKey
             // 
-            this.txtTransferKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtTransferKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTransferKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtTransferKey.ForeColor = System.Drawing.Color.White;
+            this.txtTransferKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTransferKey.Location = new System.Drawing.Point(79, 8);
             this.txtTransferKey.Name = "txtTransferKey";
-            this.txtTransferKey.Size = new System.Drawing.Size(45, 23);
+            this.txtTransferKey.Size = new System.Drawing.Size(45, 25);
             this.txtTransferKey.TabIndex = 11;
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(28, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 27);
@@ -113,7 +112,6 @@
             // 
             // CustomButtonForm
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(130, 39);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -122,7 +120,6 @@
             this.Controls.Add(this.txtAutoClickKey);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTransferKey);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomButtonForm";
             this.Padding = new System.Windows.Forms.Padding(10);

@@ -26,6 +26,7 @@ namespace _4RTools.Forms
             skillContainers.Add(new BuffContainer(this.TKSkillGroupBox, Buff.GetTaekwonSkills()));
             skillContainers.Add(new BuffContainer(this.NinjaSkillsGP, Buff.GetNinjaSkills()));
             skillContainers.Add(new BuffContainer(this.GunsSkillsGP, Buff.GetGunsSkills()));
+            skillContainers.Add(new BuffContainer(this.PadawanSkillsGP, Buff.GetPadawanSkills()));
 
             new BuffRenderer(skillContainers, toolTip1, ProfileSingleton.GetCurrent().AutobuffSkill.actionName, subject).doRender();
             subject.Attach(this);
@@ -66,6 +67,11 @@ namespace _4RTools.Forms
                 this.ActiveControl = null;
             }
             catch { }
+        }
+
+        private void SkillAutoBuffForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

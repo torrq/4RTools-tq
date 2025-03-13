@@ -37,6 +37,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.equipGroup1 = new System.Windows.Forms.GroupBox();
             this.panelSwitch1 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -173,12 +175,10 @@
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.in4SpammerClick = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.in4SpammerKey = new System.Windows.Forms.TextBox();
             this.in4SwitchDelay = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.in4SpammerDelay = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
             this.equipGroup1.SuspendLayout();
             this.panelSwitch1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -254,7 +254,7 @@
             this.lblSwitchDelay.AutoSize = true;
             this.lblSwitchDelay.Location = new System.Drawing.Point(17, 92);
             this.lblSwitchDelay.Name = "lblSwitchDelay";
-            this.lblSwitchDelay.Size = new System.Drawing.Size(69, 13);
+            this.lblSwitchDelay.Size = new System.Drawing.Size(72, 13);
             this.lblSwitchDelay.TabIndex = 28;
             this.lblSwitchDelay.Text = "Switch Delay";
             this.toolTip1.SetToolTip(this.lblSwitchDelay, "Delay between each item change.");
@@ -264,7 +264,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 26;
             this.label3.Text = "Spammer Delay";
             this.toolTip1.SetToolTip(this.label3, "Delay for Spammer Key");
@@ -274,7 +274,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(17, 92);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.Size = new System.Drawing.Size(72, 13);
             this.label6.TabIndex = 28;
             this.label6.Text = "Switch Delay";
             this.toolTip1.SetToolTip(this.label6, "Delay between each item change.");
@@ -284,7 +284,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(14, 60);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 26;
             this.label8.Text = "Spammer Delay";
             this.toolTip1.SetToolTip(this.label8, "Delay for Spammer Key");
@@ -294,7 +294,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(17, 92);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.Size = new System.Drawing.Size(72, 13);
             this.label11.TabIndex = 28;
             this.label11.Text = "Switch Delay";
             this.toolTip1.SetToolTip(this.label11, "Delay between each item change.");
@@ -304,15 +304,34 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(14, 60);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 13);
+            this.label13.Size = new System.Drawing.Size(85, 13);
             this.label13.TabIndex = 26;
             this.label13.Text = "Spammer Delay";
             this.toolTip1.SetToolTip(this.label13, "Delay for Spammer Key");
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(17, 92);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 13);
+            this.label16.TabIndex = 28;
+            this.label16.Text = "Switch Delay";
+            this.toolTip1.SetToolTip(this.label16, "Delay between each item change.");
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(14, 60);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 13);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Spammer Delay";
+            this.toolTip1.SetToolTip(this.label18, "Delay for Spammer Key");
+            // 
             // equipGroup1
             // 
             this.equipGroup1.Controls.Add(this.panelSwitch1);
-            this.equipGroup1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.equipGroup1.Location = new System.Drawing.Point(12, 12);
             this.equipGroup1.Name = "equipGroup1";
             this.equipGroup1.Size = new System.Drawing.Size(517, 198);
@@ -322,7 +341,6 @@
             // 
             // panelSwitch1
             // 
-            this.panelSwitch1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.panelSwitch1.Controls.Add(this.pictureBox12);
             this.panelSwitch1.Controls.Add(this.pictureBox11);
             this.panelSwitch1.Controls.Add(this.in1Atk6);
@@ -351,7 +369,6 @@
             this.panelSwitch1.Controls.Add(this.pictureBox2);
             this.panelSwitch1.Controls.Add(this.pictureBox1);
             this.panelSwitch1.Controls.Add(this.groupBoxATKxDEFConfig);
-            this.panelSwitch1.ForeColor = System.Drawing.Color.White;
             this.panelSwitch1.Location = new System.Drawing.Point(11, 13);
             this.panelSwitch1.Name = "panelSwitch1";
             this.panelSwitch1.Size = new System.Drawing.Size(495, 180);
@@ -379,77 +396,64 @@
             // 
             // in1Atk6
             // 
-            this.in1Atk6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Atk6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Atk6.ForeColor = System.Drawing.Color.White;
             this.in1Atk6.Location = new System.Drawing.Point(394, 151);
             this.in1Atk6.Name = "in1Atk6";
-            this.in1Atk6.Size = new System.Drawing.Size(60, 20);
+            this.in1Atk6.Size = new System.Drawing.Size(60, 22);
             this.in1Atk6.TabIndex = 35;
             this.in1Atk6.Tag = "1:Atk6";
             // 
             // in1Def6
             // 
-            this.in1Def6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Def6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Def6.ForeColor = System.Drawing.Color.White;
             this.in1Def6.Location = new System.Drawing.Point(252, 150);
             this.in1Def6.Name = "in1Def6";
-            this.in1Def6.Size = new System.Drawing.Size(60, 20);
+            this.in1Def6.Size = new System.Drawing.Size(60, 22);
             this.in1Def6.TabIndex = 34;
             this.in1Def6.Tag = "1:Def6";
             // 
             // in1Atk2
             // 
-            this.in1Atk2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Atk2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Atk2.ForeColor = System.Drawing.Color.White;
             this.in1Atk2.Location = new System.Drawing.Point(394, 55);
             this.in1Atk2.Name = "in1Atk2";
-            this.in1Atk2.Size = new System.Drawing.Size(60, 20);
+            this.in1Atk2.Size = new System.Drawing.Size(60, 22);
             this.in1Atk2.TabIndex = 9;
             this.in1Atk2.Tag = "1:Atk2";
             // 
             // lblDef
             // 
             this.lblDef.AutoSize = true;
-            this.lblDef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.lblDef.Location = new System.Drawing.Point(249, 10);
             this.lblDef.Name = "lblDef";
-            this.lblDef.Size = new System.Drawing.Size(63, 13);
+            this.lblDef.Size = new System.Drawing.Size(64, 13);
             this.lblDef.TabIndex = 0;
             this.lblDef.Text = "DEF Switch";
             // 
             // in1Def1
             // 
-            this.in1Def1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Def1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Def1.ForeColor = System.Drawing.Color.White;
             this.in1Def1.Location = new System.Drawing.Point(252, 31);
             this.in1Def1.Name = "in1Def1";
-            this.in1Def1.Size = new System.Drawing.Size(60, 20);
+            this.in1Def1.Size = new System.Drawing.Size(60, 22);
             this.in1Def1.TabIndex = 1;
             this.in1Def1.Tag = "1:Def1";
             // 
             // in1Def2
             // 
-            this.in1Def2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Def2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Def2.ForeColor = System.Drawing.Color.White;
             this.in1Def2.Location = new System.Drawing.Point(252, 54);
             this.in1Def2.Name = "in1Def2";
-            this.in1Def2.Size = new System.Drawing.Size(60, 20);
+            this.in1Def2.Size = new System.Drawing.Size(60, 22);
             this.in1Def2.TabIndex = 2;
             this.in1Def2.Tag = "1:Def2";
             // 
             // in1Def3
             // 
-            this.in1Def3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Def3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Def3.ForeColor = System.Drawing.Color.White;
             this.in1Def3.Location = new System.Drawing.Point(252, 78);
             this.in1Def3.Name = "in1Def3";
-            this.in1Def3.Size = new System.Drawing.Size(60, 20);
+            this.in1Def3.Size = new System.Drawing.Size(60, 22);
             this.in1Def3.TabIndex = 3;
             this.in1Def3.Tag = "1:Def3";
             // 
@@ -465,12 +469,10 @@
             // 
             // in1Def4
             // 
-            this.in1Def4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Def4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Def4.ForeColor = System.Drawing.Color.White;
             this.in1Def4.Location = new System.Drawing.Point(252, 102);
             this.in1Def4.Name = "in1Def4";
-            this.in1Def4.Size = new System.Drawing.Size(60, 20);
+            this.in1Def4.Size = new System.Drawing.Size(60, 22);
             this.in1Def4.TabIndex = 4;
             this.in1Def4.Tag = "1:Def4";
             // 
@@ -486,12 +488,10 @@
             // 
             // in1Def5
             // 
-            this.in1Def5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Def5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Def5.ForeColor = System.Drawing.Color.White;
             this.in1Def5.Location = new System.Drawing.Point(252, 126);
             this.in1Def5.Name = "in1Def5";
-            this.in1Def5.Size = new System.Drawing.Size(60, 20);
+            this.in1Def5.Size = new System.Drawing.Size(60, 22);
             this.in1Def5.TabIndex = 5;
             this.in1Def5.Tag = "1:Def5";
             // 
@@ -526,10 +526,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label1.Location = new System.Drawing.Point(391, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "ATK Switch";
             // 
@@ -545,12 +544,10 @@
             // 
             // in1Atk1
             // 
-            this.in1Atk1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Atk1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Atk1.ForeColor = System.Drawing.Color.White;
             this.in1Atk1.Location = new System.Drawing.Point(394, 31);
             this.in1Atk1.Name = "in1Atk1";
-            this.in1Atk1.Size = new System.Drawing.Size(60, 20);
+            this.in1Atk1.Size = new System.Drawing.Size(60, 22);
             this.in1Atk1.TabIndex = 8;
             this.in1Atk1.Tag = "1:Atk1";
             // 
@@ -566,12 +563,10 @@
             // 
             // in1Atk3
             // 
-            this.in1Atk3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Atk3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Atk3.ForeColor = System.Drawing.Color.White;
             this.in1Atk3.Location = new System.Drawing.Point(394, 79);
             this.in1Atk3.Name = "in1Atk3";
-            this.in1Atk3.Size = new System.Drawing.Size(60, 20);
+            this.in1Atk3.Size = new System.Drawing.Size(60, 22);
             this.in1Atk3.TabIndex = 10;
             this.in1Atk3.Tag = "1:Atk3";
             // 
@@ -587,12 +582,10 @@
             // 
             // in1Atk4
             // 
-            this.in1Atk4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Atk4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Atk4.ForeColor = System.Drawing.Color.White;
             this.in1Atk4.Location = new System.Drawing.Point(394, 103);
             this.in1Atk4.Name = "in1Atk4";
-            this.in1Atk4.Size = new System.Drawing.Size(60, 20);
+            this.in1Atk4.Size = new System.Drawing.Size(60, 22);
             this.in1Atk4.TabIndex = 11;
             this.in1Atk4.Tag = "1:Atk4";
             // 
@@ -608,12 +601,10 @@
             // 
             // in1Atk5
             // 
-            this.in1Atk5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1Atk5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1Atk5.ForeColor = System.Drawing.Color.White;
             this.in1Atk5.Location = new System.Drawing.Point(394, 127);
             this.in1Atk5.Name = "in1Atk5";
-            this.in1Atk5.Size = new System.Drawing.Size(60, 20);
+            this.in1Atk5.Size = new System.Drawing.Size(60, 22);
             this.in1Atk5.TabIndex = 12;
             this.in1Atk5.Tag = "1:Atk5";
             // 
@@ -647,7 +638,6 @@
             this.groupBoxATKxDEFConfig.Controls.Add(this.in1SpammerDelay);
             this.groupBoxATKxDEFConfig.Controls.Add(this.label3);
             this.groupBoxATKxDEFConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBoxATKxDEFConfig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupBoxATKxDEFConfig.Location = new System.Drawing.Point(13, 10);
             this.groupBoxATKxDEFConfig.Name = "groupBoxATKxDEFConfig";
             this.groupBoxATKxDEFConfig.Size = new System.Drawing.Size(191, 151);
@@ -662,7 +652,7 @@
             this.in1SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
             this.in1SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in1SpammerClick.Name = "in1SpammerClick";
-            this.in1SpammerClick.Size = new System.Drawing.Size(107, 17);
+            this.in1SpammerClick.Size = new System.Drawing.Size(113, 17);
             this.in1SpammerClick.TabIndex = 29;
             this.in1SpammerClick.Tag = "1:inSpammerClick";
             this.in1SpammerClick.Text = "With mouse click";
@@ -670,20 +660,16 @@
             // 
             // in1SpammerKey
             // 
-            this.in1SpammerKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1SpammerKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1SpammerKey.ForeColor = System.Drawing.Color.White;
             this.in1SpammerKey.Location = new System.Drawing.Point(101, 24);
             this.in1SpammerKey.Name = "in1SpammerKey";
-            this.in1SpammerKey.Size = new System.Drawing.Size(60, 20);
+            this.in1SpammerKey.Size = new System.Drawing.Size(60, 22);
             this.in1SpammerKey.TabIndex = 23;
             this.in1SpammerKey.Tag = "1:spammerKey";
             // 
             // in1SwitchDelay
             // 
-            this.in1SwitchDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1SwitchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1SwitchDelay.ForeColor = System.Drawing.Color.White;
             this.in1SwitchDelay.Location = new System.Drawing.Point(101, 88);
             this.in1SwitchDelay.Maximum = new decimal(new int[] {
             500,
@@ -691,7 +677,7 @@
             0,
             0});
             this.in1SwitchDelay.Name = "in1SwitchDelay";
-            this.in1SwitchDelay.Size = new System.Drawing.Size(60, 20);
+            this.in1SwitchDelay.Size = new System.Drawing.Size(60, 22);
             this.in1SwitchDelay.TabIndex = 27;
             this.in1SwitchDelay.Tag = "1:switchDelay";
             // 
@@ -700,15 +686,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Spammer Key";
             // 
             // in1SpammerDelay
             // 
-            this.in1SpammerDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in1SpammerDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in1SpammerDelay.ForeColor = System.Drawing.Color.White;
             this.in1SpammerDelay.Location = new System.Drawing.Point(101, 56);
             this.in1SpammerDelay.Maximum = new decimal(new int[] {
             5000,
@@ -716,14 +700,13 @@
             0,
             0});
             this.in1SpammerDelay.Name = "in1SpammerDelay";
-            this.in1SpammerDelay.Size = new System.Drawing.Size(60, 20);
+            this.in1SpammerDelay.Size = new System.Drawing.Size(60, 22);
             this.in1SpammerDelay.TabIndex = 25;
             this.in1SpammerDelay.Tag = "1:spammerDelay";
             // 
             // equipGroup2
             // 
             this.equipGroup2.Controls.Add(this.panelSwitch2);
-            this.equipGroup2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.equipGroup2.Location = new System.Drawing.Point(12, 216);
             this.equipGroup2.Name = "equipGroup2";
             this.equipGroup2.Size = new System.Drawing.Size(517, 198);
@@ -733,7 +716,6 @@
             // 
             // panelSwitch2
             // 
-            this.panelSwitch2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.panelSwitch2.Controls.Add(this.pictureBox13);
             this.panelSwitch2.Controls.Add(this.pictureBox14);
             this.panelSwitch2.Controls.Add(this.in2Atk6);
@@ -762,7 +744,6 @@
             this.panelSwitch2.Controls.Add(this.pictureBox23);
             this.panelSwitch2.Controls.Add(this.pictureBox24);
             this.panelSwitch2.Controls.Add(this.groupBox3);
-            this.panelSwitch2.ForeColor = System.Drawing.Color.White;
             this.panelSwitch2.Location = new System.Drawing.Point(11, 13);
             this.panelSwitch2.Name = "panelSwitch2";
             this.panelSwitch2.Size = new System.Drawing.Size(495, 180);
@@ -790,77 +771,64 @@
             // 
             // in2Atk6
             // 
-            this.in2Atk6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Atk6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Atk6.ForeColor = System.Drawing.Color.White;
             this.in2Atk6.Location = new System.Drawing.Point(394, 151);
             this.in2Atk6.Name = "in2Atk6";
-            this.in2Atk6.Size = new System.Drawing.Size(60, 20);
+            this.in2Atk6.Size = new System.Drawing.Size(60, 22);
             this.in2Atk6.TabIndex = 35;
             this.in2Atk6.Tag = "2:Atk6";
             // 
             // in2Def6
             // 
-            this.in2Def6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Def6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Def6.ForeColor = System.Drawing.Color.White;
             this.in2Def6.Location = new System.Drawing.Point(252, 150);
             this.in2Def6.Name = "in2Def6";
-            this.in2Def6.Size = new System.Drawing.Size(60, 20);
+            this.in2Def6.Size = new System.Drawing.Size(60, 22);
             this.in2Def6.TabIndex = 34;
             this.in2Def6.Tag = "2:Def6";
             // 
             // in2Atk2
             // 
-            this.in2Atk2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Atk2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Atk2.ForeColor = System.Drawing.Color.White;
             this.in2Atk2.Location = new System.Drawing.Point(394, 55);
             this.in2Atk2.Name = "in2Atk2";
-            this.in2Atk2.Size = new System.Drawing.Size(60, 20);
+            this.in2Atk2.Size = new System.Drawing.Size(60, 22);
             this.in2Atk2.TabIndex = 9;
             this.in2Atk2.Tag = "2:Atk2";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label4.Location = new System.Drawing.Point(249, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "DEF Switch";
             // 
             // in2Def1
             // 
-            this.in2Def1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Def1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Def1.ForeColor = System.Drawing.Color.White;
             this.in2Def1.Location = new System.Drawing.Point(252, 31);
             this.in2Def1.Name = "in2Def1";
-            this.in2Def1.Size = new System.Drawing.Size(60, 20);
+            this.in2Def1.Size = new System.Drawing.Size(60, 22);
             this.in2Def1.TabIndex = 1;
             this.in2Def1.Tag = "2:Def1";
             // 
             // in2Def2
             // 
-            this.in2Def2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Def2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Def2.ForeColor = System.Drawing.Color.White;
             this.in2Def2.Location = new System.Drawing.Point(252, 54);
             this.in2Def2.Name = "in2Def2";
-            this.in2Def2.Size = new System.Drawing.Size(60, 20);
+            this.in2Def2.Size = new System.Drawing.Size(60, 22);
             this.in2Def2.TabIndex = 2;
             this.in2Def2.Tag = "2:Def2";
             // 
             // in2Def3
             // 
-            this.in2Def3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Def3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Def3.ForeColor = System.Drawing.Color.White;
             this.in2Def3.Location = new System.Drawing.Point(252, 78);
             this.in2Def3.Name = "in2Def3";
-            this.in2Def3.Size = new System.Drawing.Size(60, 20);
+            this.in2Def3.Size = new System.Drawing.Size(60, 22);
             this.in2Def3.TabIndex = 3;
             this.in2Def3.Tag = "2:Def3";
             // 
@@ -876,12 +844,10 @@
             // 
             // in2Def4
             // 
-            this.in2Def4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Def4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Def4.ForeColor = System.Drawing.Color.White;
             this.in2Def4.Location = new System.Drawing.Point(252, 102);
             this.in2Def4.Name = "in2Def4";
-            this.in2Def4.Size = new System.Drawing.Size(60, 20);
+            this.in2Def4.Size = new System.Drawing.Size(60, 22);
             this.in2Def4.TabIndex = 4;
             this.in2Def4.Tag = "2:Def4";
             // 
@@ -897,12 +863,10 @@
             // 
             // in2Def5
             // 
-            this.in2Def5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Def5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Def5.ForeColor = System.Drawing.Color.White;
             this.in2Def5.Location = new System.Drawing.Point(252, 126);
             this.in2Def5.Name = "in2Def5";
-            this.in2Def5.Size = new System.Drawing.Size(60, 20);
+            this.in2Def5.Size = new System.Drawing.Size(60, 22);
             this.in2Def5.TabIndex = 5;
             this.in2Def5.Tag = "2:Def5";
             // 
@@ -937,10 +901,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label5.Location = new System.Drawing.Point(391, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "ATK Switch";
             // 
@@ -956,12 +919,10 @@
             // 
             // in2Atk1
             // 
-            this.in2Atk1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Atk1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Atk1.ForeColor = System.Drawing.Color.White;
             this.in2Atk1.Location = new System.Drawing.Point(394, 31);
             this.in2Atk1.Name = "in2Atk1";
-            this.in2Atk1.Size = new System.Drawing.Size(60, 20);
+            this.in2Atk1.Size = new System.Drawing.Size(60, 22);
             this.in2Atk1.TabIndex = 8;
             this.in2Atk1.Tag = "2:Atk1";
             // 
@@ -977,12 +938,10 @@
             // 
             // in2Atk3
             // 
-            this.in2Atk3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Atk3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Atk3.ForeColor = System.Drawing.Color.White;
             this.in2Atk3.Location = new System.Drawing.Point(394, 79);
             this.in2Atk3.Name = "in2Atk3";
-            this.in2Atk3.Size = new System.Drawing.Size(60, 20);
+            this.in2Atk3.Size = new System.Drawing.Size(60, 22);
             this.in2Atk3.TabIndex = 10;
             this.in2Atk3.Tag = "2:Atk3";
             // 
@@ -998,12 +957,10 @@
             // 
             // in2Atk4
             // 
-            this.in2Atk4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Atk4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Atk4.ForeColor = System.Drawing.Color.White;
             this.in2Atk4.Location = new System.Drawing.Point(394, 103);
             this.in2Atk4.Name = "in2Atk4";
-            this.in2Atk4.Size = new System.Drawing.Size(60, 20);
+            this.in2Atk4.Size = new System.Drawing.Size(60, 22);
             this.in2Atk4.TabIndex = 11;
             this.in2Atk4.Tag = "2:Atk4";
             // 
@@ -1019,12 +976,10 @@
             // 
             // in2Atk5
             // 
-            this.in2Atk5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2Atk5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2Atk5.ForeColor = System.Drawing.Color.White;
             this.in2Atk5.Location = new System.Drawing.Point(394, 127);
             this.in2Atk5.Name = "in2Atk5";
-            this.in2Atk5.Size = new System.Drawing.Size(60, 20);
+            this.in2Atk5.Size = new System.Drawing.Size(60, 22);
             this.in2Atk5.TabIndex = 12;
             this.in2Atk5.Tag = "2:Atk5";
             // 
@@ -1058,7 +1013,6 @@
             this.groupBox3.Controls.Add(this.in2SpammerDelay);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupBox3.Location = new System.Drawing.Point(13, 10);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(191, 151);
@@ -1073,7 +1027,7 @@
             this.in2SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
             this.in2SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in2SpammerClick.Name = "in2SpammerClick";
-            this.in2SpammerClick.Size = new System.Drawing.Size(107, 17);
+            this.in2SpammerClick.Size = new System.Drawing.Size(113, 17);
             this.in2SpammerClick.TabIndex = 29;
             this.in2SpammerClick.Tag = "2:inSpammerClick";
             this.in2SpammerClick.Text = "With mouse click";
@@ -1081,20 +1035,16 @@
             // 
             // in2SpammerKey
             // 
-            this.in2SpammerKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2SpammerKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2SpammerKey.ForeColor = System.Drawing.Color.White;
             this.in2SpammerKey.Location = new System.Drawing.Point(101, 24);
             this.in2SpammerKey.Name = "in2SpammerKey";
-            this.in2SpammerKey.Size = new System.Drawing.Size(60, 20);
+            this.in2SpammerKey.Size = new System.Drawing.Size(60, 22);
             this.in2SpammerKey.TabIndex = 23;
             this.in2SpammerKey.Tag = "2:spammerKey";
             // 
             // in2SwitchDelay
             // 
-            this.in2SwitchDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2SwitchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2SwitchDelay.ForeColor = System.Drawing.Color.White;
             this.in2SwitchDelay.Location = new System.Drawing.Point(101, 88);
             this.in2SwitchDelay.Maximum = new decimal(new int[] {
             500,
@@ -1102,7 +1052,7 @@
             0,
             0});
             this.in2SwitchDelay.Name = "in2SwitchDelay";
-            this.in2SwitchDelay.Size = new System.Drawing.Size(60, 20);
+            this.in2SwitchDelay.Size = new System.Drawing.Size(60, 22);
             this.in2SwitchDelay.TabIndex = 27;
             this.in2SwitchDelay.Tag = "2:switchDelay";
             // 
@@ -1111,15 +1061,13 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(14, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 13);
+            this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 24;
             this.label7.Text = "Spammer Key";
             // 
             // in2SpammerDelay
             // 
-            this.in2SpammerDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in2SpammerDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in2SpammerDelay.ForeColor = System.Drawing.Color.White;
             this.in2SpammerDelay.Location = new System.Drawing.Point(101, 56);
             this.in2SpammerDelay.Maximum = new decimal(new int[] {
             5000,
@@ -1127,14 +1075,13 @@
             0,
             0});
             this.in2SpammerDelay.Name = "in2SpammerDelay";
-            this.in2SpammerDelay.Size = new System.Drawing.Size(60, 20);
+            this.in2SpammerDelay.Size = new System.Drawing.Size(60, 22);
             this.in2SpammerDelay.TabIndex = 25;
             this.in2SpammerDelay.Tag = "2:spammerDelay";
             // 
             // equipGroup3
             // 
             this.equipGroup3.Controls.Add(this.panelSwitch3);
-            this.equipGroup3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.equipGroup3.Location = new System.Drawing.Point(12, 420);
             this.equipGroup3.Name = "equipGroup3";
             this.equipGroup3.Size = new System.Drawing.Size(517, 198);
@@ -1144,7 +1091,6 @@
             // 
             // panelSwitch3
             // 
-            this.panelSwitch3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.panelSwitch3.Controls.Add(this.pictureBox25);
             this.panelSwitch3.Controls.Add(this.pictureBox26);
             this.panelSwitch3.Controls.Add(this.in3Atk6);
@@ -1173,7 +1119,6 @@
             this.panelSwitch3.Controls.Add(this.pictureBox35);
             this.panelSwitch3.Controls.Add(this.pictureBox36);
             this.panelSwitch3.Controls.Add(this.groupBox5);
-            this.panelSwitch3.ForeColor = System.Drawing.Color.White;
             this.panelSwitch3.Location = new System.Drawing.Point(11, 13);
             this.panelSwitch3.Name = "panelSwitch3";
             this.panelSwitch3.Size = new System.Drawing.Size(495, 180);
@@ -1201,77 +1146,64 @@
             // 
             // in3Atk6
             // 
-            this.in3Atk6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Atk6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Atk6.ForeColor = System.Drawing.Color.White;
             this.in3Atk6.Location = new System.Drawing.Point(394, 151);
             this.in3Atk6.Name = "in3Atk6";
-            this.in3Atk6.Size = new System.Drawing.Size(60, 20);
+            this.in3Atk6.Size = new System.Drawing.Size(60, 22);
             this.in3Atk6.TabIndex = 35;
             this.in3Atk6.Tag = "3:Atk6";
             // 
             // in3Def6
             // 
-            this.in3Def6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Def6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Def6.ForeColor = System.Drawing.Color.White;
             this.in3Def6.Location = new System.Drawing.Point(252, 150);
             this.in3Def6.Name = "in3Def6";
-            this.in3Def6.Size = new System.Drawing.Size(60, 20);
+            this.in3Def6.Size = new System.Drawing.Size(60, 22);
             this.in3Def6.TabIndex = 34;
             this.in3Def6.Tag = "3:Def6";
             // 
             // in3Atk2
             // 
-            this.in3Atk2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Atk2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Atk2.ForeColor = System.Drawing.Color.White;
             this.in3Atk2.Location = new System.Drawing.Point(394, 55);
             this.in3Atk2.Name = "in3Atk2";
-            this.in3Atk2.Size = new System.Drawing.Size(60, 20);
+            this.in3Atk2.Size = new System.Drawing.Size(60, 22);
             this.in3Atk2.TabIndex = 9;
             this.in3Atk2.Tag = "3:Atk2";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label9.Location = new System.Drawing.Point(249, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 13);
+            this.label9.Size = new System.Drawing.Size(64, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "DEF Switch";
             // 
             // in3Def1
             // 
-            this.in3Def1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Def1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Def1.ForeColor = System.Drawing.Color.White;
             this.in3Def1.Location = new System.Drawing.Point(252, 31);
             this.in3Def1.Name = "in3Def1";
-            this.in3Def1.Size = new System.Drawing.Size(60, 20);
+            this.in3Def1.Size = new System.Drawing.Size(60, 22);
             this.in3Def1.TabIndex = 1;
             this.in3Def1.Tag = "3:Def1";
             // 
             // in3Def2
             // 
-            this.in3Def2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Def2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Def2.ForeColor = System.Drawing.Color.White;
             this.in3Def2.Location = new System.Drawing.Point(252, 54);
             this.in3Def2.Name = "in3Def2";
-            this.in3Def2.Size = new System.Drawing.Size(60, 20);
+            this.in3Def2.Size = new System.Drawing.Size(60, 22);
             this.in3Def2.TabIndex = 2;
             this.in3Def2.Tag = "3:Def2";
             // 
             // in3Def3
             // 
-            this.in3Def3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Def3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Def3.ForeColor = System.Drawing.Color.White;
             this.in3Def3.Location = new System.Drawing.Point(252, 78);
             this.in3Def3.Name = "in3Def3";
-            this.in3Def3.Size = new System.Drawing.Size(60, 20);
+            this.in3Def3.Size = new System.Drawing.Size(60, 22);
             this.in3Def3.TabIndex = 3;
             this.in3Def3.Tag = "3:Def3";
             // 
@@ -1287,12 +1219,10 @@
             // 
             // in3Def4
             // 
-            this.in3Def4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Def4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Def4.ForeColor = System.Drawing.Color.White;
             this.in3Def4.Location = new System.Drawing.Point(252, 102);
             this.in3Def4.Name = "in3Def4";
-            this.in3Def4.Size = new System.Drawing.Size(60, 20);
+            this.in3Def4.Size = new System.Drawing.Size(60, 22);
             this.in3Def4.TabIndex = 4;
             this.in3Def4.Tag = "3:Def4";
             // 
@@ -1308,12 +1238,10 @@
             // 
             // in3Def5
             // 
-            this.in3Def5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Def5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Def5.ForeColor = System.Drawing.Color.White;
             this.in3Def5.Location = new System.Drawing.Point(252, 126);
             this.in3Def5.Name = "in3Def5";
-            this.in3Def5.Size = new System.Drawing.Size(60, 20);
+            this.in3Def5.Size = new System.Drawing.Size(60, 22);
             this.in3Def5.TabIndex = 5;
             this.in3Def5.Tag = "3:Def5";
             // 
@@ -1348,10 +1276,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label10.Location = new System.Drawing.Point(391, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 7;
             this.label10.Text = "ATK Switch";
             // 
@@ -1367,12 +1294,10 @@
             // 
             // in3Atk1
             // 
-            this.in3Atk1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Atk1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Atk1.ForeColor = System.Drawing.Color.White;
             this.in3Atk1.Location = new System.Drawing.Point(394, 31);
             this.in3Atk1.Name = "in3Atk1";
-            this.in3Atk1.Size = new System.Drawing.Size(60, 20);
+            this.in3Atk1.Size = new System.Drawing.Size(60, 22);
             this.in3Atk1.TabIndex = 8;
             this.in3Atk1.Tag = "3:Atk1";
             // 
@@ -1388,12 +1313,10 @@
             // 
             // in3Atk3
             // 
-            this.in3Atk3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Atk3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Atk3.ForeColor = System.Drawing.Color.White;
             this.in3Atk3.Location = new System.Drawing.Point(394, 79);
             this.in3Atk3.Name = "in3Atk3";
-            this.in3Atk3.Size = new System.Drawing.Size(60, 20);
+            this.in3Atk3.Size = new System.Drawing.Size(60, 22);
             this.in3Atk3.TabIndex = 10;
             this.in3Atk3.Tag = "3:Atk3";
             // 
@@ -1409,12 +1332,10 @@
             // 
             // in3Atk4
             // 
-            this.in3Atk4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Atk4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Atk4.ForeColor = System.Drawing.Color.White;
             this.in3Atk4.Location = new System.Drawing.Point(394, 103);
             this.in3Atk4.Name = "in3Atk4";
-            this.in3Atk4.Size = new System.Drawing.Size(60, 20);
+            this.in3Atk4.Size = new System.Drawing.Size(60, 22);
             this.in3Atk4.TabIndex = 11;
             this.in3Atk4.Tag = "3:Atk4";
             // 
@@ -1430,12 +1351,10 @@
             // 
             // in3Atk5
             // 
-            this.in3Atk5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3Atk5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3Atk5.ForeColor = System.Drawing.Color.White;
             this.in3Atk5.Location = new System.Drawing.Point(394, 127);
             this.in3Atk5.Name = "in3Atk5";
-            this.in3Atk5.Size = new System.Drawing.Size(60, 20);
+            this.in3Atk5.Size = new System.Drawing.Size(60, 22);
             this.in3Atk5.TabIndex = 12;
             this.in3Atk5.Tag = "3:Atk5";
             // 
@@ -1469,7 +1388,6 @@
             this.groupBox5.Controls.Add(this.in3SpammerDelay);
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupBox5.Location = new System.Drawing.Point(13, 10);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(191, 151);
@@ -1484,7 +1402,7 @@
             this.in3SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
             this.in3SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in3SpammerClick.Name = "in3SpammerClick";
-            this.in3SpammerClick.Size = new System.Drawing.Size(107, 17);
+            this.in3SpammerClick.Size = new System.Drawing.Size(113, 17);
             this.in3SpammerClick.TabIndex = 29;
             this.in3SpammerClick.Tag = "3:inSpammerClick";
             this.in3SpammerClick.Text = "With mouse click";
@@ -1492,20 +1410,16 @@
             // 
             // in3SpammerKey
             // 
-            this.in3SpammerKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3SpammerKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3SpammerKey.ForeColor = System.Drawing.Color.White;
             this.in3SpammerKey.Location = new System.Drawing.Point(101, 24);
             this.in3SpammerKey.Name = "in3SpammerKey";
-            this.in3SpammerKey.Size = new System.Drawing.Size(60, 20);
+            this.in3SpammerKey.Size = new System.Drawing.Size(60, 22);
             this.in3SpammerKey.TabIndex = 23;
             this.in3SpammerKey.Tag = "3:spammerKey";
             // 
             // in3SwitchDelay
             // 
-            this.in3SwitchDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3SwitchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3SwitchDelay.ForeColor = System.Drawing.Color.White;
             this.in3SwitchDelay.Location = new System.Drawing.Point(101, 88);
             this.in3SwitchDelay.Maximum = new decimal(new int[] {
             500,
@@ -1513,7 +1427,7 @@
             0,
             0});
             this.in3SwitchDelay.Name = "in3SwitchDelay";
-            this.in3SwitchDelay.Size = new System.Drawing.Size(60, 20);
+            this.in3SwitchDelay.Size = new System.Drawing.Size(60, 22);
             this.in3SwitchDelay.TabIndex = 27;
             this.in3SwitchDelay.Tag = "3:switchDelay";
             // 
@@ -1522,15 +1436,13 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(14, 28);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 13);
+            this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 24;
             this.label12.Text = "Spammer Key";
             // 
             // in3SpammerDelay
             // 
-            this.in3SpammerDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in3SpammerDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in3SpammerDelay.ForeColor = System.Drawing.Color.White;
             this.in3SpammerDelay.Location = new System.Drawing.Point(101, 56);
             this.in3SpammerDelay.Maximum = new decimal(new int[] {
             5000,
@@ -1538,14 +1450,13 @@
             0,
             0});
             this.in3SpammerDelay.Name = "in3SpammerDelay";
-            this.in3SpammerDelay.Size = new System.Drawing.Size(60, 20);
+            this.in3SpammerDelay.Size = new System.Drawing.Size(60, 22);
             this.in3SpammerDelay.TabIndex = 25;
             this.in3SpammerDelay.Tag = "3:spammerDelay";
             // 
             // equipGroup4
             // 
             this.equipGroup4.Controls.Add(this.panel2);
-            this.equipGroup4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.equipGroup4.Location = new System.Drawing.Point(12, 624);
             this.equipGroup4.Name = "equipGroup4";
             this.equipGroup4.Size = new System.Drawing.Size(517, 198);
@@ -1555,7 +1466,6 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.panel2.Controls.Add(this.pictureBox37);
             this.panel2.Controls.Add(this.pictureBox38);
             this.panel2.Controls.Add(this.in4Atk6);
@@ -1584,7 +1494,6 @@
             this.panel2.Controls.Add(this.pictureBox47);
             this.panel2.Controls.Add(this.pictureBox48);
             this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(11, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(495, 180);
@@ -1612,77 +1521,64 @@
             // 
             // in4Atk6
             // 
-            this.in4Atk6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Atk6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Atk6.ForeColor = System.Drawing.Color.White;
             this.in4Atk6.Location = new System.Drawing.Point(394, 151);
             this.in4Atk6.Name = "in4Atk6";
-            this.in4Atk6.Size = new System.Drawing.Size(60, 20);
+            this.in4Atk6.Size = new System.Drawing.Size(60, 22);
             this.in4Atk6.TabIndex = 35;
             this.in4Atk6.Tag = "4:Atk6";
             // 
             // in4Def6
             // 
-            this.in4Def6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Def6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Def6.ForeColor = System.Drawing.Color.White;
             this.in4Def6.Location = new System.Drawing.Point(252, 150);
             this.in4Def6.Name = "in4Def6";
-            this.in4Def6.Size = new System.Drawing.Size(60, 20);
+            this.in4Def6.Size = new System.Drawing.Size(60, 22);
             this.in4Def6.TabIndex = 34;
             this.in4Def6.Tag = "4:Def6";
             // 
             // in4Atk2
             // 
-            this.in4Atk2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Atk2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Atk2.ForeColor = System.Drawing.Color.White;
             this.in4Atk2.Location = new System.Drawing.Point(394, 55);
             this.in4Atk2.Name = "in4Atk2";
-            this.in4Atk2.Size = new System.Drawing.Size(60, 20);
+            this.in4Atk2.Size = new System.Drawing.Size(60, 22);
             this.in4Atk2.TabIndex = 9;
             this.in4Atk2.Tag = "4:Atk2";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label14.Location = new System.Drawing.Point(249, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 13);
+            this.label14.Size = new System.Drawing.Size(64, 13);
             this.label14.TabIndex = 0;
             this.label14.Text = "DEF Switch";
             // 
             // in4Def1
             // 
-            this.in4Def1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Def1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Def1.ForeColor = System.Drawing.Color.White;
             this.in4Def1.Location = new System.Drawing.Point(252, 31);
             this.in4Def1.Name = "in4Def1";
-            this.in4Def1.Size = new System.Drawing.Size(60, 20);
+            this.in4Def1.Size = new System.Drawing.Size(60, 22);
             this.in4Def1.TabIndex = 1;
             this.in4Def1.Tag = "4:Def1";
             // 
             // in4Def2
             // 
-            this.in4Def2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Def2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Def2.ForeColor = System.Drawing.Color.White;
             this.in4Def2.Location = new System.Drawing.Point(252, 54);
             this.in4Def2.Name = "in4Def2";
-            this.in4Def2.Size = new System.Drawing.Size(60, 20);
+            this.in4Def2.Size = new System.Drawing.Size(60, 22);
             this.in4Def2.TabIndex = 2;
             this.in4Def2.Tag = "4:Def2";
             // 
             // in4Def3
             // 
-            this.in4Def3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Def3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Def3.ForeColor = System.Drawing.Color.White;
             this.in4Def3.Location = new System.Drawing.Point(252, 78);
             this.in4Def3.Name = "in4Def3";
-            this.in4Def3.Size = new System.Drawing.Size(60, 20);
+            this.in4Def3.Size = new System.Drawing.Size(60, 22);
             this.in4Def3.TabIndex = 3;
             this.in4Def3.Tag = "4:Def3";
             // 
@@ -1698,12 +1594,10 @@
             // 
             // in4Def4
             // 
-            this.in4Def4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Def4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Def4.ForeColor = System.Drawing.Color.White;
             this.in4Def4.Location = new System.Drawing.Point(252, 102);
             this.in4Def4.Name = "in4Def4";
-            this.in4Def4.Size = new System.Drawing.Size(60, 20);
+            this.in4Def4.Size = new System.Drawing.Size(60, 22);
             this.in4Def4.TabIndex = 4;
             this.in4Def4.Tag = "4:Def4";
             // 
@@ -1719,12 +1613,10 @@
             // 
             // in4Def5
             // 
-            this.in4Def5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Def5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Def5.ForeColor = System.Drawing.Color.White;
             this.in4Def5.Location = new System.Drawing.Point(252, 126);
             this.in4Def5.Name = "in4Def5";
-            this.in4Def5.Size = new System.Drawing.Size(60, 20);
+            this.in4Def5.Size = new System.Drawing.Size(60, 22);
             this.in4Def5.TabIndex = 5;
             this.in4Def5.Tag = "4:Def5";
             // 
@@ -1759,10 +1651,9 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label15.Location = new System.Drawing.Point(391, 10);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 13);
+            this.label15.Size = new System.Drawing.Size(62, 13);
             this.label15.TabIndex = 7;
             this.label15.Text = "ATK Switch";
             // 
@@ -1778,12 +1669,10 @@
             // 
             // in4Atk1
             // 
-            this.in4Atk1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Atk1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Atk1.ForeColor = System.Drawing.Color.White;
             this.in4Atk1.Location = new System.Drawing.Point(394, 31);
             this.in4Atk1.Name = "in4Atk1";
-            this.in4Atk1.Size = new System.Drawing.Size(60, 20);
+            this.in4Atk1.Size = new System.Drawing.Size(60, 22);
             this.in4Atk1.TabIndex = 8;
             this.in4Atk1.Tag = "4:Atk1";
             // 
@@ -1799,12 +1688,10 @@
             // 
             // in4Atk3
             // 
-            this.in4Atk3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Atk3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Atk3.ForeColor = System.Drawing.Color.White;
             this.in4Atk3.Location = new System.Drawing.Point(394, 79);
             this.in4Atk3.Name = "in4Atk3";
-            this.in4Atk3.Size = new System.Drawing.Size(60, 20);
+            this.in4Atk3.Size = new System.Drawing.Size(60, 22);
             this.in4Atk3.TabIndex = 10;
             this.in4Atk3.Tag = "4:Atk3";
             // 
@@ -1820,12 +1707,10 @@
             // 
             // in4Atk4
             // 
-            this.in4Atk4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Atk4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Atk4.ForeColor = System.Drawing.Color.White;
             this.in4Atk4.Location = new System.Drawing.Point(394, 103);
             this.in4Atk4.Name = "in4Atk4";
-            this.in4Atk4.Size = new System.Drawing.Size(60, 20);
+            this.in4Atk4.Size = new System.Drawing.Size(60, 22);
             this.in4Atk4.TabIndex = 11;
             this.in4Atk4.Tag = "4:Atk4";
             // 
@@ -1841,12 +1726,10 @@
             // 
             // in4Atk5
             // 
-            this.in4Atk5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4Atk5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4Atk5.ForeColor = System.Drawing.Color.White;
             this.in4Atk5.Location = new System.Drawing.Point(394, 127);
             this.in4Atk5.Name = "in4Atk5";
-            this.in4Atk5.Size = new System.Drawing.Size(60, 20);
+            this.in4Atk5.Size = new System.Drawing.Size(60, 22);
             this.in4Atk5.TabIndex = 12;
             this.in4Atk5.Tag = "4:Atk5";
             // 
@@ -1880,7 +1763,6 @@
             this.groupBox2.Controls.Add(this.in4SpammerDelay);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupBox2.Location = new System.Drawing.Point(13, 10);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(191, 151);
@@ -1895,38 +1777,24 @@
             this.in4SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
             this.in4SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in4SpammerClick.Name = "in4SpammerClick";
-            this.in4SpammerClick.Size = new System.Drawing.Size(107, 17);
+            this.in4SpammerClick.Size = new System.Drawing.Size(113, 17);
             this.in4SpammerClick.TabIndex = 29;
             this.in4SpammerClick.Tag = "4:inSpammerClick";
             this.in4SpammerClick.Text = "With mouse click";
             this.in4SpammerClick.UseVisualStyleBackColor = true;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 92);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 13);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "Switch Delay";
-            this.toolTip1.SetToolTip(this.label16, "Delay between each item change.");
-            // 
             // in4SpammerKey
             // 
-            this.in4SpammerKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4SpammerKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4SpammerKey.ForeColor = System.Drawing.Color.White;
             this.in4SpammerKey.Location = new System.Drawing.Point(101, 24);
             this.in4SpammerKey.Name = "in4SpammerKey";
-            this.in4SpammerKey.Size = new System.Drawing.Size(60, 20);
+            this.in4SpammerKey.Size = new System.Drawing.Size(60, 22);
             this.in4SpammerKey.TabIndex = 23;
             this.in4SpammerKey.Tag = "4:spammerKey";
             // 
             // in4SwitchDelay
             // 
-            this.in4SwitchDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4SwitchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4SwitchDelay.ForeColor = System.Drawing.Color.White;
             this.in4SwitchDelay.Location = new System.Drawing.Point(101, 88);
             this.in4SwitchDelay.Maximum = new decimal(new int[] {
             500,
@@ -1934,7 +1802,7 @@
             0,
             0});
             this.in4SwitchDelay.Name = "in4SwitchDelay";
-            this.in4SwitchDelay.Size = new System.Drawing.Size(60, 20);
+            this.in4SwitchDelay.Size = new System.Drawing.Size(60, 22);
             this.in4SwitchDelay.TabIndex = 27;
             this.in4SwitchDelay.Tag = "4:switchDelay";
             // 
@@ -1943,15 +1811,13 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(14, 28);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 13);
+            this.label17.Size = new System.Drawing.Size(74, 13);
             this.label17.TabIndex = 24;
             this.label17.Text = "Spammer Key";
             // 
             // in4SpammerDelay
             // 
-            this.in4SpammerDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.in4SpammerDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.in4SpammerDelay.ForeColor = System.Drawing.Color.White;
             this.in4SpammerDelay.Location = new System.Drawing.Point(101, 56);
             this.in4SpammerDelay.Maximum = new decimal(new int[] {
             5000,
@@ -1959,31 +1825,21 @@
             0,
             0});
             this.in4SpammerDelay.Name = "in4SpammerDelay";
-            this.in4SpammerDelay.Size = new System.Drawing.Size(60, 20);
+            this.in4SpammerDelay.Size = new System.Drawing.Size(60, 22);
             this.in4SpammerDelay.TabIndex = 25;
             this.in4SpammerDelay.Tag = "4:spammerDelay";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 60);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 13);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Spammer Delay";
-            this.toolTip1.SetToolTip(this.label18, "Delay for Spammer Key");
             // 
             // ATKDEFForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(547, 846);
             this.Controls.Add(this.equipGroup4);
             this.Controls.Add(this.equipGroup3);
             this.Controls.Add(this.equipGroup2);
             this.Controls.Add(this.equipGroup1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ATKDEFForm";
             this.Text = "ATKDEFForm";

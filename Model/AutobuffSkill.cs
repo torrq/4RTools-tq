@@ -85,7 +85,7 @@ namespace _4RTools.Model
                         }
                         if (!buffs.Contains(EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                         {
-                            if (!buffs.Contains(EffectStatusIDs.RIDDING) || ProfileSingleton.GetCurrent().UserPreferences.stopBuffsRein == false)
+                            if (!buffs.Contains(EffectStatusIDs.RIDDING))
                             {
                                 foreach (var item in bmClone)
                                 {

@@ -73,8 +73,6 @@ namespace _4RTools.Forms
             this.chkW = new System.Windows.Forms.CheckBox();
             this.chkQ = new System.Windows.Forms.CheckBox();
             this.txtSpammerDelay = new System.Windows.Forms.NumericUpDown();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.chkS = new System.Windows.Forms.CheckBox();
@@ -94,134 +92,134 @@ namespace _4RTools.Forms
             this.cbWithNoClick = new System.Windows.Forms.CheckBox();
             this.cbWithClick = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chkNum1 = new System.Windows.Forms.CheckBox();
-            this.chkNum2 = new System.Windows.Forms.CheckBox();
-            this.chkNum3 = new System.Windows.Forms.CheckBox();
-            this.chkNum4 = new System.Windows.Forms.CheckBox();
-            this.chkNum5 = new System.Windows.Forms.CheckBox();
-            this.chkNum6 = new System.Windows.Forms.CheckBox();
-            this.chkNum7 = new System.Windows.Forms.CheckBox();
-            this.chkNum8 = new System.Windows.Forms.CheckBox();
-            this.chkNum9 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtSpammerDelay)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupAhkConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpAndDownArrow)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // chkF9
             // 
             this.chkF9.AutoSize = true;
-            this.chkF9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF9.Location = new System.Drawing.Point(367, 12);
+            this.chkF9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF9.Location = new System.Drawing.Point(415, 15);
             this.chkF9.Name = "chkF9";
             this.chkF9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkF9.Size = new System.Drawing.Size(38, 17);
+            this.chkF9.Size = new System.Drawing.Size(46, 25);
             this.chkF9.TabIndex = 9;
             this.chkF9.Text = "F9";
             this.chkF9.UseVisualStyleBackColor = true;
+            this.chkF9.CheckedChanged += new System.EventHandler(this.chkF9_CheckedChanged);
             // 
             // chkF8
             // 
             this.chkF8.AutoSize = true;
-            this.chkF8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF8.Location = new System.Drawing.Point(323, 12);
+            this.chkF8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF8.Location = new System.Drawing.Point(365, 15);
             this.chkF8.Name = "chkF8";
             this.chkF8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkF8.Size = new System.Drawing.Size(38, 17);
+            this.chkF8.Size = new System.Drawing.Size(46, 25);
             this.chkF8.TabIndex = 8;
             this.chkF8.Text = "F8";
             this.chkF8.UseVisualStyleBackColor = true;
+            this.chkF8.CheckedChanged += new System.EventHandler(this.chkF8_CheckedChanged);
             // 
             // chkF7
             // 
             this.chkF7.AutoSize = true;
-            this.chkF7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF7.Location = new System.Drawing.Point(279, 12);
+            this.chkF7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF7.Location = new System.Drawing.Point(315, 15);
             this.chkF7.Name = "chkF7";
-            this.chkF7.Size = new System.Drawing.Size(38, 17);
+            this.chkF7.Size = new System.Drawing.Size(46, 25);
             this.chkF7.TabIndex = 7;
             this.chkF7.Text = "F7";
             this.chkF7.UseVisualStyleBackColor = true;
+            this.chkF7.CheckedChanged += new System.EventHandler(this.chkF7_CheckedChanged);
             // 
             // chkF6
             // 
             this.chkF6.AutoSize = true;
-            this.chkF6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF6.Location = new System.Drawing.Point(235, 12);
+            this.chkF6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF6.Location = new System.Drawing.Point(265, 15);
             this.chkF6.Name = "chkF6";
-            this.chkF6.Size = new System.Drawing.Size(38, 17);
+            this.chkF6.Size = new System.Drawing.Size(46, 25);
             this.chkF6.TabIndex = 6;
             this.chkF6.Text = "F6";
             this.chkF6.UseVisualStyleBackColor = true;
+            this.chkF6.CheckedChanged += new System.EventHandler(this.chkF6_CheckedChanged);
             // 
             // chkF5
             // 
             this.chkF5.AutoSize = true;
-            this.chkF5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF5.Location = new System.Drawing.Point(191, 12);
+            this.chkF5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF5.Location = new System.Drawing.Point(215, 15);
             this.chkF5.Name = "chkF5";
-            this.chkF5.Size = new System.Drawing.Size(38, 17);
+            this.chkF5.Size = new System.Drawing.Size(46, 25);
             this.chkF5.TabIndex = 5;
             this.chkF5.Text = "F5";
             this.chkF5.UseVisualStyleBackColor = true;
+            this.chkF5.CheckedChanged += new System.EventHandler(this.chkF5_CheckedChanged);
             // 
             // chkF4
             // 
             this.chkF4.AutoSize = true;
-            this.chkF4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF4.Location = new System.Drawing.Point(147, 12);
+            this.chkF4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF4.Location = new System.Drawing.Point(165, 15);
             this.chkF4.Name = "chkF4";
-            this.chkF4.Size = new System.Drawing.Size(38, 17);
+            this.chkF4.Size = new System.Drawing.Size(46, 25);
             this.chkF4.TabIndex = 4;
             this.chkF4.Text = "F4";
             this.chkF4.UseVisualStyleBackColor = true;
+            this.chkF4.CheckedChanged += new System.EventHandler(this.chkF4_CheckedChanged);
             // 
             // chkF3
             // 
             this.chkF3.AutoSize = true;
-            this.chkF3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF3.Location = new System.Drawing.Point(103, 12);
+            this.chkF3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF3.Location = new System.Drawing.Point(115, 15);
             this.chkF3.Name = "chkF3";
-            this.chkF3.Size = new System.Drawing.Size(38, 17);
+            this.chkF3.Size = new System.Drawing.Size(46, 25);
             this.chkF3.TabIndex = 3;
             this.chkF3.Text = "F3";
             this.chkF3.UseVisualStyleBackColor = true;
+            this.chkF3.CheckedChanged += new System.EventHandler(this.chkF3_CheckedChanged);
             // 
             // chkF2
             // 
             this.chkF2.AutoSize = true;
-            this.chkF2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF2.Location = new System.Drawing.Point(59, 12);
+            this.chkF2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF2.Location = new System.Drawing.Point(65, 15);
             this.chkF2.Name = "chkF2";
-            this.chkF2.Size = new System.Drawing.Size(38, 17);
+            this.chkF2.Size = new System.Drawing.Size(46, 25);
             this.chkF2.TabIndex = 2;
             this.chkF2.Text = "F2";
             this.chkF2.UseVisualStyleBackColor = true;
+            this.chkF2.CheckedChanged += new System.EventHandler(this.chkF2_CheckedChanged);
             // 
             // chkF1
             // 
             this.chkF1.AutoSize = true;
-            this.chkF1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF1.Location = new System.Drawing.Point(15, 12);
+            this.chkF1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF1.Location = new System.Drawing.Point(15, 15);
             this.chkF1.Name = "chkF1";
-            this.chkF1.Size = new System.Drawing.Size(38, 17);
+            this.chkF1.Size = new System.Drawing.Size(46, 25);
             this.chkF1.TabIndex = 1;
             this.chkF1.Text = "F1";
             this.chkF1.UseVisualStyleBackColor = true;
+            this.chkF1.CheckedChanged += new System.EventHandler(this.chkF1_CheckedChanged);
             // 
             // chk9
             // 
             this.chk9.AutoSize = true;
-            this.chk9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk9.Location = new System.Drawing.Point(367, 45);
+            this.chk9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk9.Location = new System.Drawing.Point(415, 60);
             this.chk9.Name = "chk9";
             this.chk9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chk9.Size = new System.Drawing.Size(32, 17);
+            this.chk9.Size = new System.Drawing.Size(38, 25);
             this.chk9.TabIndex = 9;
             this.chk9.Text = "9";
             this.chk9.UseVisualStyleBackColor = true;
@@ -229,100 +227,108 @@ namespace _4RTools.Forms
             // chk8
             // 
             this.chk8.AutoSize = true;
-            this.chk8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk8.Location = new System.Drawing.Point(323, 45);
+            this.chk8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk8.Location = new System.Drawing.Point(365, 60);
             this.chk8.Name = "chk8";
             this.chk8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chk8.Size = new System.Drawing.Size(32, 17);
+            this.chk8.Size = new System.Drawing.Size(38, 25);
             this.chk8.TabIndex = 8;
             this.chk8.Text = "8";
             this.chk8.UseVisualStyleBackColor = true;
+            this.chk8.CheckedChanged += new System.EventHandler(this.chk8_CheckedChanged);
             // 
             // chk7
             // 
             this.chk7.AutoSize = true;
-            this.chk7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk7.Location = new System.Drawing.Point(279, 45);
+            this.chk7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk7.Location = new System.Drawing.Point(315, 60);
             this.chk7.Name = "chk7";
-            this.chk7.Size = new System.Drawing.Size(32, 17);
+            this.chk7.Size = new System.Drawing.Size(38, 25);
             this.chk7.TabIndex = 7;
             this.chk7.Text = "7";
             this.chk7.UseVisualStyleBackColor = true;
+            this.chk7.CheckedChanged += new System.EventHandler(this.chk7_CheckedChanged);
             // 
             // chk6
             // 
             this.chk6.AutoSize = true;
-            this.chk6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk6.Location = new System.Drawing.Point(235, 45);
+            this.chk6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk6.Location = new System.Drawing.Point(265, 60);
             this.chk6.Name = "chk6";
-            this.chk6.Size = new System.Drawing.Size(32, 17);
+            this.chk6.Size = new System.Drawing.Size(38, 25);
             this.chk6.TabIndex = 6;
             this.chk6.Text = "6";
             this.chk6.UseVisualStyleBackColor = true;
+            this.chk6.CheckedChanged += new System.EventHandler(this.chk6_CheckedChanged);
             // 
             // chk5
             // 
             this.chk5.AutoSize = true;
-            this.chk5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk5.Location = new System.Drawing.Point(191, 45);
+            this.chk5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk5.Location = new System.Drawing.Point(215, 60);
             this.chk5.Name = "chk5";
-            this.chk5.Size = new System.Drawing.Size(32, 17);
+            this.chk5.Size = new System.Drawing.Size(38, 25);
             this.chk5.TabIndex = 5;
             this.chk5.Text = "5";
             this.chk5.UseVisualStyleBackColor = true;
+            this.chk5.CheckedChanged += new System.EventHandler(this.chk5_CheckedChanged);
             // 
             // chk4
             // 
             this.chk4.AutoSize = true;
-            this.chk4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk4.Location = new System.Drawing.Point(147, 45);
+            this.chk4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk4.Location = new System.Drawing.Point(165, 60);
             this.chk4.Name = "chk4";
-            this.chk4.Size = new System.Drawing.Size(32, 17);
+            this.chk4.Size = new System.Drawing.Size(38, 25);
             this.chk4.TabIndex = 4;
             this.chk4.Text = "4";
             this.chk4.UseVisualStyleBackColor = true;
+            this.chk4.CheckedChanged += new System.EventHandler(this.chk4_CheckedChanged);
             // 
             // chk3
             // 
             this.chk3.AutoSize = true;
-            this.chk3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk3.Location = new System.Drawing.Point(103, 45);
+            this.chk3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk3.Location = new System.Drawing.Point(115, 60);
             this.chk3.Name = "chk3";
-            this.chk3.Size = new System.Drawing.Size(32, 17);
+            this.chk3.Size = new System.Drawing.Size(38, 25);
             this.chk3.TabIndex = 3;
             this.chk3.Text = "3";
             this.chk3.UseVisualStyleBackColor = true;
+            this.chk3.CheckedChanged += new System.EventHandler(this.chk3_CheckedChanged);
             // 
             // chk2
             // 
             this.chk2.AutoSize = true;
-            this.chk2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk2.Location = new System.Drawing.Point(59, 45);
+            this.chk2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk2.Location = new System.Drawing.Point(64, 60);
             this.chk2.Name = "chk2";
-            this.chk2.Size = new System.Drawing.Size(32, 17);
+            this.chk2.Size = new System.Drawing.Size(38, 25);
             this.chk2.TabIndex = 2;
             this.chk2.Text = "2";
             this.chk2.UseVisualStyleBackColor = true;
+            this.chk2.CheckedChanged += new System.EventHandler(this.chk2_CheckedChanged);
             // 
             // chk1
             // 
             this.chk1.AutoSize = true;
-            this.chk1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chk1.Location = new System.Drawing.Point(15, 45);
+            this.chk1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chk1.Location = new System.Drawing.Point(15, 60);
             this.chk1.Name = "chk1";
-            this.chk1.Size = new System.Drawing.Size(32, 17);
+            this.chk1.Size = new System.Drawing.Size(38, 25);
             this.chk1.TabIndex = 1;
             this.chk1.Text = "1";
             this.chk1.UseVisualStyleBackColor = true;
+            this.chk1.CheckedChanged += new System.EventHandler(this.chk1_CheckedChanged);
             // 
             // chkM
             // 
             this.chkM.AutoSize = true;
-            this.chkM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkM.Location = new System.Drawing.Point(279, 160);
+            this.chkM.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkM.Location = new System.Drawing.Point(315, 175);
             this.chkM.Name = "chkM";
             this.chkM.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkM.Size = new System.Drawing.Size(35, 17);
+            this.chkM.Size = new System.Drawing.Size(43, 25);
             this.chkM.TabIndex = 25;
             this.chkM.Text = "M";
             this.chkM.UseVisualStyleBackColor = true;
@@ -330,10 +336,10 @@ namespace _4RTools.Forms
             // chkN
             // 
             this.chkN.AutoSize = true;
-            this.chkN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkN.Location = new System.Drawing.Point(235, 160);
+            this.chkN.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkN.Location = new System.Drawing.Point(265, 175);
             this.chkN.Name = "chkN";
-            this.chkN.Size = new System.Drawing.Size(34, 17);
+            this.chkN.Size = new System.Drawing.Size(41, 25);
             this.chkN.TabIndex = 24;
             this.chkN.Text = "N";
             this.chkN.UseVisualStyleBackColor = true;
@@ -341,10 +347,10 @@ namespace _4RTools.Forms
             // chkB
             // 
             this.chkB.AutoSize = true;
-            this.chkB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkB.Location = new System.Drawing.Point(191, 160);
+            this.chkB.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkB.Location = new System.Drawing.Point(215, 175);
             this.chkB.Name = "chkB";
-            this.chkB.Size = new System.Drawing.Size(33, 17);
+            this.chkB.Size = new System.Drawing.Size(38, 25);
             this.chkB.TabIndex = 23;
             this.chkB.Text = "B";
             this.chkB.UseVisualStyleBackColor = true;
@@ -352,10 +358,10 @@ namespace _4RTools.Forms
             // chkV
             // 
             this.chkV.AutoSize = true;
-            this.chkV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkV.Location = new System.Drawing.Point(147, 160);
+            this.chkV.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkV.Location = new System.Drawing.Point(165, 175);
             this.chkV.Name = "chkV";
-            this.chkV.Size = new System.Drawing.Size(33, 17);
+            this.chkV.Size = new System.Drawing.Size(39, 25);
             this.chkV.TabIndex = 22;
             this.chkV.Text = "V";
             this.chkV.UseVisualStyleBackColor = true;
@@ -363,10 +369,10 @@ namespace _4RTools.Forms
             // chkC
             // 
             this.chkC.AutoSize = true;
-            this.chkC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkC.Location = new System.Drawing.Point(103, 160);
+            this.chkC.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkC.Location = new System.Drawing.Point(115, 175);
             this.chkC.Name = "chkC";
-            this.chkC.Size = new System.Drawing.Size(33, 17);
+            this.chkC.Size = new System.Drawing.Size(39, 25);
             this.chkC.TabIndex = 21;
             this.chkC.Text = "C";
             this.chkC.UseVisualStyleBackColor = true;
@@ -374,10 +380,10 @@ namespace _4RTools.Forms
             // chkX
             // 
             this.chkX.AutoSize = true;
-            this.chkX.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkX.Location = new System.Drawing.Point(59, 160);
+            this.chkX.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkX.Location = new System.Drawing.Point(64, 175);
             this.chkX.Name = "chkX";
-            this.chkX.Size = new System.Drawing.Size(33, 17);
+            this.chkX.Size = new System.Drawing.Size(38, 25);
             this.chkX.TabIndex = 20;
             this.chkX.Text = "X";
             this.chkX.UseVisualStyleBackColor = true;
@@ -385,10 +391,10 @@ namespace _4RTools.Forms
             // chkZ
             // 
             this.chkZ.AutoSize = true;
-            this.chkZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkZ.Location = new System.Drawing.Point(15, 160);
+            this.chkZ.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkZ.Location = new System.Drawing.Point(15, 175);
             this.chkZ.Name = "chkZ";
-            this.chkZ.Size = new System.Drawing.Size(33, 17);
+            this.chkZ.Size = new System.Drawing.Size(38, 25);
             this.chkZ.TabIndex = 19;
             this.chkZ.Text = "Z";
             this.chkZ.UseVisualStyleBackColor = true;
@@ -396,22 +402,23 @@ namespace _4RTools.Forms
             // chkL
             // 
             this.chkL.AutoSize = true;
-            this.chkL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkL.Location = new System.Drawing.Point(367, 137);
+            this.chkL.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkL.Location = new System.Drawing.Point(415, 140);
             this.chkL.Name = "chkL";
             this.chkL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkL.Size = new System.Drawing.Size(32, 17);
+            this.chkL.Size = new System.Drawing.Size(37, 25);
             this.chkL.TabIndex = 17;
             this.chkL.Text = "L";
             this.chkL.UseVisualStyleBackColor = true;
+            this.chkL.CheckedChanged += new System.EventHandler(this.chkL_CheckedChanged);
             // 
             // chkK
             // 
             this.chkK.AutoSize = true;
-            this.chkK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkK.Location = new System.Drawing.Point(323, 137);
+            this.chkK.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkK.Location = new System.Drawing.Point(365, 140);
             this.chkK.Name = "chkK";
-            this.chkK.Size = new System.Drawing.Size(33, 17);
+            this.chkK.Size = new System.Drawing.Size(38, 25);
             this.chkK.TabIndex = 16;
             this.chkK.Text = "K";
             this.chkK.UseVisualStyleBackColor = true;
@@ -419,10 +426,10 @@ namespace _4RTools.Forms
             // chkJ
             // 
             this.chkJ.AutoSize = true;
-            this.chkJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkJ.Location = new System.Drawing.Point(279, 137);
+            this.chkJ.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkJ.Location = new System.Drawing.Point(315, 140);
             this.chkJ.Name = "chkJ";
-            this.chkJ.Size = new System.Drawing.Size(31, 17);
+            this.chkJ.Size = new System.Drawing.Size(35, 25);
             this.chkJ.TabIndex = 15;
             this.chkJ.Text = "J";
             this.chkJ.UseVisualStyleBackColor = true;
@@ -430,10 +437,10 @@ namespace _4RTools.Forms
             // chkH
             // 
             this.chkH.AutoSize = true;
-            this.chkH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkH.Location = new System.Drawing.Point(235, 137);
+            this.chkH.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkH.Location = new System.Drawing.Point(265, 140);
             this.chkH.Name = "chkH";
-            this.chkH.Size = new System.Drawing.Size(34, 17);
+            this.chkH.Size = new System.Drawing.Size(40, 25);
             this.chkH.TabIndex = 14;
             this.chkH.Text = "H";
             this.chkH.UseVisualStyleBackColor = true;
@@ -441,10 +448,10 @@ namespace _4RTools.Forms
             // chkG
             // 
             this.chkG.AutoSize = true;
-            this.chkG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkG.Location = new System.Drawing.Point(191, 137);
+            this.chkG.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkG.Location = new System.Drawing.Point(215, 140);
             this.chkG.Name = "chkG";
-            this.chkG.Size = new System.Drawing.Size(34, 17);
+            this.chkG.Size = new System.Drawing.Size(40, 25);
             this.chkG.TabIndex = 13;
             this.chkG.Text = "G";
             this.chkG.UseVisualStyleBackColor = true;
@@ -452,10 +459,10 @@ namespace _4RTools.Forms
             // chkF
             // 
             this.chkF.AutoSize = true;
-            this.chkF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkF.Location = new System.Drawing.Point(147, 137);
+            this.chkF.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkF.Location = new System.Drawing.Point(165, 140);
             this.chkF.Name = "chkF";
-            this.chkF.Size = new System.Drawing.Size(32, 17);
+            this.chkF.Size = new System.Drawing.Size(37, 25);
             this.chkF.TabIndex = 12;
             this.chkF.Text = "F";
             this.chkF.UseVisualStyleBackColor = true;
@@ -463,10 +470,10 @@ namespace _4RTools.Forms
             // chkD
             // 
             this.chkD.AutoSize = true;
-            this.chkD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkD.Location = new System.Drawing.Point(103, 137);
+            this.chkD.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkD.Location = new System.Drawing.Point(115, 140);
             this.chkD.Name = "chkD";
-            this.chkD.Size = new System.Drawing.Size(34, 17);
+            this.chkD.Size = new System.Drawing.Size(40, 25);
             this.chkD.TabIndex = 11;
             this.chkD.Text = "D";
             this.chkD.UseVisualStyleBackColor = true;
@@ -474,10 +481,10 @@ namespace _4RTools.Forms
             // chkA
             // 
             this.chkA.AutoSize = true;
-            this.chkA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkA.Location = new System.Drawing.Point(15, 137);
+            this.chkA.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkA.Location = new System.Drawing.Point(15, 140);
             this.chkA.Name = "chkA";
-            this.chkA.Size = new System.Drawing.Size(33, 17);
+            this.chkA.Size = new System.Drawing.Size(39, 25);
             this.chkA.TabIndex = 10;
             this.chkA.Text = "A";
             this.chkA.UseVisualStyleBackColor = true;
@@ -485,11 +492,11 @@ namespace _4RTools.Forms
             // chkO
             // 
             this.chkO.AutoSize = true;
-            this.chkO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkO.Location = new System.Drawing.Point(367, 114);
+            this.chkO.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkO.Location = new System.Drawing.Point(415, 105);
             this.chkO.Name = "chkO";
             this.chkO.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkO.Size = new System.Drawing.Size(34, 17);
+            this.chkO.Size = new System.Drawing.Size(41, 25);
             this.chkO.TabIndex = 9;
             this.chkO.Text = "O";
             this.chkO.UseVisualStyleBackColor = true;
@@ -497,11 +504,11 @@ namespace _4RTools.Forms
             // chkI
             // 
             this.chkI.AutoSize = true;
-            this.chkI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkI.Location = new System.Drawing.Point(323, 114);
+            this.chkI.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkI.Location = new System.Drawing.Point(365, 105);
             this.chkI.Name = "chkI";
             this.chkI.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkI.Size = new System.Drawing.Size(29, 17);
+            this.chkI.Size = new System.Drawing.Size(33, 25);
             this.chkI.TabIndex = 8;
             this.chkI.Text = "I";
             this.chkI.UseVisualStyleBackColor = true;
@@ -509,10 +516,10 @@ namespace _4RTools.Forms
             // chkU
             // 
             this.chkU.AutoSize = true;
-            this.chkU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkU.Location = new System.Drawing.Point(279, 114);
+            this.chkU.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkU.Location = new System.Drawing.Point(315, 105);
             this.chkU.Name = "chkU";
-            this.chkU.Size = new System.Drawing.Size(34, 17);
+            this.chkU.Size = new System.Drawing.Size(40, 25);
             this.chkU.TabIndex = 7;
             this.chkU.Text = "U";
             this.chkU.UseVisualStyleBackColor = true;
@@ -520,10 +527,10 @@ namespace _4RTools.Forms
             // chkY
             // 
             this.chkY.AutoSize = true;
-            this.chkY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkY.Location = new System.Drawing.Point(235, 114);
+            this.chkY.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkY.Location = new System.Drawing.Point(265, 105);
             this.chkY.Name = "chkY";
-            this.chkY.Size = new System.Drawing.Size(33, 17);
+            this.chkY.Size = new System.Drawing.Size(38, 25);
             this.chkY.TabIndex = 6;
             this.chkY.Text = "Y";
             this.chkY.UseVisualStyleBackColor = true;
@@ -531,10 +538,10 @@ namespace _4RTools.Forms
             // chkT
             // 
             this.chkT.AutoSize = true;
-            this.chkT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkT.Location = new System.Drawing.Point(191, 114);
+            this.chkT.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkT.Location = new System.Drawing.Point(215, 105);
             this.chkT.Name = "chkT";
-            this.chkT.Size = new System.Drawing.Size(33, 17);
+            this.chkT.Size = new System.Drawing.Size(37, 25);
             this.chkT.TabIndex = 5;
             this.chkT.Text = "T";
             this.chkT.UseVisualStyleBackColor = true;
@@ -542,10 +549,10 @@ namespace _4RTools.Forms
             // chkR
             // 
             this.chkR.AutoSize = true;
-            this.chkR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkR.Location = new System.Drawing.Point(147, 114);
+            this.chkR.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkR.Location = new System.Drawing.Point(165, 105);
             this.chkR.Name = "chkR";
-            this.chkR.Size = new System.Drawing.Size(34, 17);
+            this.chkR.Size = new System.Drawing.Size(39, 25);
             this.chkR.TabIndex = 4;
             this.chkR.Text = "R";
             this.chkR.UseVisualStyleBackColor = true;
@@ -553,10 +560,10 @@ namespace _4RTools.Forms
             // chkE
             // 
             this.chkE.AutoSize = true;
-            this.chkE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkE.Location = new System.Drawing.Point(103, 114);
+            this.chkE.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkE.Location = new System.Drawing.Point(115, 105);
             this.chkE.Name = "chkE";
-            this.chkE.Size = new System.Drawing.Size(33, 17);
+            this.chkE.Size = new System.Drawing.Size(37, 25);
             this.chkE.TabIndex = 3;
             this.chkE.Text = "E";
             this.chkE.UseVisualStyleBackColor = true;
@@ -564,10 +571,10 @@ namespace _4RTools.Forms
             // chkW
             // 
             this.chkW.AutoSize = true;
-            this.chkW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkW.Location = new System.Drawing.Point(59, 114);
+            this.chkW.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkW.Location = new System.Drawing.Point(64, 105);
             this.chkW.Name = "chkW";
-            this.chkW.Size = new System.Drawing.Size(37, 17);
+            this.chkW.Size = new System.Drawing.Size(44, 25);
             this.chkW.TabIndex = 2;
             this.chkW.Text = "W";
             this.chkW.UseVisualStyleBackColor = true;
@@ -575,20 +582,18 @@ namespace _4RTools.Forms
             // chkQ
             // 
             this.chkQ.AutoSize = true;
-            this.chkQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkQ.Location = new System.Drawing.Point(15, 114);
+            this.chkQ.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkQ.Location = new System.Drawing.Point(15, 105);
             this.chkQ.Name = "chkQ";
-            this.chkQ.Size = new System.Drawing.Size(34, 17);
+            this.chkQ.Size = new System.Drawing.Size(41, 25);
             this.chkQ.TabIndex = 1;
             this.chkQ.Text = "Q";
             this.chkQ.UseVisualStyleBackColor = true;
             // 
             // txtSpammerDelay
             // 
-            this.txtSpammerDelay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtSpammerDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSpammerDelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSpammerDelay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
+            this.txtSpammerDelay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSpammerDelay.Location = new System.Drawing.Point(10, 24);
             this.txtSpammerDelay.Maximum = new decimal(new int[] {
             1000,
@@ -596,37 +601,19 @@ namespace _4RTools.Forms
             0,
             0});
             this.txtSpammerDelay.Name = "txtSpammerDelay";
-            this.txtSpammerDelay.Size = new System.Drawing.Size(59, 23);
+            this.txtSpammerDelay.Size = new System.Drawing.Size(59, 25);
             this.txtSpammerDelay.TabIndex = 31;
             this.txtSpammerDelay.ValueChanged += new System.EventHandler(this.txtSpammerDelay_TextChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(15, 103);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(390, 1);
-            this.panel2.TabIndex = 27;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(0, -36);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(374, 15);
-            this.panel3.TabIndex = 28;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(14, 35);
+            this.panel4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.panel4.Location = new System.Drawing.Point(15, 95);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(390, 1);
+            this.panel4.Size = new System.Drawing.Size(440, 1);
             this.panel4.TabIndex = 29;
             // 
             // panel6
@@ -641,10 +628,10 @@ namespace _4RTools.Forms
             // chkS
             // 
             this.chkS.AutoSize = true;
-            this.chkS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkS.Location = new System.Drawing.Point(59, 137);
+            this.chkS.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chkS.Location = new System.Drawing.Point(64, 140);
             this.chkS.Name = "chkS";
-            this.chkS.Size = new System.Drawing.Size(33, 17);
+            this.chkS.Size = new System.Drawing.Size(38, 25);
             this.chkS.TabIndex = 30;
             this.chkS.Text = "S";
             this.chkS.UseVisualStyleBackColor = true;
@@ -653,8 +640,7 @@ namespace _4RTools.Forms
             // 
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtSpammerDelay);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.groupBox2.Location = new System.Drawing.Point(408, 9);
+            this.groupBox2.Location = new System.Drawing.Point(466, 11);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(115, 62);
             this.groupBox2.TabIndex = 32;
@@ -664,29 +650,25 @@ namespace _4RTools.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(72, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 17);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 32;
             this.label1.Text = "ms";
             // 
             // groupAhkConfig
             // 
-            this.groupAhkConfig.Controls.Add(this.pictureBox1);
             this.groupAhkConfig.Controls.Add(this.chkNoShift);
-            this.groupAhkConfig.Controls.Add(this.pbUpAndDownArrow);
             this.groupAhkConfig.Controls.Add(this.chkMouseFlick);
             this.groupAhkConfig.Controls.Add(this.ahkSpeedBoost);
             this.groupAhkConfig.Controls.Add(this.groupBox2);
             this.groupAhkConfig.Controls.Add(this.ahkCompatibility);
             this.groupAhkConfig.Controls.Add(this.ahkSynchronous);
             this.groupAhkConfig.Controls.Add(this.groupBox4);
-            this.groupAhkConfig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.groupAhkConfig.Location = new System.Drawing.Point(14, 190);
+            this.groupAhkConfig.Location = new System.Drawing.Point(15, 358);
             this.groupAhkConfig.Name = "groupAhkConfig";
-            this.groupAhkConfig.Size = new System.Drawing.Size(533, 74);
+            this.groupAhkConfig.Size = new System.Drawing.Size(594, 84);
             this.groupAhkConfig.TabIndex = 33;
             this.groupAhkConfig.TabStop = false;
             this.groupAhkConfig.Text = "AHK Configuration";
@@ -694,20 +676,20 @@ namespace _4RTools.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = global::_4RTools.Properties.Resources.shift;
-            this.pictureBox1.Location = new System.Drawing.Point(258, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(102, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // chkNoShift
             // 
             this.chkNoShift.AutoSize = true;
-            this.chkNoShift.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNoShift.Location = new System.Drawing.Point(198, 47);
+            this.chkNoShift.Location = new System.Drawing.Point(266, 53);
             this.chkNoShift.Name = "chkNoShift";
-            this.chkNoShift.Size = new System.Drawing.Size(64, 17);
+            this.chkNoShift.Size = new System.Drawing.Size(68, 17);
             this.chkNoShift.TabIndex = 39;
             this.chkNoShift.Text = "No Shift";
             this.chkNoShift.UseVisualStyleBackColor = true;
@@ -716,7 +698,7 @@ namespace _4RTools.Forms
             // pbUpAndDownArrow
             // 
             this.pbUpAndDownArrow.Image = global::_4RTools.Properties.Resources.up_and_down_arrow;
-            this.pbUpAndDownArrow.Location = new System.Drawing.Point(278, 25);
+            this.pbUpAndDownArrow.Location = new System.Drawing.Point(106, 21);
             this.pbUpAndDownArrow.Name = "pbUpAndDownArrow";
             this.pbUpAndDownArrow.Size = new System.Drawing.Size(16, 16);
             this.pbUpAndDownArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -726,10 +708,9 @@ namespace _4RTools.Forms
             // chkMouseFlick
             // 
             this.chkMouseFlick.AutoSize = true;
-            this.chkMouseFlick.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkMouseFlick.Location = new System.Drawing.Point(198, 25);
+            this.chkMouseFlick.Location = new System.Drawing.Point(266, 31);
             this.chkMouseFlick.Name = "chkMouseFlick";
-            this.chkMouseFlick.Size = new System.Drawing.Size(83, 17);
+            this.chkMouseFlick.Size = new System.Drawing.Size(87, 17);
             this.chkMouseFlick.TabIndex = 38;
             this.chkMouseFlick.Text = "Mouse Flick";
             this.chkMouseFlick.UseVisualStyleBackColor = true;
@@ -738,10 +719,9 @@ namespace _4RTools.Forms
             // ahkSpeedBoost
             // 
             this.ahkSpeedBoost.AutoSize = true;
-            this.ahkSpeedBoost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.ahkSpeedBoost.Location = new System.Drawing.Point(17, 34);
+            this.ahkSpeedBoost.Location = new System.Drawing.Point(121, 23);
             this.ahkSpeedBoost.Name = "ahkSpeedBoost";
-            this.ahkSpeedBoost.Size = new System.Drawing.Size(85, 17);
+            this.ahkSpeedBoost.Size = new System.Drawing.Size(90, 17);
             this.ahkSpeedBoost.TabIndex = 37;
             this.ahkSpeedBoost.TabStop = true;
             this.ahkSpeedBoost.Text = "Speed boost";
@@ -751,10 +731,9 @@ namespace _4RTools.Forms
             // ahkCompatibility
             // 
             this.ahkCompatibility.AutoSize = true;
-            this.ahkCompatibility.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.ahkCompatibility.Location = new System.Drawing.Point(17, 14);
+            this.ahkCompatibility.Location = new System.Drawing.Point(17, 23);
             this.ahkCompatibility.Name = "ahkCompatibility";
-            this.ahkCompatibility.Size = new System.Drawing.Size(83, 17);
+            this.ahkCompatibility.Size = new System.Drawing.Size(93, 17);
             this.ahkCompatibility.TabIndex = 35;
             this.ahkCompatibility.TabStop = true;
             this.ahkCompatibility.Text = "Compatibility";
@@ -764,22 +743,22 @@ namespace _4RTools.Forms
             // ahkSynchronous
             // 
             this.ahkSynchronous.AutoSize = true;
-            this.ahkSynchronous.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.ahkSynchronous.Location = new System.Drawing.Point(17, 54);
+            this.ahkSynchronous.Location = new System.Drawing.Point(17, 50);
             this.ahkSynchronous.Name = "ahkSynchronous";
-            this.ahkSynchronous.Size = new System.Drawing.Size(69, 17);
+            this.ahkSynchronous.Size = new System.Drawing.Size(92, 17);
             this.ahkSynchronous.TabIndex = 35;
             this.ahkSynchronous.TabStop = true;
-            this.ahkSynchronous.Text = "Síncrono";
+            this.ahkSynchronous.Text = "Synchronous";
             this.ahkSynchronous.UseVisualStyleBackColor = true;
             this.ahkSynchronous.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // groupBox4
             // 
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.groupBox4.Location = new System.Drawing.Point(188, 9);
+            this.groupBox4.Controls.Add(this.pictureBox1);
+            this.groupBox4.Controls.Add(this.pbUpAndDownArrow);
+            this.groupBox4.Location = new System.Drawing.Point(254, 11);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(115, 62);
+            this.groupBox4.Size = new System.Drawing.Size(128, 67);
             this.groupBox4.TabIndex = 33;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Key Config";
@@ -789,10 +768,9 @@ namespace _4RTools.Forms
             this.groupBox3.Controls.Add(this.cbDeactivated);
             this.groupBox3.Controls.Add(this.cbWithNoClick);
             this.groupBox3.Controls.Add(this.cbWithClick);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.groupBox3.Location = new System.Drawing.Point(426, 12);
+            this.groupBox3.Location = new System.Drawing.Point(467, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(122, 100);
+            this.groupBox3.Size = new System.Drawing.Size(143, 92);
             this.groupBox3.TabIndex = 34;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Legend";
@@ -801,10 +779,9 @@ namespace _4RTools.Forms
             // 
             this.cbDeactivated.AutoCheck = false;
             this.cbDeactivated.AutoSize = true;
-            this.cbDeactivated.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.cbDeactivated.Location = new System.Drawing.Point(10, 70);
+            this.cbDeactivated.Location = new System.Drawing.Point(18, 64);
             this.cbDeactivated.Name = "cbDeactivated";
-            this.cbDeactivated.Size = new System.Drawing.Size(84, 17);
+            this.cbDeactivated.Size = new System.Drawing.Size(86, 17);
             this.cbDeactivated.TabIndex = 2;
             this.cbDeactivated.Text = "Deactivated";
             this.cbDeactivated.UseVisualStyleBackColor = true;
@@ -812,10 +789,9 @@ namespace _4RTools.Forms
             // cbWithNoClick
             // 
             this.cbWithNoClick.AutoSize = true;
-            this.cbWithNoClick.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.cbWithNoClick.Location = new System.Drawing.Point(10, 46);
+            this.cbWithNoClick.Location = new System.Drawing.Point(18, 40);
             this.cbWithNoClick.Name = "cbWithNoClick";
-            this.cbWithNoClick.Size = new System.Drawing.Size(99, 17);
+            this.cbWithNoClick.Size = new System.Drawing.Size(103, 17);
             this.cbWithNoClick.TabIndex = 1;
             this.cbWithNoClick.Text = "No mouse click";
             this.cbWithNoClick.UseVisualStyleBackColor = true;
@@ -825,10 +801,9 @@ namespace _4RTools.Forms
             this.cbWithClick.AutoSize = true;
             this.cbWithClick.Checked = true;
             this.cbWithClick.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbWithClick.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.cbWithClick.Location = new System.Drawing.Point(10, 22);
+            this.cbWithClick.Location = new System.Drawing.Point(18, 16);
             this.cbWithClick.Name = "cbWithClick";
-            this.cbWithClick.Size = new System.Drawing.Size(107, 17);
+            this.cbWithClick.Size = new System.Drawing.Size(113, 17);
             this.cbWithClick.TabIndex = 0;
             this.cbWithClick.Text = "With mouse click";
             this.cbWithClick.UseVisualStyleBackColor = true;
@@ -836,140 +811,22 @@ namespace _4RTools.Forms
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(14, 68);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.panel1.Location = new System.Drawing.Point(15, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 1);
+            this.panel1.Size = new System.Drawing.Size(440, 1);
             this.panel1.TabIndex = 35;
-            // 
-            // chkNum1
-            // 
-            this.chkNum1.AutoSize = true;
-            this.chkNum1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum1.Location = new System.Drawing.Point(14, 79);
-            this.chkNum1.Name = "chkNum1";
-            this.chkNum1.Size = new System.Drawing.Size(40, 17);
-            this.chkNum1.TabIndex = 36;
-            this.chkNum1.Tag = "NumPad1";
-            this.chkNum1.Text = "N1";
-            this.chkNum1.UseVisualStyleBackColor = true;
-            // 
-            // chkNum2
-            // 
-            this.chkNum2.AutoSize = true;
-            this.chkNum2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum2.Location = new System.Drawing.Point(59, 79);
-            this.chkNum2.Name = "chkNum2";
-            this.chkNum2.Size = new System.Drawing.Size(40, 17);
-            this.chkNum2.TabIndex = 37;
-            this.chkNum2.Tag = "NumPad2";
-            this.chkNum2.Text = "N2";
-            this.chkNum2.UseVisualStyleBackColor = true;
-            // 
-            // chkNum3
-            // 
-            this.chkNum3.AutoSize = true;
-            this.chkNum3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum3.Location = new System.Drawing.Point(103, 79);
-            this.chkNum3.Name = "chkNum3";
-            this.chkNum3.Size = new System.Drawing.Size(40, 17);
-            this.chkNum3.TabIndex = 38;
-            this.chkNum3.Tag = "NumPad3";
-            this.chkNum3.Text = "N3";
-            this.chkNum3.UseVisualStyleBackColor = true;
-            // 
-            // chkNum4
-            // 
-            this.chkNum4.AutoSize = true;
-            this.chkNum4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum4.Location = new System.Drawing.Point(147, 79);
-            this.chkNum4.Name = "chkNum4";
-            this.chkNum4.Size = new System.Drawing.Size(40, 17);
-            this.chkNum4.TabIndex = 39;
-            this.chkNum4.Tag = "NumPad4";
-            this.chkNum4.Text = "N4";
-            this.chkNum4.UseVisualStyleBackColor = true;
-            // 
-            // chkNum5
-            // 
-            this.chkNum5.AutoSize = true;
-            this.chkNum5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum5.Location = new System.Drawing.Point(191, 79);
-            this.chkNum5.Name = "chkNum5";
-            this.chkNum5.Size = new System.Drawing.Size(40, 17);
-            this.chkNum5.TabIndex = 40;
-            this.chkNum5.Tag = "NumPad5";
-            this.chkNum5.Text = "N5";
-            this.chkNum5.UseVisualStyleBackColor = true;
-            // 
-            // chkNum6
-            // 
-            this.chkNum6.AutoSize = true;
-            this.chkNum6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum6.Location = new System.Drawing.Point(235, 79);
-            this.chkNum6.Name = "chkNum6";
-            this.chkNum6.Size = new System.Drawing.Size(40, 17);
-            this.chkNum6.TabIndex = 41;
-            this.chkNum6.Tag = "NumPad6";
-            this.chkNum6.Text = "N6";
-            this.chkNum6.UseVisualStyleBackColor = true;
-            // 
-            // chkNum7
-            // 
-            this.chkNum7.AutoSize = true;
-            this.chkNum7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum7.Location = new System.Drawing.Point(279, 79);
-            this.chkNum7.Name = "chkNum7";
-            this.chkNum7.Size = new System.Drawing.Size(40, 17);
-            this.chkNum7.TabIndex = 42;
-            this.chkNum7.Tag = "NumPad7";
-            this.chkNum7.Text = "N7";
-            this.chkNum7.UseVisualStyleBackColor = true;
-            // 
-            // chkNum8
-            // 
-            this.chkNum8.AutoSize = true;
-            this.chkNum8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum8.Location = new System.Drawing.Point(323, 79);
-            this.chkNum8.Name = "chkNum8";
-            this.chkNum8.Size = new System.Drawing.Size(40, 17);
-            this.chkNum8.TabIndex = 43;
-            this.chkNum8.Tag = "NumPad8";
-            this.chkNum8.Text = "N8";
-            this.chkNum8.UseVisualStyleBackColor = true;
-            // 
-            // chkNum9
-            // 
-            this.chkNum9.AutoSize = true;
-            this.chkNum9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.chkNum9.Location = new System.Drawing.Point(367, 79);
-            this.chkNum9.Name = "chkNum9";
-            this.chkNum9.Size = new System.Drawing.Size(40, 17);
-            this.chkNum9.TabIndex = 44;
-            this.chkNum9.Tag = "NumPad9";
-            this.chkNum9.Text = "N9";
-            this.chkNum9.UseVisualStyleBackColor = true;
             // 
             // AHKForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(560, 270);
-            this.Controls.Add(this.chkNum9);
-            this.Controls.Add(this.chkNum8);
-            this.Controls.Add(this.chkNum7);
-            this.Controls.Add(this.chkNum6);
-            this.Controls.Add(this.chkNum5);
-            this.Controls.Add(this.chkNum4);
-            this.Controls.Add(this.chkNum3);
-            this.Controls.Add(this.chkNum2);
+            this.ClientSize = new System.Drawing.Size(620, 454);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chkNum1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupAhkConfig);
             this.Controls.Add(this.chkS);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.chkM);
             this.Controls.Add(this.chk9);
             this.Controls.Add(this.chkN);
@@ -1012,13 +869,13 @@ namespace _4RTools.Forms
             this.Controls.Add(this.chkE);
             this.Controls.Add(this.chkQ);
             this.Controls.Add(this.chkW);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AHKForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AHKForm";
+            this.Load += new System.EventHandler(this.AHKForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtSpammerDelay)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1026,6 +883,8 @@ namespace _4RTools.Forms
             this.groupAhkConfig.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpAndDownArrow)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -1076,8 +935,6 @@ namespace _4RTools.Forms
         private System.Windows.Forms.CheckBox chkE;
         private System.Windows.Forms.CheckBox chkW;
         private System.Windows.Forms.CheckBox chkQ;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.CheckBox chkS;
@@ -1098,14 +955,5 @@ namespace _4RTools.Forms
         private RadioButton ahkSynchronous;
         private GroupBox groupBox4;
         private Panel panel1;
-        private CheckBox chkNum1;
-        private CheckBox chkNum2;
-        private CheckBox chkNum3;
-        private CheckBox chkNum4;
-        private CheckBox chkNum5;
-        private CheckBox chkNum6;
-        private CheckBox chkNum7;
-        private CheckBox chkNum8;
-        private CheckBox chkNum9;
     }
 }

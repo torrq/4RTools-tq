@@ -32,10 +32,10 @@ namespace _4RTools.Forms
                     this.autopot = this.isYgg ? ProfileSingleton.GetCurrent().AutopotYgg : ProfileSingleton.GetCurrent().Autopot;
                     InitializeApplicationForm();
                     break;
-                case MessageCode.TURN_HEAL_OFF:
+                case MessageCode.TURN_OFF:
                     this.autopot.Stop();
                     break;
-                case MessageCode.TURN_HEAL_ON:
+                case MessageCode.TURN_ON:
                     this.autopot.Start();
                     break;
             }

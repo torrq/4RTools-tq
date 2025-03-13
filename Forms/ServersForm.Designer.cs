@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddServer = new System.Windows.Forms.Button();
             this.datagridServers = new System.Windows.Forms.DataGridView();
+            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hpAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridServers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
@@ -46,10 +46,8 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.btnAddServer);
             this.panel1.Controls.Add(this.datagridServers);
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.panel1.Location = new System.Drawing.Point(12, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(541, 250);
@@ -57,9 +55,7 @@
             // 
             // btnAddServer
             // 
-            this.btnAddServer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.btnAddServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddServer.ForeColor = System.Drawing.Color.White;
             this.btnAddServer.Location = new System.Drawing.Point(3, 12);
             this.btnAddServer.Name = "btnAddServer";
             this.btnAddServer.Size = new System.Drawing.Size(104, 23);
@@ -71,7 +67,6 @@
             // datagridServers
             // 
             this.datagridServers.AutoGenerateColumns = false;
-            this.datagridServers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.datagridServers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datagridServers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridServers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -88,6 +83,10 @@
             this.datagridServers.Size = new System.Drawing.Size(541, 200);
             this.datagridServers.TabIndex = 0;
             this.datagridServers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridServers_CellContentClick);
+            // 
+            // clientDTOBindingSource
+            // 
+            this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -107,9 +106,11 @@
             // nameAddressDataGridViewTextBoxColumn
             // 
             this.nameAddressDataGridViewTextBoxColumn.DataPropertyName = "nameAddress";
+            this.nameAddressDataGridViewTextBoxColumn.FillWeight = 110F;
             this.nameAddressDataGridViewTextBoxColumn.HeaderText = "Name Address";
             this.nameAddressDataGridViewTextBoxColumn.Name = "nameAddressDataGridViewTextBoxColumn";
             this.nameAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameAddressDataGridViewTextBoxColumn.Width = 110;
             // 
             // Edit
             // 
@@ -127,19 +128,14 @@
             this.Delete.UseColumnTextForButtonValue = true;
             this.Delete.Width = 80;
             // 
-            // clientDTOBindingSource
-            // 
-            this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
-            // 
             // ServersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(565, 268);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ServersForm";
             this.Text = "ServersForm";

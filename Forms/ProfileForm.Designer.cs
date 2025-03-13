@@ -38,9 +38,7 @@
             // 
             // txtProfileName
             // 
-            this.txtProfileName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtProfileName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProfileName.ForeColor = System.Drawing.Color.White;
             this.txtProfileName.Location = new System.Drawing.Point(23, 29);
             this.txtProfileName.Multiline = true;
             this.txtProfileName.Name = "txtProfileName";
@@ -49,10 +47,8 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(267, 29);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 23);
@@ -67,15 +63,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Create a new profile";
             // 
             // btnRemoveProfile
             // 
-            this.btnRemoveProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.btnRemoveProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveProfile.ForeColor = System.Drawing.Color.White;
             this.btnRemoveProfile.Location = new System.Drawing.Point(267, 77);
             this.btnRemoveProfile.Name = "btnRemoveProfile";
             this.btnRemoveProfile.Size = new System.Drawing.Size(78, 23);
@@ -89,16 +83,14 @@
             this.lblProfilesList.AutoSize = true;
             this.lblProfilesList.Location = new System.Drawing.Point(23, 61);
             this.lblProfilesList.Name = "lblProfilesList";
-            this.lblProfilesList.Size = new System.Drawing.Size(55, 13);
+            this.lblProfilesList.Size = new System.Drawing.Size(60, 13);
             this.lblProfilesList.TabIndex = 6;
             this.lblProfilesList.Text = "Profile List";
             this.lblProfilesList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbProfilesList
             // 
-            this.lbProfilesList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.lbProfilesList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbProfilesList.ForeColor = System.Drawing.Color.White;
             this.lbProfilesList.FormattingEnabled = true;
             this.lbProfilesList.Location = new System.Drawing.Point(23, 77);
             this.lbProfilesList.Name = "lbProfilesList";
@@ -110,7 +102,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(374, 232);
             this.Controls.Add(this.lbProfilesList);
             this.Controls.Add(this.lblProfilesList);
@@ -118,7 +109,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtProfileName);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProfileForm";
             this.Text = "ProfileForm";

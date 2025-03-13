@@ -38,7 +38,7 @@ namespace _4RTools.Model
                 }
             }
             catch {
-                throw new Exception("Houve um problema ao carregar o perfil. Delete a pasta Profiles e tente novamente.");   
+                throw new Exception("There was a problem loading the profile. Delete the Profiles folder and try again.");   
             }
         }
         public static void ClearProfile(string profileName)

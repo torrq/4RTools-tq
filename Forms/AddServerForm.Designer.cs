@@ -58,9 +58,7 @@
             // 
             // txtHP1
             // 
-            this.txtHP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP1.ForeColor = System.Drawing.Color.White;
             this.txtHP1.Location = new System.Drawing.Point(127, 30);
             this.txtHP1.Name = "txtHP1";
             this.txtHP1.Size = new System.Drawing.Size(20, 20);
@@ -69,9 +67,7 @@
             // 
             // txtHP2
             // 
-            this.txtHP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP2.ForeColor = System.Drawing.Color.White;
             this.txtHP2.Location = new System.Drawing.Point(153, 30);
             this.txtHP2.Name = "txtHP2";
             this.txtHP2.Size = new System.Drawing.Size(20, 20);
@@ -80,9 +76,7 @@
             // 
             // txtHP4
             // 
-            this.txtHP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP4.ForeColor = System.Drawing.Color.White;
             this.txtHP4.Location = new System.Drawing.Point(206, 30);
             this.txtHP4.Name = "txtHP4";
             this.txtHP4.Size = new System.Drawing.Size(20, 20);
@@ -91,9 +85,7 @@
             // 
             // txtHP3
             // 
-            this.txtHP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP3.ForeColor = System.Drawing.Color.White;
             this.txtHP3.Location = new System.Drawing.Point(180, 30);
             this.txtHP3.Name = "txtHP3";
             this.txtHP3.Size = new System.Drawing.Size(20, 20);
@@ -102,9 +94,7 @@
             // 
             // txtHP8
             // 
-            this.txtHP8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP8.ForeColor = System.Drawing.Color.White;
             this.txtHP8.Location = new System.Drawing.Point(311, 30);
             this.txtHP8.Name = "txtHP8";
             this.txtHP8.Size = new System.Drawing.Size(20, 20);
@@ -113,9 +103,7 @@
             // 
             // txtHP7
             // 
-            this.txtHP7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP7.ForeColor = System.Drawing.Color.White;
             this.txtHP7.Location = new System.Drawing.Point(285, 30);
             this.txtHP7.Name = "txtHP7";
             this.txtHP7.Size = new System.Drawing.Size(20, 20);
@@ -124,9 +112,7 @@
             // 
             // txtHP6
             // 
-            this.txtHP6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP6.ForeColor = System.Drawing.Color.White;
             this.txtHP6.Location = new System.Drawing.Point(258, 30);
             this.txtHP6.Name = "txtHP6";
             this.txtHP6.Size = new System.Drawing.Size(20, 20);
@@ -135,9 +121,7 @@
             // 
             // txtHP5
             // 
-            this.txtHP5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtHP5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHP5.ForeColor = System.Drawing.Color.White;
             this.txtHP5.Location = new System.Drawing.Point(232, 30);
             this.txtHP5.Name = "txtHP5";
             this.txtHP5.Size = new System.Drawing.Size(20, 20);
@@ -146,7 +130,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.processCB);
@@ -170,7 +153,6 @@
             this.groupBox1.Controls.Add(this.txtHP6);
             this.groupBox1.Controls.Add(this.txtHP4);
             this.groupBox1.Controls.Add(this.txtHP5);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(345, 163);
@@ -180,9 +162,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(248, 118);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 39);
@@ -202,9 +182,7 @@
             // 
             // processCB
             // 
-            this.processCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.processCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.processCB.ForeColor = System.Drawing.Color.White;
             this.processCB.FormattingEnabled = true;
             this.processCB.Location = new System.Drawing.Point(90, 91);
             this.processCB.Name = "processCB";
@@ -232,7 +210,6 @@
             // 
             // txtName1
             // 
-            this.txtName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName1.ForeColor = System.Drawing.Color.White;
             this.txtName1.Location = new System.Drawing.Point(127, 58);
@@ -243,7 +220,6 @@
             // 
             // txtName8
             // 
-            this.txtName8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName8.ForeColor = System.Drawing.Color.White;
             this.txtName8.Location = new System.Drawing.Point(311, 58);
@@ -254,7 +230,6 @@
             // 
             // txtName2
             // 
-            this.txtName2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName2.ForeColor = System.Drawing.Color.White;
             this.txtName2.Location = new System.Drawing.Point(153, 58);
@@ -265,7 +240,6 @@
             // 
             // txtName7
             // 
-            this.txtName7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName7.ForeColor = System.Drawing.Color.White;
             this.txtName7.Location = new System.Drawing.Point(285, 58);
@@ -276,7 +250,6 @@
             // 
             // txtName3
             // 
-            this.txtName3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName3.ForeColor = System.Drawing.Color.White;
             this.txtName3.Location = new System.Drawing.Point(180, 58);
@@ -287,7 +260,6 @@
             // 
             // txtName6
             // 
-            this.txtName6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName6.ForeColor = System.Drawing.Color.White;
             this.txtName6.Location = new System.Drawing.Point(258, 58);
@@ -298,7 +270,6 @@
             // 
             // txtName4
             // 
-            this.txtName4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName4.ForeColor = System.Drawing.Color.White;
             this.txtName4.Location = new System.Drawing.Point(206, 58);
@@ -309,7 +280,6 @@
             // 
             // txtName5
             // 
-            this.txtName5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtName5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName5.ForeColor = System.Drawing.Color.White;
             this.txtName5.Location = new System.Drawing.Point(232, 58);
@@ -322,7 +292,6 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
             this.label2.Location = new System.Drawing.Point(87, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 16);
@@ -342,7 +311,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(367, 187);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

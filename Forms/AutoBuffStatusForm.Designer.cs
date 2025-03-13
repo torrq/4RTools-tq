@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutoBuffStatusForm));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.DebuffsGP = new System.Windows.Forms.GroupBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtStatusKey = new System.Windows.Forms.TextBox();
@@ -54,65 +53,55 @@
             // 
             this.DebuffsGP.AutoSize = true;
             this.DebuffsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DebuffsGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-            this.DebuffsGP.Location = new System.Drawing.Point(12, 52);
+            this.DebuffsGP.Location = new System.Drawing.Point(33, 52);
             this.DebuffsGP.Name = "DebuffsGP";
-            this.DebuffsGP.Size = new System.Drawing.Size(522, 29);
+            this.DebuffsGP.Size = new System.Drawing.Size(563, 29);
             this.DebuffsGP.TabIndex = 294;
             this.DebuffsGP.TabStop = false;
             this.DebuffsGP.Text = "Debuffs";
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(268, 16);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 30);
-            this.panel5.TabIndex = 301;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 20);
+            this.label1.Location = new System.Drawing.Point(194, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 297;
             this.label1.Text = "Status";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(76, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(167, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 296;
             this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Panacea");
             // 
             // txtStatusKey
             // 
-            this.txtStatusKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtStatusKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStatusKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtStatusKey.ForeColor = System.Drawing.Color.White;
-            this.txtStatusKey.Location = new System.Drawing.Point(139, 15);
+            this.txtStatusKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatusKey.Location = new System.Drawing.Point(236, 14);
             this.txtStatusKey.Name = "txtStatusKey";
-            this.txtStatusKey.Size = new System.Drawing.Size(45, 23);
+            this.txtStatusKey.Size = new System.Drawing.Size(45, 25);
             this.txtStatusKey.TabIndex = 295;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(402, 21);
+            this.label2.Location = new System.Drawing.Point(361, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 304;
             this.label2.Text = "Status";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(376, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(334, 15);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,13 +110,11 @@
             // 
             // txtNewStatusKey
             // 
-            this.txtNewStatusKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(51)))), ((int)(((byte)(56)))));
             this.txtNewStatusKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewStatusKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNewStatusKey.ForeColor = System.Drawing.Color.White;
-            this.txtNewStatusKey.Location = new System.Drawing.Point(439, 16);
+            this.txtNewStatusKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewStatusKey.Location = new System.Drawing.Point(403, 15);
             this.txtNewStatusKey.Name = "txtNewStatusKey";
-            this.txtNewStatusKey.Size = new System.Drawing.Size(45, 23);
+            this.txtNewStatusKey.Size = new System.Drawing.Size(45, 25);
             this.txtNewStatusKey.TabIndex = 302;
             // 
             // AutoBuffStatusForm
@@ -135,20 +122,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(563, 248);
+            this.ClientSize = new System.Drawing.Size(635, 248);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtNewStatusKey);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtStatusKey);
             this.Controls.Add(this.DebuffsGP);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AutoBuffStatusForm";
             this.Text = "AutoBuffStatusForm";
+            this.Load += new System.EventHandler(this.AutoBuffStatusForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -159,7 +145,6 @@
         #endregion
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox DebuffsGP;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtStatusKey;
