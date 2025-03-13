@@ -16,7 +16,6 @@ namespace _4RTools.Forms
 
         //Store key used for last profile - necessarly to clean when change profile
         private Keys lastKey;
-        private Keys healLastKey;
 
         public ToggleApplicationStateForm() { }
 

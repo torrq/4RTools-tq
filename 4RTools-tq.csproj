@@ -200,6 +200,7 @@
     </Compile>
     <EmbeddedResource Include="Forms\AddServerForm.resx">
       <DependentUpon>AddServerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Forms\AHKForm.cs">
       <SubType>Form</SubType>
@@ -213,6 +214,7 @@
     </Compile>
     <EmbeddedResource Include="Forms\AHKForm.resx">
       <DependentUpon>AHKForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Forms\ATKDEFForm.Designer.cs">
       <DependentUpon>ATKDEFForm.cs</DependentUpon>
@@ -245,9 +247,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AutoPatcher.resx">
       <DependentUpon>AutoPatcher.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AutopotForm.resx">
       <DependentUpon>AutopotForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Forms\ClientUpdaterForm.Designer.cs">
       <DependentUpon>ClientUpdaterForm.cs</DependentUpon>
@@ -258,6 +262,7 @@
     </Compile>
     <EmbeddedResource Include="Forms\ClientUpdaterForm.resx">
       <DependentUpon>ClientUpdaterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Container.resx">
       <DependentUpon>Container.cs</DependentUpon>

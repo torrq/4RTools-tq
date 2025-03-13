@@ -348,7 +348,7 @@ namespace _4RTools.Forms
         private TabPage tabPageProfiles;
         private TabPage tabMacroSwitch;
         private TabPage tabPageSkillTimer;
-        private TabPage tabPageServer;
+//        private TabPage tabPageServer;
         private TabPage tabPageDebuffs;
         private TabPage tabConfig;
     }

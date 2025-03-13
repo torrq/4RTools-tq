@@ -30,8 +30,8 @@ namespace _4RTools.Model
     internal class AutoSwitchRenderer
     {
 
-        private readonly int BUFFS_PER_ROW = 1;
-        private readonly int DISTANCE_BETWEEN_CONTAINERS = 10;
+//        private readonly int BUFFS_PER_ROW = 1;
+//        private readonly int DISTANCE_BETWEEN_CONTAINERS = 10;
         private readonly int DISTANCE_BETWEEN_ROWS = 30;
 
         private AutoSwitchContainer _container;
