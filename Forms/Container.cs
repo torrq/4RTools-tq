@@ -354,11 +354,13 @@ namespace _4RTools.Forms
 
         public void SetAutoSwitchWindow()
         {
+            /*
             AutoSwitchForm frm = new AutoSwitchForm(subject);
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.MdiParent = this;
             frm.Show();
             addform(this.tabPageAutoSwitch, frm);
+            */
 
         }
 

@@ -97,5 +97,10 @@ namespace _4RTools.Forms
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().StatusRecovery);
             this.ActiveControl = null;
         }
+
+        private void AutoBuffStatusForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

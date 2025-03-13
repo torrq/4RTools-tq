@@ -98,7 +98,7 @@ namespace _4RTools.Forms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(330, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 321;
             this.label1.Tag = "";
             this.label1.Text = "Delay";
@@ -109,7 +109,7 @@ namespace _4RTools.Forms
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(435, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(87, 13);
             this.label4.TabIndex = 322;
             this.label4.Text = "Exchange Delay";
             this.toolTip1.SetToolTip(this.label4, "Delay entre Item e Próximo Item Recomendado 1000 ms");
@@ -154,7 +154,7 @@ namespace _4RTools.Forms
             0,
             0});
             this.numDelay.Name = "numDelay";
-            this.numDelay.Size = new System.Drawing.Size(60, 20);
+            this.numDelay.Size = new System.Drawing.Size(60, 22);
             this.numDelay.TabIndex = 319;
             this.numDelay.Tag = "delay";
             this.numDelay.Value = new decimal(new int[] {
@@ -174,7 +174,7 @@ namespace _4RTools.Forms
             0,
             0});
             this.numSwitchDelay.Name = "numSwitchDelay";
-            this.numSwitchDelay.Size = new System.Drawing.Size(60, 20);
+            this.numSwitchDelay.Size = new System.Drawing.Size(60, 22);
             this.numSwitchDelay.TabIndex = 320;
             this.numSwitchDelay.Tag = "switchDelay";
             this.numSwitchDelay.Value = new decimal(new int[] {
@@ -208,7 +208,7 @@ namespace _4RTools.Forms
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(147, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 305;
             this.label3.Text = "Next item";
             // 
@@ -217,7 +217,7 @@ namespace _4RTools.Forms
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(60, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 304;
             this.label2.Text = "Item";
             // 
@@ -463,7 +463,7 @@ namespace _4RTools.Forms
             this.ProcSwitchGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProcSwitchGP.Location = new System.Drawing.Point(333, 38);
             this.ProcSwitchGP.Name = "ProcSwitchGP";
-            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 222);
+            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 224);
             this.ProcSwitchGP.TabIndex = 318;
             this.ProcSwitchGP.TabStop = false;
             this.ProcSwitchGP.Text = "Exclusives";
@@ -482,6 +482,7 @@ namespace _4RTools.Forms
             this.Controls.Add(this.skillCB);
             this.Controls.Add(this.btnAddAutoSwitch);
             this.Controls.Add(this.AutoSwitchGP);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AutoSwitchForm";
             this.Text = "AutoSwitchForm";

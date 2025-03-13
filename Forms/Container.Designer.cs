@@ -35,7 +35,6 @@ namespace _4RTools.Forms
             this.tabPageSpammer = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffSkill = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffStuff = new System.Windows.Forms.TabPage();
-            this.tabPageAutoSwitch = new System.Windows.Forms.TabPage();
             this.atkDef = new System.Windows.Forms.TabPage();
             this.tabPageMacroSongs = new System.Windows.Forms.TabPage();
             this.tabMacroSwitch = new System.Windows.Forms.TabPage();
@@ -64,13 +63,12 @@ namespace _4RTools.Forms
             // atkDefMode
             // 
             atkDefMode.Controls.Add(this.tabPageSpammer);
+            atkDefMode.Controls.Add(this.tabPageDebuffs);
             atkDefMode.Controls.Add(this.tabPageAutobuffSkill);
             atkDefMode.Controls.Add(this.tabPageAutobuffStuff);
-            atkDefMode.Controls.Add(this.tabPageAutoSwitch);
             atkDefMode.Controls.Add(this.atkDef);
             atkDefMode.Controls.Add(this.tabPageMacroSongs);
             atkDefMode.Controls.Add(this.tabMacroSwitch);
-            atkDefMode.Controls.Add(this.tabPageDebuffs);
             atkDefMode.Controls.Add(this.tabConfig);
             atkDefMode.Controls.Add(this.tabPageProfiles);
             atkDefMode.Location = new System.Drawing.Point(15, 274);
@@ -105,15 +103,6 @@ namespace _4RTools.Forms
             this.tabPageAutobuffStuff.Size = new System.Drawing.Size(629, 449);
             this.tabPageAutobuffStuff.TabIndex = 4;
             this.tabPageAutobuffStuff.Text = "Autobuff Items";
-            // 
-            // tabPageAutoSwitch
-            // 
-            this.tabPageAutoSwitch.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAutoSwitch.Name = "tabPageAutoSwitch";
-            this.tabPageAutoSwitch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAutoSwitch.Size = new System.Drawing.Size(629, 449);
-            this.tabPageAutoSwitch.TabIndex = 3;
-            this.tabPageAutoSwitch.Text = "Auto Switch";
             // 
             // atkDef
             // 
@@ -172,10 +161,10 @@ namespace _4RTools.Forms
             // lblProcessName
             // 
             this.lblProcessName.AutoSize = true;
-            this.lblProcessName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblProcessName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProcessName.Location = new System.Drawing.Point(13, 9);
             this.lblProcessName.Name = "lblProcessName";
-            this.lblProcessName.Size = new System.Drawing.Size(109, 17);
+            this.lblProcessName.Size = new System.Drawing.Size(100, 17);
             this.lblProcessName.TabIndex = 3;
             this.lblProcessName.Text = "Ragnarok Client";
             // 
@@ -202,10 +191,10 @@ namespace _4RTools.Forms
             // labelProfile
             // 
             this.labelProfile.AutoSize = true;
-            this.labelProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProfile.Location = new System.Drawing.Point(252, 9);
             this.labelProfile.Name = "labelProfile";
-            this.labelProfile.Size = new System.Drawing.Size(48, 17);
+            this.labelProfile.Size = new System.Drawing.Size(45, 17);
             this.labelProfile.TabIndex = 15;
             this.labelProfile.Text = "Profile";
             // 
@@ -238,21 +227,21 @@ namespace _4RTools.Forms
             // lblCharacterName
             // 
             this.lblCharacterName.AutoSize = true;
-            this.lblCharacterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblCharacterName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCharacterName.Location = new System.Drawing.Point(473, 9);
             this.lblCharacterName.Name = "lblCharacterName";
-            this.lblCharacterName.Size = new System.Drawing.Size(115, 17);
+            this.lblCharacterName.Size = new System.Drawing.Size(106, 17);
             this.lblCharacterName.TabIndex = 19;
             this.lblCharacterName.Text = "Character Name:";
             // 
             // characterName
             // 
             this.characterName.AutoSize = true;
-            this.characterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.characterName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.characterName.ForeColor = System.Drawing.Color.DarkGreen;
             this.characterName.Location = new System.Drawing.Point(473, 32);
             this.characterName.Name = "characterName";
-            this.characterName.Size = new System.Drawing.Size(19, 13);
+            this.characterName.Size = new System.Drawing.Size(25, 20);
             this.characterName.TabIndex = 20;
             this.characterName.Text = "- -";
             // 
@@ -306,6 +295,7 @@ namespace _4RTools.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(668, 761);
             this.Controls.Add(atkDefMode);
             this.Controls.Add(this.tabControlAutopot);
@@ -319,12 +309,13 @@ namespace _4RTools.Forms
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblProcessName);
             this.Controls.Add(this.processCB);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Container";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "4ROTools";
+            this.Text = "4RTools-tq";
             this.Load += new System.EventHandler(this.Container_Load);
             this.Resize += new System.EventHandler(this.containerResize);
             atkDefMode.ResumeLayout(false);
@@ -357,7 +348,6 @@ namespace _4RTools.Forms
         private TabPage tabPageProfiles;
         private TabPage tabMacroSwitch;
         private TabPage tabPageSkillTimer;
-        private TabPage tabPageAutoSwitch;
         private TabPage tabPageServer;
         private TabPage tabPageDebuffs;
         private TabPage tabConfig;

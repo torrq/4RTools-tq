@@ -48,7 +48,7 @@
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(267, 29);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 23);
@@ -63,7 +63,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Create a new profile";
             // 
@@ -83,7 +83,7 @@
             this.lblProfilesList.AutoSize = true;
             this.lblProfilesList.Location = new System.Drawing.Point(23, 61);
             this.lblProfilesList.Name = "lblProfilesList";
-            this.lblProfilesList.Size = new System.Drawing.Size(55, 13);
+            this.lblProfilesList.Size = new System.Drawing.Size(60, 13);
             this.lblProfilesList.TabIndex = 6;
             this.lblProfilesList.Text = "Profile List";
             this.lblProfilesList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -109,6 +109,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtProfileName);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProfileForm";
             this.Text = "ProfileForm";

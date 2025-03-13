@@ -30,6 +30,7 @@ namespace _4RTools.Forms
                     break;
                 case MessageCode.TURN_OFF:
                     this.ahk.Stop();
+
                     break;
             }
         }

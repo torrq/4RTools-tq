@@ -64,7 +64,7 @@ namespace _4RTools.Forms
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.Size = new System.Drawing.Size(138, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Order of using Autobuffs";
             // 
@@ -79,24 +79,24 @@ namespace _4RTools.Forms
             this.groupBox1.Size = new System.Drawing.Size(300, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "4ROTools Settings";
+            this.groupBox1.Text = "Settings";
             // 
             // ammo2textBox
             // 
             this.ammo2textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ammo2textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ammo2textBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ammo2textBox.Location = new System.Drawing.Point(243, 74);
             this.ammo2textBox.Name = "ammo2textBox";
-            this.ammo2textBox.Size = new System.Drawing.Size(45, 23);
+            this.ammo2textBox.Size = new System.Drawing.Size(45, 25);
             this.ammo2textBox.TabIndex = 309;
             // 
             // ammo1textBox
             // 
             this.ammo1textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ammo1textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ammo1textBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ammo1textBox.Location = new System.Drawing.Point(192, 74);
             this.ammo1textBox.Name = "ammo1textBox";
-            this.ammo1textBox.Size = new System.Drawing.Size(45, 23);
+            this.ammo1textBox.Size = new System.Drawing.Size(45, 25);
             this.ammo1textBox.TabIndex = 308;
             // 
             // switchAmmoCheckBox
@@ -104,7 +104,7 @@ namespace _4RTools.Forms
             this.switchAmmoCheckBox.AutoSize = true;
             this.switchAmmoCheckBox.Location = new System.Drawing.Point(13, 74);
             this.switchAmmoCheckBox.Name = "switchAmmoCheckBox";
-            this.switchAmmoCheckBox.Size = new System.Drawing.Size(135, 17);
+            this.switchAmmoCheckBox.Size = new System.Drawing.Size(144, 17);
             this.switchAmmoCheckBox.TabIndex = 307;
             this.switchAmmoCheckBox.Text = "Automatic Ammo Swap";
             this.switchAmmoCheckBox.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@ namespace _4RTools.Forms
             this.chkStopBuffsOnCity.AutoSize = true;
             this.chkStopBuffsOnCity.Location = new System.Drawing.Point(13, 27);
             this.chkStopBuffsOnCity.Name = "chkStopBuffsOnCity";
-            this.chkStopBuffsOnCity.Size = new System.Drawing.Size(246, 17);
+            this.chkStopBuffsOnCity.Size = new System.Drawing.Size(270, 17);
             this.chkStopBuffsOnCity.TabIndex = 0;
             this.chkStopBuffsOnCity.Text = "Pause autobuffs/skill timer/auto switch in town";
             this.chkStopBuffsOnCity.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@ namespace _4RTools.Forms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(157, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "MasterBall Usage Order";
             this.label1.Visible = false;
@@ -155,6 +155,7 @@ namespace _4RTools.Forms
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.skillsListBox);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfigForm";
             this.Text = "ConfigForm";

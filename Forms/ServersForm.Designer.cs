@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddServer = new System.Windows.Forms.Button();
             this.datagridServers = new System.Windows.Forms.DataGridView();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hpAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridServers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
@@ -84,21 +84,9 @@
             this.datagridServers.TabIndex = 0;
             this.datagridServers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridServers_CellContentClick);
             // 
-            // Edit
+            // clientDTOBindingSource
             // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 80;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 80;
+            this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -118,13 +106,27 @@
             // nameAddressDataGridViewTextBoxColumn
             // 
             this.nameAddressDataGridViewTextBoxColumn.DataPropertyName = "nameAddress";
+            this.nameAddressDataGridViewTextBoxColumn.FillWeight = 110F;
             this.nameAddressDataGridViewTextBoxColumn.HeaderText = "Name Address";
             this.nameAddressDataGridViewTextBoxColumn.Name = "nameAddressDataGridViewTextBoxColumn";
             this.nameAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameAddressDataGridViewTextBoxColumn.Width = 110;
             // 
-            // clientDTOBindingSource
+            // Edit
             // 
-            this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 80;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 80;
             // 
             // ServersForm
             // 
@@ -133,6 +135,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(565, 268);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ServersForm";
             this.Text = "ServersForm";

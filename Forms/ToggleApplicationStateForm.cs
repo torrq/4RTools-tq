@@ -57,11 +57,9 @@ namespace _4RTools.Forms
                 case MessageCode.PROFILE_CHANGED:
                     Keys currentToggleKey = (Keys)Enum.Parse(typeof(Keys), ProfileSingleton.GetCurrent().UserPreferences.toggleStateKey);
                     KeyboardHook.RemoveDown(lastKey); //Remove last key hook to prevent toggle with last profile key used.
-
                     this.txtStatusToggleKey.Text = currentToggleKey.ToString();
                     KeyboardHook.AddKeyDown(currentToggleKey, new KeyboardHook.KeyPressed(this.toggleStatus));
                     lastKey = currentToggleKey;
-
                     break;
             }
         }
@@ -143,5 +141,9 @@ namespace _4RTools.Forms
             this.subject.Notify(new Utils.Message(MessageCode.SHUTDOWN_APPLICATION, null));
         }
 
+        private void lblStatusToggle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
