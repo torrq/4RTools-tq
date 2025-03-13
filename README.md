@@ -1,4 +1,4 @@
-# R4Tools-tq
+# 4RTools-tq
 
 this is fork of https://github.com/biancaazuma/TalesTools
 which is a fork of the original, https://github.com/4RTools/4RTools
