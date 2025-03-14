@@ -392,6 +392,7 @@ namespace _4RTools.Utils
         CONFUSION = 886,
         BLIND = 887,
         FEAR = 891,
+        HALLUCINATION_DEBUFF = 1416,
 
         // OTHER
         ANTI_BOT = 5020,

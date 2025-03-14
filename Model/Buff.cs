@@ -260,8 +260,8 @@ namespace _4RTools.Model
                 new Buff("Earth Elemental Converter", EffectStatusIDs.PROPERTYGROUND, Resources._4RTools.Icons.ele_earth_converter),
                 new Buff("Water Elemental Converter", EffectStatusIDs.PROPERTYWATER, Resources._4RTools.Icons.ele_water_converter),
                 new Buff("Box of Storms", EffectStatusIDs.BOX_OF_STORMS, Resources._4RTools.Icons.boxofstorms),
-/*
                 new Buff("Aspersio Scroll", EffectStatusIDs.ASPERSIO, Resources._4RTools.Icons.ele_holy_converter),
+/*
                 new Buff("Ghost Elemental Converter", EffectStatusIDs.PROPERTYTELEKINESIS, Resources._4RTools.Icons.ele_ghost_converter),
 */
                 new Buff("Cursed Water", EffectStatusIDs.PROPERTYDARK, Resources._4RTools.Icons.cursed_water),
@@ -362,6 +362,7 @@ namespace _4RTools.Model
                 new Buff("Sit", EffectStatusIDs.SIT, Resources._4RTools.Icons.sit),
                 new Buff("Burning", EffectStatusIDs.BURNING, Resources._4RTools.Icons.burning),
                 new Buff("Slow Cast", EffectStatusIDs.SLOW_CAST, Resources._4RTools.Icons.slow_cast),
+                new Buff("Hallucination", EffectStatusIDs.HALLUCINATION_DEBUFF, Resources._4RTools.Icons.hallucination)
 
             };
 

@@ -61,16 +61,29 @@ public static class StatusIdLogger
         }
     }
 
+    private static string lastKnownStatusesLog = null;
+    private static string lastUnknownStatusesLog = null;
+
     private static void LogStatuses(object sender, ElapsedEventArgs e)
     {
         if (currentKnownStatuses.Any())
         {
-            DebugLogger.Info($"Known Statuses: {string.Join(" ", currentKnownStatuses.Select(id => $"{id}:{knownStatusIds[id]}"))}");
+            string currentLog = $"Known Statuses: {string.Join(" ", currentKnownStatuses.Select(id => $"{id}:{knownStatusIds[id]}"))}";
+            if (currentLog != lastKnownStatusesLog)
+            {
+                DebugLogger.Info(currentLog);
+                lastKnownStatusesLog = currentLog;
+            }
         }
 
         if (currentUnknownStatuses.Any())
         {
-            DebugLogger.Info($"Unknown Statuses: {string.Join(", ", currentUnknownStatuses)}");
+            string currentLog = $"Unknown Statuses: {string.Join(", ", currentUnknownStatuses)}";
+            if (currentLog != lastUnknownStatusesLog)
+            {
+                DebugLogger.Info(currentLog);
+                lastUnknownStatusesLog = currentLog;
+            }
         }
 
         currentKnownStatuses.Clear();
