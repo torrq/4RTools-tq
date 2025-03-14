@@ -278,30 +278,12 @@ namespace _4RTools.Model
         {
             List<Buff> skills = new List<Buff>
             {
-                new Buff("STR+10 Food", EffectStatusIDs.FOOD_STR, Resources._4RTools.Icons.strfood),
-                new Buff("AGI+10 Food", EffectStatusIDs.FOOD_AGI, Resources._4RTools.Icons.agi_food),
-                new Buff("VIT+10 Food", EffectStatusIDs.FOOD_VIT, Resources._4RTools.Icons.vit_food),
-                new Buff("INT+10 Food", EffectStatusIDs.FOOD_INT, Resources._4RTools.Icons.int_food),
-                new Buff("DEX+10 Food", EffectStatusIDs.FOOD_DEX, Resources._4RTools.Icons.dex_food),
-                new Buff("LUK+10 Food", EffectStatusIDs.FOOD_LUK, Resources._4RTools.Icons.luk_food),
-/*
-                new Buff("3RD STR Food", EffectStatusIDs.STR_3RD_FOOD, Resources._4RTools.Icons.str_3rd_food),
-                new Buff("3RD AGI Food", EffectStatusIDs.AGI_3RD_FOOD, Resources._4RTools.Icons.agi_3rd_food),
-                new Buff("3RD VIT Food", EffectStatusIDs.VIT_3RD_FOOD, Resources._4RTools.Icons.vit_3rd_food),
-                new Buff("3RD INT Food", EffectStatusIDs.INT_3RD_FOOD, Resources._4RTools.Icons.int_3rd_food),
-                new Buff("3RD DEX Food", EffectStatusIDs.DEX_3RD_FOOD, Resources._4RTools.Icons.dex_3rd_food),
-                new Buff("3RD LUK Food", EffectStatusIDs.LUK_3RD_FOOD, Resources._4RTools.Icons.luk_3rd_food),
-
-                new Buff("Almighty", EffectStatusIDs.RWC_2011_SCROLL, Resources._4RTools.Icons.almighty),
-                new Buff("CASH Food", EffectStatusIDs.FOOD_VIT_CASH, Resources._4RTools.Icons.cash_food),
-                new Buff("Acarajé", EffectStatusIDs.ACARAJE, Resources._4RTools.Icons.acaraje),
-                new Buff("Orange Biscuit Sticks", EffectStatusIDs.STR_Biscuit_Stick, Resources._4RTools.Icons.STR_Biscuit),
-                new Buff("Vanilla Biscuit Sticks", EffectStatusIDs.AGI_Biscuit_Stick, Resources._4RTools.Icons.AGI_Biscuit),
-                new Buff("Blackcurrant Biscuit Sticks", EffectStatusIDs.INT_Biscuit_Stick, Resources._4RTools.Icons.INT_Biscuit),
-                new Buff("Chocolate Biscuit Sticks", EffectStatusIDs.VIT_Biscuit_Stick, Resources._4RTools.Icons.VIT_Biscuit),
-                new Buff("Lemon Biscuit Sticks", EffectStatusIDs.DEX_Biscuit_Stick, Resources._4RTools.Icons.DEX_Biscuit),
-                new Buff("Strawberry Biscuit Sticks", EffectStatusIDs.LUK_Biscuit_Stick, Resources._4RTools.Icons.LUK_Biscuit),
-*/
+                new Buff("Steamed Tongue (STR+10)", EffectStatusIDs.FOOD_STR, Resources._4RTools.Icons.strfood),
+                new Buff("Steamed Scorpion (AGI+10)", EffectStatusIDs.FOOD_AGI, Resources._4RTools.Icons.agi_food),
+                new Buff("Stew of Immortality (VIT+10)", EffectStatusIDs.FOOD_VIT, Resources._4RTools.Icons.vit_food),
+                new Buff("Dragon Breath Cocktail (INT+10)", EffectStatusIDs.FOOD_INT, Resources._4RTools.Icons.int_food),
+                new Buff("Hwergelmir's Tonic (DEX+10)", EffectStatusIDs.FOOD_DEX, Resources._4RTools.Icons.dex_food),
+                new Buff("Cooked Nine Tail's Tails (LUK+10)", EffectStatusIDs.FOOD_LUK, Resources._4RTools.Icons.luk_food),
                 new Buff("Halo-Halo", EffectStatusIDs.HALOHALO, Resources._4RTools.Icons.halohalo),
                 new Buff("Glass of Illusion", EffectStatusIDs.GLASS_OF_ILLUSION, Resources._4RTools.Icons.Glass_Of_Illusion),
 
@@ -356,11 +338,7 @@ namespace _4RTools.Model
             {
                 new Buff("Field Manual 100%", EffectStatusIDs.FIELD_MANUAL, Resources._4RTools.Icons.fieldmanual),
     /*
-                new Buff("LUX AMINA Rune", EffectStatusIDs.LUX_AMINA, Resources._4RTools.Icons.LUX_AMINA),
-                new Buff("Cat Can", EffectStatusIDs.OVERLAPEXPUP, Resources._4RTools.Icons.cat_can),
-                new Buff("Goma de Mascar", EffectStatusIDs.CASH_RECEIVEITEM, Resources._4RTools.Icons.he_bubble_gum),
-                new Buff("Manual de Combate", EffectStatusIDs.CASH_PLUSEXP, Resources._4RTools.Icons.base_combat),
-                new Buff("Manual de Combate de classe", EffectStatusIDs.CASH_PLUSECLASSXP, Resources._4RTools.Icons.class_combat),
+                new Buff("HE Bubble Gum", EffectStatusIDs.CASH_RECEIVEITEM, Resources._4RTools.Icons.he_bubble_gum),
     */
             };
 
