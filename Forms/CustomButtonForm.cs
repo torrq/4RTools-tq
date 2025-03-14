@@ -14,6 +14,7 @@ namespace _4RTools.Forms
         {
             InitializeComponent();
             toolTip1.SetToolTip(label1, "Simulates alt+right mouse button for quick transfer of items between storage and inventory");
+            toolTip1.SetToolTip(pictureBox2, "Simulates alt+right mouse button for quick transfer of items between storage and inventory");
             subject.Attach(this);
         }
 
@@ -55,6 +56,21 @@ namespace _4RTools.Forms
             }
             catch { }
             this.ActiveControl = null;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTransferKey_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

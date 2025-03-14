@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using _4RTools.Utils;
 using _4RTools.Model;
 using System.Windows.Input;
+using Newtonsoft.Json.Linq;
 namespace _4RTools.Forms
 {
     public partial class SkillTimerForm : Form, IObserver

@@ -46,6 +46,7 @@ namespace _4RTools.Model
                 bool foundQuag = false;
                 bool foundDecreaseAgi = false;
                 string currentMap = c.ReadCurrentMap();
+                //DebugLogger.Info("Current Map: " + currentMap);
                 if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                 {
                     List<EffectStatusIDs> buffs = new List<EffectStatusIDs>();
@@ -56,7 +57,6 @@ namespace _4RTools.Model
 
                         if (currentStatus == uint.MaxValue) { continue; }
 
-                        // Replace the original Console.WriteLine with the new logging method
                         StatusIdLogger.LogStatusId(i, currentStatus);
 
                         buffs.Add((EffectStatusIDs)currentStatus);

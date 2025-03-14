@@ -65,12 +65,12 @@ public static class StatusIdLogger
     {
         if (currentKnownStatuses.Any())
         {
-            Console.WriteLine($"Known Statuses: {string.Join(" ", currentKnownStatuses.Select(id => $"{id}:{knownStatusIds[id]}"))}");
+            DebugLogger.Info($"Known Statuses: {string.Join(" ", currentKnownStatuses.Select(id => $"{id}:{knownStatusIds[id]}"))}");
         }
 
         if (currentUnknownStatuses.Any())
         {
-            Console.WriteLine($"Unknown Statuses: {string.Join(", ", currentUnknownStatuses)}");
+            DebugLogger.Info($"Unknown Statuses: {string.Join(", ", currentUnknownStatuses)}");
         }
 
         currentKnownStatuses.Clear();
@@ -96,7 +96,7 @@ public static class StatusIdLogger
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Failed to log new status ID: {ex.Message}");
+            DebugLogger.Error($"Failed to log new status ID: {ex.Message}");
         }
     }
 }

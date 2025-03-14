@@ -33,12 +33,6 @@ namespace _4RTools.Forms
                 LoadServers(clients);                                              //If fetch successfully update and load local file.
                 Thread.Sleep(100);
             }
-            catch(Exception ex)
-            {
-                //If catch some exception while Fetch, load resource file.
-                MessageBox.Show("Cannot load supported_servers file. Loading resource instead....");
-                clients.AddRange(JsonConvert.DeserializeObject<List<ClientDTO>>(LoadResourceServerFile()));
-            }
             finally
             {
                 new Container().Show();

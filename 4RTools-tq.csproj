@@ -433,6 +433,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Icons.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\DebugLogger.cs" />
     <Compile Include="Utils\EffectStatusIDs.cs" />
     <Compile Include="Utils\AppConfig.cs" />
     <Compile Include="Utils\Constants.cs" />

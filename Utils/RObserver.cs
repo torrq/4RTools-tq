@@ -48,19 +48,19 @@ namespace _4RTools.Utils
         private List<IObserver> _observers = new List<IObserver>();
         public void Attach(IObserver observer)
         {
-            Console.WriteLine("Subject: Attached an observer.");
+            DebugLogger.Info("Subject: Attached an observer.");
             this._observers.Add(observer);
         }
 
         public void Detach(IObserver observer)
         {
             this._observers.Remove(observer);
-            Console.WriteLine("Subject: Detached an observer.");
+            DebugLogger.Info("Subject: Detached an observer.");
         }
 
         public void Notify(Message message)
         {
-            Console.WriteLine("Subject: Notifying observers...");
+            DebugLogger.Info("Subject: Notifying observers...");
             this.Message = message;
             foreach (var observer in _observers)
             {

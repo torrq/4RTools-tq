@@ -20,8 +20,8 @@ namespace _4RTools.Utils
                     try
                     {
                         toRun(0);
-                    }catch(Exception ex) { 
-                        Console.WriteLine("[4RThread Exception] Error while Executing Thread Method ==== "+ex.Message);
+                    }catch(Exception ex) {
+                        DebugLogger.Error("[4RThread Exception] Error while Executing Thread Method ==== "+ex.Message);
                     }
                     finally
                     {
@@ -46,7 +46,7 @@ namespace _4RTools.Utils
                     _4RThread.thread.Suspend();
                 }
                 catch (Exception ex) {
-                    Console.WriteLine("[4R Thread Exception] =========== We could not suspend curren thread: " + ex);
+                    DebugLogger.Error("[4R Thread Exception] =========== We could not suspend curren thread: " + ex);
                 }
             }
         }
