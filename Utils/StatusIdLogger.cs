@@ -68,7 +68,9 @@ public static class StatusIdLogger
     {
         if (currentKnownStatuses.Any())
         {
-            string currentLog = $"Known Statuses: {string.Join(" ", currentKnownStatuses.Select(id => $"{id}:{knownStatusIds[id]}"))}";
+            // Sort the known statuses by ID number before joining them
+            string currentLog = $"Known Statuses: {string.Join(" ", currentKnownStatuses.OrderBy(id => id).Select(id => $"{id}:{knownStatusIds[id]}"))}";
+
             if (currentLog != lastKnownStatusesLog)
             {
                 DebugLogger.Info(currentLog);
@@ -78,7 +80,9 @@ public static class StatusIdLogger
 
         if (currentUnknownStatuses.Any())
         {
-            string currentLog = $"Unknown Statuses: {string.Join(", ", currentUnknownStatuses)}";
+            // Sort the unknown statuses numerically as well
+            string currentLog = $"Unknown Statuses: {string.Join(", ", currentUnknownStatuses.OrderBy(id => id))}";
+
             if (currentLog != lastUnknownStatusesLog)
             {
                 DebugLogger.Info(currentLog);
