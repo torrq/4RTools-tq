@@ -35,7 +35,7 @@ namespace _4RTools.Utils
         ASPERSIO = 17,
         [Description("Magnificat")]
         MAGNIFICAT = 20,
-        [Description("Glória")]
+        [Description("Gloria")]
         GLORIA = 21,
         [Description("Adrenaline Rush")]
         ADRENALINE = 23,
@@ -80,8 +80,9 @@ namespace _4RTools.Utils
         AUTOSPELL = 65,
         [Description("Spear Quicken")]
         SPEARQUICKEN = 68,
-        [Description("Poema de Bragi")]
+        [Description("A Poem of Bragi")]
         POEMBRAGI = 72,
+        [Description("The Apple of Idun")]
         APPLEIDUN = 73,
         [Description("Fury")]
         FURY = 86,
@@ -106,7 +107,7 @@ namespace _4RTools.Utils
         BERSERK = 107,
         [Description("Assumptio")]
         ASSUMPTIO = 110,
-        [Description("Amplificação Mística")]
+        [Description("Mystical Amplification")]
         MYST_AMPLIFY = 113,
         [Description("Enchant Deadly Poison")]
         EDP = 114,
@@ -128,9 +129,9 @@ namespace _4RTools.Utils
         MAGNUM = 131,
         [Description("Autoberserk")]
         AUTOBERSERK = 132,
-        [Description("Cambalhota")]
+        [Description("Dodge On")]
         DODGE_ON = 143,
-        [Description("Corrida")]
+        [Description("Running")]
         RUN = 145,
         [Description("Elemental Converter (Dark)")]
         PROPERTYDARK = 146,
@@ -171,18 +172,18 @@ namespace _4RTools.Utils
         DOUBLECASTING = 186,
         [Description("Maximum Overthrust")]
         OVERTHRUSTMAX = 188,
-        [Description("Bater em Retirada")]
+        [Description("Homunculus Avoid")]
         HOM_AVOID = 192,
         [Description("Shrink")]
         CR_SHRINK = 197,
         [Description("Sight Blaster")]
         SIGHTBLASTER = 198,
-        [Description("Resistência Final")]
+        [Description("Madness Canceller")]
         MADNESSCANCEL = 203,
         GATLINGFEVER = 204,
         [Description("Peel Change")]
         PEEL_CHANGE = 206,
-        [Description("Imagem Falsa")]
+        [Description("Bunshin no Jutsu")]
         BUNSINJYUTSU = 207,
         [Description("Aura Ninja")]
         AURA_NINJA = 208,
@@ -197,11 +198,11 @@ namespace _4RTools.Utils
         FOOD_DEX = 244,
         FOOD_INT = 245,
         FOOD_LUK = 246,
-        [Description("Field Manual 100%")]
         // Flee Scroll is also:
         // -- Spray of Flowers (flee +10, 5 mins) 
         FLEE_SCROLL = 247,
         ACCURACY_SCROLL = 248,
+        [Description("Field Manual 100%")]
         FIELD_MANUAL = 250,
         CASH_RECEIVEITEM = 252,
         FOOD_VIT_CASH = 273,
@@ -220,16 +221,16 @@ namespace _4RTools.Utils
         //Rune Knight Runes
         THURISAZ = 319,
         HAGALAZ = 320,
-        [Description("Aura de Combate")]
+        [Description("Fighting Spirit")]
         FIGHTINGSPIRIT = 322,
         [Description("Lauda Agnus")]
         LAUDA_AGNUS = 331,
         [Description("Lauda Ramus")]
         LAUDA_RAMUS = 332,
         HALLUCINATIONWALK = 334,
-        [Description("Disparo Selvagem")]
+        [Description("Fear Breeze")]
         FEARBREEZE = 352,
-        [Description("Maestria Arcana")]
+        [Description("Recognized Spell")]
         RECOGNIZEDSPELL = 355,
         ACCELERATION = 361,
         TAO_GUNKA = 368,
@@ -237,30 +238,30 @@ namespace _4RTools.Utils
         SR_ORCS = 371,
         ORC_HEROI = 370,
         OVERHEAT = 373,
-        [Description("Proteção da Vanguarda")]
+        [Description("Vanguard Force")]
         FORCEOFVANGUARD = 391,
-        [Description("Desejo das Sombras")]
+        [Description("Shadow Spell")]
         AUTOSHADOWSPELL = 393,
         [Description("Prestige")]
         PRESTIGE = 402,
         [Description("Inspiration")]
         INSPIRATION = 407,
-        [Description("Dragão Ascendente")]
+        [Description("Rising Dragon")]
         RAISINGDRAGON = 410,
         ACARAJE = 414,
-        [Description("Chakra da Fúria")]
+        [Description("Gentle Touch-Convert")]
         GENTLETOUCH_CHANGE = 426,
-        [Description("Chakra do Vigor")]
+        [Description("Gentle Touch-Revitalize")]
         GENTLETOUCH_REVITALIZE = 427,
-        [Description("Dança com Lobos")]
+        [Description("Dances with Wargs")]
         DANCE_WITH_WUG = 441,
-        [Description("Sinfonia dos Ventos")]
+        [Description("Windmill Rush")]
         RUSH_WINDMILL = 442,
-        [Description("Serenata ao Luar")]
+        [Description("Moonlight Serenade")]
         MOONLIT_SERENADE = 447,
-        [Description("Propulsão do Carrinho")]
+        [Description("Cart Boost")]
         GN_CARTBOOST = 461,
-        [Description("Aceleração")]
+        [Description("HP Increase Potion(Large)")]
         HP_INCREASE_POTION_LARGE = 480,
         SP_INCREASE_POTION_LARGE = 481,
         //ENERGY_DRINK_RESERCH = 481,
@@ -280,19 +281,20 @@ namespace _4RTools.Utils
         OVERLAPEXPUP = 618,
         MONSTER_TRANSFORM = 621,
         SIT = 622,
-        [Description("Inspiração")]
+        [Description("16th Night")]
         IZAYOI = 652,
         COMBAT_PILL = 662,
         RWC_2011_SCROLL = 664,
         //RED_BOOSTER = 664,
-        [Description("Canção de Frigga")]
+        [Description("Arrow Equipped")]
         ARROW_ON = 695,
+        [Description("Frigg's Song")]
         FRIGG_SONG = 715,
-        [Description("Telecinesia")]
+        [Description("Intense Telekinesis")]
         TELEKINESIS_INTENSE = 717,
-        [Description("Ilimitar")]
+        [Description("Unlimited")]
         UNLIMIT = 722,
-        [Description("Reação Ilimitada")]
+        [Description("Eternal Chain")]
         E_CHAIN = 753,
         LIMIT_POWER_BOOSTER = 867,
         //Elemental Potions
@@ -300,7 +302,7 @@ namespace _4RTools.Utils
         RESIST_PROPERTY_GROUND = 909,
         RESIST_PROPERTY_FIRE = 910,
         RESIST_PROPERTY_WIND = 911,
-        [Description("Ataque Gatling")]
+        [Description("Infinity Drink")]
         INFINITY_DRINK = 1065,
         [Description("Basílica")]
         BASILICA = 1122,
@@ -312,7 +314,7 @@ namespace _4RTools.Utils
         REF_T_POTION = 1169,
         RED_HERB_ACTIVATOR = 1170,
         BLUE_HERB_ACTIVATOR = 1171,
-        [Description("Aegis Domini")]
+        [Description("Shield Spell")]
         SHIELDSPELL = 1316,
         CASH_PLUSEXP = 1400,
         SPIRIT = 1401,
@@ -369,7 +371,7 @@ namespace _4RTools.Utils
         INT_Biscuit_Stick = 2038,
         DEX_Biscuit_Stick = 2039,
         LUK_Biscuit_Stick = 2040,
-        [Description("União Solar, Lunar e Estelar")]
+        [Description("Union of the Sun, Moon and Stars")]
         FUSION = 2063,
         BOVINE = 2068,
         DRAGON = 2069,
