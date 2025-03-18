@@ -31,6 +31,7 @@ namespace _4RTools.Utils
                 }
                 else
                 {
+                    //DebugLogger.Info("KEY: " + e.KeyCode.ToString());
                     thisk = (Key)Enum.Parse(typeof(Key), e.KeyCode.ToString());
                 }
 

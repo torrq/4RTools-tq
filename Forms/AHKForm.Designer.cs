@@ -79,14 +79,14 @@ namespace _4RTools.Forms
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupAhkConfig = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chkNoShift = new System.Windows.Forms.CheckBox();
-            this.pbUpAndDownArrow = new System.Windows.Forms.PictureBox();
             this.chkMouseFlick = new System.Windows.Forms.CheckBox();
             this.ahkSpeedBoost = new System.Windows.Forms.RadioButton();
             this.ahkCompatibility = new System.Windows.Forms.RadioButton();
             this.ahkSynchronous = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbUpAndDownArrow = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbDeactivated = new System.Windows.Forms.CheckBox();
             this.cbWithNoClick = new System.Windows.Forms.CheckBox();
@@ -96,9 +96,9 @@ namespace _4RTools.Forms
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupAhkConfig.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpAndDownArrow)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -673,17 +673,6 @@ namespace _4RTools.Forms
             this.groupAhkConfig.TabStop = false;
             this.groupAhkConfig.Text = "AHK Configuration";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::_4RTools.Properties.Resources.shift;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // chkNoShift
             // 
             this.chkNoShift.AutoSize = true;
@@ -694,16 +683,6 @@ namespace _4RTools.Forms
             this.chkNoShift.Text = "No Shift";
             this.chkNoShift.UseVisualStyleBackColor = true;
             this.chkNoShift.CheckedChanged += new System.EventHandler(this.chkNoShift_CheckedChanged);
-            // 
-            // pbUpAndDownArrow
-            // 
-            this.pbUpAndDownArrow.Image = global::_4RTools.Properties.Resources.up_and_down_arrow;
-            this.pbUpAndDownArrow.Location = new System.Drawing.Point(106, 21);
-            this.pbUpAndDownArrow.Name = "pbUpAndDownArrow";
-            this.pbUpAndDownArrow.Size = new System.Drawing.Size(16, 16);
-            this.pbUpAndDownArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbUpAndDownArrow.TabIndex = 35;
-            this.pbUpAndDownArrow.TabStop = false;
             // 
             // chkMouseFlick
             // 
@@ -763,6 +742,27 @@ namespace _4RTools.Forms
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Key Config";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::_4RTools.Properties.Resources.shift;
+            this.pictureBox1.Location = new System.Drawing.Point(102, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pbUpAndDownArrow
+            // 
+            this.pbUpAndDownArrow.Image = global::_4RTools.Properties.Resources.up_and_down_arrow;
+            this.pbUpAndDownArrow.Location = new System.Drawing.Point(106, 21);
+            this.pbUpAndDownArrow.Name = "pbUpAndDownArrow";
+            this.pbUpAndDownArrow.Size = new System.Drawing.Size(16, 16);
+            this.pbUpAndDownArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbUpAndDownArrow.TabIndex = 35;
+            this.pbUpAndDownArrow.TabStop = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cbDeactivated);
@@ -821,6 +821,7 @@ namespace _4RTools.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(620, 454);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
@@ -881,10 +882,10 @@ namespace _4RTools.Forms
             this.groupBox2.PerformLayout();
             this.groupAhkConfig.ResumeLayout(false);
             this.groupAhkConfig.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUpAndDownArrow)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpAndDownArrow)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);

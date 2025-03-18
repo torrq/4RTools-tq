@@ -190,7 +190,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin319.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin319.Location = new System.Drawing.Point(158, 30);
             this.NEXTITEMin319.Name = "NEXTITEMin319";
-            this.NEXTITEMin319.Size = new System.Drawing.Size(45, 23);
+            this.NEXTITEMin319.Size = new System.Drawing.Size(45, 25);
             this.NEXTITEMin319.TabIndex = 308;
             // 
             // pictureBox4
@@ -238,7 +238,7 @@ namespace _4RTools.Forms
             this.ITEMin319.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin319.Location = new System.Drawing.Point(51, 30);
             this.ITEMin319.Name = "ITEMin319";
-            this.ITEMin319.Size = new System.Drawing.Size(45, 23);
+            this.ITEMin319.Size = new System.Drawing.Size(45, 25);
             this.ITEMin319.TabIndex = 295;
             // 
             // NEXTITEMin2015
@@ -247,7 +247,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin2015.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin2015.Location = new System.Drawing.Point(158, 60);
             this.NEXTITEMin2015.Name = "NEXTITEMin2015";
-            this.NEXTITEMin2015.Size = new System.Drawing.Size(45, 23);
+            this.NEXTITEMin2015.Size = new System.Drawing.Size(45, 25);
             this.NEXTITEMin2015.TabIndex = 316;
             // 
             // pictureBox3
@@ -276,7 +276,7 @@ namespace _4RTools.Forms
             this.ITEMin2015.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin2015.Location = new System.Drawing.Point(51, 60);
             this.ITEMin2015.Name = "ITEMin2015";
-            this.ITEMin2015.Size = new System.Drawing.Size(45, 23);
+            this.ITEMin2015.Size = new System.Drawing.Size(45, 25);
             this.ITEMin2015.TabIndex = 314;
             // 
             // NEXTITEMin25
@@ -285,7 +285,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin25.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin25.Location = new System.Drawing.Point(158, 90);
             this.NEXTITEMin25.Name = "NEXTITEMin25";
-            this.NEXTITEMin25.Size = new System.Drawing.Size(45, 23);
+            this.NEXTITEMin25.Size = new System.Drawing.Size(45, 25);
             this.NEXTITEMin25.TabIndex = 320;
             // 
             // pictureBox6
@@ -314,7 +314,7 @@ namespace _4RTools.Forms
             this.ITEMin25.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin25.Location = new System.Drawing.Point(51, 90);
             this.ITEMin25.Name = "ITEMin25";
-            this.ITEMin25.Size = new System.Drawing.Size(45, 23);
+            this.ITEMin25.Size = new System.Drawing.Size(45, 25);
             this.ITEMin25.TabIndex = 318;
             // 
             // NEXTITEMin355
@@ -323,7 +323,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin355.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin355.Location = new System.Drawing.Point(158, 120);
             this.NEXTITEMin355.Name = "NEXTITEMin355";
-            this.NEXTITEMin355.Size = new System.Drawing.Size(45, 23);
+            this.NEXTITEMin355.Size = new System.Drawing.Size(45, 25);
             this.NEXTITEMin355.TabIndex = 324;
             // 
             // pictureBox8
@@ -352,7 +352,7 @@ namespace _4RTools.Forms
             this.ITEMin355.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin355.Location = new System.Drawing.Point(51, 120);
             this.ITEMin355.Name = "ITEMin355";
-            this.ITEMin355.Size = new System.Drawing.Size(45, 23);
+            this.ITEMin355.Size = new System.Drawing.Size(45, 25);
             this.ITEMin355.TabIndex = 322;
             // 
             // NEXTITEMin461
@@ -361,7 +361,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin461.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin461.Location = new System.Drawing.Point(158, 150);
             this.NEXTITEMin461.Name = "NEXTITEMin461";
-            this.NEXTITEMin461.Size = new System.Drawing.Size(45, 23);
+            this.NEXTITEMin461.Size = new System.Drawing.Size(45, 25);
             this.NEXTITEMin461.TabIndex = 328;
             // 
             // pictureBox10
@@ -390,7 +390,7 @@ namespace _4RTools.Forms
             this.ITEMin461.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin461.Location = new System.Drawing.Point(51, 150);
             this.ITEMin461.Name = "ITEMin461";
-            this.ITEMin461.Size = new System.Drawing.Size(45, 23);
+            this.ITEMin461.Size = new System.Drawing.Size(45, 25);
             this.ITEMin461.TabIndex = 326;
             // 
             // NEXTITEMin126
@@ -399,7 +399,7 @@ namespace _4RTools.Forms
             this.NEXTITEMin126.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.NEXTITEMin126.Location = new System.Drawing.Point(158, 180);
             this.NEXTITEMin126.Name = "NEXTITEMin126";
-            this.NEXTITEMin126.Size = new System.Drawing.Size(45, 23);
+            this.NEXTITEMin126.Size = new System.Drawing.Size(45, 25);
             this.NEXTITEMin126.TabIndex = 332;
             // 
             // pictureBox12
@@ -428,7 +428,7 @@ namespace _4RTools.Forms
             this.ITEMin126.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ITEMin126.Location = new System.Drawing.Point(51, 180);
             this.ITEMin126.Name = "ITEMin126";
-            this.ITEMin126.Size = new System.Drawing.Size(45, 23);
+            this.ITEMin126.Size = new System.Drawing.Size(45, 25);
             this.ITEMin126.TabIndex = 330;
             // 
             // ProcSwitchGP
@@ -463,7 +463,7 @@ namespace _4RTools.Forms
             this.ProcSwitchGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProcSwitchGP.Location = new System.Drawing.Point(333, 38);
             this.ProcSwitchGP.Name = "ProcSwitchGP";
-            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 224);
+            this.ProcSwitchGP.Size = new System.Drawing.Size(244, 226);
             this.ProcSwitchGP.TabIndex = 318;
             this.ProcSwitchGP.TabStop = false;
             this.ProcSwitchGP.Text = "Exclusives";
@@ -473,6 +473,7 @@ namespace _4RTools.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(606, 388);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);

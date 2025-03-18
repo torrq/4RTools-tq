@@ -106,10 +106,6 @@ public static class StatusIdLogger
                 file.WriteLine(logEntry);
             }
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("status_id_snippets.txt", true))
-            {
-                file.WriteLine($"UNKNOWN_STATUS_{statusId} = {statusId},");
-            }
         }
         catch (Exception ex)
         {

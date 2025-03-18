@@ -362,8 +362,9 @@ namespace _4RTools.Model
                 new Buff("Sit", EffectStatusIDs.SIT, Resources._4RTools.Icons.sit),
                 new Buff("Burning", EffectStatusIDs.BURNING, Resources._4RTools.Icons.burning),
                 new Buff("Slow Cast", EffectStatusIDs.SLOW_CAST, Resources._4RTools.Icons.slow_cast),
-                new Buff("Hallucination", EffectStatusIDs.HALLUCINATION_DEBUFF, Resources._4RTools.Icons.hallucination)
-
+                new Buff("Hallucination", EffectStatusIDs.HALLUCINATION_DEBUFF, Resources._4RTools.Icons.hallucination),
+                new Buff("Overweight (50%+)", EffectStatusIDs.WEIGHT50, Resources._4RTools.Icons.weight50),
+                new Buff("Overweight (90%+)", EffectStatusIDs.WEIGHT90, Resources._4RTools.Icons.weight90)
             };
 
             return skills;

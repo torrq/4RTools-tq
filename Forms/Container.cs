@@ -21,6 +21,7 @@ namespace _4RTools.Forms
             this.subject.Attach(this);
 
             InitializeComponent();
+
             this.Text = AppConfig.Name + " - " + AppConfig.Version; // Window title
 
             clients.AddRange(LocalServerManager.GetLocalClients()); //Load Local Servers First
@@ -66,16 +67,16 @@ namespace _4RTools.Forms
 
         private void SetBackGroundColorOfMDIForm()
         {
-            /*
+            
             foreach (Control ctl in this.Controls)
             {
                 if ((ctl) is MdiClient)
                 {
-                    ctl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(34)))));
+                    ctl.BackColor = System.Drawing.Color.White;
                 }
 
             }
-            */
+            
         }
 
         private void processCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,6 +84,7 @@ namespace _4RTools.Forms
             Client client = new Client(this.processCB.SelectedItem.ToString());
             ClientSingleton.Instance(client);
             characterName.Text = client.ReadCharacterName();
+            characterMap.Text = client.ReadCurrentMap();
             subject.Notify(new Utils.Message(Utils.MessageCode.PROCESS_CHANGED, null));
         }
 
@@ -190,6 +192,7 @@ namespace _4RTools.Forms
                     if (client != null)
                     {
                         characterName.Text = ClientSingleton.GetClient().ReadCharacterName();
+                        characterMap.Text = ClientSingleton.GetClient().ReadCurrentMap();
                     }
                     break;
                 case MessageCode.SERVER_LIST_CHANGED:

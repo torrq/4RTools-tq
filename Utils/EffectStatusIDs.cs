@@ -52,10 +52,6 @@ namespace _4RTools.Utils
         [Description("Energy Coat")]
         ENERGYCOAT = 31,
         HALLUCINATION = 34,
-        [Description("50% Weight")]
-        WEIGHT50 = 35,
-        [Description("90% Weight")]
-        WEIGHT90 = 36,
         //POTIONS
         CONCENTRATION_POTION = 37,
         AWAKENING_POTION = 38,
@@ -378,6 +374,10 @@ namespace _4RTools.Utils
 
         // DEBUFFS
         DECREASE_AGI = 13,
+        [Description("50% Weight")]
+        WEIGHT50 = 35,
+        [Description("90% Weight")]
+        WEIGHT90 = 36,
         BLEEDING = 124,
         SLOW_CAST = 282,
         CRITICALWOUND = 286,

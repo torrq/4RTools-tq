@@ -74,6 +74,7 @@
             // 
             // CustomButtonForm
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(205, 39);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);

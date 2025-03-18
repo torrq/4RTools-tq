@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddServer = new System.Windows.Forms.Button();
             this.datagridServers = new System.Windows.Forms.DataGridView();
-            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hpAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridServers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientDTOBindingSource)).BeginInit();
@@ -84,9 +84,21 @@
             this.datagridServers.TabIndex = 0;
             this.datagridServers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridServers_CellContentClick);
             // 
-            // clientDTOBindingSource
+            // Edit
             // 
-            this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 80;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 80;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -112,26 +124,15 @@
             this.nameAddressDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameAddressDataGridViewTextBoxColumn.Width = 110;
             // 
-            // Edit
+            // clientDTOBindingSource
             // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 80;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 80;
+            this.clientDTOBindingSource.DataSource = typeof(_4RTools.Model.ClientDTO);
             // 
             // ServersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(565, 268);
             this.Controls.Add(this.panel1);

@@ -3893,7 +3893,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(635, 1100);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(635, 1061);
             this.Controls.Add(this.chainGroup10);
             this.Controls.Add(this.chainGroup9);
             this.Controls.Add(this.chainGroup8);

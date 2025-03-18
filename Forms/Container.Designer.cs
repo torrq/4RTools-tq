@@ -33,12 +33,12 @@ namespace _4RTools.Forms
             System.Windows.Forms.TabControl atkDefMode;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Container));
             this.tabPageSpammer = new System.Windows.Forms.TabPage();
+            this.tabPageDebuffs = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffSkill = new System.Windows.Forms.TabPage();
             this.tabPageAutobuffStuff = new System.Windows.Forms.TabPage();
             this.atkDef = new System.Windows.Forms.TabPage();
             this.tabPageMacroSongs = new System.Windows.Forms.TabPage();
             this.tabMacroSwitch = new System.Windows.Forms.TabPage();
-            this.tabPageDebuffs = new System.Windows.Forms.TabPage();
             this.tabConfig = new System.Windows.Forms.TabPage();
             this.tabPageProfiles = new System.Windows.Forms.TabPage();
             this.lblProcessName = new System.Windows.Forms.Label();
@@ -46,15 +46,15 @@ namespace _4RTools.Forms
             this.btnRefresh = new System.Windows.Forms.Button();
             this.labelProfile = new System.Windows.Forms.Label();
             this.profileCB = new System.Windows.Forms.ComboBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCharacterName = new System.Windows.Forms.Label();
             this.characterName = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.tabControlAutopot = new System.Windows.Forms.TabControl();
             this.tabPageAutopot = new System.Windows.Forms.TabPage();
             this.tabPageYggAutopot = new System.Windows.Forms.TabPage();
             this.tabPageSkillTimer = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.characterMap = new System.Windows.Forms.Label();
             atkDefMode = new System.Windows.Forms.TabControl();
             atkDefMode.SuspendLayout();
             this.tabControlAutopot.SuspendLayout();
@@ -79,12 +79,22 @@ namespace _4RTools.Forms
             // 
             // tabPageSpammer
             // 
+            this.tabPageSpammer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.tabPageSpammer.Location = new System.Drawing.Point(4, 22);
             this.tabPageSpammer.Name = "tabPageSpammer";
             this.tabPageSpammer.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSpammer.Size = new System.Drawing.Size(629, 449);
             this.tabPageSpammer.TabIndex = 1;
             this.tabPageSpammer.Text = "Skill Spammer";
+            // 
+            // tabPageDebuffs
+            // 
+            this.tabPageDebuffs.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDebuffs.Name = "tabPageDebuffs";
+            this.tabPageDebuffs.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDebuffs.Size = new System.Drawing.Size(629, 449);
+            this.tabPageDebuffs.TabIndex = 7;
+            this.tabPageDebuffs.Text = "Debuffs";
             // 
             // tabPageAutobuffSkill
             // 
@@ -130,15 +140,6 @@ namespace _4RTools.Forms
             this.tabMacroSwitch.Size = new System.Drawing.Size(629, 449);
             this.tabMacroSwitch.TabIndex = 8;
             this.tabMacroSwitch.Text = "Macro Switch";
-            // 
-            // tabPageDebuffs
-            // 
-            this.tabPageDebuffs.Location = new System.Drawing.Point(4, 22);
-            this.tabPageDebuffs.Name = "tabPageDebuffs";
-            this.tabPageDebuffs.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDebuffs.Size = new System.Drawing.Size(629, 449);
-            this.tabPageDebuffs.TabIndex = 7;
-            this.tabPageDebuffs.Text = "Debuffs";
             // 
             // tabConfig
             // 
@@ -208,14 +209,6 @@ namespace _4RTools.Forms
             this.profileCB.TabIndex = 14;
             this.profileCB.SelectedIndexChanged += new System.EventHandler(this.profileCB_SelectedIndexChanged);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(16, 66);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(635, 1);
-            this.panel4.TabIndex = 17;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -228,7 +221,7 @@ namespace _4RTools.Forms
             // 
             this.lblCharacterName.AutoSize = true;
             this.lblCharacterName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCharacterName.Location = new System.Drawing.Point(473, 9);
+            this.lblCharacterName.Location = new System.Drawing.Point(463, 9);
             this.lblCharacterName.Name = "lblCharacterName";
             this.lblCharacterName.Size = new System.Drawing.Size(106, 17);
             this.lblCharacterName.TabIndex = 19;
@@ -237,21 +230,13 @@ namespace _4RTools.Forms
             // characterName
             // 
             this.characterName.AutoSize = true;
-            this.characterName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.characterName.ForeColor = System.Drawing.Color.DarkGreen;
-            this.characterName.Location = new System.Drawing.Point(473, 32);
+            this.characterName.Location = new System.Drawing.Point(475, 30);
             this.characterName.Name = "characterName";
-            this.characterName.Size = new System.Drawing.Size(25, 20);
+            this.characterName.Size = new System.Drawing.Size(22, 17);
             this.characterName.TabIndex = 20;
             this.characterName.Text = "- -";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(349, 83);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 180);
-            this.panel5.TabIndex = 18;
             // 
             // tabControlAutopot
             // 
@@ -266,6 +251,7 @@ namespace _4RTools.Forms
             // 
             // tabPageAutopot
             // 
+            this.tabPageAutopot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.tabPageAutopot.Location = new System.Drawing.Point(4, 22);
             this.tabPageAutopot.Name = "tabPageAutopot";
             this.tabPageAutopot.Padding = new System.Windows.Forms.Padding(3);
@@ -291,15 +277,33 @@ namespace _4RTools.Forms
             this.tabPageSkillTimer.TabIndex = 2;
             this.tabPageSkillTimer.Text = "Skill Timer";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Silver;
+            this.panel4.Location = new System.Drawing.Point(16, 73);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(635, 1);
+            this.panel4.TabIndex = 17;
+            // 
+            // characterMap
+            // 
+            this.characterMap.AutoSize = true;
+            this.characterMap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterMap.ForeColor = System.Drawing.Color.DarkCyan;
+            this.characterMap.Location = new System.Drawing.Point(475, 47);
+            this.characterMap.Name = "characterMap";
+            this.characterMap.Size = new System.Drawing.Size(0, 17);
+            this.characterMap.TabIndex = 26;
+            // 
             // Container
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(668, 761);
+            this.Controls.Add(this.characterMap);
             this.Controls.Add(atkDefMode);
             this.Controls.Add(this.tabControlAutopot);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.characterName);
             this.Controls.Add(this.lblCharacterName);
             this.Controls.Add(this.label1);
@@ -334,11 +338,9 @@ namespace _4RTools.Forms
         private System.Windows.Forms.Label labelProfile;
         public System.Windows.Forms.ComboBox profileCB;
         private System.Windows.Forms.TabPage tabPageAutobuffSkill;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCharacterName;
         private System.Windows.Forms.Label characterName;
-        private Panel panel5;
         private TabPage tabPageAutobuffStuff;
         private TabPage tabPageMacroSongs;
         private TabPage atkDef;
@@ -351,5 +353,7 @@ namespace _4RTools.Forms
 //        private TabPage tabPageServer;
         private TabPage tabPageDebuffs;
         private TabPage tabConfig;
+        private Panel panel4;
+        private Label characterMap;
     }
 }
