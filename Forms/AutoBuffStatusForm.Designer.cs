@@ -35,6 +35,7 @@
             this.DebuffsGP = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtStatusKey = new System.Windows.Forms.TextBox();
+            this.WeightDebuffsGP = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +86,17 @@
             this.txtStatusKey.Size = new System.Drawing.Size(45, 25);
             this.txtStatusKey.TabIndex = 295;
             // 
+            // WeightDebuffsGP
+            // 
+            this.WeightDebuffsGP.AutoSize = true;
+            this.WeightDebuffsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WeightDebuffsGP.Location = new System.Drawing.Point(36, 110);
+            this.WeightDebuffsGP.Name = "WeightDebuffsGP";
+            this.WeightDebuffsGP.Size = new System.Drawing.Size(563, 29);
+            this.WeightDebuffsGP.TabIndex = 298;
+            this.WeightDebuffsGP.TabStop = false;
+            this.WeightDebuffsGP.Text = "Weight";
+            // 
             // AutoBuffStatusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +104,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(635, 248);
+            this.Controls.Add(this.WeightDebuffsGP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtStatusKey);
@@ -113,5 +126,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtStatusKey;
+        private System.Windows.Forms.GroupBox WeightDebuffsGP;
     }
 }

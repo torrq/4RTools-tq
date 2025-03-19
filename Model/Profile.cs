@@ -19,7 +19,7 @@ namespace _4RTools.Model
                 dynamic rawObject = JsonConvert.DeserializeObject(json);
 
                 if ((rawObject != null))
-                {   
+                {
                     profile.Name = profileName;
                     profile.UserPreferences = JsonConvert.DeserializeObject<UserPreferences>(Profile.GetByAction(rawObject, profile.UserPreferences));
                     profile.AHK = JsonConvert.DeserializeObject<AHK>(Profile.GetByAction(rawObject, profile.AHK));
@@ -34,11 +34,13 @@ namespace _4RTools.Model
                     profile.MacroSwitch = JsonConvert.DeserializeObject<Macro>(Profile.GetByAction(rawObject, profile.MacroSwitch));
                     profile.Custom = JsonConvert.DeserializeObject<Custom>(Profile.GetByAction(rawObject, profile.Custom));
                     profile.DebuffsRecovery = JsonConvert.DeserializeObject<DebuffsRecovery>(Profile.GetByAction(rawObject, profile.DebuffsRecovery));
+                    profile.WeightDebuffsRecovery = JsonConvert.DeserializeObject<DebuffsRecovery>(Profile.GetByAction(rawObject, profile.WeightDebuffsRecovery));
                     profile.AutoSwitch = JsonConvert.DeserializeObject<AutoSwitch>(Profile.GetByAction(rawObject, profile.AutoSwitch));
                 }
             }
-            catch {
-                throw new Exception("There was a problem loading the profile. Delete the Profiles folder and try again.");   
+            catch
+            {
+                throw new Exception("There was a problem loading the profile. Delete the Profiles folder and try again.");
             }
         }
         public static void ClearProfile(string profileName)
@@ -109,8 +111,9 @@ namespace _4RTools.Model
         public AutoBuffStuff AutobuffStuff { get; set; }
         public StatusRecovery StatusRecovery { get; set; }
         public DebuffsRecovery DebuffsRecovery { get; set; }
-        public Macro SongMacro { get; set;}
-        public Macro MacroSwitch { get; set;}
+        public DebuffsRecovery WeightDebuffsRecovery { get; set; }
+        public Macro SongMacro { get; set; }
+        public Macro MacroSwitch { get; set; }
 
         public Custom Custom { get; set; }
         public ATKDEFMode AtkDefMode { get; set; }
@@ -121,38 +124,40 @@ namespace _4RTools.Model
             this.Name = name;
 
             this.UserPreferences = new UserPreferences();
-            this.AHK = new AHK(); 
+            this.AHK = new AHK();
             this.Autopot = new Autopot(Autopot.ACTION_NAME_AUTOPOT);
             this.AutopotYgg = new Autopot(Autopot.ACTION_NAME_AUTOPOT_YGG);
             this.AutoRefreshSpammer = new AutoRefreshSpammer();
             this.AutobuffSkill = new AutoBuffSkill(AutoBuffSkill.ACTION_NAME_AUTOBUFFSKILL);
             this.AutobuffStuff = new AutoBuffStuff(AutoBuffStuff.ACTION_NAME_AUTOBUFFSTUFF);
             this.StatusRecovery = new StatusRecovery();
-            this.SongMacro = new Macro(Macro.ACTION_NAME_SONG_MACRO,MacroSongForm.TOTAL_MACRO_LANES_FOR_SONGS);
+            this.SongMacro = new Macro(Macro.ACTION_NAME_SONG_MACRO, MacroSongForm.TOTAL_MACRO_LANES_FOR_SONGS);
             this.MacroSwitch = new Macro(Macro.ACTION_NAME_MACRO_SWITCH, MacroSwitchForm.TOTAL_MACRO_LANES);
             this.AtkDefMode = new ATKDEFMode(ATKDEFForm.TOTAL_ATKDEF_LANES);
-            this.DebuffsRecovery = new DebuffsRecovery();
+            this.DebuffsRecovery = new DebuffsRecovery("DebuffsRecovery");
+            this.WeightDebuffsRecovery = new DebuffsRecovery("WeightDebuffsRecovery");
             this.Custom = new Custom();
             this.AutoSwitch = new AutoSwitch();
         }
 
         public static object GetByAction(dynamic obj, Action action)
         {
-           if(obj != null && obj[action.GetActionName()] != null) {
+            if (obj != null && obj[action.GetActionName()] != null)
+            {
                 return obj[action.GetActionName()].ToString();
-           }
+            }
 
             return action.GetConfiguration();
         }
 
-    public static List<string> ListAll()
+        public static List<string> ListAll()
         {
             List<string> profiles = new List<string>();
             try
             {
-                string[] files =  Directory.GetFiles(AppConfig.ProfileFolder);
-                
-                foreach(string fileName in files)
+                string[] files = Directory.GetFiles(AppConfig.ProfileFolder);
+
+                foreach (string fileName in files)
                 {
                     string[] len = fileName.Split('\\');
                     string profileName = len[len.Length - 1].Split('.')[0];
@@ -163,5 +168,4 @@ namespace _4RTools.Model
             return profiles;
         }
     }
-
 }

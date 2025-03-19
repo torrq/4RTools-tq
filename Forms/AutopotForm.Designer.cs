@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutopotForm));
             this.txtHPpct = new System.Windows.Forms.NumericUpDown();
             this.labelSP = new System.Windows.Forms.Label();
             this.labelHP = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@
             // 
             this.txtHPpct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHPpct.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHPpct.Location = new System.Drawing.Point(215, 37);
+            this.txtHPpct.Location = new System.Drawing.Point(215, 35);
             this.txtHPpct.Name = "txtHPpct";
             this.txtHPpct.Size = new System.Drawing.Size(44, 25);
             this.txtHPpct.TabIndex = 39;
@@ -65,7 +66,7 @@
             // 
             this.labelSP.AutoSize = true;
             this.labelSP.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.labelSP.Location = new System.Drawing.Point(261, 74);
+            this.labelSP.Location = new System.Drawing.Point(261, 80);
             this.labelSP.Name = "labelSP";
             this.labelSP.Size = new System.Drawing.Size(21, 20);
             this.labelSP.TabIndex = 38;
@@ -75,7 +76,7 @@
             // 
             this.labelHP.AutoSize = true;
             this.labelHP.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.labelHP.Location = new System.Drawing.Point(261, 40);
+            this.labelHP.Location = new System.Drawing.Point(261, 37);
             this.labelHP.Name = "labelHP";
             this.labelHP.Size = new System.Drawing.Size(21, 20);
             this.labelHP.TabIndex = 37;
@@ -94,10 +95,10 @@
             // picBoxSP
             // 
             this.picBoxSP.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxSP.Image = global::_4RTools.Resources._4RTools.ETCResource.SP;
-            this.picBoxSP.Location = new System.Drawing.Point(68, 71);
+            this.picBoxSP.Image = ((System.Drawing.Image)(resources.GetObject("picBoxSP.Image")));
+            this.picBoxSP.Location = new System.Drawing.Point(56, 71);
             this.picBoxSP.Name = "picBoxSP";
-            this.picBoxSP.Size = new System.Drawing.Size(25, 25);
+            this.picBoxSP.Size = new System.Drawing.Size(38, 38);
             this.picBoxSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picBoxSP.TabIndex = 35;
             this.picBoxSP.TabStop = false;
@@ -105,10 +106,10 @@
             // picBoxHP
             // 
             this.picBoxHP.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxHP.Image = global::_4RTools.Resources._4RTools.ETCResource.HP;
-            this.picBoxHP.Location = new System.Drawing.Point(68, 36);
+            this.picBoxHP.Image = ((System.Drawing.Image)(resources.GetObject("picBoxHP.Image")));
+            this.picBoxHP.Location = new System.Drawing.Point(56, 28);
             this.picBoxHP.Name = "picBoxHP";
-            this.picBoxHP.Size = new System.Drawing.Size(24, 24);
+            this.picBoxHP.Size = new System.Drawing.Size(38, 38);
             this.picBoxHP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxHP.TabIndex = 34;
             this.picBoxHP.TabStop = false;
@@ -137,7 +138,7 @@
             // 
             this.txtHpKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHpKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHpKey.Location = new System.Drawing.Point(127, 37);
+            this.txtHpKey.Location = new System.Drawing.Point(127, 35);
             this.txtHpKey.Name = "txtHpKey";
             this.txtHpKey.Size = new System.Drawing.Size(61, 25);
             this.txtHpKey.TabIndex = 43;
@@ -146,7 +147,7 @@
             // 
             this.txtSPKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSPKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSPKey.Location = new System.Drawing.Point(127, 72);
+            this.txtSPKey.Location = new System.Drawing.Point(127, 78);
             this.txtSPKey.Name = "txtSPKey";
             this.txtSPKey.Size = new System.Drawing.Size(61, 25);
             this.txtSPKey.TabIndex = 44;
@@ -155,7 +156,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.label3.Location = new System.Drawing.Point(95, 40);
+            this.label3.Location = new System.Drawing.Point(95, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 20);
             this.label3.TabIndex = 45;
@@ -166,7 +167,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(98, 75);
+            this.label4.Location = new System.Drawing.Point(98, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 20);
             this.label4.TabIndex = 46;
@@ -177,7 +178,7 @@
             // 
             this.txtSPpct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSPpct.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSPpct.Location = new System.Drawing.Point(215, 72);
+            this.txtSPpct.Location = new System.Drawing.Point(215, 78);
             this.txtSPpct.Name = "txtSPpct";
             this.txtSPpct.Size = new System.Drawing.Size(44, 25);
             this.txtSPpct.TabIndex = 40;
@@ -187,7 +188,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 12);
+            this.label5.Location = new System.Drawing.Point(26, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 20);
             this.label5.TabIndex = 47;
@@ -197,7 +198,7 @@
             // 
             this.firstHP.AutoSize = true;
             this.firstHP.Checked = true;
-            this.firstHP.Location = new System.Drawing.Point(36, 44);
+            this.firstHP.Location = new System.Drawing.Point(36, 41);
             this.firstHP.Name = "firstHP";
             this.firstHP.Size = new System.Drawing.Size(14, 13);
             this.firstHP.TabIndex = 48;
@@ -208,7 +209,7 @@
             // firstSP
             // 
             this.firstSP.AutoSize = true;
-            this.firstSP.Location = new System.Drawing.Point(36, 78);
+            this.firstSP.Location = new System.Drawing.Point(36, 84);
             this.firstSP.Name = "firstSP";
             this.firstSP.Size = new System.Drawing.Size(14, 13);
             this.firstSP.TabIndex = 49;
@@ -255,6 +256,7 @@
             this.Name = "AutopotForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AutopotForm";
+            this.Load += new System.EventHandler(this.AutopotForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtHPpct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxHP)).EndInit();

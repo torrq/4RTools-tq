@@ -134,5 +134,10 @@ namespace _4RTools.Forms
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
         }
+
+        private void AutopotForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

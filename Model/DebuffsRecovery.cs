@@ -8,20 +8,33 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
-
 namespace _4RTools.Model
 {
     public class DebuffsRecovery : Action
     {
         public static string ACTION_NAME_DEBUFF_RECOVERY = "DebuffsRecovery";
+        public static string ACTION_NAME_WEIGHT_DEBUFF_RECOVERY = "WeightDebuffsRecovery";
 
         private _4RThread thread;
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
         public int delay { get; set; } = 1;
 
+        private string actionName;
+
+        // Default constructor
+        public DebuffsRecovery() : this(ACTION_NAME_DEBUFF_RECOVERY)
+        {
+        }
+
+        // Constructor with custom action name
+        public DebuffsRecovery(string actionName)
+        {
+            this.actionName = actionName;
+        }
+
         public string GetActionName()
         {
-            return ACTION_NAME_DEBUFF_RECOVERY;
+            return this.actionName;
         }
 
         public _4RThread RestoreStatusThread(Client c)
@@ -34,9 +47,7 @@ namespace _4RTools.Model
                     for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
                     {
                         uint currentStatus = c.CurrentBuffStatusCode(i);
-
                         if (currentStatus == uint.MaxValue) { continue; }
-
                         EffectStatusIDs status = (EffectStatusIDs)currentStatus;
                         if (buffMapping.ContainsKey((EffectStatusIDs)currentStatus)) //IF FOR REMOVE STATUS - CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
                         {
@@ -52,7 +63,6 @@ namespace _4RTools.Model
                 Thread.Sleep(this.delay);
                 return 0;
             });
-
             return statusEffectsThread;
         }
 
@@ -91,7 +101,6 @@ namespace _4RTools.Model
             {
                 buffMapping.Remove(status);
             }
-
             if (FormUtils.IsValidKey(key))
             {
                 buffMapping.Add(status, key);
@@ -108,6 +117,5 @@ namespace _4RTools.Model
             if ((key != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), key.ToString()), 0);
         }
-
     }
 }

@@ -12,9 +12,15 @@ namespace _4RTools.Utils
         private static readonly object _logLock = new object();
         private static readonly string _logFilePath = "4rtools_debug.txt";
         private static readonly System.Timers.Timer _flushTimer;
-        private static readonly Queue<string> _messageQueue = new Queue<string>();
+        private static readonly Queue<LogEntry> _messageQueue = new Queue<LogEntry>();
         private static bool _isInitialized = false;
         private static readonly int _flushIntervalMs = 1000; // Flush to file every second
+
+        // Duplicate message tracking
+        private static string _lastMessage = null;
+        private static LogLevel _lastLogLevel = LogLevel.INFO;
+        private static int _duplicateCount = 0;
+        private static DateTime _lastMessageTime = DateTime.MinValue;
 
         // Log levels
         public enum LogLevel
@@ -23,6 +29,25 @@ namespace _4RTools.Utils
             WARNING,
             ERROR,
             DEBUG
+        }
+
+        // Structure to hold log messages with potential repeat counts
+        private class LogEntry
+        {
+            public string Message { get; set; }
+            public LogLevel Level { get; set; }
+            public DateTime Timestamp { get; set; }
+            public int RepeatCount { get; set; }
+
+            public string FormatMessage()
+            {
+                string baseMessage = $"[{Timestamp:yyyy-MM-dd HH:mm:ss.fff}] [{Level}] {Message}";
+                if (RepeatCount > 0)
+                {
+                    return $"{baseMessage} (repeated {RepeatCount} times)";
+                }
+                return baseMessage;
+            }
         }
 
         static DebugLogger()
@@ -69,15 +94,42 @@ namespace _4RTools.Utils
         {
             try
             {
-                string formattedMessage = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] [{level}] {message}";
-
-                // Also output to console for visibility during development
-                Console.WriteLine(formattedMessage);
-
-                // Add to queue for file writing
                 lock (_logLock)
                 {
-                    _messageQueue.Enqueue(formattedMessage);
+                    DateTime now = DateTime.Now;
+
+                    // Check if this is a duplicate message
+                    if (message == _lastMessage && level == _lastLogLevel)
+                    {
+                        // Just increment counter, don't log yet
+                        _duplicateCount++;
+                        return;
+                    }
+                    else
+                    {
+                        // Process the previous message with potential duplicates
+                        if (_lastMessage != null)
+                        {
+                            var entry = new LogEntry
+                            {
+                                Message = _lastMessage,
+                                Level = _lastLogLevel,
+                                Timestamp = _lastMessageTime,
+                                RepeatCount = _duplicateCount
+                            };
+
+                            // Add to queue and output to console
+                            string formattedMessage = entry.FormatMessage();
+                            Console.WriteLine(formattedMessage);
+                            _messageQueue.Enqueue(entry);
+                        }
+
+                        // Set the new message as the current one
+                        _lastMessage = message;
+                        _lastLogLevel = level;
+                        _lastMessageTime = now;
+                        _duplicateCount = 0;
+                    }
                 }
             }
             catch (Exception ex)
@@ -115,10 +167,11 @@ namespace _4RTools.Utils
 
             try
             {
-                List<string> messagesToWrite = null;
+                List<LogEntry> messagesToWrite = null;
 
                 lock (_logLock)
                 {
+                    // Don't flush if there's nothing to write
                     if (_messageQueue.Count == 0)
                         return;
 
@@ -130,9 +183,9 @@ namespace _4RTools.Utils
                 {
                     using (StreamWriter writer = new StreamWriter(_logFilePath, true, Encoding.UTF8))
                     {
-                        foreach (string msg in messagesToWrite)
+                        foreach (var entry in messagesToWrite)
                         {
-                            writer.WriteLine(msg);
+                            writer.WriteLine(entry.FormatMessage());
                         }
                     }
                 }
@@ -152,6 +205,25 @@ namespace _4RTools.Utils
             try
             {
                 _flushTimer.Stop();
+
+                // Ensure the current message gets written if it exists
+                lock (_logLock)
+                {
+                    if (_lastMessage != null)
+                    {
+                        var entry = new LogEntry
+                        {
+                            Message = _lastMessage,
+                            Level = _lastLogLevel,
+                            Timestamp = _lastMessageTime,
+                            RepeatCount = _duplicateCount
+                        };
+
+                        Console.WriteLine(entry.FormatMessage());
+                        _messageQueue.Enqueue(entry);
+                    }
+                }
+
                 FlushQueue();
 
                 using (StreamWriter writer = new StreamWriter(_logFilePath, true, Encoding.UTF8))
