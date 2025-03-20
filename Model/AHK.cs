@@ -163,35 +163,6 @@ namespace _4RTools.Model
                 return 0;
             };
 
-            if (config.ClickActive)
-            {
-                while (Keyboard.IsKeyDown(config.key))
-                {
-                    if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
-                    if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
-                    {
-                        autoSwitchAmmo(roClient, ref ammo);
-                        SendMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (IntPtr)thisk, IntPtr.Zero);
-                        Thread.Sleep(1);
-                        SendMessage(roClient.process.MainWindowHandle, Constants.WM_KEYUP_MSG_ID, (IntPtr)thisk, IntPtr.Zero);
-                        if (config.ClickActive)
-                        {
-                            if (this.mouseFlick)
-                            {
-                                System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
-                                send_click(0);
-                                System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
-                            }
-                            else
-                            {
-                                send_click(0);
-                            }
-                        }
-                        Thread.Sleep(this.AhkDelay);
-                    }
-                    if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
-                }
-            }
         }
 
         private void _AHKSpeedBoost(Client roClient, KeyConfig config, Keys thisk)

@@ -225,9 +225,9 @@ namespace _4RTools.Forms
             this.lblCharacterName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCharacterName.Location = new System.Drawing.Point(463, 9);
             this.lblCharacterName.Name = "lblCharacterName";
-            this.lblCharacterName.Size = new System.Drawing.Size(106, 17);
+            this.lblCharacterName.Size = new System.Drawing.Size(64, 17);
             this.lblCharacterName.TabIndex = 19;
-            this.lblCharacterName.Text = "Character Name:";
+            this.lblCharacterName.Text = "Character";
             // 
             // characterName
             // 

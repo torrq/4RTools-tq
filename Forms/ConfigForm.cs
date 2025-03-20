@@ -23,17 +23,11 @@ namespace _4RTools.Forms
             this.ammo2textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.ammo2textBox.TextChanged += new EventHandler(this.textAmmo2_TextChanged);
 
-
             var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.autoBuffOrder;
             this.skillsListBox.MouseLeave += new System.EventHandler(this.skillsListBox_MouseLeave);
             this.skillsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skillsListBox_MouseDown);
             this.skillsListBox.DragOver += new DragEventHandler(this.skillsListBox_DragOver);
             this.skillsListBox.DragDrop += new DragEventHandler(this.skillsListBox_DragDrop);
-
-            this.switchListBox.MouseLeave += new System.EventHandler(this.switchListBox_MouseLeave);
-            this.switchListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.switchListBox_MouseDown);
-            this.switchListBox.DragOver += new DragEventHandler(this.switchListBox_DragOver);
-            this.switchListBox.DragDrop += new DragEventHandler(this.switchListBox_DragDrop);
 
             toolTip1.SetToolTip(switchAmmoCheckBox, "Switch between ammunition");
             toolTip3.SetToolTip(ammo1textBox, "ammo 1 shortcut");
@@ -81,12 +75,6 @@ namespace _4RTools.Forms
                     buffsList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
                 }
 
-                switchListBox.Items.Clear();
-
-                foreach (var tswitch in buffsList)
-                {
-                    switchListBox.Items.Add(tswitch.ToDescriptionString());
-                }
             }
             catch (Exception ex)
             {
@@ -176,55 +164,6 @@ namespace _4RTools.Forms
             this.skillsListBox.Items.Remove(data);
             this.skillsListBox.Items.Insert(index, data);
         }
-
-        private void switchListBox_MouseLeave(object sender, EventArgs e)
-        {
-            try
-            {
-                var autoSwitchPets = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
-                var newOrderList = new List<EffectStatusIDs>();
-                var orderedBuffList = switchListBox.Items;
-                List<EffectStatusIDs> currentList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Where(x => x.itemKey != Key.None && x.skillId != EffectStatusIDs.THURISAZ).Select(x => x.skillId).ToList();
-
-                List<EffectStatusIDs> newOrderedBuffList = new List<EffectStatusIDs>();
-                if (currentList.Count > 0)
-                {
-
-                    foreach (var buff in orderedBuffList)
-                    {
-                        var buffId = buff.ToString().ToEffectStatusId();
-                        newOrderList.Add(buffId);
-                        var findBuff = currentList.FirstOrDefault(t => t == buffId);
-                        newOrderedBuffList.Add(findBuff);
-                    }
-                    ProfileSingleton.GetCurrent().AutoSwitch.SetAutoSwitchOrder(newOrderList);
-                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
-                    newOrderedBuffList.Clear();
-                }
-            }
-            catch { }
-        }
-        private void switchListBox_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-            if (this.switchListBox.SelectedItem == null) return;
-            this.switchListBox.DoDragDrop(this.switchListBox.SelectedItem, DragDropEffects.Move);
-        }
-
-        private void switchListBox_DragOver(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Move;
-        }
-
-        private void switchListBox_DragDrop(object sender, DragEventArgs e)
-        {
-            Point point = switchListBox.PointToClient(new Point(e.X, e.Y));
-            int index = this.switchListBox.IndexFromPoint(point);
-            if (index < 0) index = this.switchListBox.Items.Count - 1;
-            object data = switchListBox.SelectedItem;
-            this.switchListBox.Items.Remove(data);
-            this.switchListBox.Items.Insert(index, data);
-        }
-
         private void chkStopBuffsOnCity_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
@@ -270,6 +209,11 @@ namespace _4RTools.Forms
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
