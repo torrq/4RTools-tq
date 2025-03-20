@@ -1,23 +1,33 @@
 ﻿using System;
+using System.Windows.Forms;
+
 namespace _4RTools
 {
     internal static class Program
     {
-        /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            System.Windows.Forms.Application.EnableVisualStyles();
-            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            // Application app = new Application();
-            // app.IsMdiContainer = true;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            //Forms.ClientUpdaterForm app = new Forms.ClientUpdaterForm();
-            Forms.Container app = new Forms.Container();
-            //Forms.AutoPatcher app = new Forms.AutoPatcher();
-            System.Windows.Forms.Application.Run(app);
+            using (Forms.Container app = new Forms.Container()) // Ensure proper disposal
+            {
+                try
+                {
+                    Application.Run(app);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An unexpected error occurred: " + ex.Message,
+                                    "Application Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            }
+
+            // Ensure proper cleanup after exiting
+            Application.Exit();
         }
     }
 }

@@ -49,7 +49,7 @@ namespace _4RTools.Model
                 string currentMap = c.ReadCurrentMap();
                 if (!hasBuff(c, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                 {
-                    if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+                    if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity && this.listCities.Contains(currentMap) == false)
                     {
                         List<EffectStatusIDs> buffs = new List<EffectStatusIDs>();
                         Dictionary<EffectStatusIDs, Key> bmClone = new Dictionary<EffectStatusIDs, Key>(this.buffMapping);
