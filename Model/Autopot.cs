@@ -21,8 +21,8 @@ namespace _4RTools.Model
         public int hpPercent { get; set; }
         public Key spKey { get; set; }
         public int spPercent { get; set; }
-        public int delay { get; set; } = 15;
-        public int delayYgg { get; set; } = 50;
+        public int delay { get; set; } = 100;
+        public int delayYgg { get; set; } = 100;
         public bool stopWitchFC { get; set; } = false;
         public string firstHeal { get; set; } = FIRSTHP;
 

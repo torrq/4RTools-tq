@@ -40,7 +40,7 @@ namespace _4RTools.Model
         public const string SPEED_BOOST = "ahkSpeedBoost";
         public const string SYNCHRONOUS = "ahkSynchronous";
         public Dictionary<string, KeyConfig> AhkEntries { get; set; } = new Dictionary<string, KeyConfig>();
-        public int AhkDelay { get; set; } = 10;
+        public int AhkDelay { get; set; } = 100;
         public bool mouseFlick { get; set; } = false;
         public bool noShift { get; set; } = false;
         public string ahkMode { get; set; } = COMPATIBILITY;
