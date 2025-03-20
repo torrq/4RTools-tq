@@ -59,7 +59,7 @@ namespace _4RTools.Model
             if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
             {
                 string currentMap = roClient.ReadCurrentMap();
-                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity && !this.listCities.Contains(currentMap))
+                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || !this.listCities.Contains(currentMap))
                 {
                     if (rKey != Key.None)
                     {
