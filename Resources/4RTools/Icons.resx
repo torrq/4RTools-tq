@@ -278,59 +278,59 @@
     <value>..\..\assets\images\gatling_fever.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coldskin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\coldskin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\assets\images\coldskin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fieldmanual" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\fieldmanual.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\assets\images\fieldmanual.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-	<data name="forceprojection" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceprojection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forceprojection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceprojection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
- <data name="forceconcentrate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceconcentrate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="saberparry" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\saberparry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="saberthrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\saberthrust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forceelement_earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceelement_earth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forceelement_holy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceelement_holy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forceelement_ghost" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceelement_ghost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forceelement_fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceelement_fire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forceelement_water" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceelement_water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forceelement_wind" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceelement_wind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forceelement_shadow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forceelement_shadow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forcepersuasion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forcepersuasion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forcesacrifice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forcesacrifice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="jedistealth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\jedistealth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="jedifrenzy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\jedifrenzy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
-<data name="forcelevitate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\forcelevitate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-</data>
+  <data name="forceconcentrate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceconcentrate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saberparry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\saberparry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saberthrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\saberthrust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forceelement_earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceelement_earth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forceelement_holy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceelement_holy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forceelement_ghost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceelement_ghost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forceelement_fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceelement_fire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forceelement_water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceelement_water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forceelement_wind" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceelement_wind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forceelement_shadow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forceelement_shadow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forcepersuasion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forcepersuasion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forcesacrifice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forcesacrifice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jedistealth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\jedistealth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jedifrenzy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\jedifrenzy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forcelevitate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\assets\images\forcelevitate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gentle_touch_convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\images\gentle_touch_convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -548,7 +548,7 @@
     <value>..\..\assets\images\sunbox.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boxofstorms" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\boxofstorms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\assets\images\boxofstorms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="swing_k" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\images\swing_k.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -746,10 +746,10 @@
     <value>..\..\assets\images\slow_cast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="weight50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\weight50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\assets\images\weight50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="weight90" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\images\weight90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\assets\images\weight90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mindbreaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\images\mindbreaker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

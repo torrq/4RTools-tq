@@ -54,7 +54,6 @@ namespace _4RTools.Forms
 
         public void addform(TabPage tp, Form f)
         {
-
             if (!tp.Controls.Contains(f))
             {
                 tp.Controls.Add(f);
@@ -67,16 +66,13 @@ namespace _4RTools.Forms
 
         private void SetBackGroundColorOfMDIForm()
         {
-            
             foreach (Control ctl in this.Controls)
             {
                 if ((ctl) is MdiClient)
                 {
                     ctl.BackColor = System.Drawing.Color.White;
                 }
-
             }
-            
         }
 
         private void processCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -88,12 +84,46 @@ namespace _4RTools.Forms
             subject.Notify(new Utils.Message(Utils.MessageCode.PROCESS_CHANGED, null));
         }
 
+        private void TabControlAutopot_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tabControl = sender as TabControl;
+            if (tabControl == null) return;
+
+            // Background color for all tabs
+            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(238, 248, 255)), e.Bounds); // #EEF8FF
+
+            // Check if this is the selected (active) tab
+            bool isActiveTab = (e.Index == tabControl.SelectedIndex);
+
+            // Use bold font for active tab, regular for others
+            Font tabFont = isActiveTab ? new Font(e.Font, FontStyle.Bold) : e.Font;
+
+            // Set text color (change if needed)
+            Color textColor = Color.Black;
+
+            // Draw tab text centered
+            string text = tabControl.TabPages[e.Index].Text;
+            using (Brush textBrush = new SolidBrush(textColor))
+            {
+                SizeF textSize = e.Graphics.MeasureString(text, tabFont);
+                float textX = e.Bounds.X + (e.Bounds.Width - textSize.Width) / 2;
+                float textY = e.Bounds.Y + (e.Bounds.Height - textSize.Height) / 2;
+                e.Graphics.DrawString(text, tabFont, textBrush, textX, textY);
+            }
+        }
+
         private void Container_Load(object sender, EventArgs e)
         {
             ProfileSingleton.Create("Default");
             this.refreshProcessList();
             this.refreshProfileList();
             this.profileCB.SelectedItem = "Default";
+            // Enable owner-drawn mode
+            tabControlAutopot.DrawMode = TabDrawMode.OwnerDrawFixed;
+            tabControlAutopot.DrawItem += TabControlAutopot_DrawItem;
+            tabControlAutopot.BackColor = Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            tabControlAutopot.ForeColor = Color.Black;
+
         }
 
         public void refreshProfileList()

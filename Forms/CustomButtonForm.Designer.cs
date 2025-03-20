@@ -41,7 +41,7 @@
             // 
             this.txtTransferKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTransferKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransferKey.Location = new System.Drawing.Point(77, 7);
+            this.txtTransferKey.Location = new System.Drawing.Point(99, 7);
             this.txtTransferKey.Name = "txtTransferKey";
             this.txtTransferKey.Size = new System.Drawing.Size(65, 25);
             this.txtTransferKey.TabIndex = 11;
@@ -51,10 +51,10 @@
             // 
             this.label1.Cursor = System.Windows.Forms.Cursors.Help;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 6);
+            this.label1.Location = new System.Drawing.Point(38, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 27);
+            this.label1.Size = new System.Drawing.Size(59, 27);
             this.label1.TabIndex = 13;
             this.label1.Text = "Transfer";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,7 +64,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(161, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(173, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -74,7 +74,7 @@
             // 
             // CustomButtonForm
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(205, 39);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);

@@ -172,10 +172,11 @@ namespace _4RTools.Forms
             // processCB
             // 
             this.processCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.processCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.processCB.FormattingEnabled = true;
             this.processCB.Location = new System.Drawing.Point(18, 29);
             this.processCB.Name = "processCB";
-            this.processCB.Size = new System.Drawing.Size(184, 21);
+            this.processCB.Size = new System.Drawing.Size(184, 25);
             this.processCB.TabIndex = 2;
             this.processCB.SelectedIndexChanged += new System.EventHandler(this.processCB_SelectedIndexChanged);
             // 
@@ -202,10 +203,11 @@ namespace _4RTools.Forms
             // profileCB
             // 
             this.profileCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profileCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileCB.FormattingEnabled = true;
             this.profileCB.Location = new System.Drawing.Point(256, 29);
             this.profileCB.Name = "profileCB";
-            this.profileCB.Size = new System.Drawing.Size(181, 21);
+            this.profileCB.Size = new System.Drawing.Size(181, 25);
             this.profileCB.TabIndex = 14;
             this.profileCB.SelectedIndexChanged += new System.EventHandler(this.profileCB_SelectedIndexChanged);
             // 
@@ -244,6 +246,7 @@ namespace _4RTools.Forms
             this.tabControlAutopot.Controls.Add(this.tabPageYggAutopot);
             this.tabControlAutopot.Controls.Add(this.tabPageSkillTimer);
             this.tabControlAutopot.Location = new System.Drawing.Point(15, 83);
+            this.tabControlAutopot.Multiline = true;
             this.tabControlAutopot.Name = "tabControlAutopot";
             this.tabControlAutopot.SelectedIndex = 0;
             this.tabControlAutopot.Size = new System.Drawing.Size(328, 180);
@@ -261,6 +264,7 @@ namespace _4RTools.Forms
             // 
             // tabPageYggAutopot
             // 
+            this.tabPageYggAutopot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.tabPageYggAutopot.Location = new System.Drawing.Point(4, 22);
             this.tabPageYggAutopot.Name = "tabPageYggAutopot";
             this.tabPageYggAutopot.Padding = new System.Windows.Forms.Padding(3);
@@ -270,6 +274,7 @@ namespace _4RTools.Forms
             // 
             // tabPageSkillTimer
             // 
+            this.tabPageSkillTimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.tabPageSkillTimer.Location = new System.Drawing.Point(4, 22);
             this.tabPageSkillTimer.Name = "tabPageSkillTimer";
             this.tabPageSkillTimer.Padding = new System.Windows.Forms.Padding(3);

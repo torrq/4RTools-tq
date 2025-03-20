@@ -196,6 +196,16 @@ namespace _4RTools.Resources._4RTools {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to [
+        ///  {
+        ///    &quot;name&quot;: &quot;OsRO Midrate&quot;,
+        ///    &quot;hpAddress&quot;: &quot;0x00E8F434&quot;,
+        ///    &quot;nameAddress&quot;: &quot;0x00E91C00&quot;
+        ///  }
+        ///]
+        ///.
+        /// </summary>
         internal static string supported_servers {
             get {
                 return ResourceManager.GetString("supported_servers", resourceCulture);
@@ -208,6 +218,16 @@ namespace _4RTools.Resources._4RTools {
         internal static System.Drawing.Bitmap up_and_down_arrow {
             get {
                 object obj = ResourceManager.GetObject("up_and_down_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ygg {
+            get {
+                object obj = ResourceManager.GetObject("Ygg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
