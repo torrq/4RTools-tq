@@ -171,7 +171,6 @@ namespace _4RTools.Forms
             // 
             // processCB
             // 
-            this.processCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.processCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.processCB.FormattingEnabled = true;
             this.processCB.Location = new System.Drawing.Point(18, 29);
@@ -182,9 +181,10 @@ namespace _4RTools.Forms
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(208, 28);
+            this.btnRefresh.Location = new System.Drawing.Point(208, 31);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(19, 22);
             this.btnRefresh.TabIndex = 5;
@@ -202,7 +202,6 @@ namespace _4RTools.Forms
             // 
             // profileCB
             // 
-            this.profileCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profileCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileCB.FormattingEnabled = true;
             this.profileCB.Location = new System.Drawing.Point(256, 29);

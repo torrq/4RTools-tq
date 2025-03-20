@@ -528,6 +528,7 @@
             // 
             // btnResMac1
             // 
+            this.btnResMac1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac1.Location = new System.Drawing.Point(32, 69);
             this.btnResMac1.Name = "btnResMac1";
@@ -846,6 +847,7 @@
             // 
             // btnResMac2
             // 
+            this.btnResMac2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac2.Location = new System.Drawing.Point(32, 69);
             this.btnResMac2.Name = "btnResMac2";
@@ -1170,6 +1172,7 @@
             // 
             // btnResMac3
             // 
+            this.btnResMac3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac3.Location = new System.Drawing.Point(32, 69);
             this.btnResMac3.Name = "btnResMac3";
@@ -1463,6 +1466,7 @@
             // 
             // btnResMac4
             // 
+            this.btnResMac4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac4.Location = new System.Drawing.Point(32, 69);
             this.btnResMac4.Name = "btnResMac4";
@@ -1747,6 +1751,7 @@
             // 
             // btnResMac8
             // 
+            this.btnResMac8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac8.Location = new System.Drawing.Point(32, 69);
             this.btnResMac8.Name = "btnResMac8";
@@ -2035,6 +2040,7 @@
             // 
             // btnResMac7
             // 
+            this.btnResMac7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac7.Location = new System.Drawing.Point(32, 69);
             this.btnResMac7.Name = "btnResMac7";
@@ -2299,6 +2305,7 @@
             // 
             // btnResMac6
             // 
+            this.btnResMac6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac6.Location = new System.Drawing.Point(32, 69);
             this.btnResMac6.Name = "btnResMac6";
@@ -2569,6 +2576,7 @@
             // 
             // btnResMac5
             // 
+            this.btnResMac5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResMac5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResMac5.Location = new System.Drawing.Point(32, 69);
             this.btnResMac5.Name = "btnResMac5";

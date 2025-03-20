@@ -105,6 +105,7 @@ namespace _4RTools.Forms
             // chkF9
             // 
             this.chkF9.AutoSize = true;
+            this.chkF9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF9.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF9.Location = new System.Drawing.Point(415, 15);
             this.chkF9.Name = "chkF9";
@@ -118,6 +119,7 @@ namespace _4RTools.Forms
             // chkF8
             // 
             this.chkF8.AutoSize = true;
+            this.chkF8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF8.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF8.Location = new System.Drawing.Point(365, 15);
             this.chkF8.Name = "chkF8";
@@ -131,6 +133,7 @@ namespace _4RTools.Forms
             // chkF7
             // 
             this.chkF7.AutoSize = true;
+            this.chkF7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF7.Location = new System.Drawing.Point(315, 15);
             this.chkF7.Name = "chkF7";
@@ -143,6 +146,7 @@ namespace _4RTools.Forms
             // chkF6
             // 
             this.chkF6.AutoSize = true;
+            this.chkF6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF6.Location = new System.Drawing.Point(265, 15);
             this.chkF6.Name = "chkF6";
@@ -155,6 +159,7 @@ namespace _4RTools.Forms
             // chkF5
             // 
             this.chkF5.AutoSize = true;
+            this.chkF5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF5.Location = new System.Drawing.Point(215, 15);
             this.chkF5.Name = "chkF5";
@@ -167,6 +172,7 @@ namespace _4RTools.Forms
             // chkF4
             // 
             this.chkF4.AutoSize = true;
+            this.chkF4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF4.Location = new System.Drawing.Point(165, 15);
             this.chkF4.Name = "chkF4";
@@ -179,6 +185,7 @@ namespace _4RTools.Forms
             // chkF3
             // 
             this.chkF3.AutoSize = true;
+            this.chkF3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF3.Location = new System.Drawing.Point(115, 15);
             this.chkF3.Name = "chkF3";
@@ -191,6 +198,7 @@ namespace _4RTools.Forms
             // chkF2
             // 
             this.chkF2.AutoSize = true;
+            this.chkF2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF2.Location = new System.Drawing.Point(65, 15);
             this.chkF2.Name = "chkF2";
@@ -203,6 +211,7 @@ namespace _4RTools.Forms
             // chkF1
             // 
             this.chkF1.AutoSize = true;
+            this.chkF1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF1.Location = new System.Drawing.Point(15, 15);
             this.chkF1.Name = "chkF1";
@@ -215,6 +224,7 @@ namespace _4RTools.Forms
             // chk9
             // 
             this.chk9.AutoSize = true;
+            this.chk9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk9.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk9.Location = new System.Drawing.Point(415, 60);
             this.chk9.Name = "chk9";
@@ -227,6 +237,7 @@ namespace _4RTools.Forms
             // chk8
             // 
             this.chk8.AutoSize = true;
+            this.chk8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk8.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk8.Location = new System.Drawing.Point(365, 60);
             this.chk8.Name = "chk8";
@@ -240,6 +251,7 @@ namespace _4RTools.Forms
             // chk7
             // 
             this.chk7.AutoSize = true;
+            this.chk7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk7.Location = new System.Drawing.Point(315, 60);
             this.chk7.Name = "chk7";
@@ -252,6 +264,7 @@ namespace _4RTools.Forms
             // chk6
             // 
             this.chk6.AutoSize = true;
+            this.chk6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk6.Location = new System.Drawing.Point(265, 60);
             this.chk6.Name = "chk6";
@@ -264,6 +277,7 @@ namespace _4RTools.Forms
             // chk5
             // 
             this.chk5.AutoSize = true;
+            this.chk5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk5.Location = new System.Drawing.Point(215, 60);
             this.chk5.Name = "chk5";
@@ -276,6 +290,7 @@ namespace _4RTools.Forms
             // chk4
             // 
             this.chk4.AutoSize = true;
+            this.chk4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk4.Location = new System.Drawing.Point(165, 60);
             this.chk4.Name = "chk4";
@@ -288,6 +303,7 @@ namespace _4RTools.Forms
             // chk3
             // 
             this.chk3.AutoSize = true;
+            this.chk3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk3.Location = new System.Drawing.Point(115, 60);
             this.chk3.Name = "chk3";
@@ -300,6 +316,7 @@ namespace _4RTools.Forms
             // chk2
             // 
             this.chk2.AutoSize = true;
+            this.chk2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk2.Location = new System.Drawing.Point(64, 60);
             this.chk2.Name = "chk2";
@@ -312,6 +329,7 @@ namespace _4RTools.Forms
             // chk1
             // 
             this.chk1.AutoSize = true;
+            this.chk1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chk1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chk1.Location = new System.Drawing.Point(15, 60);
             this.chk1.Name = "chk1";
@@ -324,6 +342,7 @@ namespace _4RTools.Forms
             // chkM
             // 
             this.chkM.AutoSize = true;
+            this.chkM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkM.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkM.Location = new System.Drawing.Point(315, 175);
             this.chkM.Name = "chkM";
@@ -336,6 +355,7 @@ namespace _4RTools.Forms
             // chkN
             // 
             this.chkN.AutoSize = true;
+            this.chkN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkN.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkN.Location = new System.Drawing.Point(265, 175);
             this.chkN.Name = "chkN";
@@ -347,6 +367,7 @@ namespace _4RTools.Forms
             // chkB
             // 
             this.chkB.AutoSize = true;
+            this.chkB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkB.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkB.Location = new System.Drawing.Point(215, 175);
             this.chkB.Name = "chkB";
@@ -358,6 +379,7 @@ namespace _4RTools.Forms
             // chkV
             // 
             this.chkV.AutoSize = true;
+            this.chkV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkV.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkV.Location = new System.Drawing.Point(165, 175);
             this.chkV.Name = "chkV";
@@ -369,6 +391,7 @@ namespace _4RTools.Forms
             // chkC
             // 
             this.chkC.AutoSize = true;
+            this.chkC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkC.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkC.Location = new System.Drawing.Point(115, 175);
             this.chkC.Name = "chkC";
@@ -380,6 +403,7 @@ namespace _4RTools.Forms
             // chkX
             // 
             this.chkX.AutoSize = true;
+            this.chkX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkX.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkX.Location = new System.Drawing.Point(64, 175);
             this.chkX.Name = "chkX";
@@ -391,6 +415,7 @@ namespace _4RTools.Forms
             // chkZ
             // 
             this.chkZ.AutoSize = true;
+            this.chkZ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkZ.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkZ.Location = new System.Drawing.Point(15, 175);
             this.chkZ.Name = "chkZ";
@@ -402,6 +427,7 @@ namespace _4RTools.Forms
             // chkL
             // 
             this.chkL.AutoSize = true;
+            this.chkL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkL.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkL.Location = new System.Drawing.Point(415, 140);
             this.chkL.Name = "chkL";
@@ -415,6 +441,7 @@ namespace _4RTools.Forms
             // chkK
             // 
             this.chkK.AutoSize = true;
+            this.chkK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkK.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkK.Location = new System.Drawing.Point(365, 140);
             this.chkK.Name = "chkK";
@@ -426,6 +453,7 @@ namespace _4RTools.Forms
             // chkJ
             // 
             this.chkJ.AutoSize = true;
+            this.chkJ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkJ.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkJ.Location = new System.Drawing.Point(315, 140);
             this.chkJ.Name = "chkJ";
@@ -437,6 +465,7 @@ namespace _4RTools.Forms
             // chkH
             // 
             this.chkH.AutoSize = true;
+            this.chkH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkH.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkH.Location = new System.Drawing.Point(265, 140);
             this.chkH.Name = "chkH";
@@ -448,6 +477,7 @@ namespace _4RTools.Forms
             // chkG
             // 
             this.chkG.AutoSize = true;
+            this.chkG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkG.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkG.Location = new System.Drawing.Point(215, 140);
             this.chkG.Name = "chkG";
@@ -459,6 +489,7 @@ namespace _4RTools.Forms
             // chkF
             // 
             this.chkF.AutoSize = true;
+            this.chkF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkF.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkF.Location = new System.Drawing.Point(165, 140);
             this.chkF.Name = "chkF";
@@ -470,6 +501,7 @@ namespace _4RTools.Forms
             // chkD
             // 
             this.chkD.AutoSize = true;
+            this.chkD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkD.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkD.Location = new System.Drawing.Point(115, 140);
             this.chkD.Name = "chkD";
@@ -481,6 +513,7 @@ namespace _4RTools.Forms
             // chkA
             // 
             this.chkA.AutoSize = true;
+            this.chkA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkA.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkA.Location = new System.Drawing.Point(15, 140);
             this.chkA.Name = "chkA";
@@ -492,6 +525,7 @@ namespace _4RTools.Forms
             // chkO
             // 
             this.chkO.AutoSize = true;
+            this.chkO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkO.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkO.Location = new System.Drawing.Point(415, 105);
             this.chkO.Name = "chkO";
@@ -504,6 +538,7 @@ namespace _4RTools.Forms
             // chkI
             // 
             this.chkI.AutoSize = true;
+            this.chkI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkI.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkI.Location = new System.Drawing.Point(365, 105);
             this.chkI.Name = "chkI";
@@ -516,6 +551,7 @@ namespace _4RTools.Forms
             // chkU
             // 
             this.chkU.AutoSize = true;
+            this.chkU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkU.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkU.Location = new System.Drawing.Point(315, 105);
             this.chkU.Name = "chkU";
@@ -527,6 +563,7 @@ namespace _4RTools.Forms
             // chkY
             // 
             this.chkY.AutoSize = true;
+            this.chkY.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkY.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkY.Location = new System.Drawing.Point(265, 105);
             this.chkY.Name = "chkY";
@@ -538,6 +575,7 @@ namespace _4RTools.Forms
             // chkT
             // 
             this.chkT.AutoSize = true;
+            this.chkT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkT.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkT.Location = new System.Drawing.Point(215, 105);
             this.chkT.Name = "chkT";
@@ -549,6 +587,7 @@ namespace _4RTools.Forms
             // chkR
             // 
             this.chkR.AutoSize = true;
+            this.chkR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkR.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkR.Location = new System.Drawing.Point(165, 105);
             this.chkR.Name = "chkR";
@@ -560,6 +599,7 @@ namespace _4RTools.Forms
             // chkE
             // 
             this.chkE.AutoSize = true;
+            this.chkE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkE.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkE.Location = new System.Drawing.Point(115, 105);
             this.chkE.Name = "chkE";
@@ -571,6 +611,7 @@ namespace _4RTools.Forms
             // chkW
             // 
             this.chkW.AutoSize = true;
+            this.chkW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkW.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkW.Location = new System.Drawing.Point(64, 105);
             this.chkW.Name = "chkW";
@@ -582,6 +623,7 @@ namespace _4RTools.Forms
             // chkQ
             // 
             this.chkQ.AutoSize = true;
+            this.chkQ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkQ.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkQ.Location = new System.Drawing.Point(15, 105);
             this.chkQ.Name = "chkQ";
@@ -628,6 +670,7 @@ namespace _4RTools.Forms
             // chkS
             // 
             this.chkS.AutoSize = true;
+            this.chkS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkS.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chkS.Location = new System.Drawing.Point(64, 140);
             this.chkS.Name = "chkS";
@@ -676,6 +719,7 @@ namespace _4RTools.Forms
             // chkNoShift
             // 
             this.chkNoShift.AutoSize = true;
+            this.chkNoShift.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkNoShift.Location = new System.Drawing.Point(266, 53);
             this.chkNoShift.Name = "chkNoShift";
             this.chkNoShift.Size = new System.Drawing.Size(68, 17);
@@ -687,6 +731,7 @@ namespace _4RTools.Forms
             // chkMouseFlick
             // 
             this.chkMouseFlick.AutoSize = true;
+            this.chkMouseFlick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkMouseFlick.Location = new System.Drawing.Point(266, 31);
             this.chkMouseFlick.Name = "chkMouseFlick";
             this.chkMouseFlick.Size = new System.Drawing.Size(87, 17);
@@ -698,6 +743,7 @@ namespace _4RTools.Forms
             // ahkSpeedBoost
             // 
             this.ahkSpeedBoost.AutoSize = true;
+            this.ahkSpeedBoost.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ahkSpeedBoost.Location = new System.Drawing.Point(121, 23);
             this.ahkSpeedBoost.Name = "ahkSpeedBoost";
             this.ahkSpeedBoost.Size = new System.Drawing.Size(90, 17);
@@ -710,6 +756,7 @@ namespace _4RTools.Forms
             // ahkCompatibility
             // 
             this.ahkCompatibility.AutoSize = true;
+            this.ahkCompatibility.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ahkCompatibility.Location = new System.Drawing.Point(17, 23);
             this.ahkCompatibility.Name = "ahkCompatibility";
             this.ahkCompatibility.Size = new System.Drawing.Size(93, 17);
@@ -722,6 +769,7 @@ namespace _4RTools.Forms
             // ahkSynchronous
             // 
             this.ahkSynchronous.AutoSize = true;
+            this.ahkSynchronous.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ahkSynchronous.Location = new System.Drawing.Point(17, 50);
             this.ahkSynchronous.Name = "ahkSynchronous";
             this.ahkSynchronous.Size = new System.Drawing.Size(92, 17);
@@ -779,6 +827,7 @@ namespace _4RTools.Forms
             // 
             this.cbDeactivated.AutoCheck = false;
             this.cbDeactivated.AutoSize = true;
+            this.cbDeactivated.Cursor = System.Windows.Forms.Cursors.Help;
             this.cbDeactivated.Location = new System.Drawing.Point(18, 64);
             this.cbDeactivated.Name = "cbDeactivated";
             this.cbDeactivated.Size = new System.Drawing.Size(86, 17);
@@ -789,6 +838,7 @@ namespace _4RTools.Forms
             // cbWithNoClick
             // 
             this.cbWithNoClick.AutoSize = true;
+            this.cbWithNoClick.Cursor = System.Windows.Forms.Cursors.Help;
             this.cbWithNoClick.Location = new System.Drawing.Point(18, 40);
             this.cbWithNoClick.Name = "cbWithNoClick";
             this.cbWithNoClick.Size = new System.Drawing.Size(103, 17);
@@ -801,6 +851,7 @@ namespace _4RTools.Forms
             this.cbWithClick.AutoSize = true;
             this.cbWithClick.Checked = true;
             this.cbWithClick.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbWithClick.Cursor = System.Windows.Forms.Cursors.Help;
             this.cbWithClick.Location = new System.Drawing.Point(18, 16);
             this.cbWithClick.Name = "cbWithClick";
             this.cbWithClick.Size = new System.Drawing.Size(113, 17);

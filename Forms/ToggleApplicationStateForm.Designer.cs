@@ -75,6 +75,7 @@
             // btnStatusToggle
             // 
             this.btnStatusToggle.BackColor = System.Drawing.Color.Red;
+            this.btnStatusToggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStatusToggle.FlatAppearance.BorderSize = 0;
             this.btnStatusToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatusToggle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

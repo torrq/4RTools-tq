@@ -47,8 +47,9 @@
             // 
             // btnSave
             // 
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(267, 29);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 23);
@@ -69,6 +70,7 @@
             // 
             // btnRemoveProfile
             // 
+            this.btnRemoveProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveProfile.Location = new System.Drawing.Point(267, 77);
             this.btnRemoveProfile.Name = "btnRemoveProfile";

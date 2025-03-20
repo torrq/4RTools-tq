@@ -118,6 +118,7 @@
             // 
             // btnResetAutobuff
             // 
+            this.btnResetAutobuff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResetAutobuff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetAutobuff.Location = new System.Drawing.Point(535, 12);
             this.btnResetAutobuff.Name = "btnResetAutobuff";

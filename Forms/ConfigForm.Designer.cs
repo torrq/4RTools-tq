@@ -104,6 +104,7 @@ namespace _4RTools.Forms
             // switchAmmoCheckBox
             // 
             this.switchAmmoCheckBox.AutoSize = true;
+            this.switchAmmoCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switchAmmoCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.switchAmmoCheckBox.Location = new System.Drawing.Point(13, 74);
             this.switchAmmoCheckBox.Name = "switchAmmoCheckBox";
@@ -116,6 +117,7 @@ namespace _4RTools.Forms
             // chkStopBuffsOnCity
             // 
             this.chkStopBuffsOnCity.AutoSize = true;
+            this.chkStopBuffsOnCity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkStopBuffsOnCity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkStopBuffsOnCity.Location = new System.Drawing.Point(13, 27);
             this.chkStopBuffsOnCity.Name = "chkStopBuffsOnCity";
