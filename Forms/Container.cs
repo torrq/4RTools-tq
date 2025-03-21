@@ -118,12 +118,21 @@ namespace _4RTools.Forms
             this.refreshProcessList();
             this.refreshProfileList();
             this.profileCB.SelectedItem = "Default";
-            // Enable owner-drawn mode
-            tabControlAutopot.DrawMode = TabDrawMode.OwnerDrawFixed;
-            tabControlAutopot.DrawItem += TabControlAutopot_DrawItem;
-            tabControlAutopot.BackColor = Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            tabControlAutopot.ForeColor = Color.Black;
 
+            // Apply the same custom drawing settings to both tab groups
+            ConfigureTabControl(tabControlAutopot);
+            ConfigureTabControl(atkDefMode);
+        }
+
+        private void ConfigureTabControl(TabControl tabControl)
+        {
+            tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+            tabControl.DrawItem += TabControlAutopot_DrawItem;
+            tabControl.BackColor = Color.FromArgb(238, 248, 255);
+            tabControl.ForeColor = Color.Black;
+
+            // Ensure a flat modern look
+            tabControl.Appearance = TabAppearance.Normal; // Prevents 3D borders
         }
 
         public void refreshProfileList()
