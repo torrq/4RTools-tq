@@ -650,6 +650,7 @@
             this.in1SpammerClick.AutoSize = true;
             this.in1SpammerClick.Checked = true;
             this.in1SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.in1SpammerClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.in1SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in1SpammerClick.Name = "in1SpammerClick";
             this.in1SpammerClick.Size = new System.Drawing.Size(113, 17);
@@ -1025,6 +1026,7 @@
             this.in2SpammerClick.AutoSize = true;
             this.in2SpammerClick.Checked = true;
             this.in2SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.in2SpammerClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.in2SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in2SpammerClick.Name = "in2SpammerClick";
             this.in2SpammerClick.Size = new System.Drawing.Size(113, 17);
@@ -1400,6 +1402,7 @@
             this.in3SpammerClick.AutoSize = true;
             this.in3SpammerClick.Checked = true;
             this.in3SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.in3SpammerClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.in3SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in3SpammerClick.Name = "in3SpammerClick";
             this.in3SpammerClick.Size = new System.Drawing.Size(113, 17);
@@ -1775,6 +1778,7 @@
             this.in4SpammerClick.AutoSize = true;
             this.in4SpammerClick.Checked = true;
             this.in4SpammerClick.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.in4SpammerClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.in4SpammerClick.Location = new System.Drawing.Point(17, 120);
             this.in4SpammerClick.Name = "in4SpammerClick";
             this.in4SpammerClick.Size = new System.Drawing.Size(113, 17);

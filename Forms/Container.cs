@@ -16,6 +16,7 @@ namespace _4RTools.Forms
         private string currentProfile;
         List<ClientDTO> clients = new List<ClientDTO>();
         private ToggleApplicationStateForm frmToggleApplication = new ToggleApplicationStateForm();
+
         public Container()
         {
             this.subject.Attach(this);
@@ -45,7 +46,6 @@ namespace _4RTools.Forms
             SetSongMacroWindow();
             SetATKDEFWindow();
             SetMacroSwitchWindow();
-            SetAutoSwitchWindow();
             SetConfigWindow();
 
             //TrackerSingleton.Instance().SendEvent("desktop_login", "page_view", "desktop_container_load");
@@ -118,12 +118,20 @@ namespace _4RTools.Forms
             this.refreshProcessList();
             this.refreshProfileList();
             this.profileCB.SelectedItem = "Default";
-            // Enable owner-drawn mode
-            tabControlAutopot.DrawMode = TabDrawMode.OwnerDrawFixed;
-            tabControlAutopot.DrawItem += TabControlAutopot_DrawItem;
-            tabControlAutopot.BackColor = Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            tabControlAutopot.ForeColor = Color.Black;
 
+            ConfigureTabControl(tabControlAutopot);
+            //ConfigureTabControl(atkDefMode);
+        }
+
+        private void ConfigureTabControl(TabControl tabControl)
+        {
+            tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+            tabControl.DrawItem += TabControlAutopot_DrawItem;
+            tabControl.BackColor = Color.FromArgb(238, 248, 255);
+            tabControl.ForeColor = Color.Black;
+
+            // Ensure a flat modern look
+            tabControl.Appearance = TabAppearance.Normal; // Prevents 3D borders
         }
 
         public void refreshProfileList()
@@ -184,11 +192,6 @@ namespace _4RTools.Forms
         private void websiteLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(AppConfig.Website);
-        }
-
-        private void livepixLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start(AppConfig.Livepix);
         }
 
         private void profileCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -385,18 +388,6 @@ namespace _4RTools.Forms
             frm.Show();
         }
 
-        public void SetAutoSwitchWindow()
-        {
-            /*
-            AutoSwitchForm frm = new AutoSwitchForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageAutoSwitch, frm);
-            */
-
-        }
-
         public void SetConfigWindow()
         {
             ConfigForm frm = new ConfigForm(subject);
@@ -413,5 +404,6 @@ namespace _4RTools.Forms
         {
 
         }
+
     }
 }

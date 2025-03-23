@@ -13,6 +13,8 @@ namespace _4RTools.Model
         public List<EffectStatusIDs> autoBuffOrder { get; set; } = new List<EffectStatusIDs>();
 
         public bool stopBuffsCity { get; set; } = false;
+        public string overweightMode { get; set; } = "overweightOff";
+        public Key overweightKey { get; set; }
 
         public bool switchAmmo { get; set; } = false;
         public Key ammo1Key { get; set; }

@@ -102,7 +102,7 @@ namespace _4RTools.Model
                 string currentMap = c.ReadCurrentMap();
                 if (!hasBuff(c, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
                 {
-                    if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+                    if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity && this.listCities.Contains(currentMap) == false)
                     {
                         for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
                         {

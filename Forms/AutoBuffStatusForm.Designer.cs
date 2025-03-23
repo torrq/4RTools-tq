@@ -90,12 +90,12 @@
             // 
             this.WeightDebuffsGP.AutoSize = true;
             this.WeightDebuffsGP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WeightDebuffsGP.Location = new System.Drawing.Point(36, 110);
+            this.WeightDebuffsGP.Location = new System.Drawing.Point(33, 110);
             this.WeightDebuffsGP.Name = "WeightDebuffsGP";
-            this.WeightDebuffsGP.Size = new System.Drawing.Size(563, 29);
+            this.WeightDebuffsGP.Size = new System.Drawing.Size(563, 88);
             this.WeightDebuffsGP.TabIndex = 298;
             this.WeightDebuffsGP.TabStop = false;
-            this.WeightDebuffsGP.Text = "Weight";
+            this.WeightDebuffsGP.Text = "Overweight";
             // 
             // AutoBuffStatusForm
             // 

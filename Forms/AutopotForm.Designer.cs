@@ -138,7 +138,7 @@
             // 
             this.txtHpKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHpKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHpKey.Location = new System.Drawing.Point(127, 35);
+            this.txtHpKey.Location = new System.Drawing.Point(137, 35);
             this.txtHpKey.Name = "txtHpKey";
             this.txtHpKey.Size = new System.Drawing.Size(65, 25);
             this.txtHpKey.TabIndex = 43;
@@ -147,7 +147,7 @@
             // 
             this.txtSPKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSPKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSPKey.Location = new System.Drawing.Point(127, 78);
+            this.txtSPKey.Location = new System.Drawing.Point(137, 78);
             this.txtSPKey.Name = "txtSPKey";
             this.txtSPKey.Size = new System.Drawing.Size(65, 25);
             this.txtSPKey.TabIndex = 44;
@@ -156,7 +156,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 35);
+            this.label3.Location = new System.Drawing.Point(100, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 21);
             this.label3.TabIndex = 45;
@@ -167,7 +167,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(97, 78);
+            this.label4.Location = new System.Drawing.Point(100, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 21);
             this.label4.TabIndex = 46;
@@ -209,6 +209,7 @@
             // firstSP
             // 
             this.firstSP.AutoSize = true;
+            this.firstSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.firstSP.Location = new System.Drawing.Point(31, 84);
             this.firstSP.Name = "firstSP";
             this.firstSP.Size = new System.Drawing.Size(14, 13);
@@ -219,6 +220,7 @@
             // chkStopWitchFC
             // 
             this.chkStopWitchFC.AutoSize = true;
+            this.chkStopWitchFC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkStopWitchFC.Location = new System.Drawing.Point(7, 126);
             this.chkStopWitchFC.Name = "chkStopWitchFC";
             this.chkStopWitchFC.Size = new System.Drawing.Size(137, 17);

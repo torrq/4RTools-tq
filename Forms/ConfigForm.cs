@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Input;
-using static _4RTools.Model.AutoSwitch;
 
 namespace _4RTools.Forms
 {
@@ -22,6 +21,9 @@ namespace _4RTools.Forms
             this.ammo2textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.ammo2textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.ammo2textBox.TextChanged += new EventHandler(this.textAmmo2_TextChanged);
+            this.overweightKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
+            this.overweightKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
+            this.overweightKey.TextChanged += new EventHandler(this.overweightKey_TextChanged);
 
             var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.autoBuffOrder;
             this.skillsListBox.MouseLeave += new System.EventHandler(this.skillsListBox_MouseLeave);
@@ -32,6 +34,8 @@ namespace _4RTools.Forms
             toolTip1.SetToolTip(switchAmmoCheckBox, "Switch between ammunition");
             toolTip3.SetToolTip(ammo1textBox, "ammo 1 shortcut");
             toolTip4.SetToolTip(ammo2textBox, "ammo 2 shortcut");
+            toolTip5.SetToolTip(overweightKey, "Alt-# macro to send when overweight");
+
             subject.Attach(this);
         }
 
@@ -44,41 +48,6 @@ namespace _4RTools.Forms
                 case MessageCode.ADDED_NEW_AUTOSWITCH_PETS:
                     UpdateUI(subject);
                     break;
-                //case MessageCode.ADDED_NEW_AUTOSWITCH_PETS:
-                //    UpdateSwitch();
-                //    break;
-            }
-        }
-
-        public void UpdateSwitch()
-        {
-            try
-            {
-                var buffsList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchMapping.Where(x => x.itemKey != Key.None && x.skillId != EffectStatusIDs.THURISAZ).Select(x => x.skillId).ToList();
-                var newBuffList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
-                if (buffsList.Count > ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder.Count)
-                {
-
-                    var newBuffs = buffsList.FindAll(item => !newBuffList.Contains(item));
-                    foreach (var buff in newBuffs)
-                    {
-                        newBuffList.Add(buff);
-                    }
-                    ProfileSingleton.GetCurrent().AutoSwitch.SetAutoSwitchOrder(newBuffList);
-                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutoSwitch);
-                }
-                
-                if (ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder.Count > 0)
-                {
-                    var tessste = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
-                    ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder.RemoveAll(item => !buffsList.Contains(item));
-                    buffsList = ProfileSingleton.GetCurrent().AutoSwitch.autoSwitchOrder;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                var teste = ex;
             }
         }
 
@@ -100,12 +69,18 @@ namespace _4RTools.Forms
                 {
                     skillsListBox.Items.Add(buff.ToDescriptionString());
                 }
-                UpdateSwitch();
 
                 this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity;
                 this.switchAmmoCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.switchAmmo;
                 this.ammo1textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo1Key.ToString();
                 this.ammo2textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo2Key.ToString();
+                this.overweightKey.Text = ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString();
+
+                RadioButton rdOverweightMode = (RadioButton)this.groupOverweight.Controls[ProfileSingleton.GetCurrent().UserPreferences.overweightMode.ToString()];
+                if (rdOverweightMode != null) { 
+                    rdOverweightMode.Checked = true;
+                };
+
             }
             catch (Exception ex)
             {
@@ -208,14 +183,44 @@ namespace _4RTools.Forms
             catch { }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
+        private void overweightKey_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                TextBox txtBox = (TextBox)sender;
+                if (txtBox.Text.ToString() != String.Empty)
+                {
+                    Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
+                    ProfileSingleton.GetCurrent().UserPreferences.overweightKey = key;
+                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
+                }
+            }
+            catch { }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void overweightMode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is RadioButton rb && rb.Checked)
+            {
+                if (!string.IsNullOrWhiteSpace(rb.Name))
+                {
+                    ProfileSingleton.GetCurrent().UserPreferences.overweightMode = rb.Name;
+                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
+                }
+            }
+        }
+
     }
 }

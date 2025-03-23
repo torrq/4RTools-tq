@@ -40,7 +40,7 @@ namespace _4RTools.Model
         public const string SPEED_BOOST = "ahkSpeedBoost";
         public const string SYNCHRONOUS = "ahkSynchronous";
         public Dictionary<string, KeyConfig> AhkEntries { get; set; } = new Dictionary<string, KeyConfig>();
-        public int AhkDelay { get; set; } = 10;
+        public int AhkDelay { get; set; } = 100;
         public bool mouseFlick { get; set; } = false;
         public bool noShift { get; set; } = false;
         public string ahkMode { get; set; } = COMPATIBILITY;
@@ -154,7 +154,7 @@ namespace _4RTools.Model
         {
             
             Func<int, int> send_click;
-            bool ammo = false;
+            //bool ammo = false;
             send_click = (evt) =>
             {
                 SendMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, IntPtr.Zero, IntPtr.Zero);
@@ -223,7 +223,26 @@ namespace _4RTools.Model
 
         private Keys toKeys(Key k)
         {
-            return (Keys)Enum.Parse(typeof(Keys), k.ToString());
+            // Explicit mapping for D0-D9 and other special keys
+            switch (k)
+            {
+                case Key.D0: return Keys.D0;
+                case Key.D1: return Keys.D1;
+                case Key.D2: return Keys.D2;
+                case Key.D3: return Keys.D3;
+                case Key.D4: return Keys.D4;
+                case Key.D5: return Keys.D5;
+                case Key.D6: return Keys.D6;
+                case Key.D7: return Keys.D7;
+                case Key.D8: return Keys.D8;
+                case Key.D9: return Keys.D9;
+                case Key.OemPlus: return Keys.Oemplus;
+                case Key.OemTilde: return Keys.Oemtilde;
+                case Key.OemComma: return Keys.Oemcomma;
+                default:
+                    // Use Enum.Parse for other keys
+                    return (Keys)Enum.Parse(typeof(Keys), k.ToString());
+            }
         }
 
         private void _AHKNoClick(Client roClient, KeyConfig config, Keys thisk)

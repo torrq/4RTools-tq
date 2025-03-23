@@ -107,5 +107,6 @@ namespace _4RTools.Forms
         private void AutoBuffStatusForm_Load(object sender, EventArgs e)
         {
         }
+
     }
 }

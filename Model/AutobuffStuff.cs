@@ -46,7 +46,7 @@ namespace _4RTools.Model
                 bool foundQuag = false;
                 bool foundDecreaseAgi = false;
                 string currentMap = c.ReadCurrentMap();
-                DebugLogger.Info("Current Map: " + currentMap);
+
                 if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                 {
                     List<EffectStatusIDs> buffs = new List<EffectStatusIDs>();

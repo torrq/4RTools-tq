@@ -18,23 +18,69 @@ namespace _4RTools.Utils
                 TextBox textBox = (TextBox)sender;
                 Key thisk;
 
-                if (e.KeyCode.ToString() == "Oemplus")
+                DebugLogger.Info("KEY: " + e.KeyCode.ToString());
+
+                // Handle special cases for keys like OemPlus, OemTilde, and OemComma
+                if (e.KeyCode == Keys.Oemplus)
                 {
                     thisk = Key.OemPlus;
-                }else if(e.KeyCode.ToString() == "Oemtilde")
+                }
+                else if (e.KeyCode == Keys.Oemtilde)
                 {
                     thisk = Key.OemTilde;
                 }
-                else if (e.KeyCode.ToString() == "Oemcomma")
+                else if (e.KeyCode == Keys.Oemcomma)
                 {
                     thisk = Key.OemComma;
                 }
+                // Handle numeric keys (D0-D9) explicitly
+                else if (e.KeyCode == Keys.D0)
+                {
+                    thisk = Key.D0;
+                }
+                else if (e.KeyCode == Keys.D1)
+                {
+                    thisk = Key.D1;
+                }
+                else if (e.KeyCode == Keys.D2)
+                {
+                    thisk = Key.D2;
+                }
+                else if (e.KeyCode == Keys.D3)
+                {
+                    thisk = Key.D3;
+                }
+                else if (e.KeyCode == Keys.D4)
+                {
+                    thisk = Key.D4;
+                }
+                else if (e.KeyCode == Keys.D5)
+                {
+                    thisk = Key.D5;
+                }
+                else if (e.KeyCode == Keys.D6)
+                {
+                    thisk = Key.D6;
+                }
+                else if (e.KeyCode == Keys.D7)
+                {
+                    thisk = Key.D7;
+                }
+                else if (e.KeyCode == Keys.D8)
+                {
+                    thisk = Key.D8;
+                }
+                else if (e.KeyCode == Keys.D9)
+                {
+                    thisk = Key.D9;
+                }
                 else
                 {
-                    //DebugLogger.Info("KEY: " + e.KeyCode.ToString());
+                    // Default case for other keys
                     thisk = (Key)Enum.Parse(typeof(Key), e.KeyCode.ToString());
                 }
 
+                // Handle specific actions based on the key
                 switch (thisk)
                 {
                     case Key.Escape:
@@ -45,11 +91,16 @@ namespace _4RTools.Utils
                         textBox.Text = thisk.ToString();
                         break;
                 }
+
                 textBox.Parent.Focus();
                 e.Handled = true;
             }
-            catch { }
+            catch (Exception ex)
+            {
+                DebugLogger.Error("Error in OnKeyDown: " + ex.Message);
+            }
         }
+
 
         public static bool IsValidKey(Key key)
         {
