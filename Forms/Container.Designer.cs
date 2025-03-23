@@ -8,7 +8,6 @@ namespace _4RTools.Forms
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.TabControl atkDefMode;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -56,27 +55,27 @@ namespace _4RTools.Forms
             this.tabPageSkillTimer = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.characterMap = new System.Windows.Forms.Label();
-            this.atkDefMode = new System.Windows.Forms.TabControl();
-            this.atkDefMode.SuspendLayout();
+            atkDefMode = new System.Windows.Forms.TabControl();
+            atkDefMode.SuspendLayout();
             this.tabControlAutopot.SuspendLayout();
             this.SuspendLayout();
             // 
             // atkDefMode
             // 
-            this.atkDefMode.Controls.Add(this.tabPageSpammer);
-            this.atkDefMode.Controls.Add(this.tabPageDebuffs);
-            this.atkDefMode.Controls.Add(this.tabPageAutobuffSkill);
-            this.atkDefMode.Controls.Add(this.tabPageAutobuffStuff);
-            this.atkDefMode.Controls.Add(this.atkDef);
-            this.atkDefMode.Controls.Add(this.tabPageMacroSongs);
-            this.atkDefMode.Controls.Add(this.tabMacroSwitch);
-            this.atkDefMode.Controls.Add(this.tabConfig);
-            this.atkDefMode.Controls.Add(this.tabPageProfiles);
-            this.atkDefMode.Location = new System.Drawing.Point(15, 274);
-            this.atkDefMode.Name = "atkDefMode";
-            this.atkDefMode.SelectedIndex = 0;
-            this.atkDefMode.Size = new System.Drawing.Size(637, 475);
-            this.atkDefMode.TabIndex = 6;
+            atkDefMode.Controls.Add(this.tabPageSpammer);
+            atkDefMode.Controls.Add(this.tabPageDebuffs);
+            atkDefMode.Controls.Add(this.tabPageAutobuffSkill);
+            atkDefMode.Controls.Add(this.tabPageAutobuffStuff);
+            atkDefMode.Controls.Add(this.atkDef);
+            atkDefMode.Controls.Add(this.tabPageMacroSongs);
+            atkDefMode.Controls.Add(this.tabMacroSwitch);
+            atkDefMode.Controls.Add(this.tabConfig);
+            atkDefMode.Controls.Add(this.tabPageProfiles);
+            atkDefMode.Location = new System.Drawing.Point(15, 274);
+            atkDefMode.Name = "atkDefMode";
+            atkDefMode.SelectedIndex = 0;
+            atkDefMode.Size = new System.Drawing.Size(637, 475);
+            atkDefMode.TabIndex = 6;
             // 
             // tabPageSpammer
             // 
@@ -172,7 +171,6 @@ namespace _4RTools.Forms
             // 
             // processCB
             // 
-            this.processCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.processCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.processCB.FormattingEnabled = true;
             this.processCB.Location = new System.Drawing.Point(18, 29);
@@ -183,9 +181,10 @@ namespace _4RTools.Forms
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(208, 28);
+            this.btnRefresh.Location = new System.Drawing.Point(208, 30);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(19, 22);
             this.btnRefresh.TabIndex = 5;
@@ -203,7 +202,6 @@ namespace _4RTools.Forms
             // 
             // profileCB
             // 
-            this.profileCB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profileCB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileCB.FormattingEnabled = true;
             this.profileCB.Location = new System.Drawing.Point(256, 29);
@@ -308,7 +306,7 @@ namespace _4RTools.Forms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(668, 761);
             this.Controls.Add(this.characterMap);
-            this.Controls.Add(this.atkDefMode);
+            this.Controls.Add(atkDefMode);
             this.Controls.Add(this.tabControlAutopot);
             this.Controls.Add(this.characterName);
             this.Controls.Add(this.lblCharacterName);
@@ -328,7 +326,7 @@ namespace _4RTools.Forms
             this.Text = "4RTools-tq";
             this.Load += new System.EventHandler(this.Container_Load);
             this.Resize += new System.EventHandler(this.containerResize);
-            //this.atkDefMode.ResumeLayout(false);
+            atkDefMode.ResumeLayout(false);
             this.tabControlAutopot.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

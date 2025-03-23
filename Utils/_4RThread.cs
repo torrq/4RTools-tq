@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Threading;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _4RTools.Utils
 {
     public class _4RThread
     {
         private Thread thread;
-
+        private ManualResetEventSlim suspendEvent = new ManualResetEventSlim(true); // Initially set
 
         public _4RThread(Func<int, int> toRun)
         {
@@ -19,9 +16,12 @@ namespace _4RTools.Utils
                 {
                     try
                     {
+                        suspendEvent.Wait(); // This will "pause" execution when Reset() is called
                         toRun(0);
-                    }catch(Exception ex) {
-                        DebugLogger.Error("[4RThread Exception] Error while Executing Thread Method ==== "+ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        DebugLogger.Error("[4RThread Exception] Error while Executing Thread Method ==== " + ex.Message);
                     }
                     finally
                     {
@@ -34,19 +34,24 @@ namespace _4RTools.Utils
 
         public static void Start(_4RThread _4RThread)
         {
-            _4RThread.thread.Start();
+            if (_4RThread != null)
+            {
+                _4RThread.suspendEvent.Set(); // Resume execution
+                _4RThread.thread.Start();
+            }
         }
 
         public static void Stop(_4RThread _4RThread)
         {
             if (_4RThread != null && _4RThread.thread.IsAlive)
             {
-                try { 
-                
-                    _4RThread.thread.Suspend();
+                try
+                {
+                    _4RThread.suspendEvent.Reset(); // This will "pause" the thread
                 }
-                catch (Exception ex) {
-                    DebugLogger.Error("[4R Thread Exception] =========== We could not suspend curren thread: " + ex);
+                catch (Exception ex)
+                {
+                    DebugLogger.Error("[4R Thread Exception] =========== We could not suspend current thread: " + ex);
                 }
             }
         }

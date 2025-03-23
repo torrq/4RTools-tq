@@ -55,6 +55,7 @@
             // 
             // btnAddServer
             // 
+            this.btnAddServer.BackColor = System.Drawing.Color.White;
             this.btnAddServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddServer.Location = new System.Drawing.Point(3, 12);
             this.btnAddServer.Name = "btnAddServer";

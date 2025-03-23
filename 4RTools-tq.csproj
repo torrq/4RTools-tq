@@ -8,13 +8,15 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>_4RTools</RootNamespace>
     <AssemblyName>4RTools-tq</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -50,6 +52,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PreferNativeArm64>false</PreferNativeArm64>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo-4rtools.ico</ApplicationIcon>
@@ -64,9 +68,7 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ManifestCertificateThumbprint>D23C52749664C893CEAA696749FDA24E4E4F528C</ManifestCertificateThumbprint>
   </PropertyGroup>
@@ -78,6 +80,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -133,14 +138,6 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
       <Private>True</Private>
@@ -191,17 +188,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AddServerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AddServerForm.Designer.cs">
-      <DependentUpon>AddServerForm.cs</DependentUpon>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Compile>
-    <EmbeddedResource Include="Forms\AddServerForm.resx">
-      <DependentUpon>AddServerForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Compile Include="Forms\AHKForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,50 +206,17 @@
       <DependentUpon>ATKDEFForm.cs</DependentUpon>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Compile>
-    <Compile Include="Forms\AutoSwitchForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AutoSwitchForm.Designer.cs">
-      <DependentUpon>AutoSwitchForm.cs</DependentUpon>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Compile>
-    <Compile Include="Forms\AutoPatcher.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <EmbeddedResource Include="Forms\ATKDEFForm.resx">
       <DependentUpon>ATKDEFForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Forms\AutoPatcher.Designer.cs">
-      <DependentUpon>AutoPatcher.cs</DependentUpon>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Compile>
-    <Compile Include="Forms\ClientUpdaterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <EmbeddedResource Include="Forms\AutoSwitchForm.resx">
-      <DependentUpon>AutoSwitchForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AutoPatcher.resx">
-      <DependentUpon>AutoPatcher.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AutopotForm.resx">
       <DependentUpon>AutopotForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Forms\ClientUpdaterForm.Designer.cs">
-      <DependentUpon>ClientUpdaterForm.cs</DependentUpon>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Compile>
     <Compile Include="Forms\MacroSongForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Forms\ClientUpdaterForm.resx">
-      <DependentUpon>ClientUpdaterForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Container.resx">
       <DependentUpon>Container.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -290,9 +243,6 @@
       <DependentUpon>ConfigForm.cs</DependentUpon>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Compile>
-    <Compile Include="Forms\ServersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <EmbeddedResource Include="Forms\MacroSwitchForm.resx">
       <DependentUpon>MacroSwitchForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -304,16 +254,9 @@
     <EmbeddedResource Include="Forms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Forms\ServersForm.Designer.cs">
-      <DependentUpon>ServersForm.cs</DependentUpon>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Compile>
     <Compile Include="Forms\SkillAutoBuffForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Forms\ServersForm.resx">
-      <DependentUpon>ServersForm.cs</DependentUpon>
-    </EmbeddedResource>
     <Compile Include="Forms\SkillAutoBuffForm.Designer.cs">
       <DependentUpon>SkillAutoBuffForm.cs</DependentUpon>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -390,13 +333,11 @@
     <Compile Include="Model\AHK.cs" />
     <Compile Include="Model\ATKDEFMode.cs" />
     <Compile Include="Model\AutobuffSkill.cs" />
-    <Compile Include="Model\AutoSwitch.cs" />
     <Compile Include="Model\Autopot.cs" />
     <Compile Include="Model\AutobuffStuff.cs" />
     <Compile Include="Model\AutoRefreshSpammer.cs" />
     <Compile Include="Model\Buff.cs" />
     <Compile Include="Model\BuffContainer.cs" />
-    <Compile Include="Model\AutoSwitchRenderer.cs" />
     <Compile Include="Model\DebuffRenderer.cs" />
     <Compile Include="Model\BuffRenderer.cs" />
     <Compile Include="Model\Custom.cs" />
@@ -714,11 +655,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.Zip">
-      <Version>22.10.0</Version>
+      <Version>25.2.0</Version>
     </PackageReference>
     <PackageReference Include="Costura.Fody">
-      <Version>5.7.0</Version>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <Version>6.0.0</Version>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Win32.Primitives">
@@ -728,7 +668,7 @@
       <Version>2.0.3</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>13.0.1</Version>
+      <Version>13.0.3</Version>
     </PackageReference>
     <PackageReference Include="System.AppContext">
       <Version>4.3.0</Version>
@@ -740,13 +680,13 @@
       <Version>4.3.0</Version>
     </PackageReference>
     <PackageReference Include="System.Console">
-      <Version>4.3.0</Version>
+      <Version>4.3.1</Version>
     </PackageReference>
     <PackageReference Include="System.Diagnostics.Debug">
       <Version>4.3.0</Version>
     </PackageReference>
     <PackageReference Include="System.Diagnostics.DiagnosticSource">
-      <Version>4.3.0</Version>
+      <Version>9.0.3</Version>
     </PackageReference>
     <PackageReference Include="System.Diagnostics.Tools">
       <Version>4.3.0</Version>
@@ -779,7 +719,7 @@
       <Version>4.3.4</Version>
     </PackageReference>
     <PackageReference Include="System.Net.Primitives">
-      <Version>4.3.0</Version>
+      <Version>4.3.1</Version>
     </PackageReference>
     <PackageReference Include="System.Net.Sockets">
       <Version>4.3.0</Version>
@@ -799,8 +739,11 @@
     <PackageReference Include="System.Resources.ResourceManager">
       <Version>4.3.0</Version>
     </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>6.1.1</Version>
+    </PackageReference>
     <PackageReference Include="System.Runtime.Extensions">
-      <Version>4.3.0</Version>
+      <Version>4.3.1</Version>
     </PackageReference>
     <PackageReference Include="System.Runtime.Handles">
       <Version>4.3.0</Version>
@@ -836,10 +779,10 @@
       <Version>4.3.0</Version>
     </PackageReference>
     <PackageReference Include="System.ValueTuple">
-      <Version>4.5.0</Version>
+      <Version>4.6.1</Version>
     </PackageReference>
     <PackageReference Include="System.Xml.ReaderWriter">
-      <Version>4.3.0</Version>
+      <Version>4.3.1</Version>
     </PackageReference>
     <PackageReference Include="System.Xml.XDocument">
       <Version>4.3.0</Version>

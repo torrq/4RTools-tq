@@ -1,8 +1,11 @@
-﻿using _4RTools.Utils;
+﻿using _4RTools.Forms;
+using _4RTools.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +24,13 @@ namespace _4RTools.Model
 
         private string actionName;
 
+        private Dictionary<uint, DateTime> lastKeyPressTimes = new Dictionary<uint, DateTime>();
+        private Dictionary<uint, int> keyPressCount = new Dictionary<uint, int>();
+        private const int MAX_KEY_PRESS_COUNT = 2;
+        private const int MIN_KEY_PRESS_INTERVAL_MS = 1500;
+
+        private ToggleApplicationStateForm frmToggleApplication = new ToggleApplicationStateForm();
+
         // Default constructor
         public DebuffsRecovery() : this(ACTION_NAME_DEBUFF_RECOVERY)
         {
@@ -36,6 +46,9 @@ namespace _4RTools.Model
         {
             return this.actionName;
         }
+
+        [DllImport("user32.dll")]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
 
         public _4RThread RestoreStatusThread(Client c)
         {
@@ -55,14 +68,44 @@ namespace _4RTools.Model
                             Key key = buffMapping[(EffectStatusIDs)currentStatus];
                             if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
                             {
-                                this.useStatusRecovery(key);
+                                if (ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "50" &&
+    (currentStatus == (uint)EffectStatusIDs.WEIGHT90) && key != Key.None)
+                                {
+                                    DebugLogger.Info("We are at 90% weight with autostop checkbox enabled, key=" + key.ToString());
+                                    /*
+                                    var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
+                                    frmToggleApplication.toggleStatus();
+     
+                                    if (shouldSendKey)
+                                    {
+
+                                        // Set focus to the RO window
+                                        IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
+                                        SetForegroundWindow(handle);
+                                        // send ALT-# by the only way that seems to work
+                                        System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(key));
+                                    }
+                                    */
+                                }
+                                else if (ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "90" &&
+    (currentStatus == (uint)EffectStatusIDs.WEIGHT50) && key != Key.None)
+                                {
+                                    DebugLogger.Info("We are at 50% weight with autostop checkbox enabled, key=" + key.ToString());
+                                }
+                                else
+                                {
+                                    this.useStatusRecovery(key);
+                                }
                             }
                         }
                     }
                 }
                 Thread.Sleep(this.delay);
                 return 0;
-            });
+            })
+            {
+
+            };
             return statusEffectsThread;
         }
 
@@ -115,7 +158,28 @@ namespace _4RTools.Model
         private void useStatusRecovery(Key key)
         {
             if ((key != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
+            {
                 Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), key.ToString()), 0);
+            }
         }
+
+        private string ToSendKeysFormat(Key key)
+        {
+            switch (key)
+            {
+                case Key.D0: return "0";
+                case Key.D1: return "1";
+                case Key.D2: return "2";
+                case Key.D3: return "3";
+                case Key.D4: return "4";
+                case Key.D5: return "5";
+                case Key.D6: return "6";
+                case Key.D7: return "7";
+                case Key.D8: return "8";
+                case Key.D9: return "9";
+                default: return key.ToString().ToLower();
+            }
+        }
+
     }
 }

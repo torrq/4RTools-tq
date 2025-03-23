@@ -77,7 +77,7 @@ namespace _4RTools.Forms
             lastKey = currentToggleKey; //Refresh lastKey to update 
         }
 
-        private bool toggleStatus()
+        public bool toggleStatus()
         {
             bool isOn = this.btnStatusToggle.Text == "ON";
             if (isOn)

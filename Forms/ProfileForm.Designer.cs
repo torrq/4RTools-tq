@@ -48,10 +48,11 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(505, 29);
+            this.btnSave.Location = new System.Drawing.Point(496, 27);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 26);
             this.btnSave.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label1.Location = new System.Drawing.Point(90, 6);
+            this.label1.Location = new System.Drawing.Point(109, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 17);
             this.label1.TabIndex = 2;
@@ -72,10 +73,11 @@
             // 
             // btnRemoveProfile
             // 
+            this.btnRemoveProfile.BackColor = System.Drawing.Color.White;
             this.btnRemoveProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.btnRemoveProfile.Location = new System.Drawing.Point(505, 400);
+            this.btnRemoveProfile.Location = new System.Drawing.Point(496, 400);
             this.btnRemoveProfile.Name = "btnRemoveProfile";
             this.btnRemoveProfile.Size = new System.Drawing.Size(78, 26);
             this.btnRemoveProfile.TabIndex = 3;
@@ -87,7 +89,7 @@
             // 
             this.lblProfilesList.AutoSize = true;
             this.lblProfilesList.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.lblProfilesList.Location = new System.Drawing.Point(90, 61);
+            this.lblProfilesList.Location = new System.Drawing.Point(109, 61);
             this.lblProfilesList.Name = "lblProfilesList";
             this.lblProfilesList.Size = new System.Drawing.Size(68, 17);
             this.lblProfilesList.TabIndex = 6;

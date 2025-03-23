@@ -35,7 +35,6 @@ namespace _4RTools.Model
                     profile.Custom = JsonConvert.DeserializeObject<Custom>(Profile.GetByAction(rawObject, profile.Custom));
                     profile.DebuffsRecovery = JsonConvert.DeserializeObject<DebuffsRecovery>(Profile.GetByAction(rawObject, profile.DebuffsRecovery));
                     profile.WeightDebuffsRecovery = JsonConvert.DeserializeObject<DebuffsRecovery>(Profile.GetByAction(rawObject, profile.WeightDebuffsRecovery));
-                    profile.AutoSwitch = JsonConvert.DeserializeObject<AutoSwitch>(Profile.GetByAction(rawObject, profile.AutoSwitch));
                 }
             }
             catch
@@ -117,7 +116,6 @@ namespace _4RTools.Model
 
         public Custom Custom { get; set; }
         public ATKDEFMode AtkDefMode { get; set; }
-        public AutoSwitch AutoSwitch { get; set; }
 
         public Profile(string name)
         {
@@ -137,7 +135,6 @@ namespace _4RTools.Model
             this.DebuffsRecovery = new DebuffsRecovery("DebuffsRecovery");
             this.WeightDebuffsRecovery = new DebuffsRecovery("WeightDebuffsRecovery");
             this.Custom = new Custom();
-            this.AutoSwitch = new AutoSwitch();
         }
 
         public static object GetByAction(dynamic obj, Action action)

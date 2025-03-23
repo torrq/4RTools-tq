@@ -16,6 +16,7 @@ namespace _4RTools.Forms
         private string currentProfile;
         List<ClientDTO> clients = new List<ClientDTO>();
         private ToggleApplicationStateForm frmToggleApplication = new ToggleApplicationStateForm();
+
         public Container()
         {
             this.subject.Attach(this);
@@ -45,7 +46,6 @@ namespace _4RTools.Forms
             SetSongMacroWindow();
             SetATKDEFWindow();
             SetMacroSwitchWindow();
-            SetAutoSwitchWindow();
             SetConfigWindow();
 
             //TrackerSingleton.Instance().SendEvent("desktop_login", "page_view", "desktop_container_load");
@@ -119,9 +119,8 @@ namespace _4RTools.Forms
             this.refreshProfileList();
             this.profileCB.SelectedItem = "Default";
 
-            // Apply the same custom drawing settings to both tab groups
             ConfigureTabControl(tabControlAutopot);
-            ConfigureTabControl(atkDefMode);
+            //ConfigureTabControl(atkDefMode);
         }
 
         private void ConfigureTabControl(TabControl tabControl)
@@ -193,11 +192,6 @@ namespace _4RTools.Forms
         private void websiteLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(AppConfig.Website);
-        }
-
-        private void livepixLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start(AppConfig.Livepix);
         }
 
         private void profileCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -392,18 +386,6 @@ namespace _4RTools.Forms
             frm.MdiParent = this;
             addform(this.tabMacroSwitch, frm);
             frm.Show();
-        }
-
-        public void SetAutoSwitchWindow()
-        {
-            /*
-            AutoSwitchForm frm = new AutoSwitchForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageAutoSwitch, frm);
-            */
-
         }
 
         public void SetConfigWindow()
