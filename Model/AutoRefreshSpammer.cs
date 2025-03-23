@@ -60,7 +60,7 @@ namespace _4RTools.Model
 
             {
                 string currentMap = roClient.ReadCurrentMap();
-                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || !this.listCities.Contains(currentMap))
+                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
                 {
                     if (rKey != Key.None)
                     {
