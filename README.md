@@ -1,14 +1,13 @@
 # 4RTools-tq
 
-this is fork of https://github.com/biancaazuma/TalesTools
-which is a fork of the original, https://github.com/4RTools/4RTools
+Fork of: https://github.com/biancaazuma/TalesTools
+Originally: https://github.com/4RTools/4RTools
 
 Changes:
-* translated back into English
-* adapted to fit OsRO MR
-* renewal skills mostly removed
-* padawan (jedi/sith) skills added, and skill icons added too!
-* reverted from two toggle buttons (one for heal, other for all other macro) to just one again
-* dark theme reverted back into a light theme (seems to match RO's client better)
-* some of the form's UI modified
-* most of the fonts (eventually all) changed to Segoe UI
+* Translated back into English, and adapted to fit OsRO MR's status set.
+* New setting to disable 4RTools while overweight (50% or 90%) and shoot an Alt-# macro off.
+* Renewal skills (mostly) removed.
+* Padawan (Jedi/Sith) skills added, and skill icons added too!
+* Reverted from two toggle buttons (one for heal, other for all other macro) to just one again.
+* Dark theme reverted back into a light theme (seems to match RO's client better).
+* Misc UI tweaks.
