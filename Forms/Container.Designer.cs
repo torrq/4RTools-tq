@@ -162,12 +162,12 @@ namespace _4RTools.Forms
             // lblProcessName
             // 
             this.lblProcessName.AutoSize = true;
-            this.lblProcessName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProcessName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProcessName.Location = new System.Drawing.Point(13, 9);
             this.lblProcessName.Name = "lblProcessName";
-            this.lblProcessName.Size = new System.Drawing.Size(100, 17);
+            this.lblProcessName.Size = new System.Drawing.Size(44, 17);
             this.lblProcessName.TabIndex = 3;
-            this.lblProcessName.Text = "Ragnarok Client";
+            this.lblProcessName.Text = "Client";
             // 
             // processCB
             // 
@@ -193,10 +193,10 @@ namespace _4RTools.Forms
             // labelProfile
             // 
             this.labelProfile.AutoSize = true;
-            this.labelProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProfile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProfile.Location = new System.Drawing.Point(252, 9);
             this.labelProfile.Name = "labelProfile";
-            this.labelProfile.Size = new System.Drawing.Size(45, 17);
+            this.labelProfile.Size = new System.Drawing.Size(49, 17);
             this.labelProfile.TabIndex = 15;
             this.labelProfile.Text = "Profile";
             // 
@@ -221,10 +221,10 @@ namespace _4RTools.Forms
             // lblCharacterName
             // 
             this.lblCharacterName.AutoSize = true;
-            this.lblCharacterName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCharacterName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCharacterName.Location = new System.Drawing.Point(463, 9);
             this.lblCharacterName.Name = "lblCharacterName";
-            this.lblCharacterName.Size = new System.Drawing.Size(64, 17);
+            this.lblCharacterName.Size = new System.Drawing.Size(66, 17);
             this.lblCharacterName.TabIndex = 19;
             this.lblCharacterName.Text = "Character";
             // 
@@ -303,7 +303,7 @@ namespace _4RTools.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 761);
             this.Controls.Add(this.characterMap);
             this.Controls.Add(atkDefMode);

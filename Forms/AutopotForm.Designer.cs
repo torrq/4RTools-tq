@@ -187,10 +187,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(23, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 17);
+            this.label5.Size = new System.Drawing.Size(32, 17);
             this.label5.TabIndex = 47;
             this.label5.Text = "First";
             // 

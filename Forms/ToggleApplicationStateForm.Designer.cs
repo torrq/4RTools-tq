@@ -63,6 +63,8 @@
             // lblStatusToggle
             // 
             this.lblStatusToggle.AllowDrop = true;
+            this.lblStatusToggle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.lblStatusToggle.Location = new System.Drawing.Point(6, 55);
             this.lblStatusToggle.MaximumSize = new System.Drawing.Size(190, 18);
             this.lblStatusToggle.Name = "lblStatusToggle";

@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using _4RTools.Utils;
+using _4RTools.Forms;
+using System.Runtime.InteropServices;
 
 namespace _4RTools.Model
 {
@@ -18,6 +20,9 @@ namespace _4RTools.Model
         public List<String> listCities { get; set; }
 
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
+
+        [DllImport("user32.dll")]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
 
         public AutoBuffSkill(string actionName)
         {
@@ -37,6 +42,24 @@ namespace _4RTools.Model
                 if (this.listCities == null || this.listCities.Count == 0) this.listCities = LocalServerManager.GetListCities();
                 this.thread = AutoBuffThread(roClient);
                 _4RThread.Start(this.thread);
+            }
+        }
+
+        private string ToSendKeysFormat(Key key)
+        {
+            switch (key)
+            {
+                case Key.D0: return "0";
+                case Key.D1: return "1";
+                case Key.D2: return "2";
+                case Key.D3: return "3";
+                case Key.D4: return "4";
+                case Key.D5: return "5";
+                case Key.D6: return "6";
+                case Key.D7: return "7";
+                case Key.D8: return "8";
+                case Key.D9: return "9";
+                default: return key.ToString().ToLower();
             }
         }
 
@@ -60,7 +83,40 @@ namespace _4RTools.Model
                             if (currentStatus == uint.MaxValue) { continue; }
 
                             buffs.Add((EffectStatusIDs)currentStatus);
-                            EffectStatusIDs status = (EffectStatusIDs)currentStatus;    
+                            EffectStatusIDs status = (EffectStatusIDs)currentStatus;
+
+                            if (status == EffectStatusIDs.WEIGHT50 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight50")
+                            {
+                                if (!string.IsNullOrEmpty(ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString()))
+                                {
+                                    // Set focus to the RO window
+                                    IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
+                                    SetForegroundWindow(handle);
+                                    // send ALT-# by the only way that seems to work
+                                    System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(ProfileSingleton.GetCurrent().UserPreferences.overweightKey));
+                                    DebugLogger.Info("Overweight 50%, sent macro: Alt + " + ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString());
+                                }
+                                var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
+                                frmToggleApplication.toggleStatus();
+                                DebugLogger.Info("Overweight 50%, disable now");
+
+                            }
+
+                            if (status == EffectStatusIDs.WEIGHT90 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight90")
+                            {
+                                if (!string.IsNullOrEmpty(ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString()))
+                                {
+                                    // Set focus to the RO window
+                                    IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
+                                    SetForegroundWindow(handle);
+                                    // send ALT-# by the only way that seems to work
+                                    System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(ProfileSingleton.GetCurrent().UserPreferences.overweightKey));
+                                    DebugLogger.Info("Overweight 90%, sent macro: Alt + " + ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString());
+                                }
+                                DebugLogger.Info("Overweight 90%, disable now");
+                                var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
+                                frmToggleApplication.toggleStatus();
+                            }
 
                             if (status == EffectStatusIDs.OVERTHRUSTMAX)
                             {
