@@ -60,7 +60,7 @@
             this.txtHPpct.Name = "txtHPpct";
             this.txtHPpct.Size = new System.Drawing.Size(44, 25);
             this.txtHPpct.TabIndex = 39;
-            this.txtHPpct.ValueChanged += new System.EventHandler(this.txtHPpctTextChanged);
+            this.txtHPpct.ValueChanged += new System.EventHandler(this.TxtHPpctTextChanged);
             // 
             // labelSP
             // 
@@ -90,7 +90,7 @@
             this.txtAutopotDelay.Name = "txtAutopotDelay";
             this.txtAutopotDelay.Size = new System.Drawing.Size(44, 23);
             this.txtAutopotDelay.TabIndex = 36;
-            this.txtAutopotDelay.TextChanged += new System.EventHandler(this.txtAutopotDelayTextChanged);
+            this.txtAutopotDelay.TextChanged += new System.EventHandler(this.TxtAutopotDelayTextChanged);
             // 
             // picBoxSP
             // 
@@ -182,7 +182,7 @@
             this.txtSPpct.Name = "txtSPpct";
             this.txtSPpct.Size = new System.Drawing.Size(44, 25);
             this.txtSPpct.TabIndex = 40;
-            this.txtSPpct.ValueChanged += new System.EventHandler(this.txtSPpctTextChanged);
+            this.txtSPpct.ValueChanged += new System.EventHandler(this.TxtSPpctTextChanged);
             // 
             // label5
             // 
@@ -227,7 +227,7 @@
             this.chkStopWitchFC.TabIndex = 50;
             this.chkStopWitchFC.Text = "Stop on Critical Injury";
             this.chkStopWitchFC.UseVisualStyleBackColor = true;
-            this.chkStopWitchFC.CheckedChanged += new System.EventHandler(this.chkStopWitchFC_CheckedChanged);
+            this.chkStopWitchFC.CheckedChanged += new System.EventHandler(this.ChkStopWitchFC_CheckedChanged);
             // 
             // AutopotForm
             // 

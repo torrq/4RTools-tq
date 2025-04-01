@@ -76,7 +76,7 @@ namespace _4RTools.Forms
             this.label2.Size = new System.Drawing.Size(153, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Order of using autobuffs";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // groupSettings
             // 
@@ -105,7 +105,7 @@ namespace _4RTools.Forms
             this.groupOverweight.TabIndex = 316;
             this.groupOverweight.TabStop = false;
             this.groupOverweight.Text = "Turn off when overweight";
-            this.groupOverweight.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupOverweight.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // label1
             // 
@@ -130,7 +130,7 @@ namespace _4RTools.Forms
             this.overweight50.TabStop = true;
             this.overweight50.Text = "50% Weight";
             this.overweight50.UseVisualStyleBackColor = true;
-            this.overweight50.CheckedChanged += new System.EventHandler(this.overweightMode_CheckedChanged);
+            this.overweight50.CheckedChanged += new System.EventHandler(this.OverweightMode_CheckedChanged);
             // 
             // overweightKey
             // 
@@ -140,7 +140,7 @@ namespace _4RTools.Forms
             this.overweightKey.Name = "overweightKey";
             this.overweightKey.Size = new System.Drawing.Size(55, 25);
             this.overweightKey.TabIndex = 311;
-            this.overweightKey.TextChanged += new System.EventHandler(this.overweightKey_TextChanged);
+            this.overweightKey.TextChanged += new System.EventHandler(this.OverweightKey_TextChanged);
             // 
             // overweightOff
             // 
@@ -154,7 +154,7 @@ namespace _4RTools.Forms
             this.overweightOff.TabStop = true;
             this.overweightOff.Text = "Disabled";
             this.overweightOff.UseVisualStyleBackColor = true;
-            this.overweightOff.CheckedChanged += new System.EventHandler(this.overweightMode_CheckedChanged);
+            this.overweightOff.CheckedChanged += new System.EventHandler(this.OverweightMode_CheckedChanged);
             // 
             // overweight90
             // 
@@ -169,7 +169,7 @@ namespace _4RTools.Forms
             this.overweight90.TabStop = true;
             this.overweight90.Text = "90% Weight";
             this.overweight90.UseVisualStyleBackColor = true;
-            this.overweight90.CheckedChanged += new System.EventHandler(this.overweightMode_CheckedChanged);
+            this.overweight90.CheckedChanged += new System.EventHandler(this.OverweightMode_CheckedChanged);
             // 
             // ammo2textBox
             // 
@@ -200,7 +200,7 @@ namespace _4RTools.Forms
             this.switchAmmoCheckBox.TabIndex = 307;
             this.switchAmmoCheckBox.Text = "Automatic Ammo Swap";
             this.switchAmmoCheckBox.UseVisualStyleBackColor = true;
-            this.switchAmmoCheckBox.CheckedChanged += new System.EventHandler(this.switchAmmoCheckBox_CheckedChanged);
+            this.switchAmmoCheckBox.CheckedChanged += new System.EventHandler(this.SwitchAmmoCheckBox_CheckedChanged);
             // 
             // chkStopBuffsOnCity
             // 
@@ -213,7 +213,7 @@ namespace _4RTools.Forms
             this.chkStopBuffsOnCity.TabIndex = 0;
             this.chkStopBuffsOnCity.Text = "Pause autopot, buffs && skill timer in town";
             this.chkStopBuffsOnCity.UseVisualStyleBackColor = true;
-            this.chkStopBuffsOnCity.CheckedChanged += new System.EventHandler(this.chkStopBuffsOnCity_CheckedChanged);
+            this.chkStopBuffsOnCity.CheckedChanged += new System.EventHandler(this.ChkStopBuffsOnCity_CheckedChanged);
             // 
             // clientDTOBindingSource
             // 

@@ -83,10 +83,10 @@ namespace _4RTools.Forms
             this.chkMouseFlick = new System.Windows.Forms.CheckBox();
             this.ahkSpeedBoost = new System.Windows.Forms.RadioButton();
             this.ahkCompatibility = new System.Windows.Forms.RadioButton();
-            this.ahkSynchronous = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbUpAndDownArrow = new System.Windows.Forms.PictureBox();
+            this.ahkSynchronous = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbDeactivated = new System.Windows.Forms.CheckBox();
             this.cbWithNoClick = new System.Windows.Forms.CheckBox();
@@ -114,7 +114,7 @@ namespace _4RTools.Forms
             this.chkF9.TabIndex = 9;
             this.chkF9.Text = "F9";
             this.chkF9.UseVisualStyleBackColor = true;
-            this.chkF9.CheckedChanged += new System.EventHandler(this.chkF9_CheckedChanged);
+            this.chkF9.CheckedChanged += new System.EventHandler(this.ChkF9_CheckedChanged);
             // 
             // chkF8
             // 
@@ -128,7 +128,7 @@ namespace _4RTools.Forms
             this.chkF8.TabIndex = 8;
             this.chkF8.Text = "F8";
             this.chkF8.UseVisualStyleBackColor = true;
-            this.chkF8.CheckedChanged += new System.EventHandler(this.chkF8_CheckedChanged);
+            this.chkF8.CheckedChanged += new System.EventHandler(this.ChkF8_CheckedChanged);
             // 
             // chkF7
             // 
@@ -141,7 +141,7 @@ namespace _4RTools.Forms
             this.chkF7.TabIndex = 7;
             this.chkF7.Text = "F7";
             this.chkF7.UseVisualStyleBackColor = true;
-            this.chkF7.CheckedChanged += new System.EventHandler(this.chkF7_CheckedChanged);
+            this.chkF7.CheckedChanged += new System.EventHandler(this.ChkF7_CheckedChanged);
             // 
             // chkF6
             // 
@@ -154,7 +154,7 @@ namespace _4RTools.Forms
             this.chkF6.TabIndex = 6;
             this.chkF6.Text = "F6";
             this.chkF6.UseVisualStyleBackColor = true;
-            this.chkF6.CheckedChanged += new System.EventHandler(this.chkF6_CheckedChanged);
+            this.chkF6.CheckedChanged += new System.EventHandler(this.ChkF6_CheckedChanged);
             // 
             // chkF5
             // 
@@ -167,7 +167,7 @@ namespace _4RTools.Forms
             this.chkF5.TabIndex = 5;
             this.chkF5.Text = "F5";
             this.chkF5.UseVisualStyleBackColor = true;
-            this.chkF5.CheckedChanged += new System.EventHandler(this.chkF5_CheckedChanged);
+            this.chkF5.CheckedChanged += new System.EventHandler(this.ChkF5_CheckedChanged);
             // 
             // chkF4
             // 
@@ -180,7 +180,7 @@ namespace _4RTools.Forms
             this.chkF4.TabIndex = 4;
             this.chkF4.Text = "F4";
             this.chkF4.UseVisualStyleBackColor = true;
-            this.chkF4.CheckedChanged += new System.EventHandler(this.chkF4_CheckedChanged);
+            this.chkF4.CheckedChanged += new System.EventHandler(this.ChkF4_CheckedChanged);
             // 
             // chkF3
             // 
@@ -193,7 +193,7 @@ namespace _4RTools.Forms
             this.chkF3.TabIndex = 3;
             this.chkF3.Text = "F3";
             this.chkF3.UseVisualStyleBackColor = true;
-            this.chkF3.CheckedChanged += new System.EventHandler(this.chkF3_CheckedChanged);
+            this.chkF3.CheckedChanged += new System.EventHandler(this.ChkF3_CheckedChanged);
             // 
             // chkF2
             // 
@@ -206,7 +206,7 @@ namespace _4RTools.Forms
             this.chkF2.TabIndex = 2;
             this.chkF2.Text = "F2";
             this.chkF2.UseVisualStyleBackColor = true;
-            this.chkF2.CheckedChanged += new System.EventHandler(this.chkF2_CheckedChanged);
+            this.chkF2.CheckedChanged += new System.EventHandler(this.ChkF2_CheckedChanged);
             // 
             // chkF1
             // 
@@ -219,7 +219,7 @@ namespace _4RTools.Forms
             this.chkF1.TabIndex = 1;
             this.chkF1.Text = "F1";
             this.chkF1.UseVisualStyleBackColor = true;
-            this.chkF1.CheckedChanged += new System.EventHandler(this.chkF1_CheckedChanged);
+            this.chkF1.CheckedChanged += new System.EventHandler(this.ChkF1_CheckedChanged);
             // 
             // chk9
             // 
@@ -246,7 +246,7 @@ namespace _4RTools.Forms
             this.chk8.TabIndex = 8;
             this.chk8.Text = "8";
             this.chk8.UseVisualStyleBackColor = true;
-            this.chk8.CheckedChanged += new System.EventHandler(this.chk8_CheckedChanged);
+            this.chk8.CheckedChanged += new System.EventHandler(this.Chk8_CheckedChanged);
             // 
             // chk7
             // 
@@ -259,7 +259,7 @@ namespace _4RTools.Forms
             this.chk7.TabIndex = 7;
             this.chk7.Text = "7";
             this.chk7.UseVisualStyleBackColor = true;
-            this.chk7.CheckedChanged += new System.EventHandler(this.chk7_CheckedChanged);
+            this.chk7.CheckedChanged += new System.EventHandler(this.Chk7_CheckedChanged);
             // 
             // chk6
             // 
@@ -272,7 +272,7 @@ namespace _4RTools.Forms
             this.chk6.TabIndex = 6;
             this.chk6.Text = "6";
             this.chk6.UseVisualStyleBackColor = true;
-            this.chk6.CheckedChanged += new System.EventHandler(this.chk6_CheckedChanged);
+            this.chk6.CheckedChanged += new System.EventHandler(this.Chk6_CheckedChanged);
             // 
             // chk5
             // 
@@ -285,7 +285,7 @@ namespace _4RTools.Forms
             this.chk5.TabIndex = 5;
             this.chk5.Text = "5";
             this.chk5.UseVisualStyleBackColor = true;
-            this.chk5.CheckedChanged += new System.EventHandler(this.chk5_CheckedChanged);
+            this.chk5.CheckedChanged += new System.EventHandler(this.Chk5_CheckedChanged);
             // 
             // chk4
             // 
@@ -298,7 +298,7 @@ namespace _4RTools.Forms
             this.chk4.TabIndex = 4;
             this.chk4.Text = "4";
             this.chk4.UseVisualStyleBackColor = true;
-            this.chk4.CheckedChanged += new System.EventHandler(this.chk4_CheckedChanged);
+            this.chk4.CheckedChanged += new System.EventHandler(this.Chk4_CheckedChanged);
             // 
             // chk3
             // 
@@ -311,7 +311,7 @@ namespace _4RTools.Forms
             this.chk3.TabIndex = 3;
             this.chk3.Text = "3";
             this.chk3.UseVisualStyleBackColor = true;
-            this.chk3.CheckedChanged += new System.EventHandler(this.chk3_CheckedChanged);
+            this.chk3.CheckedChanged += new System.EventHandler(this.Chk3_CheckedChanged);
             // 
             // chk2
             // 
@@ -324,7 +324,7 @@ namespace _4RTools.Forms
             this.chk2.TabIndex = 2;
             this.chk2.Text = "2";
             this.chk2.UseVisualStyleBackColor = true;
-            this.chk2.CheckedChanged += new System.EventHandler(this.chk2_CheckedChanged);
+            this.chk2.CheckedChanged += new System.EventHandler(this.Chk2_CheckedChanged);
             // 
             // chk1
             // 
@@ -337,7 +337,7 @@ namespace _4RTools.Forms
             this.chk1.TabIndex = 1;
             this.chk1.Text = "1";
             this.chk1.UseVisualStyleBackColor = true;
-            this.chk1.CheckedChanged += new System.EventHandler(this.chk1_CheckedChanged);
+            this.chk1.CheckedChanged += new System.EventHandler(this.Chk1_CheckedChanged);
             // 
             // chkM
             // 
@@ -436,7 +436,7 @@ namespace _4RTools.Forms
             this.chkL.TabIndex = 17;
             this.chkL.Text = "L";
             this.chkL.UseVisualStyleBackColor = true;
-            this.chkL.CheckedChanged += new System.EventHandler(this.chkL_CheckedChanged);
+            this.chkL.CheckedChanged += new System.EventHandler(this.ChkL_CheckedChanged);
             // 
             // chkK
             // 
@@ -643,9 +643,9 @@ namespace _4RTools.Forms
             0,
             0});
             this.txtSpammerDelay.Name = "txtSpammerDelay";
-            this.txtSpammerDelay.Size = new System.Drawing.Size(59, 25);
+            this.txtSpammerDelay.Size = new System.Drawing.Size(65, 25);
             this.txtSpammerDelay.TabIndex = 31;
-            this.txtSpammerDelay.ValueChanged += new System.EventHandler(this.txtSpammerDelay_TextChanged);
+            this.txtSpammerDelay.ValueChanged += new System.EventHandler(this.TxtSpammerDelay_TextChanged);
             // 
             // panel4
             // 
@@ -694,7 +694,7 @@ namespace _4RTools.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 26);
+            this.label1.Location = new System.Drawing.Point(81, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 32;
@@ -707,7 +707,6 @@ namespace _4RTools.Forms
             this.groupAhkConfig.Controls.Add(this.ahkSpeedBoost);
             this.groupAhkConfig.Controls.Add(this.groupBox2);
             this.groupAhkConfig.Controls.Add(this.ahkCompatibility);
-            this.groupAhkConfig.Controls.Add(this.ahkSynchronous);
             this.groupAhkConfig.Controls.Add(this.groupBox4);
             this.groupAhkConfig.Location = new System.Drawing.Point(15, 358);
             this.groupAhkConfig.Name = "groupAhkConfig";
@@ -726,7 +725,7 @@ namespace _4RTools.Forms
             this.chkNoShift.TabIndex = 39;
             this.chkNoShift.Text = "No Shift";
             this.chkNoShift.UseVisualStyleBackColor = true;
-            this.chkNoShift.CheckedChanged += new System.EventHandler(this.chkNoShift_CheckedChanged);
+            this.chkNoShift.CheckedChanged += new System.EventHandler(this.ChkNoShift_CheckedChanged);
             // 
             // chkMouseFlick
             // 
@@ -738,18 +737,18 @@ namespace _4RTools.Forms
             this.chkMouseFlick.TabIndex = 38;
             this.chkMouseFlick.Text = "Mouse Flick";
             this.chkMouseFlick.UseVisualStyleBackColor = true;
-            this.chkMouseFlick.CheckedChanged += new System.EventHandler(this.chkMouseFlick_CheckedChanged);
+            this.chkMouseFlick.CheckedChanged += new System.EventHandler(this.ChkMouseFlick_CheckedChanged);
             // 
             // ahkSpeedBoost
             // 
             this.ahkSpeedBoost.AutoSize = true;
             this.ahkSpeedBoost.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ahkSpeedBoost.Location = new System.Drawing.Point(121, 23);
+            this.ahkSpeedBoost.Location = new System.Drawing.Point(135, 38);
             this.ahkSpeedBoost.Name = "ahkSpeedBoost";
-            this.ahkSpeedBoost.Size = new System.Drawing.Size(90, 17);
+            this.ahkSpeedBoost.Size = new System.Drawing.Size(89, 17);
             this.ahkSpeedBoost.TabIndex = 37;
             this.ahkSpeedBoost.TabStop = true;
-            this.ahkSpeedBoost.Text = "Speed boost";
+            this.ahkSpeedBoost.Text = "Speed Boost";
             this.ahkSpeedBoost.UseVisualStyleBackColor = true;
             this.ahkSpeedBoost.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
@@ -757,7 +756,7 @@ namespace _4RTools.Forms
             // 
             this.ahkCompatibility.AutoSize = true;
             this.ahkCompatibility.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ahkCompatibility.Location = new System.Drawing.Point(17, 23);
+            this.ahkCompatibility.Location = new System.Drawing.Point(27, 38);
             this.ahkCompatibility.Name = "ahkCompatibility";
             this.ahkCompatibility.Size = new System.Drawing.Size(93, 17);
             this.ahkCompatibility.TabIndex = 35;
@@ -765,19 +764,6 @@ namespace _4RTools.Forms
             this.ahkCompatibility.Text = "Compatibility";
             this.ahkCompatibility.UseVisualStyleBackColor = true;
             this.ahkCompatibility.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
-            // 
-            // ahkSynchronous
-            // 
-            this.ahkSynchronous.AutoSize = true;
-            this.ahkSynchronous.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ahkSynchronous.Location = new System.Drawing.Point(17, 50);
-            this.ahkSynchronous.Name = "ahkSynchronous";
-            this.ahkSynchronous.Size = new System.Drawing.Size(92, 17);
-            this.ahkSynchronous.TabIndex = 35;
-            this.ahkSynchronous.TabStop = true;
-            this.ahkSynchronous.Text = "Synchronous";
-            this.ahkSynchronous.UseVisualStyleBackColor = true;
-            this.ahkSynchronous.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -799,7 +785,7 @@ namespace _4RTools.Forms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // pbUpAndDownArrow
             // 
@@ -810,6 +796,13 @@ namespace _4RTools.Forms
             this.pbUpAndDownArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbUpAndDownArrow.TabIndex = 35;
             this.pbUpAndDownArrow.TabStop = false;
+            // 
+            // ahkSynchronous
+            // 
+            this.ahkSynchronous.Location = new System.Drawing.Point(0, 0);
+            this.ahkSynchronous.Name = "ahkSynchronous";
+            this.ahkSynchronous.Size = new System.Drawing.Size(104, 24);
+            this.ahkSynchronous.TabIndex = 0;
             // 
             // groupBox3
             // 

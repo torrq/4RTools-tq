@@ -10,11 +10,15 @@ namespace _4RTools.Forms
     {
 
         private Custom custom;
+
         public CustomButtonForm(Subject subject)
         {
             InitializeComponent();
-            toolTip1.SetToolTip(label1, "Simulates alt+right mouse button for quick transfer of items between storage and inventory");
-            toolTip1.SetToolTip(pictureBox2, "Simulates alt+right mouse button for quick transfer of items between storage and inventory");
+            string toolTipText = "Simulates Alt+Right Click for quick item transfer between storage and inventory";
+
+            toolTip1.SetToolTip(label1, toolTipText);
+            toolTip1.SetToolTip(pictureBox2, toolTipText);
+
             subject.Attach(this);
         }
 
@@ -42,11 +46,11 @@ namespace _4RTools.Forms
 
             this.txtTransferKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.txtTransferKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.txtTransferKey.TextChanged += new EventHandler(onTransferKeyChange);
+            this.txtTransferKey.TextChanged += new EventHandler(OnTransferKeyChange);
             this.ActiveControl = null;
         }
 
-        private void onTransferKeyChange(object sender, EventArgs e)
+        private void OnTransferKeyChange(object sender, EventArgs e)
         {
             Key key = (Key)Enum.Parse(typeof(Key), this.txtTransferKey.Text.ToString());
             try
@@ -58,17 +62,17 @@ namespace _4RTools.Forms
             this.ActiveControl = null;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtTransferKey_TextChanged(object sender, EventArgs e)
+        private void TxtTransferKey_TextChanged(object sender, EventArgs e)
         {
 
         }

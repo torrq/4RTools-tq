@@ -19,7 +19,7 @@ namespace _4RTools.Forms
             new DebuffRenderer(debuffContainers, toolTip1).DoRender();
             this.txtStatusKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.txtStatusKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.txtStatusKey.TextChanged += new EventHandler(onStatusKeyChange);
+            this.txtStatusKey.TextChanged += new EventHandler(OnStatusKeyChange);
             subject.Attach(this);
         }
         public void Update(ISubject subject)
@@ -90,7 +90,7 @@ namespace _4RTools.Forms
             }
         }
 
-        private void onStatusKeyChange(object sender, EventArgs e)
+        private void OnStatusKeyChange(object sender, EventArgs e)
         {
             Key k = (Key)Enum.Parse(typeof(Key), this.txtStatusKey.Text.ToString());
             ProfileSingleton.GetCurrent().StatusRecovery.AddKeyToBuff(EffectStatusIDs.POISON, k);

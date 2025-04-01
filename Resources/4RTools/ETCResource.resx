@@ -136,17 +136,11 @@
   <data name="Healing_On" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\etc\Healing_On.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="HP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\assets\etc\HP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\etc\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shift" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\etc\shift.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\assets\etc\SP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Speech_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\assets\etc\Speech_Off.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -170,6 +164,6 @@
     <value>..\..\assets\etc\Yggdrasil.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ygg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-	<value>..\..\assets\etc\Ygg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\assets\etc\Ygg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

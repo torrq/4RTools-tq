@@ -427,7 +427,7 @@
             this.in8mac1.Name = "in8mac1";
             this.in8mac1.Size = new System.Drawing.Size(47, 22);
             this.in8mac1.TabIndex = 285;
-            this.in8mac1.TextChanged += new System.EventHandler(this.in8mac1_TextChanged);
+            this.in8mac1.TextChanged += new System.EventHandler(this.In8mac1_TextChanged);
             // 
             // in7mac1
             // 
@@ -436,7 +436,7 @@
             this.in7mac1.Name = "in7mac1";
             this.in7mac1.Size = new System.Drawing.Size(47, 22);
             this.in7mac1.TabIndex = 284;
-            this.in7mac1.TextChanged += new System.EventHandler(this.in7mac1_TextChanged);
+            this.in7mac1.TextChanged += new System.EventHandler(this.In7mac1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -504,7 +504,7 @@
             this.inInstrumentMacro1.Size = new System.Drawing.Size(47, 22);
             this.inInstrumentMacro1.TabIndex = 277;
             this.inInstrumentMacro1.Tag = "1:Instrument";
-            this.inInstrumentMacro1.TextChanged += new System.EventHandler(this.inInstrumentMacro1_TextChanged);
+            this.inInstrumentMacro1.TextChanged += new System.EventHandler(this.InInstrumentMacro1_TextChanged);
             // 
             // pictureBox5
             // 
@@ -524,7 +524,7 @@
             this.inDaggerMacro1.Size = new System.Drawing.Size(47, 22);
             this.inDaggerMacro1.TabIndex = 211;
             this.inDaggerMacro1.Tag = "1:Dagger";
-            this.inDaggerMacro1.TextChanged += new System.EventHandler(this.inDaggerMacro1_TextChanged);
+            this.inDaggerMacro1.TextChanged += new System.EventHandler(this.InDaggerMacro1_TextChanged);
             // 
             // btnResMac1
             // 
@@ -545,7 +545,7 @@
             this.in6mac1.Name = "in6mac1";
             this.in6mac1.Size = new System.Drawing.Size(47, 22);
             this.in6mac1.TabIndex = 75;
-            this.in6mac1.TextChanged += new System.EventHandler(this.in6mac1_TextChanged);
+            this.in6mac1.TextChanged += new System.EventHandler(this.In6mac1_TextChanged);
             // 
             // in5mac1
             // 
@@ -554,7 +554,7 @@
             this.in5mac1.Name = "in5mac1";
             this.in5mac1.Size = new System.Drawing.Size(47, 22);
             this.in5mac1.TabIndex = 74;
-            this.in5mac1.TextChanged += new System.EventHandler(this.in5mac1_TextChanged);
+            this.in5mac1.TextChanged += new System.EventHandler(this.In5mac1_TextChanged);
             // 
             // in4mac1
             // 
@@ -563,7 +563,7 @@
             this.in4mac1.Name = "in4mac1";
             this.in4mac1.Size = new System.Drawing.Size(47, 22);
             this.in4mac1.TabIndex = 73;
-            this.in4mac1.TextChanged += new System.EventHandler(this.in4mac1_TextChanged);
+            this.in4mac1.TextChanged += new System.EventHandler(this.In4mac1_TextChanged);
             // 
             // in3mac1
             // 
@@ -572,7 +572,7 @@
             this.in3mac1.Name = "in3mac1";
             this.in3mac1.Size = new System.Drawing.Size(47, 22);
             this.in3mac1.TabIndex = 72;
-            this.in3mac1.TextChanged += new System.EventHandler(this.in3mac1_TextChanged);
+            this.in3mac1.TextChanged += new System.EventHandler(this.In3mac1_TextChanged);
             // 
             // in2mac1
             // 
@@ -581,7 +581,7 @@
             this.in2mac1.Name = "in2mac1";
             this.in2mac1.Size = new System.Drawing.Size(47, 22);
             this.in2mac1.TabIndex = 71;
-            this.in2mac1.TextChanged += new System.EventHandler(this.in2mac1_TextChanged);
+            this.in2mac1.TextChanged += new System.EventHandler(this.In2mac1_TextChanged);
             // 
             // in1mac1
             // 
@@ -590,7 +590,7 @@
             this.in1mac1.Name = "in1mac1";
             this.in1mac1.Size = new System.Drawing.Size(47, 22);
             this.in1mac1.TabIndex = 70;
-            this.in1mac1.TextChanged += new System.EventHandler(this.in1mac1_TextChanged);
+            this.in1mac1.TextChanged += new System.EventHandler(this.In1mac1_TextChanged);
             // 
             // inTriggerMacro1
             // 
@@ -600,7 +600,7 @@
             this.inTriggerMacro1.Size = new System.Drawing.Size(47, 22);
             this.inTriggerMacro1.TabIndex = 69;
             this.inTriggerMacro1.Tag = "1:Trigger";
-            this.inTriggerMacro1.TextChanged += new System.EventHandler(this.inTriggerMacro1_TextChanged);
+            this.inTriggerMacro1.TextChanged += new System.EventHandler(this.InTriggerMacro1_TextChanged);
             // 
             // delayMac1
             // 
@@ -723,7 +723,7 @@
             this.in8mac2.Name = "in8mac2";
             this.in8mac2.Size = new System.Drawing.Size(47, 22);
             this.in8mac2.TabIndex = 300;
-            this.in8mac2.TextChanged += new System.EventHandler(this.in8mac2_TextChanged);
+            this.in8mac2.TextChanged += new System.EventHandler(this.In8mac2_TextChanged);
             // 
             // in7mac2
             // 
@@ -732,7 +732,7 @@
             this.in7mac2.Name = "in7mac2";
             this.in7mac2.Size = new System.Drawing.Size(47, 22);
             this.in7mac2.TabIndex = 299;
-            this.in7mac2.TextChanged += new System.EventHandler(this.in7mac2_TextChanged);
+            this.in7mac2.TextChanged += new System.EventHandler(this.In7mac2_TextChanged);
             // 
             // pictureBox15
             // 
@@ -781,7 +781,7 @@
             this.in6mac2.Name = "in6mac2";
             this.in6mac2.Size = new System.Drawing.Size(47, 22);
             this.in6mac2.TabIndex = 294;
-            this.in6mac2.TextChanged += new System.EventHandler(this.in6mac2_TextChanged);
+            this.in6mac2.TextChanged += new System.EventHandler(this.In6mac2_TextChanged);
             // 
             // in5mac2
             // 
@@ -790,7 +790,7 @@
             this.in5mac2.Name = "in5mac2";
             this.in5mac2.Size = new System.Drawing.Size(47, 22);
             this.in5mac2.TabIndex = 293;
-            this.in5mac2.TextChanged += new System.EventHandler(this.in5mac2_TextChanged);
+            this.in5mac2.TextChanged += new System.EventHandler(this.In5mac2_TextChanged);
             // 
             // in4mac2
             // 
@@ -799,7 +799,7 @@
             this.in4mac2.Name = "in4mac2";
             this.in4mac2.Size = new System.Drawing.Size(47, 22);
             this.in4mac2.TabIndex = 292;
-            this.in4mac2.TextChanged += new System.EventHandler(this.in4mac2_TextChanged);
+            this.in4mac2.TextChanged += new System.EventHandler(this.In4mac2_TextChanged);
             // 
             // in3mac2
             // 
@@ -808,7 +808,7 @@
             this.in3mac2.Name = "in3mac2";
             this.in3mac2.Size = new System.Drawing.Size(47, 22);
             this.in3mac2.TabIndex = 291;
-            this.in3mac2.TextChanged += new System.EventHandler(this.in3mac2_TextChanged);
+            this.in3mac2.TextChanged += new System.EventHandler(this.In3mac2_TextChanged);
             // 
             // in2mac2
             // 
@@ -817,7 +817,7 @@
             this.in2mac2.Name = "in2mac2";
             this.in2mac2.Size = new System.Drawing.Size(47, 22);
             this.in2mac2.TabIndex = 290;
-            this.in2mac2.TextChanged += new System.EventHandler(this.in2mac2_TextChanged);
+            this.in2mac2.TextChanged += new System.EventHandler(this.In2mac2_TextChanged);
             // 
             // in1mac2
             // 
@@ -826,7 +826,7 @@
             this.in1mac2.Name = "in1mac2";
             this.in1mac2.Size = new System.Drawing.Size(47, 22);
             this.in1mac2.TabIndex = 289;
-            this.in1mac2.TextChanged += new System.EventHandler(this.in1mac2_TextChanged);
+            this.in1mac2.TextChanged += new System.EventHandler(this.In1mac2_TextChanged);
             // 
             // panel4
             // 
@@ -866,7 +866,7 @@
             this.inInstrumentMacro2.Size = new System.Drawing.Size(47, 22);
             this.inInstrumentMacro2.TabIndex = 282;
             this.inInstrumentMacro2.Tag = "2:Instrument";
-            this.inInstrumentMacro2.TextChanged += new System.EventHandler(this.inInstrumentMacro2_TextChanged);
+            this.inInstrumentMacro2.TextChanged += new System.EventHandler(this.InInstrumentMacro2_TextChanged);
             // 
             // inTriggerMacro2
             // 
@@ -876,7 +876,7 @@
             this.inTriggerMacro2.Size = new System.Drawing.Size(47, 22);
             this.inTriggerMacro2.TabIndex = 70;
             this.inTriggerMacro2.Tag = "2:Trigger";
-            this.inTriggerMacro2.TextChanged += new System.EventHandler(this.inTriggerMacro2_TextChanged);
+            this.inTriggerMacro2.TextChanged += new System.EventHandler(this.InTriggerMacro2_TextChanged);
             // 
             // pictureBox11
             // 
@@ -909,7 +909,7 @@
             this.inDaggerMacro2.Size = new System.Drawing.Size(47, 22);
             this.inDaggerMacro2.TabIndex = 280;
             this.inDaggerMacro2.Tag = "2:Dagger";
-            this.inDaggerMacro2.TextChanged += new System.EventHandler(this.inDaggerMacro2_TextChanged);
+            this.inDaggerMacro2.TextChanged += new System.EventHandler(this.InDaggerMacro2_TextChanged);
             // 
             // label1
             // 
@@ -1019,7 +1019,7 @@
             this.in8mac3.Name = "in8mac3";
             this.in8mac3.Size = new System.Drawing.Size(47, 22);
             this.in8mac3.TabIndex = 315;
-            this.in8mac3.TextChanged += new System.EventHandler(this.in8mac3_TextChanged);
+            this.in8mac3.TextChanged += new System.EventHandler(this.In8mac3_TextChanged);
             // 
             // in7mac3
             // 
@@ -1028,7 +1028,7 @@
             this.in7mac3.Name = "in7mac3";
             this.in7mac3.Size = new System.Drawing.Size(47, 22);
             this.in7mac3.TabIndex = 314;
-            this.in7mac3.TextChanged += new System.EventHandler(this.in7mac3_TextChanged);
+            this.in7mac3.TextChanged += new System.EventHandler(this.In7mac3_TextChanged);
             // 
             // pictureBox24
             // 
@@ -1077,7 +1077,7 @@
             this.in6mac3.Name = "in6mac3";
             this.in6mac3.Size = new System.Drawing.Size(47, 22);
             this.in6mac3.TabIndex = 309;
-            this.in6mac3.TextChanged += new System.EventHandler(this.in6mac3_TextChanged);
+            this.in6mac3.TextChanged += new System.EventHandler(this.In6mac3_TextChanged);
             // 
             // in5mac3
             // 
@@ -1086,7 +1086,7 @@
             this.in5mac3.Name = "in5mac3";
             this.in5mac3.Size = new System.Drawing.Size(47, 22);
             this.in5mac3.TabIndex = 308;
-            this.in5mac3.TextChanged += new System.EventHandler(this.in5mac3_TextChanged);
+            this.in5mac3.TextChanged += new System.EventHandler(this.In5mac3_TextChanged);
             // 
             // in4mac3
             // 
@@ -1095,7 +1095,7 @@
             this.in4mac3.Name = "in4mac3";
             this.in4mac3.Size = new System.Drawing.Size(47, 22);
             this.in4mac3.TabIndex = 307;
-            this.in4mac3.TextChanged += new System.EventHandler(this.in4mac3_TextChanged);
+            this.in4mac3.TextChanged += new System.EventHandler(this.In4mac3_TextChanged);
             // 
             // in3mac3
             // 
@@ -1104,7 +1104,7 @@
             this.in3mac3.Name = "in3mac3";
             this.in3mac3.Size = new System.Drawing.Size(47, 22);
             this.in3mac3.TabIndex = 306;
-            this.in3mac3.TextChanged += new System.EventHandler(this.in3mac3_TextChanged);
+            this.in3mac3.TextChanged += new System.EventHandler(this.In3mac3_TextChanged);
             // 
             // in2mac3
             // 
@@ -1113,7 +1113,7 @@
             this.in2mac3.Name = "in2mac3";
             this.in2mac3.Size = new System.Drawing.Size(47, 22);
             this.in2mac3.TabIndex = 305;
-            this.in2mac3.TextChanged += new System.EventHandler(this.in2mac3_TextChanged);
+            this.in2mac3.TextChanged += new System.EventHandler(this.In2mac3_TextChanged);
             // 
             // in1mac3
             // 
@@ -1122,7 +1122,7 @@
             this.in1mac3.Name = "in1mac3";
             this.in1mac3.Size = new System.Drawing.Size(47, 22);
             this.in1mac3.TabIndex = 304;
-            this.in1mac3.TextChanged += new System.EventHandler(this.in1mac3_TextChanged);
+            this.in1mac3.TextChanged += new System.EventHandler(this.In1mac3_TextChanged);
             // 
             // panel6
             // 
@@ -1150,7 +1150,7 @@
             this.inInstrumentMacro3.Size = new System.Drawing.Size(47, 22);
             this.inInstrumentMacro3.TabIndex = 287;
             this.inInstrumentMacro3.Tag = "3:Instrument";
-            this.inInstrumentMacro3.TextChanged += new System.EventHandler(this.inInstrumentMacro3_TextChanged);
+            this.inInstrumentMacro3.TextChanged += new System.EventHandler(this.InInstrumentMacro3_TextChanged);
             // 
             // pictureBox20
             // 
@@ -1170,7 +1170,7 @@
             this.inDaggerMacro3.Size = new System.Drawing.Size(47, 22);
             this.inDaggerMacro3.TabIndex = 285;
             this.inDaggerMacro3.Tag = "3:Dagger";
-            this.inDaggerMacro3.TextChanged += new System.EventHandler(this.inDaggerMacro3_TextChanged);
+            this.inDaggerMacro3.TextChanged += new System.EventHandler(this.InDaggerMacro3_TextChanged);
             // 
             // btnResMac3
             // 
@@ -1192,7 +1192,7 @@
             this.inTriggerMacro3.Size = new System.Drawing.Size(47, 22);
             this.inTriggerMacro3.TabIndex = 71;
             this.inTriggerMacro3.Tag = "3:Trigger";
-            this.inTriggerMacro3.TextChanged += new System.EventHandler(this.inTriggerMacro3_TextChanged);
+            this.inTriggerMacro3.TextChanged += new System.EventHandler(this.InTriggerMacro3_TextChanged);
             // 
             // delayMac3
             // 
@@ -1315,7 +1315,7 @@
             this.in8mac4.Name = "in8mac4";
             this.in8mac4.Size = new System.Drawing.Size(47, 22);
             this.in8mac4.TabIndex = 335;
-            this.in8mac4.TextChanged += new System.EventHandler(this.in8mac4_TextChanged);
+            this.in8mac4.TextChanged += new System.EventHandler(this.In8mac4_TextChanged);
             // 
             // in7mac4
             // 
@@ -1324,7 +1324,7 @@
             this.in7mac4.Name = "in7mac4";
             this.in7mac4.Size = new System.Drawing.Size(47, 22);
             this.in7mac4.TabIndex = 334;
-            this.in7mac4.TextChanged += new System.EventHandler(this.in7mac4_TextChanged);
+            this.in7mac4.TextChanged += new System.EventHandler(this.In7mac4_TextChanged);
             // 
             // pictureBox31
             // 
@@ -1373,7 +1373,7 @@
             this.in6mac4.Name = "in6mac4";
             this.in6mac4.Size = new System.Drawing.Size(47, 22);
             this.in6mac4.TabIndex = 329;
-            this.in6mac4.TextChanged += new System.EventHandler(this.in6mac4_TextChanged);
+            this.in6mac4.TextChanged += new System.EventHandler(this.In6mac4_TextChanged);
             // 
             // in5mac4
             // 
@@ -1382,7 +1382,7 @@
             this.in5mac4.Name = "in5mac4";
             this.in5mac4.Size = new System.Drawing.Size(47, 22);
             this.in5mac4.TabIndex = 328;
-            this.in5mac4.TextChanged += new System.EventHandler(this.in5mac4_TextChanged);
+            this.in5mac4.TextChanged += new System.EventHandler(this.In5mac4_TextChanged);
             // 
             // in4mac4
             // 
@@ -1391,7 +1391,7 @@
             this.in4mac4.Name = "in4mac4";
             this.in4mac4.Size = new System.Drawing.Size(47, 22);
             this.in4mac4.TabIndex = 327;
-            this.in4mac4.TextChanged += new System.EventHandler(this.in4mac4_TextChanged);
+            this.in4mac4.TextChanged += new System.EventHandler(this.In4mac4_TextChanged);
             // 
             // in3mac4
             // 
@@ -1400,7 +1400,7 @@
             this.in3mac4.Name = "in3mac4";
             this.in3mac4.Size = new System.Drawing.Size(47, 22);
             this.in3mac4.TabIndex = 326;
-            this.in3mac4.TextChanged += new System.EventHandler(this.in3mac4_TextChanged);
+            this.in3mac4.TextChanged += new System.EventHandler(this.In3mac4_TextChanged);
             // 
             // in2mac4
             // 
@@ -1409,7 +1409,7 @@
             this.in2mac4.Name = "in2mac4";
             this.in2mac4.Size = new System.Drawing.Size(47, 22);
             this.in2mac4.TabIndex = 325;
-            this.in2mac4.TextChanged += new System.EventHandler(this.in2mac4_TextChanged);
+            this.in2mac4.TextChanged += new System.EventHandler(this.In2mac4_TextChanged);
             // 
             // in1mac4
             // 
@@ -1418,7 +1418,7 @@
             this.in1mac4.Name = "in1mac4";
             this.in1mac4.Size = new System.Drawing.Size(47, 22);
             this.in1mac4.TabIndex = 324;
-            this.in1mac4.TextChanged += new System.EventHandler(this.in1mac4_TextChanged);
+            this.in1mac4.TextChanged += new System.EventHandler(this.In1mac4_TextChanged);
             // 
             // panel8
             // 
@@ -1446,7 +1446,7 @@
             this.inInstrumentMacro4.Size = new System.Drawing.Size(47, 22);
             this.inInstrumentMacro4.TabIndex = 321;
             this.inInstrumentMacro4.Tag = "4:Instrument";
-            this.inInstrumentMacro4.TextChanged += new System.EventHandler(this.inInstrumentMacro4_TextChanged);
+            this.inInstrumentMacro4.TextChanged += new System.EventHandler(this.InInstrumentMacro4_TextChanged);
             // 
             // pictureBox36
             // 
@@ -1487,7 +1487,7 @@
             this.inTriggerMacro4.Size = new System.Drawing.Size(47, 22);
             this.inTriggerMacro4.TabIndex = 72;
             this.inTriggerMacro4.Tag = "4:Trigger";
-            this.inTriggerMacro4.TextChanged += new System.EventHandler(this.inTriggerMacro4_TextChanged);
+            this.inTriggerMacro4.TextChanged += new System.EventHandler(this.InTriggerMacro4_TextChanged);
             // 
             // delayMac4
             // 
@@ -1903,7 +1903,7 @@
             this.in7mac7.Name = "in7mac7";
             this.in7mac7.Size = new System.Drawing.Size(47, 22);
             this.in7mac7.TabIndex = 314;
-            this.in7mac7.TextChanged += new System.EventHandler(this.in7mac7_TextChanged);
+            this.in7mac7.TextChanged += new System.EventHandler(this.In7mac7_TextChanged);
             // 
             // pictureBox49
             // 
@@ -1960,7 +1960,7 @@
             this.in5mac7.Name = "in5mac7";
             this.in5mac7.Size = new System.Drawing.Size(47, 22);
             this.in5mac7.TabIndex = 308;
-            this.in5mac7.TextChanged += new System.EventHandler(this.in5mac7_TextChanged);
+            this.in5mac7.TextChanged += new System.EventHandler(this.In5mac7_TextChanged);
             // 
             // in4mac7
             // 
@@ -1977,7 +1977,7 @@
             this.in3mac7.Name = "in3mac7";
             this.in3mac7.Size = new System.Drawing.Size(47, 22);
             this.in3mac7.TabIndex = 306;
-            this.in3mac7.TextChanged += new System.EventHandler(this.in3mac7_TextChanged);
+            this.in3mac7.TextChanged += new System.EventHandler(this.In3mac7_TextChanged);
             // 
             // in2mac7
             // 
@@ -1994,7 +1994,7 @@
             this.in1mac7.Name = "in1mac7";
             this.in1mac7.Size = new System.Drawing.Size(47, 22);
             this.in1mac7.TabIndex = 304;
-            this.in1mac7.TextChanged += new System.EventHandler(this.in1mac7_TextChanged);
+            this.in1mac7.TextChanged += new System.EventHandler(this.In1mac7_TextChanged);
             // 
             // panel14
             // 
@@ -2041,7 +2041,7 @@
             this.inDaggerMacro7.Size = new System.Drawing.Size(47, 22);
             this.inDaggerMacro7.TabIndex = 285;
             this.inDaggerMacro7.Tag = "7:Dagger";
-            this.inDaggerMacro7.TextChanged += new System.EventHandler(this.inDaggerMacro7_TextChanged);
+            this.inDaggerMacro7.TextChanged += new System.EventHandler(this.InDaggerMacro7_TextChanged);
             // 
             // btnResMac7
             // 
@@ -2063,7 +2063,7 @@
             this.inTriggerMacro7.Size = new System.Drawing.Size(47, 22);
             this.inTriggerMacro7.TabIndex = 71;
             this.inTriggerMacro7.Tag = "7:Trigger";
-            this.inTriggerMacro7.TextChanged += new System.EventHandler(this.inTriggerMacro7_TextChanged);
+            this.inTriggerMacro7.TextChanged += new System.EventHandler(this.InTriggerMacro7_TextChanged);
             // 
             // delayMac7
             // 
@@ -2186,7 +2186,7 @@
             this.in8mac6.Name = "in8mac6";
             this.in8mac6.Size = new System.Drawing.Size(47, 22);
             this.in8mac6.TabIndex = 300;
-            this.in8mac6.TextChanged += new System.EventHandler(this.in8mac6_TextChanged);
+            this.in8mac6.TextChanged += new System.EventHandler(this.In8mac6_TextChanged);
             // 
             // in7mac6
             // 
@@ -2195,7 +2195,7 @@
             this.in7mac6.Name = "in7mac6";
             this.in7mac6.Size = new System.Drawing.Size(47, 22);
             this.in7mac6.TabIndex = 299;
-            this.in7mac6.TextChanged += new System.EventHandler(this.in7mac6_TextChanged);
+            this.in7mac6.TextChanged += new System.EventHandler(this.In7mac6_TextChanged);
             // 
             // pictureBox58
             // 
@@ -2244,7 +2244,7 @@
             this.in6mac6.Name = "in6mac6";
             this.in6mac6.Size = new System.Drawing.Size(47, 22);
             this.in6mac6.TabIndex = 294;
-            this.in6mac6.TextChanged += new System.EventHandler(this.in6mac6_TextChanged);
+            this.in6mac6.TextChanged += new System.EventHandler(this.In6mac6_TextChanged);
             // 
             // in5mac6
             // 
@@ -2253,7 +2253,7 @@
             this.in5mac6.Name = "in5mac6";
             this.in5mac6.Size = new System.Drawing.Size(47, 22);
             this.in5mac6.TabIndex = 293;
-            this.in5mac6.TextChanged += new System.EventHandler(this.in5mac6_TextChanged);
+            this.in5mac6.TextChanged += new System.EventHandler(this.In5mac6_TextChanged);
             // 
             // in4mac6
             // 
@@ -2262,7 +2262,7 @@
             this.in4mac6.Name = "in4mac6";
             this.in4mac6.Size = new System.Drawing.Size(47, 22);
             this.in4mac6.TabIndex = 292;
-            this.in4mac6.TextChanged += new System.EventHandler(this.in4mac6_TextChanged);
+            this.in4mac6.TextChanged += new System.EventHandler(this.In4mac6_TextChanged);
             // 
             // in3mac6
             // 
@@ -2271,7 +2271,7 @@
             this.in3mac6.Name = "in3mac6";
             this.in3mac6.Size = new System.Drawing.Size(47, 22);
             this.in3mac6.TabIndex = 291;
-            this.in3mac6.TextChanged += new System.EventHandler(this.in3mac6_TextChanged);
+            this.in3mac6.TextChanged += new System.EventHandler(this.In3mac6_TextChanged);
             // 
             // in2mac6
             // 
@@ -2280,7 +2280,7 @@
             this.in2mac6.Name = "in2mac6";
             this.in2mac6.Size = new System.Drawing.Size(47, 22);
             this.in2mac6.TabIndex = 290;
-            this.in2mac6.TextChanged += new System.EventHandler(this.in2mac6_TextChanged);
+            this.in2mac6.TextChanged += new System.EventHandler(this.In2mac6_TextChanged);
             // 
             // in1mac6
             // 
@@ -2289,7 +2289,7 @@
             this.in1mac6.Name = "in1mac6";
             this.in1mac6.Size = new System.Drawing.Size(47, 22);
             this.in1mac6.TabIndex = 289;
-            this.in1mac6.TextChanged += new System.EventHandler(this.in1mac6_TextChanged);
+            this.in1mac6.TextChanged += new System.EventHandler(this.In1mac6_TextChanged);
             // 
             // panel17
             // 
@@ -2329,7 +2329,7 @@
             this.inInstrumentMacro6.Size = new System.Drawing.Size(47, 22);
             this.inInstrumentMacro6.TabIndex = 282;
             this.inInstrumentMacro6.Tag = "6:Instrument";
-            this.inInstrumentMacro6.TextChanged += new System.EventHandler(this.inInstrumentMacro6_TextChanged);
+            this.inInstrumentMacro6.TextChanged += new System.EventHandler(this.InInstrumentMacro6_TextChanged);
             // 
             // inTriggerMacro6
             // 
@@ -2339,7 +2339,7 @@
             this.inTriggerMacro6.Size = new System.Drawing.Size(47, 22);
             this.inTriggerMacro6.TabIndex = 70;
             this.inTriggerMacro6.Tag = "6:Trigger";
-            this.inTriggerMacro6.TextChanged += new System.EventHandler(this.inTriggerMacro6_TextChanged);
+            this.inTriggerMacro6.TextChanged += new System.EventHandler(this.InTriggerMacro6_TextChanged);
             // 
             // pictureBox63
             // 
@@ -2372,7 +2372,7 @@
             this.inDaggerMacro6.Size = new System.Drawing.Size(47, 22);
             this.inDaggerMacro6.TabIndex = 280;
             this.inDaggerMacro6.Tag = "6:Dagger";
-            this.inDaggerMacro6.TextChanged += new System.EventHandler(this.inDaggerMacro6_TextChanged);
+            this.inDaggerMacro6.TextChanged += new System.EventHandler(this.InDaggerMacro6_TextChanged);
             // 
             // label19
             // 
@@ -2482,7 +2482,7 @@
             this.in8mac5.Name = "in8mac5";
             this.in8mac5.Size = new System.Drawing.Size(47, 22);
             this.in8mac5.TabIndex = 285;
-            this.in8mac5.TextChanged += new System.EventHandler(this.in8mac5_TextChanged);
+            this.in8mac5.TextChanged += new System.EventHandler(this.In8mac5_TextChanged);
             // 
             // in7mac5
             // 
@@ -2491,7 +2491,7 @@
             this.in7mac5.Name = "in7mac5";
             this.in7mac5.Size = new System.Drawing.Size(47, 22);
             this.in7mac5.TabIndex = 284;
-            this.in7mac5.TextChanged += new System.EventHandler(this.in7mac5_TextChanged);
+            this.in7mac5.TextChanged += new System.EventHandler(this.In7mac5_TextChanged);
             // 
             // pictureBox67
             // 
@@ -2559,7 +2559,7 @@
             this.inInstrumentMacro5.Size = new System.Drawing.Size(47, 22);
             this.inInstrumentMacro5.TabIndex = 277;
             this.inInstrumentMacro5.Tag = "5:Instrument";
-            this.inInstrumentMacro5.TextChanged += new System.EventHandler(this.inInstrumentMacro5_TextChanged);
+            this.inInstrumentMacro5.TextChanged += new System.EventHandler(this.InInstrumentMacro5_TextChanged);
             // 
             // pictureBox72
             // 
@@ -2579,7 +2579,7 @@
             this.inDaggerMacro5.Size = new System.Drawing.Size(47, 22);
             this.inDaggerMacro5.TabIndex = 211;
             this.inDaggerMacro5.Tag = "5:Dagger";
-            this.inDaggerMacro5.TextChanged += new System.EventHandler(this.inDaggerMacro5_TextChanged);
+            this.inDaggerMacro5.TextChanged += new System.EventHandler(this.InDaggerMacro5_TextChanged);
             // 
             // btnResMac5
             // 
@@ -2600,7 +2600,7 @@
             this.in6mac5.Name = "in6mac5";
             this.in6mac5.Size = new System.Drawing.Size(47, 22);
             this.in6mac5.TabIndex = 75;
-            this.in6mac5.TextChanged += new System.EventHandler(this.in6mac5_TextChanged);
+            this.in6mac5.TextChanged += new System.EventHandler(this.In6mac5_TextChanged);
             // 
             // in5mac5
             // 
@@ -2609,7 +2609,7 @@
             this.in5mac5.Name = "in5mac5";
             this.in5mac5.Size = new System.Drawing.Size(47, 22);
             this.in5mac5.TabIndex = 74;
-            this.in5mac5.TextChanged += new System.EventHandler(this.in5mac5_TextChanged);
+            this.in5mac5.TextChanged += new System.EventHandler(this.In5mac5_TextChanged);
             // 
             // in4mac5
             // 
@@ -2618,7 +2618,7 @@
             this.in4mac5.Name = "in4mac5";
             this.in4mac5.Size = new System.Drawing.Size(47, 22);
             this.in4mac5.TabIndex = 73;
-            this.in4mac5.TextChanged += new System.EventHandler(this.in4mac5_TextChanged);
+            this.in4mac5.TextChanged += new System.EventHandler(this.In4mac5_TextChanged);
             // 
             // in3mac5
             // 
@@ -2627,7 +2627,7 @@
             this.in3mac5.Name = "in3mac5";
             this.in3mac5.Size = new System.Drawing.Size(47, 22);
             this.in3mac5.TabIndex = 72;
-            this.in3mac5.TextChanged += new System.EventHandler(this.in3mac5_TextChanged);
+            this.in3mac5.TextChanged += new System.EventHandler(this.In3mac5_TextChanged);
             // 
             // in2mac5
             // 
@@ -2636,7 +2636,7 @@
             this.in2mac5.Name = "in2mac5";
             this.in2mac5.Size = new System.Drawing.Size(47, 22);
             this.in2mac5.TabIndex = 71;
-            this.in2mac5.TextChanged += new System.EventHandler(this.in2mac5_TextChanged);
+            this.in2mac5.TextChanged += new System.EventHandler(this.In2mac5_TextChanged);
             // 
             // in1mac5
             // 
@@ -2645,7 +2645,7 @@
             this.in1mac5.Name = "in1mac5";
             this.in1mac5.Size = new System.Drawing.Size(47, 22);
             this.in1mac5.TabIndex = 70;
-            this.in1mac5.TextChanged += new System.EventHandler(this.in1mac5_TextChanged);
+            this.in1mac5.TextChanged += new System.EventHandler(this.In1mac5_TextChanged);
             // 
             // inTriggerMacro5
             // 
@@ -2655,7 +2655,7 @@
             this.inTriggerMacro5.Size = new System.Drawing.Size(47, 22);
             this.inTriggerMacro5.TabIndex = 69;
             this.inTriggerMacro5.Tag = "5:Trigger";
-            this.inTriggerMacro5.TextChanged += new System.EventHandler(this.inTriggerMacro5_TextChanged);
+            this.inTriggerMacro5.TextChanged += new System.EventHandler(this.InTriggerMacro5_TextChanged);
             // 
             // delayMac5
             // 

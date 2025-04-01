@@ -25,7 +25,7 @@ namespace _4RTools.Forms
 
             ProfileSingleton.Create(newProfileName);
             this.lbProfilesList.Items.Add(newProfileName);
-            this.container.refreshProfileList();
+            this.container.RefreshProfileList();
             this.txtProfileName.Text = ""; // clear text box
         }
 
@@ -45,7 +45,7 @@ namespace _4RTools.Forms
             {
                 ProfileSingleton.Delete(selectedProfile);
                 this.lbProfilesList.Items.Remove(selectedProfile);
-                this.container.refreshProfileList();
+                this.container.RefreshProfileList();
             }
         }
     }

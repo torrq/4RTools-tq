@@ -177,7 +177,7 @@ namespace _4RTools.Forms
             this.processCB.Name = "processCB";
             this.processCB.Size = new System.Drawing.Size(184, 25);
             this.processCB.TabIndex = 2;
-            this.processCB.SelectedIndexChanged += new System.EventHandler(this.processCB_SelectedIndexChanged);
+            this.processCB.SelectedIndexChanged += new System.EventHandler(this.ProcessCB_SelectedIndexChanged);
             // 
             // btnRefresh
             // 
@@ -188,7 +188,7 @@ namespace _4RTools.Forms
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(19, 22);
             this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // labelProfile
             // 
@@ -208,7 +208,7 @@ namespace _4RTools.Forms
             this.profileCB.Name = "profileCB";
             this.profileCB.Size = new System.Drawing.Size(181, 25);
             this.profileCB.TabIndex = 14;
-            this.profileCB.SelectedIndexChanged += new System.EventHandler(this.profileCB_SelectedIndexChanged);
+            this.profileCB.SelectedIndexChanged += new System.EventHandler(this.ProfileCB_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -325,7 +325,7 @@ namespace _4RTools.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "4RTools-tq";
             this.Load += new System.EventHandler(this.Container_Load);
-            this.Resize += new System.EventHandler(this.containerResize);
+            this.Resize += new System.EventHandler(this.ContainerResize);
             atkDefMode.ResumeLayout(false);
             this.tabControlAutopot.ResumeLayout(false);
             this.ResumeLayout(false);

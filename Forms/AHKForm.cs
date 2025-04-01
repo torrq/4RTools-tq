@@ -58,10 +58,10 @@ namespace _4RTools.Forms
             }
         }
 
-        private void onCheckChange(object sender, EventArgs e)
+        private void OnCheckChange(object sender, EventArgs e)
         {
             CheckBox checkbox = (CheckBox)sender;
-            bool haveMouseClick = checkbox.CheckState == CheckState.Checked ? true : false;
+            bool haveMouseClick = checkbox.CheckState == CheckState.Checked;
 
             if (checkbox.CheckState == CheckState.Checked || checkbox.CheckState == CheckState.Indeterminate)
             {
@@ -83,7 +83,7 @@ namespace _4RTools.Forms
             ProfileSingleton.SetConfiguration(this.ahk);
         }
 
-        private void txtSpammerDelay_TextChanged(object sender, EventArgs e)
+        private void TxtSpammerDelay_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -110,9 +110,9 @@ namespace _4RTools.Forms
                 if (c is CheckBox)
                 {
                     CheckBox check = (CheckBox)c;
-                    check.CheckStateChanged -= onCheckChange;
+                    check.CheckStateChanged -= OnCheckChange;
                 }
-            this.chkNoShift.CheckedChanged -= new System.EventHandler(this.chkNoShift_CheckedChanged);
+            this.chkNoShift.CheckedChanged -= new System.EventHandler(this.ChkNoShift_CheckedChanged);
         }
 
 
@@ -128,9 +128,9 @@ namespace _4RTools.Forms
                     };
 
                     if (check.Enabled)
-                        check.CheckStateChanged += onCheckChange;
+                        check.CheckStateChanged += OnCheckChange;
                 }
-            this.chkNoShift.CheckedChanged += new System.EventHandler(this.chkNoShift_CheckedChanged);
+            this.chkNoShift.CheckedChanged += new System.EventHandler(this.ChkNoShift_CheckedChanged);
         }
 
         private void SetLegendDefaultValues()
@@ -154,14 +154,14 @@ namespace _4RTools.Forms
             }
         }
 
-        private void chkMouseFlick_CheckedChanged(object sender, EventArgs e)
+        private void ChkMouseFlick_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
             this.ahk.MouseFlick = chk.Checked;
             ProfileSingleton.SetConfiguration(this.ahk);
         }
 
-        private void chkNoShift_CheckedChanged(object sender, EventArgs e)
+        private void ChkNoShift_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
             this.ahk.NoShift = chk.Checked;
@@ -181,114 +181,45 @@ namespace _4RTools.Forms
             }
         }
 
-        private void AHKForm_Load(object sender, EventArgs e)
-        {
+        private void AHKForm_Load(object sender, EventArgs e) { }
 
-        }
+        private void ChkF1_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF2_CheckedChanged(object sender, EventArgs e)
-        {
+        private void ChkF2_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void ChkF3_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF3_CheckedChanged(object sender, EventArgs e)
-        {
+        private void ChkF4_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void ChkF5_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF4_CheckedChanged(object sender, EventArgs e)
-        {
+        private void ChkF6_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void ChkF7_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF5_CheckedChanged(object sender, EventArgs e)
-        {
+        private void ChkF8_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void ChkF9_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF6_CheckedChanged(object sender, EventArgs e)
-        {
+        private void Chk1_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void Chk2_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF7_CheckedChanged(object sender, EventArgs e)
-        {
+        private void Chk3_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void Chk4_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF8_CheckedChanged(object sender, EventArgs e)
-        {
+        private void Chk5_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void Chk6_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chkF9_CheckedChanged(object sender, EventArgs e)
-        {
+        private void Chk7_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void Chk8_CheckedChanged(object sender, EventArgs e) { }
 
-        private void chk1_CheckedChanged(object sender, EventArgs e)
-        {
+        private void ChkL_CheckedChanged(object sender, EventArgs e) { }
 
-        }
+        private void PictureBox1_Click(object sender, EventArgs e) { }
 
-        private void chk2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk7_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chk8_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkF1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkNum8_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkL_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkNum7_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

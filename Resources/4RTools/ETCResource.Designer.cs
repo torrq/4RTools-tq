@@ -119,16 +119,6 @@ namespace _4RTools.Resources._4RTools {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap HP {
-            get {
-                object obj = ResourceManager.GetObject("HP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon icon4rtools_off {
@@ -164,16 +154,6 @@ namespace _4RTools.Resources._4RTools {
         internal static System.Drawing.Bitmap shift {
             get {
                 object obj = ResourceManager.GetObject("shift", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap SP {
-            get {
-                object obj = ResourceManager.GetObject("SP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

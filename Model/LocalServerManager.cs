@@ -10,54 +10,9 @@ namespace _4RTools.Model
 {
     internal class LocalServerManager
     {
-
         private static readonly string localServerName = "supported_servers.json";
         private static readonly string localCityName = "city_name.json";
         private static List<String> cityList;
-
-        public static void AddServer(string hpAddress, string nameAddress, string processName)
-        {
-            if (!IsValid(hpAddress))
-            {
-                throw new ArgumentException("HP Address is Invalid. Please type a valid Hex value.");
-            }
-
-            if(!IsValid(nameAddress))
-            {
-                throw new ArgumentException("Name Address is Invalid. Please type a valid Hex value.");
-            }
-            ClientDTO dto = new ClientDTO(processName, null, hpAddress, nameAddress, null);
-            ClientListSingleton.AddClient(new Client(dto));
-
-            List<ClientDTO> clients = GetLocalClients();
-            clients.Add(dto);
-            OverwriteLocalFile(clients);
-
-            /**
-             * Cases
-             * 1. Local file don't exists
-             *  Solution: Create a empty file
-             * 2. Local file exists with wrong syntax
-             *  Solution: Remove invalid file and create new one
-             * 3. Arquivo Local existe e é válido
-             */
-        }
-
-        public static void RemoveClient(ClientDTO dto)
-        {
-            List<ClientDTO> clients = GetLocalClients();
-            clients.RemoveAt(dto.Index);
-            OverwriteLocalFile(clients);
-            ClientListSingleton.RemoveClient(Client.FromDTO(dto));
-        }
-
-        private static void OverwriteLocalFile(List<ClientDTO> clients)
-        {
-            string output = JsonConvert.SerializeObject(clients, Formatting.Indented);
-            File.WriteAllText(localServerName, string.Empty);
-            File.WriteAllText(localServerName, output);
-        }
-
 
         private static string LoadLocalServerFile()
         {
@@ -134,24 +89,5 @@ namespace _4RTools.Model
             return cityList;
         }
 
-        private static bool IsValid(IEnumerable<char> chars)
-        {
-            return IsHex(chars) && chars.Count() == 8;
-        }
-
-        public static bool IsHex(IEnumerable<char> chars)
-        {
-            bool isHex;
-            foreach (var c in chars)
-            {
-                isHex = ((c >= '0' && c <= '9') ||
-                         (c >= 'a' && c <= 'f') ||
-                         (c >= 'A' && c <= 'F'));
-
-                if (!isHex)
-                    return false;
-            }
-            return true;
-        }
     }
 }

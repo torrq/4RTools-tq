@@ -45,7 +45,7 @@
             this.txtTransferKey.Name = "txtTransferKey";
             this.txtTransferKey.Size = new System.Drawing.Size(65, 25);
             this.txtTransferKey.TabIndex = 11;
-            this.txtTransferKey.TextChanged += new System.EventHandler(this.txtTransferKey_TextChanged);
+            this.txtTransferKey.TextChanged += new System.EventHandler(this.TxtTransferKey_TextChanged);
             // 
             // label1
             // 
@@ -58,7 +58,7 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Transfer";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // pictureBox2
             // 
@@ -70,7 +70,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // CustomButtonForm
             // 

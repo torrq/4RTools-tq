@@ -38,7 +38,6 @@ namespace _4RTools.Model
         private _4RThread thread;
         public const string COMPATIBILITY = "ahkCompatibility";
         public const string SPEED_BOOST = "ahkSpeedBoost";
-        public const string SYNCHRONOUS = "ahkSynchronous";
         public Dictionary<string, KeyConfig> AhkEntries { get; set; } = new Dictionary<string, KeyConfig>();
         public int AhkDelay { get; set; } = 100;
         public bool MouseFlick { get; set; } = false;
@@ -85,14 +84,6 @@ namespace _4RTools.Model
                             this.AHKNoClick(roClient, config, thisk);
                         }
                     }
-                }
-            }
-            else if (AHKMode.Equals(SYNCHRONOUS))
-            {
-                foreach (KeyConfig config in AhkEntries.Values)
-                {
-                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.Key.ToString());
-                    AHKSynchronous(roClient, config, thisk);
                 }
             }
             else
@@ -188,13 +179,13 @@ namespace _4RTools.Model
                     if (ammo == false)
                     {
                         Key key = prefs.Ammo1Key;
-                        Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, ToKeys(key), 0);
                         ammo = true;
                     }
                     else
                     {
                         Key key = prefs.Ammo2Key;
-                        Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, ToKeys(key), 0);
                         ammo = false;
                     }
 
@@ -202,7 +193,7 @@ namespace _4RTools.Model
             }
         }
 
-        private Keys toKeys(Key k)
+        private Keys ToKeys(Key k)
         {
             // Explicit mapping for D0-D9 and other special keys
             switch (k)

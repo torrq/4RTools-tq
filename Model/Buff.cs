@@ -229,23 +229,6 @@ namespace _4RTools.Model
                 new Buff("Concentration Potion", EffectStatusIDs.CONCENTRATION_POTION, Resources._4RTools.Icons.concentration_potion),
                 new Buff("Awakening Potion", EffectStatusIDs.AWAKENING_POTION, Resources._4RTools.Icons.awakening_potion),
                 new Buff("Berserk Potion", EffectStatusIDs.BERSERK_POTION, Resources._4RTools.Icons.berserk_potion),
-/*
-                new Buff("Regeneration Potion", EffectStatusIDs.REGENERATION_POTION, Resources._4RTools.Icons.regeneration),
-                new Buff("Large HP Potion", EffectStatusIDs.HP_INCREASE_POTION_LARGE, Resources._4RTools.Icons.ghp),
-                new Buff("Large SP Potion", EffectStatusIDs.SP_INCREASE_POTION_LARGE, Resources._4RTools.Icons.gsp),
-                new Buff("Red Herb Activator", EffectStatusIDs.RED_HERB_ACTIVATOR, Resources._4RTools.Icons.red_herb_activator),
-                new Buff("Blue Herb Activator", EffectStatusIDs.BLUE_HERB_ACTIVATOR, Resources._4RTools.Icons.blue_herb_activator),
-                new Buff("Golden X Potion", EffectStatusIDs.REF_T_POTION, Resources._4RTools.Icons.Golden_X),
-                new Buff("Mega Resistance Potion", EffectStatusIDs.TARGET_BLOOD, Resources._4RTools.Icons.mega_resist_potion),
-                new Buff("Physical Fury Potion", EffectStatusIDs.FULL_SWINGK, Resources._4RTools.Icons.swing_k),
-                new Buff("Magical Fury Potion", EffectStatusIDs.MANA_PLUS, Resources._4RTools.Icons.mana_plus),
-                new Buff("Cat Juice", EffectStatusIDs.SPELLBREAKER, Resources._4RTools.Icons.spellbreaker),
-                new Buff("Mental Potion", EffectStatusIDs.MENTAL_POTION, Resources._4RTools.Icons.mental_potion),
-                new Buff("Vitata 500 Potion", EffectStatusIDs.VITATA_POTION, Resources._4RTools.Icons.vitata_potion),
-                new Buff("Crimson Elixir", EffectStatusIDs.RED_BOOSTER, Resources._4RTools.Icons.red_booster_potion),
-                new Buff("Furious Bovine Potion", EffectStatusIDs.BOVINE, Resources._4RTools.Icons.bovine_potion),
-                new Buff("Mystic Dragon Potion", EffectStatusIDs.DRAGON, Resources._4RTools.Icons.dragon_potion),
-*/
             };
 
             return skills;
@@ -261,9 +244,6 @@ namespace _4RTools.Model
                 new Buff("Water Elemental Converter", EffectStatusIDs.PROPERTYWATER, Resources._4RTools.Icons.ele_water_converter),
                 new Buff("Box of Storms", EffectStatusIDs.BOX_OF_STORMS, Resources._4RTools.Icons.boxofstorms),
                 new Buff("Aspersio Scroll", EffectStatusIDs.ASPERSIO, Resources._4RTools.Icons.ele_holy_converter),
-/*
-                new Buff("Ghost Elemental Converter", EffectStatusIDs.PROPERTYTELEKINESIS, Resources._4RTools.Icons.ele_ghost_converter),
-*/
                 new Buff("Cursed Water", EffectStatusIDs.PROPERTYDARK, Resources._4RTools.Icons.cursed_water),
                 new Buff("Fireproof Potion", EffectStatusIDs.RESIST_PROPERTY_FIRE, Resources._4RTools.Icons.fireproof),
                 new Buff("Coldproof Potion", EffectStatusIDs.RESIST_PROPERTY_WATER, Resources._4RTools.Icons.coldproof),

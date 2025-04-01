@@ -136,17 +136,15 @@ namespace _4RTools.Forms
                 GroupBox p = (GroupBox)this.Controls.Find("chainGroup" + id, true)[0];
                 foreach (Control control in p.Controls)
                 {
-                    if (control is TextBox)
+                    if (control is TextBox textBox)
                     {
-                        TextBox textBox = (TextBox)control;
                         textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
                         textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
                         textBox.TextChanged += new EventHandler(this.OnTextChange);
                     }
 
-                    if (control is NumericUpDown)
+                    if (control is NumericUpDown delayInput)
                     {
-                        NumericUpDown delayInput = (NumericUpDown)control;
                         delayInput.ValueChanged += new System.EventHandler(this.OnDelayChange);
                     }
                 }

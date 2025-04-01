@@ -17,19 +17,19 @@ namespace _4RTools.Forms
 
             this.ammo1textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.ammo1textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.ammo1textBox.TextChanged += new EventHandler(this.textAmmo1_TextChanged);
+            this.ammo1textBox.TextChanged += new EventHandler(this.TextAmmo1_TextChanged);
             this.ammo2textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.ammo2textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.ammo2textBox.TextChanged += new EventHandler(this.textAmmo2_TextChanged);
+            this.ammo2textBox.TextChanged += new EventHandler(this.TextAmmo2_TextChanged);
             this.overweightKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.overweightKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-            this.overweightKey.TextChanged += new EventHandler(this.overweightKey_TextChanged);
+            this.overweightKey.TextChanged += new EventHandler(this.OverweightKey_TextChanged);
 
             var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.AutoBuffOrder;
-            this.skillsListBox.MouseLeave += new System.EventHandler(this.skillsListBox_MouseLeave);
-            this.skillsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skillsListBox_MouseDown);
-            this.skillsListBox.DragOver += new DragEventHandler(this.skillsListBox_DragOver);
-            this.skillsListBox.DragDrop += new DragEventHandler(this.skillsListBox_DragDrop);
+            this.skillsListBox.MouseLeave += new System.EventHandler(this.SkillsListBox_MouseLeave);
+            this.skillsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SkillsListBox_MouseDown);
+            this.skillsListBox.DragOver += new DragEventHandler(this.SkillsListBox_DragOver);
+            this.skillsListBox.DragDrop += new DragEventHandler(this.SkillsListBox_DragDrop);
 
             toolTip1.SetToolTip(switchAmmoCheckBox, "Switch between ammunition");
             toolTip3.SetToolTip(ammo1textBox, "ammo 1 shortcut");
@@ -55,13 +55,7 @@ namespace _4RTools.Forms
         {
             try
             {
-                AutoBuffSkill currentBuffs = (AutoBuffSkill)(subject as Subject).Message.Data;
-
-                if (currentBuffs == null)
-                {
-                    currentBuffs = ProfileSingleton.GetCurrent().AutobuffSkill;
-                }
-
+                AutoBuffSkill currentBuffs = (AutoBuffSkill)(subject as Subject).Message.Data ?? ProfileSingleton.GetCurrent().AutobuffSkill;
                 var buffsList = currentBuffs.buffMapping.Keys.ToList();
                 skillsListBox.Items.Clear();
 
@@ -82,13 +76,12 @@ namespace _4RTools.Forms
                 };
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                var teste = ex;
             }
         }
 
-        private void skillsListBox_MouseLeave(object sender, EventArgs e)
+        private void SkillsListBox_MouseLeave(object sender, EventArgs e)
         {
             try
             {
@@ -119,18 +112,18 @@ namespace _4RTools.Forms
             }
             catch { }
         }
-        private void skillsListBox_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void SkillsListBox_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (this.skillsListBox.SelectedItem == null) return;
             this.skillsListBox.DoDragDrop(this.skillsListBox.SelectedItem, DragDropEffects.Move);
         }
 
-        private void skillsListBox_DragOver(object sender, DragEventArgs e)
+        private void SkillsListBox_DragOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Move;
         }
 
-        private void skillsListBox_DragDrop(object sender, DragEventArgs e)
+        private void SkillsListBox_DragDrop(object sender, DragEventArgs e)
         {
             Point point = skillsListBox.PointToClient(new Point(e.X, e.Y));
             int index = this.skillsListBox.IndexFromPoint(point);
@@ -139,21 +132,21 @@ namespace _4RTools.Forms
             this.skillsListBox.Items.Remove(data);
             this.skillsListBox.Items.Insert(index, data);
         }
-        private void chkStopBuffsOnCity_CheckedChanged(object sender, EventArgs e)
+        private void ChkStopBuffsOnCity_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
             ProfileSingleton.GetCurrent().UserPreferences.StopBuffsCity = chk.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
         }
 
-        private void switchAmmoCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void SwitchAmmoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
             ProfileSingleton.GetCurrent().UserPreferences.SwitchAmmo = chk.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
         }
 
-        private void textAmmo1_TextChanged(object sender, EventArgs e)
+        private void TextAmmo1_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -168,7 +161,7 @@ namespace _4RTools.Forms
             catch { }
         }
 
-        private void textAmmo2_TextChanged(object sender, EventArgs e)
+        private void TextAmmo2_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -183,14 +176,12 @@ namespace _4RTools.Forms
             catch { }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Label2_Click(object sender, EventArgs e)
         {
 
         }
 
-
-
-        private void overweightKey_TextChanged(object sender, EventArgs e)
+        private void OverweightKey_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -205,12 +196,12 @@ namespace _4RTools.Forms
             catch { }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void GroupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void overweightMode_CheckedChanged(object sender, EventArgs e)
+        private void OverweightMode_CheckedChanged(object sender, EventArgs e)
         {
             if (sender is RadioButton rb && rb.Checked)
             {
