@@ -25,7 +25,9 @@ namespace _4RTools.Forms
 
             this.Text = AppConfig.Name + " - " + AppConfig.Version; // Window title
 
+            LocalServerManager.Initialize(); // Will log errors if they occur
             clients.AddRange(LocalServerManager.GetLocalClients()); //Load Local Servers First
+
             LoadServers(clients);
 
             //Container Configuration

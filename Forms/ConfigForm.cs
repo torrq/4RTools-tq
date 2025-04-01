@@ -31,7 +31,7 @@ namespace _4RTools.Forms
             this.skillsListBox.DragOver += new DragEventHandler(this.SkillsListBox_DragOver);
             this.skillsListBox.DragDrop += new DragEventHandler(this.SkillsListBox_DragDrop);
 
-            string cityName = _4RTools.Model.LocalServerManager.GetLocalCityName();
+            string cityName = _4RTools.Model.LocalServerManager.GetCitiesFile();
 
             toolTip1.SetToolTip(switchAmmoCheckBox, "Switch between ammunition");
             toolTip2.SetToolTip(chkSoundEnabled, "Play sounds when toggling on and off");

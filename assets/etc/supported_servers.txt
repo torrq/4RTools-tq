@@ -1,7 +1,0 @@
-[
-  {
-    "name": "OsRO Midrate",
-    "hpAddress": "0x00E8F434",
-    "nameAddress": "0x00E91C00"
-  }
-]
