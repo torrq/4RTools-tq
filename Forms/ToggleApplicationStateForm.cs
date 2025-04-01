@@ -79,6 +79,7 @@ namespace _4RTools.Forms
 
         public bool toggleStatus()
         {
+            UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
             bool isOn = this.btnStatusToggle.Text == "ON";
             if (isOn)
             {
@@ -88,7 +89,10 @@ namespace _4RTools.Forms
                 this.subject.Notify(new Utils.Message(MessageCode.TURN_OFF, null));
                 this.lblStatusToggle.Text = "Press the key to start!";
                 this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-                new SoundPlayer(Resources._4RTools.ETCResource.Speech_Off).Play();
+                if (prefs.SoundEnabled)
+                {
+                    new SoundPlayer(Resources._4RTools.ETCResource.Speech_Off).Play();
+                }
             }
             else
             {
@@ -101,7 +105,10 @@ namespace _4RTools.Forms
                     this.subject.Notify(new Utils.Message(MessageCode.TURN_ON, null));
                     this.lblStatusToggle.Text = "Press the key to stop!";
                     this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-                    new SoundPlayer(Resources._4RTools.ETCResource.Speech_On).Play();
+                    if (prefs.SoundEnabled)
+                    {
+                        new SoundPlayer(Resources._4RTools.ETCResource.Speech_On).Play();
+                    }
                 }
                 else
                 {
@@ -115,6 +122,7 @@ namespace _4RTools.Forms
 
         public bool TurnOFF()
         {
+            UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
             bool isOn = this.btnStatusToggle.Text == "ON";
             if (isOn)
             {
@@ -123,7 +131,10 @@ namespace _4RTools.Forms
                 this.subject.Notify(new Utils.Message(MessageCode.TURN_OFF, null));
                 this.lblStatusToggle.Text = "Press the key to start!";
                 this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(155)))), ((int)(((byte)(164)))));
-                new SoundPlayer(Resources._4RTools.ETCResource.Speech_Off).Play();
+                if (prefs.SoundEnabled)
+                {
+                    new SoundPlayer(Resources._4RTools.ETCResource.Speech_Off).Play();
+                }
             }
 
             return true;
@@ -141,6 +152,11 @@ namespace _4RTools.Forms
         }
 
         private void lblStatusToggle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

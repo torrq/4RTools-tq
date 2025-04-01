@@ -43,9 +43,9 @@
             this.groupBox1.Controls.Add(this.txtStatusToggleKey);
             this.groupBox1.Controls.Add(this.lblStatusToggle);
             this.groupBox1.Controls.Add(this.btnStatusToggle);
-            this.groupBox1.Location = new System.Drawing.Point(46, 24);
+            this.groupBox1.Location = new System.Drawing.Point(47, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 75);
+            this.groupBox1.Size = new System.Drawing.Size(200, 112);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Current Status";
@@ -54,7 +54,7 @@
             // 
             this.txtStatusToggleKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStatusToggleKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatusToggleKey.Location = new System.Drawing.Point(102, 27);
+            this.txtStatusToggleKey.Location = new System.Drawing.Point(102, 34);
             this.txtStatusToggleKey.Name = "txtStatusToggleKey";
             this.txtStatusToggleKey.Size = new System.Drawing.Size(72, 25);
             this.txtStatusToggleKey.TabIndex = 23;
@@ -65,7 +65,7 @@
             this.lblStatusToggle.AllowDrop = true;
             this.lblStatusToggle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatusToggle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.lblStatusToggle.Location = new System.Drawing.Point(6, 55);
+            this.lblStatusToggle.Location = new System.Drawing.Point(4, 72);
             this.lblStatusToggle.MaximumSize = new System.Drawing.Size(190, 18);
             this.lblStatusToggle.Name = "lblStatusToggle";
             this.lblStatusToggle.Size = new System.Drawing.Size(190, 18);
@@ -82,7 +82,7 @@
             this.btnStatusToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatusToggle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatusToggle.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnStatusToggle.Location = new System.Drawing.Point(18, 21);
+            this.btnStatusToggle.Location = new System.Drawing.Point(18, 28);
             this.btnStatusToggle.Margin = new System.Windows.Forms.Padding(0);
             this.btnStatusToggle.Name = "btnStatusToggle";
             this.btnStatusToggle.Size = new System.Drawing.Size(68, 33);

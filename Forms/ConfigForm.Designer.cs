@@ -35,6 +35,7 @@ namespace _4RTools.Forms
             this.skillsListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupSettings = new System.Windows.Forms.GroupBox();
+            this.chkSoundEnabled = new System.Windows.Forms.CheckBox();
             this.groupOverweight = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.overweight50 = new System.Windows.Forms.RadioButton();
@@ -50,6 +51,7 @@ namespace _4RTools.Forms
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip6 = new System.Windows.Forms.ToolTip(this.components);
             this.clientDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupSettings.SuspendLayout();
             this.groupOverweight.SuspendLayout();
@@ -80,6 +82,7 @@ namespace _4RTools.Forms
             // 
             // groupSettings
             // 
+            this.groupSettings.Controls.Add(this.chkSoundEnabled);
             this.groupSettings.Controls.Add(this.groupOverweight);
             this.groupSettings.Controls.Add(this.ammo2textBox);
             this.groupSettings.Controls.Add(this.ammo1textBox);
@@ -91,6 +94,19 @@ namespace _4RTools.Forms
             this.groupSettings.TabIndex = 0;
             this.groupSettings.TabStop = false;
             this.groupSettings.Text = "Settings";
+            // 
+            // chkSoundEnabled
+            // 
+            this.chkSoundEnabled.AutoSize = true;
+            this.chkSoundEnabled.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkSoundEnabled.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSoundEnabled.Location = new System.Drawing.Point(13, 74);
+            this.chkSoundEnabled.Name = "chkSoundEnabled";
+            this.chkSoundEnabled.Size = new System.Drawing.Size(121, 21);
+            this.chkSoundEnabled.TabIndex = 317;
+            this.chkSoundEnabled.Text = "Sounds Enabled";
+            this.chkSoundEnabled.UseVisualStyleBackColor = true;
+            this.chkSoundEnabled.CheckedChanged += new System.EventHandler(this.ChkSoundEnabled_CheckedChanged);
             // 
             // groupOverweight
             // 
@@ -175,7 +191,7 @@ namespace _4RTools.Forms
             // 
             this.ammo2textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ammo2textBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ammo2textBox.Location = new System.Drawing.Point(243, 74);
+            this.ammo2textBox.Location = new System.Drawing.Point(243, 121);
             this.ammo2textBox.Name = "ammo2textBox";
             this.ammo2textBox.Size = new System.Drawing.Size(45, 25);
             this.ammo2textBox.TabIndex = 309;
@@ -184,7 +200,7 @@ namespace _4RTools.Forms
             // 
             this.ammo1textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ammo1textBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ammo1textBox.Location = new System.Drawing.Point(192, 74);
+            this.ammo1textBox.Location = new System.Drawing.Point(192, 121);
             this.ammo1textBox.Name = "ammo1textBox";
             this.ammo1textBox.Size = new System.Drawing.Size(45, 25);
             this.ammo1textBox.TabIndex = 308;
@@ -194,7 +210,7 @@ namespace _4RTools.Forms
             this.switchAmmoCheckBox.AutoSize = true;
             this.switchAmmoCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switchAmmoCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.switchAmmoCheckBox.Location = new System.Drawing.Point(13, 74);
+            this.switchAmmoCheckBox.Location = new System.Drawing.Point(13, 121);
             this.switchAmmoCheckBox.Name = "switchAmmoCheckBox";
             this.switchAmmoCheckBox.Size = new System.Drawing.Size(162, 21);
             this.switchAmmoCheckBox.TabIndex = 307;
@@ -257,11 +273,13 @@ namespace _4RTools.Forms
         private ToolTip toolTip3;
         private ToolTip toolTip4;
         private ToolTip toolTip5;
+        private ToolTip toolTip6;
         private TextBox overweightKey;
         private RadioButton overweight90;
         private RadioButton overweight50;
         private RadioButton overweightOff;
         private GroupBox groupOverweight;
         private Label label1;
+        private CheckBox chkSoundEnabled;
     }
 }

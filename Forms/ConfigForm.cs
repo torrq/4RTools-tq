@@ -31,10 +31,14 @@ namespace _4RTools.Forms
             this.skillsListBox.DragOver += new DragEventHandler(this.SkillsListBox_DragOver);
             this.skillsListBox.DragDrop += new DragEventHandler(this.SkillsListBox_DragDrop);
 
+            string cityName = _4RTools.Model.LocalServerManager.GetLocalCityName();
+
             toolTip1.SetToolTip(switchAmmoCheckBox, "Switch between ammunition");
+            toolTip2.SetToolTip(chkSoundEnabled, "Play sounds when toggling on and off");
             toolTip3.SetToolTip(ammo1textBox, "ammo 1 shortcut");
             toolTip4.SetToolTip(ammo2textBox, "ammo 2 shortcut");
             toolTip5.SetToolTip(overweightKey, "Alt-# macro to send when overweight");
+            toolTip6.SetToolTip(chkStopBuffsOnCity, "When in a city (defined in " + cityName + "), pause temporarily");
 
             subject.Attach(this);
         }
@@ -53,6 +57,7 @@ namespace _4RTools.Forms
 
         public void UpdateUI(ISubject subject)
         {
+            UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
             try
             {
                 AutoBuffSkill currentBuffs = (AutoBuffSkill)(subject as Subject).Message.Data ?? ProfileSingleton.GetCurrent().AutobuffSkill;
@@ -64,11 +69,12 @@ namespace _4RTools.Forms
                     skillsListBox.Items.Add(buff.ToDescriptionString());
                 }
 
-                this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.StopBuffsCity;
-                this.switchAmmoCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.SwitchAmmo;
-                this.ammo1textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.Ammo1Key.ToString();
-                this.ammo2textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.Ammo2Key.ToString();
-                this.overweightKey.Text = ProfileSingleton.GetCurrent().UserPreferences.OverweightKey.ToString();
+                this.chkStopBuffsOnCity.Checked = prefs.StopBuffsCity;
+                this.chkSoundEnabled.Checked = prefs.SoundEnabled;
+                this.switchAmmoCheckBox.Checked = prefs.SwitchAmmo;
+                this.ammo1textBox.Text = prefs.Ammo1Key.ToString();
+                this.ammo2textBox.Text = prefs.Ammo2Key.ToString();
+                this.overweightKey.Text = prefs.OverweightKey.ToString();
 
                 RadioButton rdOverweightMode = (RadioButton)this.groupOverweight.Controls[ProfileSingleton.GetCurrent().UserPreferences.OverweightMode.ToString()];
                 if (rdOverweightMode != null) { 
@@ -136,6 +142,13 @@ namespace _4RTools.Forms
         {
             CheckBox chk = sender as CheckBox;
             ProfileSingleton.GetCurrent().UserPreferences.StopBuffsCity = chk.Checked;
+            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
+        }
+
+        private void ChkSoundEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox chk = sender as CheckBox;
+            ProfileSingleton.GetCurrent().UserPreferences.SoundEnabled = chk.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
         }
 

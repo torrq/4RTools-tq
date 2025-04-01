@@ -11,8 +11,13 @@ namespace _4RTools.Model
     internal class LocalServerManager
     {
         private static readonly string localServerName = "supported_servers.json";
-        private static readonly string localCityName = "city_name.json";
+        private static readonly string localCityName = "cities.json";
         private static List<String> cityList;
+
+        public static string GetLocalCityName()
+        {
+            return localCityName;
+        }
 
         private static string LoadLocalServerFile()
         {
