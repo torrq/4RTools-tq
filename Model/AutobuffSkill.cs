@@ -158,7 +158,7 @@ namespace _4RTools.Model
         private void SendOverweightMacro(Client c, string percentage)
         {
             UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
-            if (!string.IsNullOrEmpty(prefs.OverweightKey.ToString()))
+            if (!string.IsNullOrEmpty(prefs.OverweightKey.ToString()) && prefs.OverweightKey.ToString() != "None")
             {
                 // Set focus to the RO window
                 IntPtr handle = ClientSingleton.GetClient().Process.MainWindowHandle;
