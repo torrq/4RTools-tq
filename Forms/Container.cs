@@ -217,7 +217,7 @@ namespace _4RTools.Forms
 
         public void Update(ISubject subject)
         {
-            switch ((subject as Subject).Message.code)
+            switch ((subject as Subject).Message.Code)
             {
                 case MessageCode.TURN_ON:
                 case MessageCode.PROFILE_CHANGED:

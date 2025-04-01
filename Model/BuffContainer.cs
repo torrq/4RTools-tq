@@ -9,13 +9,13 @@ namespace _4RTools.Model
 {
     internal class BuffContainer
     {
-        public GroupBox container { get; set; }
-        public List<Buff> skills { get; set; }
+        public GroupBox Container { get; set; }
+        public List<Buff> Skills { get; set; }
 
         public BuffContainer(GroupBox p, List<Buff> skills)
         {
-            this.skills = skills;
-            this.container = p;
+            this.Skills = skills;
+            this.Container = p;
         }
     }
 }

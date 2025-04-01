@@ -10,44 +10,44 @@ using System.Collections.Generic;
 namespace _4RTools.Model
 {
 
-    public class Autopot : Action
+    public class Autopot : IAction
     {
 
         public static string ACTION_NAME_AUTOPOT = "Autopot";
         public static string ACTION_NAME_AUTOPOT_YGG = "AutopotYgg";
         public const string FIRSTHP = "firstHP";
         public const string FIRSTSP = "firstSP";
-        public Key hpKey { get; set; }
-        public int hpPercent { get; set; }
-        public Key spKey { get; set; }
-        public int spPercent { get; set; }
-        public int delay { get; set; } = 100;
-        public int delayYgg { get; set; } = 100;
-        public bool stopWitchFC { get; set; } = false;
-        public string firstHeal { get; set; } = FIRSTHP;
+        public Key HPKey { get; set; }
+        public int HPPercent { get; set; }
+        public Key SPKey { get; set; }
+        public int SPPercent { get; set; }
+        public int Delay { get; set; } = 100;
+        public int DelayYgg { get; set; } = 100;
+        public bool StopWitchFC { get; set; } = false;
+        public string FirstHeal { get; set; } = FIRSTHP;
 
-        public string actionName { get; set; }
+        public string ActionName { get; set; }
         private _4RThread thread;
 
-        public List<String> listCities { get; set; }
+        public List<String> CityList { get; set; }
 
         public Autopot() { }
         public Autopot(string actionName)
         {
-            this.actionName = actionName;
+            this.ActionName = actionName;
         }
 
         public Autopot(Key hpKey, int hpPercent, int delay, Key spKey, int spPercent, Key tiKey)
         {
-            this.delay = delay;
+            this.Delay = delay;
 
             // HP
-            this.hpKey = hpKey;
-            this.hpPercent = hpPercent;
+            this.HPKey = hpKey;
+            this.HPPercent = hpPercent;
 
             // SP
-            this.spKey = spKey;
-            this.spPercent = spPercent;
+            this.SPKey = spKey;
+            this.SPPercent = spPercent;
 
         }
 
@@ -61,7 +61,7 @@ namespace _4RTools.Model
                     _4RThread.Stop(this.thread);
                 }
                 int hpPotCount = 0;
-                if (this.listCities == null || this.listCities.Count == 0) this.listCities = LocalServerManager.GetListCities();
+                if (this.CityList == null || this.CityList.Count == 0) this.CityList = LocalServerManager.GetCityList();
                 this.thread = new _4RThread(_ => AutopotThreadExecution(roClient, hpPotCount));
                 _4RThread.Start(this.thread);
             }
@@ -70,10 +70,10 @@ namespace _4RTools.Model
         private int AutopotThreadExecution(Client roClient, int hpPotCount)
         {
             string currentMap = roClient.ReadCurrentMap();
-            if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+            if (!ProfileSingleton.GetCurrent().UserPreferences.StopBuffsCity || this.CityList.Contains(currentMap) == false)
             {
                 bool hasCriticalWound = HasCriticalWound(roClient);
-                if (firstHeal.Equals(FIRSTHP))
+                if (FirstHeal.Equals(FIRSTHP))
                 {
                     healHPFirst(roClient, hpPotCount, hasCriticalWound);
                 }
@@ -82,83 +82,73 @@ namespace _4RTools.Model
                     healSPFirst(roClient, hpPotCount, hasCriticalWound);
                 }
             }
-            Thread.Sleep(this.delay);
+            Thread.Sleep(this.Delay);
             return 0;
-        }
-
-        private bool hasBuff(Client c, EffectStatusIDs buff)
-        {
-            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
-            {
-                uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)buff) { return true; }
-            }
-            return false;
         }
 
         private void healSPFirst(Client roClient, int hpPotCount, bool hasCriticalWound)
         {
-            if (roClient.IsSpBelow(spPercent))
+            if (roClient.IsSpBelow(SPPercent))
             {
-                pot(this.spKey);
+                Pot(this.SPKey);
                 hpPotCount++;
 
-                if (hpPotCount == 3 && roClient.IsHpBelow(hpPercent))
+                if (hpPotCount == 3 && roClient.IsHpBelow(HPPercent))
                 {
                     hpPotCount = 0;
-                    if (this.actionName == ACTION_NAME_AUTOPOT_YGG)
+                    if (this.ActionName == ACTION_NAME_AUTOPOT_YGG)
                     {
-                        pot(this.hpKey);
+                        Pot(this.HPKey);
                     }
-                    else if (this.actionName == ACTION_NAME_AUTOPOT && ((!this.stopWitchFC && hasCriticalWound) || !hasCriticalWound))
+                    else if (this.ActionName == ACTION_NAME_AUTOPOT && ((!this.StopWitchFC && hasCriticalWound) || !hasCriticalWound))
                     {
-                        pot(this.hpKey);
+                        Pot(this.HPKey);
                     }
 
                 }
             }
             // check hp
-            if (roClient.IsHpBelow(hpPercent))
+            if (roClient.IsHpBelow(HPPercent))
             {
-                pot(this.hpKey);
+                Pot(this.HPKey);
             }
         }
 
         private void healHPFirst(Client roClient, int hpPotCount, bool hasCriticalWound)
         {
-            if (roClient.IsHpBelow(hpPercent))
+            if (roClient.IsHpBelow(HPPercent))
             {
-                if (this.actionName == ACTION_NAME_AUTOPOT_YGG)
+                if (this.ActionName == ACTION_NAME_AUTOPOT_YGG)
                 {
-                    pot(this.hpKey);
+                    Pot(this.HPKey);
                     hpPotCount++;
                 }
-                else if (this.actionName == ACTION_NAME_AUTOPOT && ((!this.stopWitchFC && hasCriticalWound) || !hasCriticalWound))
+                else if (this.ActionName == ACTION_NAME_AUTOPOT && ((!this.StopWitchFC && hasCriticalWound) || !hasCriticalWound))
                 {
-                    pot(this.hpKey);
+                    Pot(this.HPKey);
                     hpPotCount++;
                 }
-                if (hpPotCount == 3 && roClient.IsSpBelow(spPercent))
+                if (hpPotCount == 3 && roClient.IsSpBelow(SPPercent))
                 {
                     hpPotCount = 0;
-                    pot(this.spKey);
+                    Pot(this.SPKey);
 
                 }
             }
             // check sp
-            if (roClient.IsSpBelow(spPercent))
+            if (roClient.IsSpBelow(SPPercent))
             {
-                pot(this.spKey);
+                Pot(this.SPKey);
             }
         }
 
-        private void pot(Key key)
+        private void Pot(Key key)
         {
             Keys k = (Keys)Enum.Parse(typeof(Keys), key.ToString());
             if ((k != Keys.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
             {
-                Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, k, 0); // keydown
-                Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYUP_MSG_ID, k, 0); // keyup
+                Interop.PostMessage(ClientSingleton.GetClient().Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, k, 0); // keydown
+                Interop.PostMessage(ClientSingleton.GetClient().Process.MainWindowHandle, Constants.WM_KEYUP_MSG_ID, k, 0); // keyup
             }
         }
 
@@ -172,10 +162,7 @@ namespace _4RTools.Model
             return JsonConvert.SerializeObject(this);
         }
 
-        public string GetActionName()
-        {
-            return this.actionName != null ? this.actionName : ACTION_NAME_AUTOPOT;
-        }
+        public string GetActionName() => ActionName ?? ACTION_NAME_AUTOPOT;
 
         public bool HasCriticalWound(Client c)
         {

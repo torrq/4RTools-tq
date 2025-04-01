@@ -35,7 +35,7 @@ namespace _4RTools.Utils
 
         private static IntPtr hHook = IntPtr.Zero;
         //Delegate that points to the filter function
-        private static HookProc hookproc = new HookProc(Filter);
+        private static readonly HookProc hookproc = new HookProc(Filter);
 
         /// <summary>
         /// Check to see if either Control modifier is active.

@@ -116,7 +116,7 @@ namespace _4RTools.Forms
             var subj = subject as Subject;
             if (subj == null) return; // Ignore updates from unexpected subjects
 
-            switch (subj.Message.code)
+            switch (subj.Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
                     UpdateUi();
@@ -153,13 +153,13 @@ namespace _4RTools.Forms
 
                 // Optimize config finding/creation
                 // Using List.Find is okay for small lists, for large lists consider Dictionary<int, EquipConfig>
-                EquipConfig equipConfig = currentProfile.AtkDefMode.equipConfigs.Find(config => config.id == id);
+                EquipConfig equipConfig = currentProfile.AtkDefMode.EquipConfigs.Find(config => config.id == id);
 
                 // Create and add if not found
                 if (equipConfig == null)
                 {
                     equipConfig = new EquipConfig(id, Key.None);
-                    currentProfile.AtkDefMode.equipConfigs.Add(equipConfig);
+                    currentProfile.AtkDefMode.EquipConfigs.Add(equipConfig);
                     // Consider if SetConfiguration is needed here - depends on its implementation
                     // If it just saves, maybe defer saving?
                     ProfileSingleton.SetConfiguration(currentProfile.AtkDefMode);
@@ -171,14 +171,14 @@ namespace _4RTools.Forms
                 // Spammer Key TextBox
                 if (_controlCache.TryGetValue($"in{id}SpammerKey", out Control cKey) && cKey is TextBox txtSpammerKey)
                 {
-                    txtSpammerKey.Text = equipConfig.keySpammer.ToString();
+                    txtSpammerKey.Text = equipConfig.KeySpammer.ToString();
                 }
 
                 // Spammer Delay NumericUpDown
                 if (_controlCache.TryGetValue($"in{id}SpammerDelay", out Control cSpammerDelay) && cSpammerDelay is NumericUpDown nudSpammerDelay)
                 {
                     // Ensure value is within bounds before setting
-                    decimal value = equipConfig.ahkDelay;
+                    decimal value = equipConfig.AHKDelay;
                     if (value >= nudSpammerDelay.Minimum && value <= nudSpammerDelay.Maximum)
                         nudSpammerDelay.Value = value;
                     else
@@ -188,7 +188,7 @@ namespace _4RTools.Forms
                 // Switch Delay NumericUpDown
                 if (_controlCache.TryGetValue($"in{id}SwitchDelay", out Control cSwitchDelay) && cSwitchDelay is NumericUpDown nudSwitchDelay)
                 {
-                    decimal value = equipConfig.switchDelay;
+                    decimal value = equipConfig.SwitchDelay;
                     if (value >= nudSwitchDelay.Minimum && value <= nudSwitchDelay.Maximum)
                         nudSwitchDelay.Value = value;
                     else
@@ -198,14 +198,14 @@ namespace _4RTools.Forms
                 // Spammer Click CheckBox
                 if (_controlCache.TryGetValue($"in{id}SpammerClick", out Control cSpammerClick) && cSpammerClick is CheckBox chkSpammerClick)
                 {
-                    chkSpammerClick.Checked = equipConfig.keySpammerWithClick;
+                    chkSpammerClick.Checked = equipConfig.KeySpammerWithClick;
                 }
 
 
                 // ATK/DEF Key TextBoxes
                 // Avoid creating dictionary copies if only reading
-                var atkKeys = equipConfig.atkKeys; // Direct reference
-                var defKeys = equipConfig.defKeys; // Direct reference
+                var atkKeys = equipConfig.AtkKeys; // Direct reference
+                var defKeys = equipConfig.DefKeys; // Direct reference
 
                 for (int i = 1; i <= TOTAL_EQUIPS; i++)
                 {
@@ -274,7 +274,7 @@ namespace _4RTools.Forms
 
                 // Cache profile/config access
                 Profile currentProfile = ProfileSingleton.GetCurrent();
-                EquipConfig equipConfig = currentProfile?.AtkDefMode?.equipConfigs.Find(config => config.id == id);
+                EquipConfig equipConfig = currentProfile?.AtkDefMode?.EquipConfigs.Find(config => config.id == id);
                 if (equipConfig == null) return; // Config not found
 
                 // Use short for consistency with original, though int is generally fine
@@ -294,11 +294,11 @@ namespace _4RTools.Forms
 
                 if (type == "spammerDelay")
                 {
-                    equipConfig.ahkDelay = value;
+                    equipConfig.AHKDelay = value;
                 }
                 else if (type == "switchDelay") // Assuming the other type is switchDelay
                 {
-                    equipConfig.switchDelay = value;
+                    equipConfig.SwitchDelay = value;
                 }
 
                 // PERFORMANCE WARNING: Calling SetConfiguration on every ValueChanged event
@@ -335,12 +335,12 @@ namespace _4RTools.Forms
                 string type = inputTag[1];
 
                 Profile currentProfile = ProfileSingleton.GetCurrent();
-                EquipConfig equipConfig = currentProfile?.AtkDefMode?.equipConfigs.Find(config => config.id == id);
+                EquipConfig equipConfig = currentProfile?.AtkDefMode?.EquipConfigs.Find(config => config.id == id);
                 if (equipConfig == null) return;
 
                 if (type.Equals("spammerKey", StringComparison.OrdinalIgnoreCase)) // Case-insensitive compare
                 {
-                    equipConfig.keySpammer = key;
+                    equipConfig.KeySpammer = key;
                 }
                 else // Assuming ATK/DEF keys
                 {
@@ -384,11 +384,11 @@ namespace _4RTools.Forms
                 if (!int.TryParse(inputTag[0], out int id)) return;
 
                 Profile currentProfile = ProfileSingleton.GetCurrent();
-                EquipConfig equipConfig = currentProfile?.AtkDefMode?.equipConfigs.Find(config => config.id == id);
+                EquipConfig equipConfig = currentProfile?.AtkDefMode?.EquipConfigs.Find(config => config.id == id);
 
                 if (equipConfig != null)
                 {
-                    equipConfig.keySpammerWithClick = checkBox.Checked;
+                    equipConfig.KeySpammerWithClick = checkBox.Checked;
                     // PERFORMANCE WARNING: See note in onDelayChange about SetConfiguration.
                     ProfileSingleton.SetConfiguration(currentProfile.AtkDefMode);
                 }

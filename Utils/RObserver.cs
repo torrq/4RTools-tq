@@ -31,21 +31,21 @@ namespace _4RTools.Utils
 
     public class Message
     {
-        public MessageCode code { get; }
-        public object data { get; set; }
+        public MessageCode Code { get; }
+        public object Data { get; set; }
         public Message() { }
 
         public Message(MessageCode code, object data)
         {
-            this.code = code;
-            this.data = data;
+            this.Code = code;
+            this.Data = data;
         }
     }
 
     public class Subject : ISubject
     {
         public Message Message { get; set; } = new Message();
-        private List<IObserver> _observers = new List<IObserver>();
+        private readonly List<IObserver> _observers = new List<IObserver>();
         public void Attach(IObserver observer)
         {
             DebugLogger.Info("Subject: Attached an observer.");

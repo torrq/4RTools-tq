@@ -1,6 +1,6 @@
 ﻿namespace _4RTools.Model
 {
-    public interface Action
+    public interface IAction
     {
         void Start();
         void Stop();

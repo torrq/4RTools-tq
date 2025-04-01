@@ -7,15 +7,15 @@ namespace _4RTools.Model
 {
     internal class Buff
     {
-        public String name { get; set; }
-        public EffectStatusIDs effectStatusID { get; set; }
-        public Bitmap icon { get; set; }
+        public String Name { get; set; }
+        public EffectStatusIDs EffectStatusID { get; set; }
+        public Bitmap Icon { get; set; }
 
         public Buff(string name, EffectStatusIDs effectStatus, Bitmap icon)
         {
-            this.name = name;
-            this.effectStatusID = effectStatus;
-            this.icon = icon;
+            this.Name = name;
+            this.EffectStatusID = effectStatus;
+            this.Icon = icon;
         }
 
         //--------------------- SKILLS ------------------------------

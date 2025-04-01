@@ -17,8 +17,8 @@ namespace _4RTools.Model
         private readonly int DISTANCE_BETWEEN_CONTAINERS = 10;
         private readonly int DISTANCE_BETWEEN_ROWS = 45;
 
-        private List<BuffContainer> _containers;
-        private ToolTip _toolTip;
+        private readonly List<BuffContainer> _containers;
+        private readonly ToolTip _toolTip;
 
         public DebuffRenderer(List<BuffContainer> containers, ToolTip toolTip)
         {
@@ -26,43 +26,43 @@ namespace _4RTools.Model
             this._toolTip = toolTip;
         }
 
-        public void doRender()
+        public void DoRender()
         {
             for (int i = 0; i < _containers.Count; i++)
             {
                 BuffContainer bk = _containers[i];
-                Point lastLocation = new Point(bk.container.Location.X, 20);
+                Point lastLocation = new Point(bk.Container.Location.X, 20);
                 int colCount = 0;
 
                 if (i > 0)
                 {
                     //If not first container to be rendered, get last container height and append 70
-                    bk.container.Location = new Point(_containers[i - 1].container.Location.X, _containers[i - 1].container.Location.Y + _containers[i - 1].container.Height + DISTANCE_BETWEEN_CONTAINERS);
+                    bk.Container.Location = new Point(_containers[i - 1].Container.Location.X, _containers[i - 1].Container.Location.Y + _containers[i - 1].Container.Height + DISTANCE_BETWEEN_CONTAINERS);
                 }
 
-                foreach (Buff skill in bk.skills)
+                foreach (Buff skill in bk.Skills)
                 {
                     PictureBox pb = new PictureBox();
                     TextBox textBox = new TextBox();
 
-                    pb.Image = skill.icon;
+                    pb.Image = skill.Icon;
                     pb.BackgroundImageLayout = ImageLayout.Center;
                     pb.Location = new Point(lastLocation.X + (colCount * 100), lastLocation.Y);
-                    pb.Name = "pbox" + ((int)skill.effectStatusID);
+                    pb.Name = "pbox" + ((int)skill.EffectStatusID);
                     pb.Size = new Size(32, 32);
-                    _toolTip.SetToolTip(pb, skill.name);
+                    _toolTip.SetToolTip(pb, skill.Name);
 
                     textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
                     textBox.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
-                    textBox.TextChanged += new EventHandler(onTextChange);
+                    textBox.TextChanged += new EventHandler(OnTextChange);
                     textBox.Size = new Size(55, 20);
-                    textBox.Tag = ((int)skill.effectStatusID);
-                    textBox.Name = "in" + ((int)skill.effectStatusID);
+                    textBox.Tag = ((int)skill.EffectStatusID);
+                    textBox.Name = "in" + ((int)skill.EffectStatusID);
                     textBox.Location = new Point(pb.Location.X + 35, pb.Location.Y + 8);
                     textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
-                    bk.container.Controls.Add(textBox);
-                    bk.container.Controls.Add(pb);
+                    bk.Container.Controls.Add(textBox);
+                    bk.Container.Controls.Add(pb);
 
                     colCount++;
 
@@ -70,13 +70,13 @@ namespace _4RTools.Model
                     {
                         //5 Buffs per row
                         colCount = 0;
-                        lastLocation = new Point(bk.container.Location.X, lastLocation.Y + DISTANCE_BETWEEN_ROWS);
+                        lastLocation = new Point(bk.Container.Location.X, lastLocation.Y + DISTANCE_BETWEEN_ROWS);
                     }
                 }
             }
         }
 
-        private void onTextChange(object sender, EventArgs e)
+        private void OnTextChange(object sender, EventArgs e)
         {
             try
             {

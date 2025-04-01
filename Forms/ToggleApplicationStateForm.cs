@@ -26,7 +26,7 @@ namespace _4RTools.Forms
             subject.Attach(this);
             this.subject = subject;
             KeyboardHook.Enable();
-            this.txtStatusToggleKey.Text = ProfileSingleton.GetCurrent().UserPreferences.toggleStateKey;
+            this.txtStatusToggleKey.Text = ProfileSingleton.GetCurrent().UserPreferences.ToggleStateKey;
             this.txtStatusToggleKey.KeyDown += new KeyEventHandler(FormUtils.OnKeyDown);
             this.txtStatusToggleKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.txtStatusToggleKey.TextChanged += new EventHandler(this.onStatusToggleKeyChange);
@@ -51,10 +51,10 @@ namespace _4RTools.Forms
 
         public void Update(ISubject subject)
         {
-            switch ((subject as Subject).Message.code)
+            switch ((subject as Subject).Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
-                    Keys currentToggleKey = (Keys)Enum.Parse(typeof(Keys), ProfileSingleton.GetCurrent().UserPreferences.toggleStateKey);
+                    Keys currentToggleKey = (Keys)Enum.Parse(typeof(Keys), ProfileSingleton.GetCurrent().UserPreferences.ToggleStateKey);
                     KeyboardHook.RemoveDown(lastKey); //Remove last key hook to prevent toggle with last profile key used.
                     this.txtStatusToggleKey.Text = currentToggleKey.ToString();
                     KeyboardHook.AddKeyDown(currentToggleKey, new KeyboardHook.KeyPressed(this.toggleStatus));
@@ -71,7 +71,7 @@ namespace _4RTools.Forms
             Keys currentToggleKey = (Keys)Enum.Parse(typeof(Keys), this.txtStatusToggleKey.Text);
             KeyboardHook.RemoveDown(lastKey);
             KeyboardHook.AddKeyDown(currentToggleKey, new KeyboardHook.KeyPressed(this.toggleStatus));
-            ProfileSingleton.GetCurrent().UserPreferences.toggleStateKey = currentToggleKey.ToString(); //Update profile key
+            ProfileSingleton.GetCurrent().UserPreferences.ToggleStateKey = currentToggleKey.ToString(); //Update profile key
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
 
             lastKey = currentToggleKey; //Refresh lastKey to update 

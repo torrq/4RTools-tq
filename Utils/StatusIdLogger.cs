@@ -9,12 +9,11 @@ using _4RTools.Utils;
 public static class StatusIdLogger
 {
     private static Dictionary<uint, string> knownStatusIds = null;
-    private static Dictionary<uint, string> knownStatusDescriptions = null;
-    private static HashSet<uint> reportedNewStatusIds = new HashSet<uint>();
-    private static HashSet<uint> currentKnownStatuses = new HashSet<uint>();
-    private static HashSet<uint> currentUnknownStatuses = new HashSet<uint>();
-    private static Timer logTimer;
-    private static int logIntervalMs = 1000; // 1 second interval
+    private static readonly HashSet<uint> reportedNewStatusIds = new HashSet<uint>();
+    private static readonly HashSet<uint> currentKnownStatuses = new HashSet<uint>();
+    private static readonly HashSet<uint> currentUnknownStatuses = new HashSet<uint>();
+    private static readonly Timer logTimer;
+    private static readonly int logIntervalMs = 1000; // 1 second interval
 
     static StatusIdLogger()
     {
@@ -31,7 +30,6 @@ public static class StatusIdLogger
             return;
 
         knownStatusIds = new Dictionary<uint, string>();
-        knownStatusDescriptions = new Dictionary<uint, string>();
 
         foreach (EffectStatusIDs statusId in Enum.GetValues(typeof(EffectStatusIDs)))
         {

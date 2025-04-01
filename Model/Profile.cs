@@ -80,7 +80,7 @@ namespace _4RTools.Model
             catch { }
         }
 
-        public static void SetConfiguration(Action action)
+        public static void SetConfiguration(IAction action)
         {
             if (profile != null)
             {
@@ -137,7 +137,7 @@ namespace _4RTools.Model
             this.Custom = new Custom();
         }
 
-        public static object GetByAction(dynamic obj, Action action)
+        public static object GetByAction(dynamic obj, IAction action)
         {
             if (obj != null && obj[action.GetActionName()] != null)
             {

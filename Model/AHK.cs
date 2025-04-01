@@ -12,17 +12,17 @@ namespace _4RTools.Model
 {
     public class KeyConfig
     {
-        public Key key { get; set; }
+        public Key Key { get; set; }
         public bool ClickActive { get; set; }
 
         public KeyConfig(Key key, bool clickAtive)
         {
-            this.key = key;
+            this.Key = key;
             this.ClickActive = clickAtive;
         }
     }
 
-    public class AHK : Action
+    public class AHK : IAction
     {
         // Import the mouse_event function from the Windows API
         [DllImport("user32.dll")]
@@ -41,9 +41,9 @@ namespace _4RTools.Model
         public const string SYNCHRONOUS = "ahkSynchronous";
         public Dictionary<string, KeyConfig> AhkEntries { get; set; } = new Dictionary<string, KeyConfig>();
         public int AhkDelay { get; set; } = 100;
-        public bool mouseFlick { get; set; } = false;
-        public bool noShift { get; set; } = false;
-        public string ahkMode { get; set; } = COMPATIBILITY;
+        public bool MouseFlick { get; set; } = false;
+        public bool NoShift { get; set; } = false;
+        public string AHKMode { get; set; } = COMPATIBILITY;
 
         public AHK()
         {
@@ -66,65 +66,65 @@ namespace _4RTools.Model
 
         private int AHKThreadExecution(Client roClient)
         {
-            if (ahkMode.Equals(COMPATIBILITY))
+            if (AHKMode.Equals(COMPATIBILITY))
             {
                 foreach (KeyConfig config in AhkEntries.Values)
                 {
-                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
+                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.Key.ToString());
                     if (!Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                     {
-                        if (config.ClickActive && Keyboard.IsKeyDown(config.key))
+                        if (config.ClickActive && Keyboard.IsKeyDown(config.Key))
                         {
-                            if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
-                            _AHKCompatibility(roClient, config, thisk);
-                            if (noShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
+                            if (NoShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY, 0);
+                            AHKCompatibility(roClient, config, thisk);
+                            if (NoShift) keybd_event(Constants.VK_SHIFT, 0x45, Constants.KEYEVENTF_EXTENDEDKEY | Constants.KEYEVENTF_KEYUP, 0);
 
                         }
                         else
                         {
-                            this._AHKNoClick(roClient, config, thisk);
+                            this.AHKNoClick(roClient, config, thisk);
                         }
                     }
                 }
             }
-            else if (ahkMode.Equals(SYNCHRONOUS))
+            else if (AHKMode.Equals(SYNCHRONOUS))
             {
                 foreach (KeyConfig config in AhkEntries.Values)
                 {
-                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
-                    _AHKSynchronous(roClient, config, thisk);
+                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.Key.ToString());
+                    AHKSynchronous(roClient, config, thisk);
                 }
             }
             else
             {
                 foreach (KeyConfig config in AhkEntries.Values)
                 {
-                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.key.ToString());
-                    this._AHKSpeedBoost(roClient, config, thisk);
+                    Keys thisk = (Keys)Enum.Parse(typeof(Keys), config.Key.ToString());
+                    this.AHKSpeedBoost(roClient, config, thisk);
                 }
             }
             return 0;
         }
 
-        private void _AHKCompatibility(Client roClient, KeyConfig config, Keys thisk)
+        private void AHKCompatibility(Client roClient, KeyConfig config, Keys thisk)
         {
             Func<int, int> send_click;
 
             send_click = (evt) =>
             {
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, 0, 0);
+                Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_LBUTTONDOWN, 0, 0);
                 Thread.Sleep(1);
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONUP, 0, 0);
+                Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_LBUTTONUP, 0, 0);
                 return 0;
             };
 
-            if (this.mouseFlick)
+            if (this.MouseFlick)
             {
                 bool ammo = false;
-                while (Keyboard.IsKeyDown(config.key))
+                while (Keyboard.IsKeyDown(config.Key))
                 {
-                    autoSwitchAmmo(roClient, ref ammo);
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                    AutoSwitchAmmo(roClient, ref ammo);
+                    Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                     System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
                     send_click(0);
                     System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
@@ -134,39 +134,39 @@ namespace _4RTools.Model
             else
             {
                 bool ammo = false;
-                while (Keyboard.IsKeyDown(config.key))
+                while (Keyboard.IsKeyDown(config.Key))
                 {
-                    autoSwitchAmmo(roClient, ref ammo);
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                    AutoSwitchAmmo(roClient, ref ammo);
+                    Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                     send_click(0);
                     Thread.Sleep(this.AhkDelay);
                 }
             }
         }
 
-        private void _AHKSynchronous(Client roClient, KeyConfig config, Keys thisk)
+        private void AHKSynchronous(Client roClient, KeyConfig config, Keys thisk)
         {
             
             Func<int, int> send_click;
             //bool ammo = false;
             send_click = (evt) =>
             {
-                SendMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, IntPtr.Zero, IntPtr.Zero);
+                SendMessage(roClient.Process.MainWindowHandle, Constants.WM_LBUTTONDOWN, IntPtr.Zero, IntPtr.Zero);
                 Thread.Sleep(1);
-                SendMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONUP, IntPtr.Zero, IntPtr.Zero);
+                SendMessage(roClient.Process.MainWindowHandle, Constants.WM_LBUTTONUP, IntPtr.Zero, IntPtr.Zero);
                 return 0;
             };
 
         }
 
-        private void _AHKSpeedBoost(Client roClient, KeyConfig config, Keys thisk)
+        private void AHKSpeedBoost(Client roClient, KeyConfig config, Keys thisk)
         {
             bool ammo = false;
-            while (Keyboard.IsKeyDown(config.key))
+            while (Keyboard.IsKeyDown(config.Key))
             {
-                autoSwitchAmmo(roClient, ref ammo);
+                AutoSwitchAmmo(roClient, ref ammo);
 
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                 if (config.ClickActive)
                 {
                     Point cursorPos = System.Windows.Forms.Cursor.Position;
@@ -178,38 +178,28 @@ namespace _4RTools.Model
             }
         }
 
-        private void autoSwitchAmmo(Client roClient, ref bool ammo)
+        private void AutoSwitchAmmo(Client roClient, ref bool ammo)
         {
-            if (ProfileSingleton.GetCurrent().UserPreferences.switchAmmo)
+            UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
+            if (prefs.SwitchAmmo)
             {
-                if (ProfileSingleton.GetCurrent().UserPreferences.ammo1Key.ToString() != String.Empty
-                    && ProfileSingleton.GetCurrent().UserPreferences.ammo2Key.ToString() != String.Empty)
+                if (prefs.Ammo1Key.ToString() != String.Empty && prefs.Ammo2Key.ToString() != String.Empty)
                 {
                     if (ammo == false)
                     {
-                        Key key = ProfileSingleton.GetCurrent().UserPreferences.ammo1Key;
-                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        Key key = prefs.Ammo1Key;
+                        Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
                         ammo = true;
                     }
                     else
                     {
-                        Key key = ProfileSingleton.GetCurrent().UserPreferences.ammo2Key;
-                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
+                        Key key = prefs.Ammo2Key;
+                        Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0);
                         ammo = false;
                     }
 
                 }
             }
-        }
-
-        private bool hasBuff(Client c, EffectStatusIDs buff)
-        {
-            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
-            {
-                uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)buff) { return true; }
-            }
-            return false;
         }
 
         private Keys toKeys(Key k)
@@ -236,11 +226,11 @@ namespace _4RTools.Model
             }
         }
 
-        private void _AHKNoClick(Client roClient, KeyConfig config, Keys thisk)
+        private void AHKNoClick(Client roClient, KeyConfig config, Keys thisk)
         {
-            while (Keyboard.IsKeyDown(config.key))
+            while (Keyboard.IsKeyDown(config.Key))
             {
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                 Thread.Sleep(this.AhkDelay);
             }
         }

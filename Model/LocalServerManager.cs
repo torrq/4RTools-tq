@@ -17,12 +17,12 @@ namespace _4RTools.Model
 
         public static void AddServer(string hpAddress, string nameAddress, string processName)
         {
-            if (!isValid(hpAddress))
+            if (!IsValid(hpAddress))
             {
                 throw new ArgumentException("HP Address is Invalid. Please type a valid Hex value.");
             }
 
-            if(!isValid(nameAddress))
+            if(!IsValid(nameAddress))
             {
                 throw new ArgumentException("Name Address is Invalid. Please type a valid Hex value.");
             }
@@ -46,7 +46,7 @@ namespace _4RTools.Model
         public static void RemoveClient(ClientDTO dto)
         {
             List<ClientDTO> clients = GetLocalClients();
-            clients.RemoveAt(dto.index);
+            clients.RemoveAt(dto.Index);
             OverwriteLocalFile(clients);
             ClientListSingleton.RemoveClient(Client.FromDTO(dto));
         }
@@ -115,7 +115,7 @@ namespace _4RTools.Model
             return json;
         }
 
-        public static List<String> GetListCities()
+        public static List<String> GetCityList()
         {
             if (cityList == null || cityList.Count == 0) { 
                 string localServers = LoadLocalCityNameFile();
@@ -134,7 +134,7 @@ namespace _4RTools.Model
             return cityList;
         }
 
-        private static bool isValid(IEnumerable<char> chars)
+        private static bool IsValid(IEnumerable<char> chars)
         {
             return IsHex(chars) && chars.Count() == 8;
         }

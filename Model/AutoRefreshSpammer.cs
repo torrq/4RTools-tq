@@ -10,12 +10,12 @@ using System.Runtime.InteropServices;
 
 namespace _4RTools.Model
 {
-    public class AutoRefreshSpammer : Action
+    public class AutoRefreshSpammer : IAction
     {
         private string ACTION_NAME = "AutoRefreshSpammer";
 
         public Dictionary<int, MacroKey> skillTimer = new Dictionary<int, MacroKey>();
-        public List<String> listCities { get; set; }
+        public List<String> CityList { get; set; }
 
         private _4RThread thread1;
         private _4RThread thread2;
@@ -27,17 +27,17 @@ namespace _4RTools.Model
             Client roClient = ClientSingleton.GetClient();
             if (roClient != null)
             {
-                validadeThreads(this.thread1);
-                validadeThreads(this.thread2);
-                validadeThreads(this.thread3);
-                validadeThreads(this.thread4);
+                ValidadeThreads(this.thread1);
+                ValidadeThreads(this.thread2);
+                ValidadeThreads(this.thread3);
+                ValidadeThreads(this.thread4);
 
-                if (this.listCities == null || this.listCities.Count == 0) this.listCities = LocalServerManager.GetListCities();
+                if (this.CityList == null || this.CityList.Count == 0) this.CityList = LocalServerManager.GetCityList();
 
-                this.thread1 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[1].delay, skillTimer[1].key));
-                this.thread2 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[2].delay, skillTimer[2].key));
-                this.thread3 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[3].delay, skillTimer[3].key));
-                this.thread4 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[4].delay, skillTimer[4].key));
+                this.thread1 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[1].Delay, skillTimer[1].Key));
+                this.thread2 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[2].Delay, skillTimer[2].Key));
+                this.thread3 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[3].Delay, skillTimer[3].Key));
+                this.thread4 = new _4RThread((_) => AutoRefreshThreadExecution(roClient, skillTimer[4].Delay, skillTimer[4].Key));
 
                 _4RThread.Start(this.thread1);
                 _4RThread.Start(this.thread2);
@@ -46,7 +46,7 @@ namespace _4RTools.Model
             }
         }
 
-        private void validadeThreads(_4RThread _4RThread)
+        private void ValidadeThreads(_4RThread _4RThread)
         {
             if (_4RThread != null)
             {
@@ -57,24 +57,15 @@ namespace _4RTools.Model
         private int AutoRefreshThreadExecution(Client roClient, int delay, Key rKey)
         {
             string currentMap = roClient.ReadCurrentMap();
-            if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+            if (!ProfileSingleton.GetCurrent().UserPreferences.StopBuffsCity || this.CityList.Contains(currentMap) == false)
             {
                 if (rKey != Key.None)
                 {
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), rKey.ToString()), 0);
+                    Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), rKey.ToString()), 0);
                 }
             }
             Thread.Sleep(delay * 1000);
             return 0;
-        }
-        private bool hasBuff(Client c, EffectStatusIDs buff)
-        {
-            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
-            {
-                uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)buff) { return true; }
-            }
-            return false;
         }
 
         public void Stop()

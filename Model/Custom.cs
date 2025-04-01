@@ -12,11 +12,11 @@ using System.Windows.Input;
 
 namespace _4RTools.Model
 {
-    public class Custom : Action
+    public class Custom : IAction
     {
         public static string ACTION_NAME_CUSTOM = "Custom";
 
-        public string actionName { get; set; }
+        public string ActionName { get; set; }
 
         private _4RThread thread;
 
@@ -40,37 +40,29 @@ namespace _4RTools.Model
             var TiMode = ProfileSingleton.GetCurrent().Custom.tiMode;
             if (!TiMode.Equals(Key.None) && Keyboard.IsKeyDown(TiMode))
             {
-                _AHKTransferBoost(roClient, new KeyConfig(TiMode, true), (Keys)Enum.Parse(typeof(Keys), TiMode.ToString()));
+                AHKTransferBoost(roClient, new KeyConfig(TiMode, true), (Keys)Enum.Parse(typeof(Keys), TiMode.ToString()));
                 return 0;
             }
             Thread.Sleep(100);
             return 0;
         }
-        private bool hasBuff(Client c, EffectStatusIDs buff)
-        {
-            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
-            {
-                uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)buff) { return true; }
-            }
-            return false;
-        }
-        private void _AHKTransferBoost(Client roClient, KeyConfig config, Keys thisk)
+
+        private void AHKTransferBoost(Client roClient, KeyConfig config, Keys thisk)
         {
             Func<int, int> send_click;
 
             //Send Event Directly to Window via PostMessage
             send_click = (evt) =>
             {
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_RBUTTONDOWN, 0, 0);
+                Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_RBUTTONDOWN, 0, 0);
                 Thread.Sleep(1);
-                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_RBUTTONUP, 0, 0);
+                Interop.PostMessage(roClient.Process.MainWindowHandle, Constants.WM_RBUTTONUP, 0, 0);
                 return 0;
             };
 
             keybd_event(Constants.VK_LMENU, 0xA4, Constants.KEYEVENTF_EXTENDEDKEY, 0);
 
-            while (Keyboard.IsKeyDown(config.key))
+            while (Keyboard.IsKeyDown(config.Key))
             {
                 send_click(0);
                 Thread.Sleep(10);

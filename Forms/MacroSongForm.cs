@@ -19,7 +19,7 @@ namespace _4RTools.Forms
 
         public void Update(ISubject subject) 
         { 
-            switch((subject as Subject).Message.code)
+            switch((subject as Subject).Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
                     updateUi();
@@ -40,7 +40,7 @@ namespace _4RTools.Forms
             {
                 Macro songMacro = ProfileSingleton.GetCurrent().SongMacro;
                 GroupBox p = (GroupBox)this.Controls.Find("panelMacro" + id, true)[0];
-                ChainConfig chainConfig = new ChainConfig(songMacro.chainConfigs[id - 1]);
+                ChainConfig chainConfig = new ChainConfig(songMacro.ChainConfigs[id - 1]);
                 FormUtils.ResetForm(p);
 
                 //Update Trigger Macro Value
@@ -48,7 +48,7 @@ namespace _4RTools.Forms
                 if (c.Length > 0)
                 {
                     TextBox textBox = (TextBox)c[0];
-                    textBox.Text = chainConfig.trigger.ToString();
+                    textBox.Text = chainConfig.Trigger.ToString();
                 }
 
                 //Update Dagger Value
@@ -56,7 +56,7 @@ namespace _4RTools.Forms
                 if (cDagger.Length > 0)
                 {
                     TextBox textBox = (TextBox)cDagger[0];
-                    textBox.Text = chainConfig.daggerKey.ToString();
+                    textBox.Text = chainConfig.DaggerKey.ToString();
                 }
 
                 //Update Instrument Value
@@ -64,7 +64,7 @@ namespace _4RTools.Forms
                 if (cInstrument.Length > 0)
                 {
                     TextBox textBox = (TextBox)cInstrument[0];
-                    textBox.Text = chainConfig.instrumentKey.ToString();
+                    textBox.Text = chainConfig.InstrumentKey.ToString();
                 }
 
 
@@ -75,7 +75,7 @@ namespace _4RTools.Forms
                     if (controls.Length > 0)
                     {
                         TextBox textBox = (TextBox)controls[0];
-                        textBox.Text = chainConfig.macroEntries[cbName].key.ToString();
+                        textBox.Text = chainConfig.macroEntries[cbName].Key.ToString();
                     }
                 }
 
@@ -84,7 +84,7 @@ namespace _4RTools.Forms
                 if (d.Length > 0)
                 {
                     NumericUpDown delayInput = (NumericUpDown)d[0];
-                    delayInput.Value = chainConfig.delay;
+                    delayInput.Value = chainConfig.Delay;
                 }
             } catch { }
         }
@@ -101,31 +101,31 @@ namespace _4RTools.Forms
                 string[] inputTag = textBox.Tag.ToString().Split(new[] { ":" }, StringSplitOptions.None);
                 int macroid = short.Parse(inputTag[0]);
                 string type = inputTag[1];
-                ChainConfig chainConfig = ProfileSingleton.GetCurrent().SongMacro.chainConfigs.Find(config => config.id == macroid);
+                ChainConfig chainConfig = ProfileSingleton.GetCurrent().SongMacro.ChainConfigs.Find(config => config.id == macroid);
 
                 switch (type)
                 {
                     case "Dagger":
-                        chainConfig.daggerKey = key;
+                        chainConfig.DaggerKey = key;
                         break;
                     case "Instrument":
-                        chainConfig.instrumentKey= key;
+                        chainConfig.InstrumentKey= key;
                         break;
                     case "Trigger":
-                        chainConfig.trigger = key;
+                        chainConfig.Trigger = key;
                         break;
                 }
             }
             else
             {
                 int macroID = short.Parse(textBox.Name.Split(new[] { "mac" }, StringSplitOptions.None)[1]);
-                ChainConfig chainConfig = SongMacro.chainConfigs.Find(songMacro => songMacro.id == macroID);
+                ChainConfig chainConfig = SongMacro.ChainConfigs.Find(songMacro => songMacro.id == macroID);
                 if(chainConfig == null)
                 {
-                    SongMacro.chainConfigs.Add(new ChainConfig(macroID, Key.None));
-                    chainConfig = SongMacro.chainConfigs.Find(songMacro => songMacro.id == macroID);
+                    SongMacro.ChainConfigs.Add(new ChainConfig(macroID, Key.None));
+                    chainConfig = SongMacro.ChainConfigs.Find(songMacro => songMacro.id == macroID);
                 }
-                chainConfig.macroEntries[textBox.Name] = new MacroKey(key, chainConfig.delay);
+                chainConfig.macroEntries[textBox.Name] = new MacroKey(key, chainConfig.Delay);
             }
 
             ProfileSingleton.SetConfiguration(SongMacro);
@@ -136,14 +136,14 @@ namespace _4RTools.Forms
             Macro SongMacro = ProfileSingleton.GetCurrent().SongMacro;
             NumericUpDown delayInput = (NumericUpDown)sender;
             int macroID = Int16.Parse(delayInput.Name.Split(new[] { "delayMac" }, StringSplitOptions.None)[1]);
-            ChainConfig chainConfig = SongMacro.chainConfigs.Find(songMacro => songMacro.id == macroID);
+            ChainConfig chainConfig = SongMacro.ChainConfigs.Find(songMacro => songMacro.id == macroID);
 
-            chainConfig.delay = decimal.ToInt16(delayInput.Value);
+            chainConfig.Delay = decimal.ToInt16(delayInput.Value);
 
             List<string> names = new List<string>(chainConfig.macroEntries.Keys);
             foreach (string cbName in names)
             {
-                chainConfig.macroEntries[cbName].delay = chainConfig.delay;
+                chainConfig.macroEntries[cbName].Delay = chainConfig.Delay;
             }
             ProfileSingleton.SetConfiguration(SongMacro);
         }

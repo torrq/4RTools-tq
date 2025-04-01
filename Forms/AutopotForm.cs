@@ -26,7 +26,7 @@ namespace _4RTools.Forms
 
         public void Update(ISubject subject)
         {
-            switch ((subject as Subject).Message.code)
+            switch ((subject as Subject).Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
                     this.autopot = this.isYgg ? ProfileSingleton.GetCurrent().AutopotYgg : ProfileSingleton.GetCurrent().Autopot;
@@ -43,13 +43,13 @@ namespace _4RTools.Forms
 
         private void InitializeApplicationForm()
         {
-            this.txtHpKey.Text = this.autopot.hpKey.ToString();
-            this.txtSPKey.Text = this.autopot.spKey.ToString();
-            this.txtHPpct.Text = this.autopot.hpPercent.ToString();
-            this.txtSPpct.Text = this.autopot.spPercent.ToString();
-            this.txtAutopotDelay.Text = this.autopot.delay.ToString();
-            this.chkStopWitchFC.Checked = this.autopot.stopWitchFC;
-            RadioButton rdHealFirst = (RadioButton)this.Controls[ProfileSingleton.GetCurrent().Autopot.firstHeal];
+            this.txtHpKey.Text = this.autopot.HPKey.ToString();
+            this.txtSPKey.Text = this.autopot.SPKey.ToString();
+            this.txtHPpct.Text = this.autopot.HPPercent.ToString();
+            this.txtSPpct.Text = this.autopot.SPPercent.ToString();
+            this.txtAutopotDelay.Text = this.autopot.Delay.ToString();
+            this.chkStopWitchFC.Checked = this.autopot.StopWitchFC;
+            RadioButton rdHealFirst = (RadioButton)this.Controls[ProfileSingleton.GetCurrent().Autopot.FirstHeal];
             if (rdHealFirst != null) { rdHealFirst.Checked = true; };
 
             txtHpKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
@@ -65,7 +65,7 @@ namespace _4RTools.Forms
         private void onHpTextChange(object sender, EventArgs e)
         {
             Key key = (Key)Enum.Parse(typeof(Key), txtHpKey.Text.ToString());
-            this.autopot.hpKey = key;
+            this.autopot.HPKey = key;
             ProfileSingleton.SetConfiguration(this.autopot);
             this.ActiveControl = null;
         }
@@ -73,7 +73,7 @@ namespace _4RTools.Forms
         private void onSpTextChange(object sender, EventArgs e)
         {
             Key key = (Key)Enum.Parse(typeof(Key), txtSPKey.Text.ToString());
-            this.autopot.spKey = key;
+            this.autopot.SPKey = key;
             ProfileSingleton.SetConfiguration(this.autopot);
             this.ActiveControl = null;
         }
@@ -82,7 +82,7 @@ namespace _4RTools.Forms
         {
             try
             {
-                this.autopot.delay = Int16.Parse(this.txtAutopotDelay.Text);
+                this.autopot.Delay = Int16.Parse(this.txtAutopotDelay.Text);
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
             catch (Exception ex)
@@ -96,7 +96,7 @@ namespace _4RTools.Forms
         {
             try
             {
-                this.autopot.hpPercent = Int16.Parse(this.txtHPpct.Text);
+                this.autopot.HPPercent = Int16.Parse(this.txtHPpct.Text);
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
             catch (Exception ex)
@@ -109,7 +109,7 @@ namespace _4RTools.Forms
         private void chkStopWitchFC_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
-            this.autopot.stopWitchFC = chk.Checked;
+            this.autopot.StopWitchFC = chk.Checked;
             ProfileSingleton.SetConfiguration(this.autopot);
         }
 
@@ -117,7 +117,7 @@ namespace _4RTools.Forms
         {
             try
             {
-                this.autopot.spPercent = Int16.Parse(this.txtSPpct.Text);
+                this.autopot.SPPercent = Int16.Parse(this.txtSPpct.Text);
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
             catch (Exception ex)
@@ -130,7 +130,7 @@ namespace _4RTools.Forms
             RadioButton rb = sender as RadioButton;
             if (rb.Checked)
             {
-                this.autopot.firstHeal = rb.Name;
+                this.autopot.FirstHeal = rb.Name;
                 ProfileSingleton.SetConfiguration(this.autopot);
             }
         }

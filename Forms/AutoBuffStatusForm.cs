@@ -16,7 +16,7 @@ namespace _4RTools.Forms
             InitializeComponent();
             debuffContainers.Add(new BuffContainer(this.DebuffsGP, Buff.GetDebuffs()));
             debuffContainers.Add(new BuffContainer(this.WeightDebuffsGP, Buff.GetWeightDebuffs()));
-            new DebuffRenderer(debuffContainers, toolTip1).doRender();
+            new DebuffRenderer(debuffContainers, toolTip1).DoRender();
             this.txtStatusKey.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
             this.txtStatusKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.txtStatusKey.TextChanged += new EventHandler(onStatusKeyChange);
@@ -24,7 +24,7 @@ namespace _4RTools.Forms
         }
         public void Update(ISubject subject)
         {
-            switch ((subject as Subject).Message.code)
+            switch ((subject as Subject).Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
                     this.txtStatusKey.Text = ProfileSingleton.GetCurrent().StatusRecovery.buffMapping.Keys.Contains(EffectStatusIDs.SILENCE) ? ProfileSingleton.GetCurrent().StatusRecovery.buffMapping[EffectStatusIDs.SILENCE].ToString() : Keys.None.ToString();

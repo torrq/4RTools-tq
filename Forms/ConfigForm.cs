@@ -25,7 +25,7 @@ namespace _4RTools.Forms
             this.overweightKey.KeyPress += new KeyPressEventHandler(FormUtils.OnKeyPress);
             this.overweightKey.TextChanged += new EventHandler(this.overweightKey_TextChanged);
 
-            var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.autoBuffOrder;
+            var newListBuff = ProfileSingleton.GetCurrent().UserPreferences.AutoBuffOrder;
             this.skillsListBox.MouseLeave += new System.EventHandler(this.skillsListBox_MouseLeave);
             this.skillsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skillsListBox_MouseDown);
             this.skillsListBox.DragOver += new DragEventHandler(this.skillsListBox_DragOver);
@@ -41,7 +41,7 @@ namespace _4RTools.Forms
 
         public void Update(ISubject subject)
         {
-            switch ((subject as Subject).Message.code)
+            switch ((subject as Subject).Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
                 case MessageCode.ADDED_NEW_AUTOBUFF_SKILL:
@@ -55,7 +55,7 @@ namespace _4RTools.Forms
         {
             try
             {
-                AutoBuffSkill currentBuffs = (AutoBuffSkill)(subject as Subject).Message.data;
+                AutoBuffSkill currentBuffs = (AutoBuffSkill)(subject as Subject).Message.Data;
 
                 if (currentBuffs == null)
                 {
@@ -70,13 +70,13 @@ namespace _4RTools.Forms
                     skillsListBox.Items.Add(buff.ToDescriptionString());
                 }
 
-                this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity;
-                this.switchAmmoCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.switchAmmo;
-                this.ammo1textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo1Key.ToString();
-                this.ammo2textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.ammo2Key.ToString();
-                this.overweightKey.Text = ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString();
+                this.chkStopBuffsOnCity.Checked = ProfileSingleton.GetCurrent().UserPreferences.StopBuffsCity;
+                this.switchAmmoCheckBox.Checked = ProfileSingleton.GetCurrent().UserPreferences.SwitchAmmo;
+                this.ammo1textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.Ammo1Key.ToString();
+                this.ammo2textBox.Text = ProfileSingleton.GetCurrent().UserPreferences.Ammo2Key.ToString();
+                this.overweightKey.Text = ProfileSingleton.GetCurrent().UserPreferences.OverweightKey.ToString();
 
-                RadioButton rdOverweightMode = (RadioButton)this.groupOverweight.Controls[ProfileSingleton.GetCurrent().UserPreferences.overweightMode.ToString()];
+                RadioButton rdOverweightMode = (RadioButton)this.groupOverweight.Controls[ProfileSingleton.GetCurrent().UserPreferences.OverweightMode.ToString()];
                 if (rdOverweightMode != null) { 
                     rdOverweightMode.Checked = true;
                 };
@@ -111,7 +111,7 @@ namespace _4RTools.Forms
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
 
                     ProfileSingleton.GetCurrent().AutobuffSkill.ClearKeyMapping();
-                    ProfileSingleton.GetCurrent().AutobuffSkill.setBuffMapping(newOrderedBuffList);
+                    ProfileSingleton.GetCurrent().AutobuffSkill.SetBuffMapping(newOrderedBuffList);
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutobuffSkill);
 
                     newOrderedBuffList.Clear();
@@ -142,14 +142,14 @@ namespace _4RTools.Forms
         private void chkStopBuffsOnCity_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
-            ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity = chk.Checked;
+            ProfileSingleton.GetCurrent().UserPreferences.StopBuffsCity = chk.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
         }
 
         private void switchAmmoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
-            ProfileSingleton.GetCurrent().UserPreferences.switchAmmo = chk.Checked;
+            ProfileSingleton.GetCurrent().UserPreferences.SwitchAmmo = chk.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
         }
 
@@ -161,7 +161,7 @@ namespace _4RTools.Forms
                 if (txtBox.Text.ToString() != String.Empty)
                 {
                     Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
-                    ProfileSingleton.GetCurrent().UserPreferences.ammo1Key = key;
+                    ProfileSingleton.GetCurrent().UserPreferences.Ammo1Key = key;
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
                 }
             }
@@ -176,7 +176,7 @@ namespace _4RTools.Forms
                 if (txtBox.Text.ToString() != String.Empty)
                 {
                     Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
-                    ProfileSingleton.GetCurrent().UserPreferences.ammo2Key = key;
+                    ProfileSingleton.GetCurrent().UserPreferences.Ammo2Key = key;
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
                 }
             }
@@ -198,7 +198,7 @@ namespace _4RTools.Forms
                 if (txtBox.Text.ToString() != String.Empty)
                 {
                     Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
-                    ProfileSingleton.GetCurrent().UserPreferences.overweightKey = key;
+                    ProfileSingleton.GetCurrent().UserPreferences.OverweightKey = key;
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
                 }
             }
@@ -216,7 +216,7 @@ namespace _4RTools.Forms
             {
                 if (!string.IsNullOrWhiteSpace(rb.Name))
                 {
-                    ProfileSingleton.GetCurrent().UserPreferences.overweightMode = rb.Name;
+                    ProfileSingleton.GetCurrent().UserPreferences.OverweightMode = rb.Name;
                     ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().UserPreferences);
                 }
             }

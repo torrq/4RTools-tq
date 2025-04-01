@@ -6,19 +6,19 @@ using System.Windows.Input;
 
 namespace _4RTools.Model
 {
-    public class UserPreferences : Action
+    public class UserPreferences : IAction
     {
-        private string ACTION_NAME = "UserPreferences";
-        public string toggleStateKey { get; set; } = Keys.End.ToString();
-        public List<EffectStatusIDs> autoBuffOrder { get; set; } = new List<EffectStatusIDs>();
+        private readonly string ACTION_NAME = "UserPreferences";
+        public string ToggleStateKey { get; set; } = Keys.End.ToString();
+        public List<EffectStatusIDs> AutoBuffOrder { get; set; } = new List<EffectStatusIDs>();
 
-        public bool stopBuffsCity { get; set; } = false;
-        public string overweightMode { get; set; } = "overweightOff";
-        public Key overweightKey { get; set; }
+        public bool StopBuffsCity { get; set; } = false;
+        public string OverweightMode { get; set; } = "overweightOff";
+        public Key OverweightKey { get; set; }
 
-        public bool switchAmmo { get; set; } = false;
-        public Key ammo1Key { get; set; }
-        public Key ammo2Key { get; set; }
+        public bool SwitchAmmo { get; set; } = false;
+        public Key Ammo1Key { get; set; }
+        public Key Ammo2Key { get; set; }
 
         public UserPreferences()
         {
@@ -39,7 +39,7 @@ namespace _4RTools.Model
         }
         public void SetAutoBuffOrder(List<EffectStatusIDs> buffs)
         {
-            this.autoBuffOrder = buffs;
+            this.AutoBuffOrder = buffs;
         }
     }
 }

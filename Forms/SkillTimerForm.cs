@@ -19,7 +19,7 @@ namespace _4RTools.Forms
 
         public void Update(ISubject subject)
         {
-            switch ((subject as Subject).Message.code)
+            switch ((subject as Subject).Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
                     validate();
@@ -72,7 +72,7 @@ namespace _4RTools.Forms
                     if (c.Length > 0)
                     {
                         TextBox keyTextBox = (TextBox)c[0];
-                        keyTextBox.Text = Spammers.skillTimer[id].key.ToString();
+                        keyTextBox.Text = Spammers.skillTimer[id].Key.ToString();
                     }
 
                     //Update Delay Macro Value
@@ -80,7 +80,7 @@ namespace _4RTools.Forms
                     if (d.Length > 0)
                     {
                         NumericUpDown delayInput = (NumericUpDown)d[0];
-                        delayInput.Value = Spammers.skillTimer[id].delay;
+                        delayInput.Value = Spammers.skillTimer[id].Delay;
                     }
                 }
 
@@ -122,7 +122,7 @@ namespace _4RTools.Forms
                 if (c.Length > 0)
                 {
                     TextBox keyTextBox = (TextBox)c[0];
-                    keyTextBox.Text = skillTimer.key.ToString();
+                    keyTextBox.Text = skillTimer.Key.ToString();
                 }
 
                 //Update Delay Macro Value
@@ -130,7 +130,7 @@ namespace _4RTools.Forms
                 if (d.Length > 0)
                 {
                     NumericUpDown delayInput = (NumericUpDown)d[0];
-                    delayInput.Value = skillTimer.delay;
+                    delayInput.Value = skillTimer.Delay;
                 }
             }
             catch (Exception ex)
@@ -152,7 +152,7 @@ namespace _4RTools.Forms
                 if (Spammers.skillTimer.ContainsKey(id))
                 {
                     MacroKey skillTimer = Spammers.skillTimer[id];
-                    skillTimer.key = key;
+                    skillTimer.Key = key;
                 }
                 else
                 {
@@ -181,7 +181,7 @@ namespace _4RTools.Forms
                 if (Spammers.skillTimer.ContainsKey(id))
                 {
                     var skillTimer = Spammers.skillTimer[id];
-                    skillTimer.delay = delay;
+                    skillTimer.Delay = delay;
                 }
                 else
                 {

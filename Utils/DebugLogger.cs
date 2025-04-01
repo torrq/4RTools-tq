@@ -13,7 +13,7 @@ namespace _4RTools.Utils
         private static readonly string _logFilePath = "4rtools_debug.txt";
         private static readonly System.Timers.Timer _flushTimer;
         private static readonly Queue<LogEntry> _messageQueue = new Queue<LogEntry>();
-        private static bool _isInitialized = false;
+        private static readonly bool _isInitialized = false;
         private static readonly int _flushIntervalMs = 1000; // Flush to file every second
 
         // Duplicate message tracking

@@ -20,7 +20,7 @@ namespace _4RTools.Forms
 
         public void Update(ISubject subject)
         {
-            switch ((subject as Subject).Message.code)
+            switch ((subject as Subject).Message.Code)
             {
                 case MessageCode.PROFILE_CHANGED:
                     InitializeApplicationForm();
@@ -43,11 +43,11 @@ namespace _4RTools.Forms
             this.ahk = ProfileSingleton.GetCurrent().AHK;
             InitializeCheckAsThreeState();
             
-            RadioButton rdAhkMode = (RadioButton)this.groupAhkConfig.Controls[ProfileSingleton.GetCurrent().AHK.ahkMode];
+            RadioButton rdAhkMode = (RadioButton)this.groupAhkConfig.Controls[ProfileSingleton.GetCurrent().AHK.AHKMode];
             if (rdAhkMode != null) { rdAhkMode.Checked = true; };
             this.txtSpammerDelay.Text = ProfileSingleton.GetCurrent().AHK.AhkDelay.ToString();
-            this.chkNoShift.Checked = ProfileSingleton.GetCurrent().AHK.noShift;
-            this.chkMouseFlick.Checked = ProfileSingleton.GetCurrent().AHK.mouseFlick;
+            this.chkNoShift.Checked = ProfileSingleton.GetCurrent().AHK.NoShift;
+            this.chkMouseFlick.Checked = ProfileSingleton.GetCurrent().AHK.MouseFlick;
             this.DisableControlsIfSpeedBoost();
 
             Dictionary<string, KeyConfig> ahkClones = new Dictionary<string, KeyConfig>(ProfileSingleton.GetCurrent().AHK.AhkEntries);
@@ -148,7 +148,7 @@ namespace _4RTools.Forms
             RadioButton rb = sender as RadioButton;
             if (rb.Checked)
             {
-                this.ahk.ahkMode = rb.Name;
+                this.ahk.AHKMode = rb.Name;
                 ProfileSingleton.SetConfiguration(this.ahk);
                 this.DisableControlsIfSpeedBoost();
             }
@@ -157,20 +157,20 @@ namespace _4RTools.Forms
         private void chkMouseFlick_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
-            this.ahk.mouseFlick = chk.Checked;
+            this.ahk.MouseFlick = chk.Checked;
             ProfileSingleton.SetConfiguration(this.ahk);
         }
 
         private void chkNoShift_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chk = sender as CheckBox;
-            this.ahk.noShift = chk.Checked;
+            this.ahk.NoShift = chk.Checked;
             ProfileSingleton.SetConfiguration(this.ahk);
         }
 
         private void DisableControlsIfSpeedBoost()
         {
-            if (this.ahk.ahkMode == AHK.SPEED_BOOST)
+            if (this.ahk.AHKMode == AHK.SPEED_BOOST)
             {
                 this.chkMouseFlick.Enabled = false;
                 this.chkNoShift.Enabled = false;

@@ -9,18 +9,18 @@ using _4RTools.Utils;
 namespace _4RTools.Model
 {
 
-    public class AutoBuffStuff : Action
+    public class AutoBuffStuff : IAction
     {
         public static string ACTION_NAME_AUTOBUFFSTUFF = "AutobuffStuff";
-        public string actionName { get; set; }
+        public string ActionName { get; set; }
         private _4RThread thread;
-        public int delay { get; set; } = 100;
+        public int Delay { get; set; } = 100;
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
-        public List<String> listCities { get; set; }
+        public List<String> CityList { get; set; }
 
         public AutoBuffStuff(string actionName)
         {
-            this.actionName = actionName;
+            this.ActionName = actionName;
         }
 
         public void Start()
@@ -33,7 +33,7 @@ namespace _4RTools.Model
                 {
                     _4RThread.Stop(this.thread);
                 }
-                if (this.listCities == null || this.listCities.Count == 0) this.listCities = LocalServerManager.GetListCities();
+                if (this.CityList == null || this.CityList.Count == 0) this.CityList = LocalServerManager.GetCityList();
                 this.thread = AutoBuffThread(roClient);
                 _4RThread.Start(this.thread);
             }
@@ -46,8 +46,9 @@ namespace _4RTools.Model
                 bool foundQuag = false;
                 bool foundDecreaseAgi = false;
                 string currentMap = c.ReadCurrentMap();
+                UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
 
-                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+                if (!prefs.StopBuffsCity || this.CityList.Contains(currentMap) == false)
                 {
                     List<EffectStatusIDs> buffs = new List<EffectStatusIDs>();
                     Dictionary<EffectStatusIDs, Key> bmClone = new Dictionary<EffectStatusIDs, Key>(this.buffMapping);
@@ -91,8 +92,8 @@ namespace _4RTools.Model
                         }
                         else if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
                         {
-                            this.useAutobuff(item.Value);
-                            Thread.Sleep(delay);
+                            this.UseAutobuff(item.Value);
+                            Thread.Sleep(Delay);
                         }
                     }
                 }
@@ -133,13 +134,12 @@ namespace _4RTools.Model
 
         public string GetActionName()
         {
-            return this.actionName;
+            return this.ActionName;
         }
-
-        private void useAutobuff(Key key)
+        private void UseAutobuff(Key key)
         {
             if ((key != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
-                Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), key.ToString()), 0);
+                Interop.PostMessage(ClientSingleton.GetClient().Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), key.ToString()), 0);
         }
     }
 }

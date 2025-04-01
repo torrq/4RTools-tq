@@ -13,59 +13,58 @@ namespace _4RTools.Model
 
     public class ClientDTO
     {
-        public int index { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public string hpAddress { get; set; }
-        public string nameAddress { get; set; }
+        public int Index { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string HPAddress { get; set; }
+        public string NameAddress { get; set; }
 
-        public string mapAddress { get; set; }
+        public string MapAddress { get; set; }
 
-        public int hpAddressPointer { get; set; }
-        public int nameAddressPointer { get; set; }
-        public int mapAddressPointer { get; set; }
+        public int HPAddressPointer { get; set; }
+        public int NameAddressPointer { get; set; }
+        public int MapAddressPointer { get; set; }
 
         public ClientDTO() { }
 
         public ClientDTO(string name, string description, string hpAddress, string nameAddress, string mapAddress)
         {
-            this.name= name;
-            this.description = description;
-            this.hpAddress = hpAddress;
-            this.nameAddress = nameAddress;
-            this.mapAddress = mapAddress;
+            this.Name= name;
+            this.Description = description;
+            this.HPAddress = hpAddress;
+            this.NameAddress = nameAddress;
+            this.MapAddress = mapAddress;
 
-            this.hpAddressPointer = Convert.ToInt32(hpAddress, 16);
-            this.nameAddressPointer = Convert.ToInt32(nameAddress, 16);
-            this.mapAddressPointer = Convert.ToInt32(mapAddress, 16);
+            this.HPAddressPointer = Convert.ToInt32(hpAddress, 16);
+            this.NameAddressPointer = Convert.ToInt32(nameAddress, 16);
+            this.MapAddressPointer = Convert.ToInt32(mapAddress, 16);
 
         }
 
     }
 
-
     public sealed class ClientListSingleton
     {
-        private static List<Client> clients = new List<Client>();
+        private static List<Client> Clients = new List<Client>();
         
         public static void AddClient(Client c)
         {
-            clients.Add(c);
+            Clients.Add(c);
         }
 
         public static void RemoveClient(Client c)
         {
-            clients.Remove(c);
+            Clients.Remove(c);
         }
 
         public static List<Client> GetAll()
         {
-            return clients;
+            return Clients;
         }
 
         public static bool ExistsByProcessName(string processName)
         {
-            return clients.Exists(client => client.processName == processName);
+            return Clients.Exists(client => client.ProcessName == processName);
         }
     }
 
@@ -90,32 +89,32 @@ namespace _4RTools.Model
 
     public class Client
     {
-        public Process process { get; }
+        public Process Process { get; }
 
-        public string processName { get; private set; }
+        public string ProcessName { get; private set; }
         private Utils.ProcessMemoryReader PMR { get; set; }
-        public int currentNameAddress { get; set; }
-        public int currentHPBaseAddress { get; set; }
-        public int currentMapAddress { get; set; }
-        private int statusBufferAddress { get; set; }
+        public int CurrentNameAddress { get; set; }
+        public int CurrentHPBaseAddress { get; set; }
+        public int CurrentMapAddress { get; set; }
+        private int StatusBufferAddress { get; set; }
         private int _num = 0;
 
         public Client(string processName, int currentHPBaseAddress, int currentNameAddress, int currentMapAddress)
         {
-            this.currentNameAddress = currentNameAddress;
-            this.currentHPBaseAddress = currentHPBaseAddress;
-            this.currentMapAddress = currentMapAddress;
-            this.processName = processName;
-            this.statusBufferAddress = currentHPBaseAddress + 0x474;
+            this.CurrentNameAddress = currentNameAddress;
+            this.CurrentHPBaseAddress = currentHPBaseAddress;
+            this.CurrentMapAddress = currentMapAddress;
+            this.ProcessName = processName;
+            this.StatusBufferAddress = currentHPBaseAddress + 0x474;
         }
 
         public Client(ClientDTO dto)
         {
-            this.processName = dto.name;
-            this.currentHPBaseAddress = Convert.ToInt32(dto.hpAddress, 16);
-            this.currentNameAddress = Convert.ToInt32(dto.nameAddress, 16);
-            this.currentMapAddress = Convert.ToInt32(dto.mapAddress, 16);
-            this.statusBufferAddress = this.currentHPBaseAddress + 0x474;
+            this.ProcessName = dto.Name;
+            this.CurrentHPBaseAddress = Convert.ToInt32(dto.HPAddress, 16);
+            this.CurrentNameAddress = Convert.ToInt32(dto.NameAddress, 16);
+            this.CurrentMapAddress = Convert.ToInt32(dto.MapAddress, 16);
+            this.StatusBufferAddress = this.CurrentHPBaseAddress + 0x474;
         }
 
         public Client(string processName)
@@ -128,28 +127,25 @@ namespace _4RTools.Model
             {
                 if (choosenPID == process.Id)
                 {
-                    this.process = process;
+                    this.Process = process;
                     PMR.ReadProcess = process;
                     PMR.OpenProcess();
 
                     try
                     {
-                        Client c = GetClientByProcess(rawProcessName);
-
-                        if (c == null) throw new Exception();
-
-                        this.currentHPBaseAddress = c.currentHPBaseAddress;
-                        this.currentNameAddress = c.currentNameAddress;
-                        this.currentMapAddress = c.currentMapAddress;
-                        this.statusBufferAddress = c.statusBufferAddress;
+                        Client c = GetClientByProcess(rawProcessName) ?? throw new Exception();
+                        this.CurrentHPBaseAddress = c.CurrentHPBaseAddress;
+                        this.CurrentNameAddress = c.CurrentNameAddress;
+                        this.CurrentMapAddress = c.CurrentMapAddress;
+                        this.StatusBufferAddress = c.StatusBufferAddress;
                     }
                     catch
                     {
                         MessageBox.Show("This client is not supported. Only Spammers and macro will works.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        this.currentHPBaseAddress = 0;
-                        this.currentNameAddress = 0;
-                        this.currentMapAddress = 0;
-                        this.statusBufferAddress = 0;
+                        this.CurrentHPBaseAddress = 0;
+                        this.CurrentNameAddress = 0;
+                        this.CurrentMapAddress = 0;
+                        this.StatusBufferAddress = 0;
                     }
                    
                     //Do not block spammer for non supported Versions
@@ -199,37 +195,37 @@ namespace _4RTools.Model
 
         public uint ReadCurrentHp()
         {
-            return ReadMemory(this.currentHPBaseAddress);
+            return ReadMemory(this.CurrentHPBaseAddress);
         }
 
         public uint ReadCurrentSp()
         {
-            return ReadMemory(this.currentHPBaseAddress + 8);
+            return ReadMemory(this.CurrentHPBaseAddress + 8);
         }
 
         public uint ReadMaxHp()
         {
-            return ReadMemory(this.currentHPBaseAddress + 4);
+            return ReadMemory(this.CurrentHPBaseAddress + 4);
         }
 
         public string ReadCharacterName()
         {
-            return ReadMemoryAsString(this.currentNameAddress);
+            return ReadMemoryAsString(this.CurrentNameAddress);
         }
 
         public string ReadCurrentMap()
         {
-            return ReadMemoryAsString(this.currentMapAddress);
+            return ReadMemoryAsString(this.CurrentMapAddress);
         }
 
         public uint ReadMaxSp()
         {
-            return ReadMemory(this.currentHPBaseAddress + 12);
+            return ReadMemory(this.CurrentHPBaseAddress + 12);
         }
 
         public uint CurrentBuffStatusCode(int effectStatusIndex)
         {
-            return ReadMemory(this.statusBufferAddress + effectStatusIndex * 4);
+            return ReadMemory(this.StatusBufferAddress + effectStatusIndex * 4);
         }
 
         public Client GetClientByProcess(string processName)
@@ -237,9 +233,9 @@ namespace _4RTools.Model
        
             foreach(Client c in ClientListSingleton.GetAll())
             {
-                if (c.processName == processName)
+                if (c.ProcessName == processName)
                 {
-                    uint hpBaseValue = ReadMemory(c.currentHPBaseAddress);
+                    uint hpBaseValue = ReadMemory(c.CurrentHPBaseAddress);
                     if (hpBaseValue > 0) return c;
                 }
             }
@@ -249,9 +245,9 @@ namespace _4RTools.Model
         public static Client FromDTO(ClientDTO dto)
         {
             return ClientListSingleton.GetAll()
-                .Where(c => c.processName == dto.name)
-                .Where(c => c.currentHPBaseAddress == dto.hpAddressPointer)
-                .Where(c => c.currentNameAddress == dto.nameAddressPointer).FirstOrDefault();
+                .Where(c => c.ProcessName == dto.Name)
+                .Where(c => c.CurrentHPBaseAddress == dto.HPAddressPointer)
+                .Where(c => c.CurrentNameAddress == dto.NameAddressPointer).FirstOrDefault();
         }
     }
 }

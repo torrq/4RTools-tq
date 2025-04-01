@@ -11,13 +11,13 @@ using System.Runtime.InteropServices;
 namespace _4RTools.Model
 {
 
-    public class AutoBuffSkill : Action
+    public class AutoBuffSkill : IAction
     {
         public static string ACTION_NAME_AUTOBUFFSKILL = "AutobuffSkill";
-        public string actionName { get; set; }
+        public string ActionName { get; set; }
         private _4RThread thread;
-        public int delay { get; set; } = 100;
-        public List<String> listCities { get; set; }
+        public int Delay { get; set; } = 100;
+        public List<String> CityList { get; set; }
 
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
 
@@ -26,7 +26,7 @@ namespace _4RTools.Model
 
         public AutoBuffSkill(string actionName)
         {
-            this.actionName = actionName;
+            this.ActionName = actionName;
         }
 
         public void Start()
@@ -39,7 +39,7 @@ namespace _4RTools.Model
                 {
                     _4RThread.Stop(this.thread);
                 }
-                if (this.listCities == null || this.listCities.Count == 0) this.listCities = LocalServerManager.GetListCities();
+                if (this.CityList == null || this.CityList.Count == 0) this.CityList = LocalServerManager.GetCityList();
                 this.thread = AutoBuffThread(roClient);
                 _4RThread.Start(this.thread);
             }
@@ -77,7 +77,7 @@ namespace _4RTools.Model
                 string currentMap = c.ReadCurrentMap();
                 UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
 
-                    if (!prefs.stopBuffsCity || !this.listCities.Contains(currentMap))
+                    if (!prefs.StopBuffsCity || !this.CityList.Contains(currentMap))
                     {
                         List<EffectStatusIDs> currentBuffs = new List<EffectStatusIDs>();
                         Dictionary<EffectStatusIDs, Key> buffsToApply = new Dictionary<EffectStatusIDs, Key>(this.buffMapping);
@@ -123,8 +123,8 @@ namespace _4RTools.Model
 
                                 if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
                                 {
-                                    this.useAutobuff(buffToApply.Value);
-                                    Thread.Sleep(delay);
+                                    this.UseAutobuff(buffToApply.Value);
+                                    Thread.Sleep(Delay);
                                 }
                             }
                         }
@@ -138,14 +138,15 @@ namespace _4RTools.Model
         }
         private void HandleOverweightStatus(Client c, EffectStatusIDs status)
         {
-            if (status == EffectStatusIDs.WEIGHT50 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight50")
+            UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
+            if (status == EffectStatusIDs.WEIGHT50 && prefs.OverweightMode == "overweight50")
             {
                 SendOverweightMacro(c, "50");
                 var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
                 frmToggleApplication.toggleStatus();
                 DebugLogger.Info("Overweight 50%, disable now");
             }
-            else if (status == EffectStatusIDs.WEIGHT90 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight90")
+            else if (status == EffectStatusIDs.WEIGHT90 && prefs.OverweightMode == "overweight90")
             {
                 SendOverweightMacro(c, "90");
                 DebugLogger.Info("Overweight 90%, disable now");
@@ -156,14 +157,15 @@ namespace _4RTools.Model
 
         private void SendOverweightMacro(Client c, string percentage)
         {
-            if (!string.IsNullOrEmpty(ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString()))
+            UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
+            if (!string.IsNullOrEmpty(prefs.OverweightKey.ToString()))
             {
                 // Set focus to the RO window
-                IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
+                IntPtr handle = ClientSingleton.GetClient().Process.MainWindowHandle;
                 SetForegroundWindow(handle);
                 // send ALT-# by the only way that seems to work
-                System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(ProfileSingleton.GetCurrent().UserPreferences.overweightKey));
-                DebugLogger.Info($"Overweight {percentage}%, sent macro: Alt + " + ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString());
+                System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(prefs.OverweightKey));
+                DebugLogger.Info($"Overweight {percentage}%, sent macro: Alt + " + prefs.OverweightKey.ToString());
             }
         }
         private bool ShouldSkipBuffDueToQuag(bool foundQuag, EffectStatusIDs buffKey)
@@ -175,15 +177,7 @@ namespace _4RTools.Model
         {
             return foundDecreaseAgi && (buffKey == EffectStatusIDs.TWOHANDQUICKEN || buffKey == EffectStatusIDs.ADRENALINE || buffKey == EffectStatusIDs.ADRENALINE2 || buffKey == EffectStatusIDs.ONEHANDQUICKEN || buffKey == EffectStatusIDs.SPEARQUICKEN);
         }
-        private bool hasBuff(Client c, EffectStatusIDs buff)
-        {
-            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
-            {
-                uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)buff) { return true; }
-            }
-            return false;
-        }
+     
         public void AddKeyToBuff(EffectStatusIDs status, Key key)
         {
             if (buffMapping.ContainsKey(status))
@@ -197,7 +191,7 @@ namespace _4RTools.Model
             }
         }
 
-        public void setBuffMapping(Dictionary<EffectStatusIDs, Key> buffs)
+        public void SetBuffMapping(Dictionary<EffectStatusIDs, Key> buffs)
         {
             this.buffMapping = new Dictionary<EffectStatusIDs, Key>(buffs);
         }
@@ -218,13 +212,13 @@ namespace _4RTools.Model
 
         public string GetActionName()
         {
-            return this.actionName;
+            return this.ActionName;
         }
 
-        private void useAutobuff(Key key)
+        private void UseAutobuff(Key key)
         {
             if ((key != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
-                Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), key.ToString()), 0);
+                Interop.PostMessage(ClientSingleton.GetClient().Process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), key.ToString()), 0);
         }
     }
 }

@@ -5,8 +5,8 @@ namespace _4RTools.Utils
 {
     public class _4RThread
     {
-        private Thread thread;
-        private ManualResetEventSlim suspendEvent = new ManualResetEventSlim(true); // Initially set
+        private readonly Thread thread;
+        private readonly ManualResetEventSlim suspendEvent = new ManualResetEventSlim(true); // Initially set
 
         public _4RThread(Func<int, int> toRun)
         {
