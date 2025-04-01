@@ -4,7 +4,7 @@
 4RTools-tq is a fork of [TalesTools](https://github.com/biancaazuma/TalesTools), which was originally based on [4RTools](https://github.com/4RTools/4RTools). This project refines and adapts the tool for enhanced compatibility with OsRO MR.
 
 ## Key Changes
-- **Language & Adaptation:** Re-translated back into English and adjusted to align with OsRO MR's status system.
+- **Language & Adaptation:** Re-translated back into English and adjusted to align with OsRO MR's status set.
 - **Weight-Based Auto-Disable:** Added a setting to disable 4RTools when overweight (at 50% or 90%) and trigger an Alt-# macro.
 - **Expanded Skill Support:** Included Padawan (Jedi/Sith) skills along with corresponding skill icons.
 - **Pre-Renewal Focus:** Removed most Renewal skills to maintain compatibility.
