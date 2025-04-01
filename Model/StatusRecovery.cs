@@ -29,23 +29,20 @@ namespace _4RTools.Model
             Client roClient = ClientSingleton.GetClient();
             _4RThread statusEffectsThread = new _4RThread(_ =>
             {
-                if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+                for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
                 {
-                    for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
+                    uint currentStatus = c.CurrentBuffStatusCode(i);
+
+                    if (currentStatus == uint.MaxValue) { continue; }
+
+                    EffectStatusIDs status = (EffectStatusIDs)currentStatus;
+                    if (buffMapping.ContainsKey((EffectStatusIDs)currentStatus)) //IF FOR REMOVE STATUS - CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
                     {
-                        uint currentStatus = c.CurrentBuffStatusCode(i);
-
-                        if (currentStatus == uint.MaxValue) { continue; }
-
-                        EffectStatusIDs status = (EffectStatusIDs)currentStatus;
-                        if (buffMapping.ContainsKey((EffectStatusIDs)currentStatus)) //IF FOR REMOVE STATUS - CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
+                        //IF CONTAINS CURRENT STATUS ON DICT
+                        Key key = buffMapping[(EffectStatusIDs)currentStatus];
+                        if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
                         {
-                            //IF CONTAINS CURRENT STATUS ON DICT
-                            Key key = buffMapping[(EffectStatusIDs)currentStatus];
-                            if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
-                            {
-                                this.useStatusRecovery(key);
-                            }
+                            this.useStatusRecovery(key);
                         }
                     }
                 }

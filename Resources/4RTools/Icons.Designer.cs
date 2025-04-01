@@ -703,16 +703,6 @@ namespace _4RTools.Resources._4RTools {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eden_scroll {
-            get {
-                object obj = ResourceManager.GetObject("eden_scroll", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ele_earth_converter {
             get {
                 object obj = ResourceManager.GetObject("ele_earth_converter", resourceCulture);
@@ -1296,26 +1286,6 @@ namespace _4RTools.Resources._4RTools {
         internal static System.Drawing.Bitmap knife {
             get {
                 object obj = ResourceManager.GetObject("knife", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lauda_agnus {
-            get {
-                object obj = ResourceManager.GetObject("lauda_agnus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lauda_ramus {
-            get {
-                object obj = ResourceManager.GetObject("lauda_ramus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

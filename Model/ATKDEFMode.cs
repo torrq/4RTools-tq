@@ -94,69 +94,56 @@ namespace _4RTools.Model
 
         private int AHKThreadExecution(Client roClient)
         {
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+        foreach (EquipConfig equipConfig in this.equipConfigs)
             {
-                foreach (EquipConfig equipConfig in this.equipConfigs)
+                bool equipAtkItems = false;
+                bool equipDefItems = false;
+                bool ammo = false;
+
+                if (equipConfig.keySpammer != Key.None && Keyboard.IsKeyDown(equipConfig.keySpammer)
+                    && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
                 {
-                    bool equipAtkItems = false;
-                    bool equipDefItems = false;
-                    bool ammo = false;
+                    Keys thisk = toKeys(equipConfig.keySpammer);
 
-                    if (equipConfig.keySpammer != Key.None && Keyboard.IsKeyDown(equipConfig.keySpammer)
-                       && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
+                    while (Keyboard.IsKeyDown(equipConfig.keySpammer))
                     {
-                        Keys thisk = toKeys(equipConfig.keySpammer);
-
-                        while (Keyboard.IsKeyDown(equipConfig.keySpammer))
+                        if (!equipAtkItems)
                         {
-                            if (!equipAtkItems)
+                            foreach (Key key in equipConfig.atkKeys.Values)
                             {
-                                foreach (Key key in equipConfig.atkKeys.Values)
-                                {
-                                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0); //Equip ATK Items
-                                    Thread.Sleep(equipConfig.switchDelay);
-                                }
-                                equipAtkItems = true;
-                            }
-
-                            if (equipConfig.keySpammerWithClick)
-                            {
-                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, 0, 0);
-                                autoSwitchAmmo(roClient, ref ammo);
-                                Thread.Sleep(1);
-                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONUP, 0, 0);
-                                Thread.Sleep(equipConfig.ahkDelay);
-                            }
-                            else
-                            {
-                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                                Thread.Sleep(equipConfig.ahkDelay);
-                            }
-                        }
-                        if (!equipDefItems)
-                        {
-                            foreach (Key key in equipConfig.defKeys.Values)
-                            {
-                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0); //Equip DEF Items
+                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0); //Equip ATK Items
                                 Thread.Sleep(equipConfig.switchDelay);
                             }
-                            equipDefItems = true;
+                            equipAtkItems = true;
                         }
+
+                        if (equipConfig.keySpammerWithClick)
+                        {
+                            Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                            Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONDOWN, 0, 0);
+                            autoSwitchAmmo(roClient, ref ammo);
+                            Thread.Sleep(1);
+                            Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_LBUTTONUP, 0, 0);
+                            Thread.Sleep(equipConfig.ahkDelay);
+                        }
+                        else
+                        {
+                            Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                            Thread.Sleep(equipConfig.ahkDelay);
+                        }
+                    }
+                    if (!equipDefItems)
+                    {
+                        foreach (Key key in equipConfig.defKeys.Values)
+                        {
+                            Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, toKeys(key), 0); //Equip DEF Items
+                            Thread.Sleep(equipConfig.switchDelay);
+                        }
+                        equipDefItems = true;
                     }
                 }
             }
             return 0;
-        }
-
-        private bool hasBuff(Client c, EffectStatusIDs buff)
-        {
-            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
-            {
-                uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)buff) { return true; }
-            }
-            return false;
         }
 
         private void autoSwitchAmmo(Client roClient, ref bool ammo)
@@ -181,16 +168,6 @@ namespace _4RTools.Model
 
                 }
             }
-        }
-
-        public bool isRidding(Client c)
-        {
-            for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
-            {
-                uint currentStatus = c.CurrentBuffStatusCode(i);
-                if (currentStatus == (int)EffectStatusIDs.RIDDING) { return true; }
-            }
-            return false;
         }
 
         public void AddSwitchItem(int id, string dictKey, Key k, string type)

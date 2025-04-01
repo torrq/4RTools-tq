@@ -37,14 +37,11 @@ namespace _4RTools.Model
 
         private int CustomExecutionThread(Client roClient)
         {
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+            var TiMode = ProfileSingleton.GetCurrent().Custom.tiMode;
+            if (!TiMode.Equals(Key.None) && Keyboard.IsKeyDown(TiMode))
             {
-                var TiMode = ProfileSingleton.GetCurrent().Custom.tiMode;
-                if (!TiMode.Equals(Key.None) && Keyboard.IsKeyDown(TiMode))
-                {
-                    _AHKTransferBoost(roClient, new KeyConfig(TiMode, true), (Keys)Enum.Parse(typeof(Keys), TiMode.ToString()));
-                    return 0;
-                }
+                _AHKTransferBoost(roClient, new KeyConfig(TiMode, true), (Keys)Enum.Parse(typeof(Keys), TiMode.ToString()));
+                return 0;
             }
             Thread.Sleep(100);
             return 0;

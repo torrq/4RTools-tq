@@ -123,15 +123,12 @@ namespace _4RTools.Model
                 bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
                 {
-                    if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
-                    {
-                        autoSwitchAmmo(roClient, ref ammo);
-                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                        System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
-                        send_click(0);
-                        System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
-                        Thread.Sleep(this.AhkDelay);
-                    }
+                    autoSwitchAmmo(roClient, ref ammo);
+                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                    System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y - Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
+                    send_click(0);
+                    System.Windows.Forms.Cursor.Position = new Point(System.Windows.Forms.Cursor.Position.X + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK, System.Windows.Forms.Cursor.Position.Y + Constants.MOUSE_DIAGONAL_MOVIMENTATION_PIXELS_AHK);
+                    Thread.Sleep(this.AhkDelay);
                 }
             }
             else
@@ -139,13 +136,10 @@ namespace _4RTools.Model
                 bool ammo = false;
                 while (Keyboard.IsKeyDown(config.key))
                 {
-                    if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
-                    {
-                        autoSwitchAmmo(roClient, ref ammo);
-                        Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                        send_click(0);
-                        Thread.Sleep(this.AhkDelay);
-                    }
+                    autoSwitchAmmo(roClient, ref ammo);
+                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                    send_click(0);
+                    Thread.Sleep(this.AhkDelay);
                 }
             }
         }
@@ -170,20 +164,17 @@ namespace _4RTools.Model
             bool ammo = false;
             while (Keyboard.IsKeyDown(config.key))
             {
-                if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
-                {
-                    autoSwitchAmmo(roClient, ref ammo);
+                autoSwitchAmmo(roClient, ref ammo);
 
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                    if (config.ClickActive)
-                    {
-                        Point cursorPos = System.Windows.Forms.Cursor.Position;
-                        mouse_event(Constants.MOUSEEVENTF_LEFTDOWN, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
-                        Thread.Sleep(1);
-                        mouse_event(Constants.MOUSEEVENTF_LEFTUP, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
-                    }
-                    Thread.Sleep(this.AhkDelay);
+                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+                if (config.ClickActive)
+                {
+                    Point cursorPos = System.Windows.Forms.Cursor.Position;
+                    mouse_event(Constants.MOUSEEVENTF_LEFTDOWN, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
+                    Thread.Sleep(1);
+                    mouse_event(Constants.MOUSEEVENTF_LEFTUP, (uint)cursorPos.X, (uint)cursorPos.Y, 0, 0);
                 }
+                Thread.Sleep(this.AhkDelay);
             }
         }
 
@@ -249,10 +240,7 @@ namespace _4RTools.Model
         {
             while (Keyboard.IsKeyDown(config.key))
             {
-                if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
-                {
-                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-                }
+                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
                 Thread.Sleep(this.AhkDelay);
             }
         }

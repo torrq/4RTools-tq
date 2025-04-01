@@ -70,19 +70,16 @@ namespace _4RTools.Model
         private int AutopotThreadExecution(Client roClient, int hpPotCount)
         {
             string currentMap = roClient.ReadCurrentMap();
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+            if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
             {
-                if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+                bool hasCriticalWound = HasCriticalWound(roClient);
+                if (firstHeal.Equals(FIRSTHP))
                 {
-                    bool hasCriticalWound = HasCriticalWound(roClient);
-                    if (firstHeal.Equals(FIRSTHP))
-                    {
-                        healHPFirst(roClient, hpPotCount, hasCriticalWound);
-                    }
-                    else
-                    {
-                        healSPFirst(roClient, hpPotCount, hasCriticalWound);
-                    }
+                    healHPFirst(roClient, hpPotCount, hasCriticalWound);
+                }
+                else
+                {
+                    healSPFirst(roClient, hpPotCount, hasCriticalWound);
                 }
             }
             Thread.Sleep(this.delay);

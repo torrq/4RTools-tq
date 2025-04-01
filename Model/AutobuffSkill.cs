@@ -45,22 +45,27 @@ namespace _4RTools.Model
             }
         }
 
+        private static readonly Dictionary<Key, string> _sendKeysMap = new Dictionary<Key, string>()
+         {
+             { Key.D0, "0" },
+             { Key.D1, "1" },
+             { Key.D2, "2" },
+             { Key.D3, "3" },
+             { Key.D4, "4" },
+             { Key.D5, "5" },
+             { Key.D6, "6" },
+             { Key.D7, "7" },
+             { Key.D8, "8" },
+             { Key.D9, "9" }
+         };
+
         private string ToSendKeysFormat(Key key)
         {
-            switch (key)
+            if (_sendKeysMap.TryGetValue(key, out string value))
             {
-                case Key.D0: return "0";
-                case Key.D1: return "1";
-                case Key.D2: return "2";
-                case Key.D3: return "3";
-                case Key.D4: return "4";
-                case Key.D5: return "5";
-                case Key.D6: return "6";
-                case Key.D7: return "7";
-                case Key.D8: return "8";
-                case Key.D9: return "9";
-                default: return key.ToString().ToLower();
+                return value;
             }
+            return key.ToString().ToLower();
         }
 
         public _4RThread AutoBuffThread(Client c)
@@ -70,105 +75,105 @@ namespace _4RTools.Model
                 bool foundQuag = false;
                 bool foundDecreaseAgi = false;
                 string currentMap = c.ReadCurrentMap();
-                if (!hasBuff(c, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
-                {
-                    if (!ProfileSingleton.GetCurrent().UserPreferences.stopBuffsCity || this.listCities.Contains(currentMap) == false)
+                UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
+
+                    if (!prefs.stopBuffsCity || !this.listCities.Contains(currentMap))
                     {
-                        List<EffectStatusIDs> buffs = new List<EffectStatusIDs>();
-                        Dictionary<EffectStatusIDs, Key> bmClone = new Dictionary<EffectStatusIDs, Key>(this.buffMapping);
+                        List<EffectStatusIDs> currentBuffs = new List<EffectStatusIDs>();
+                        Dictionary<EffectStatusIDs, Key> buffsToApply = new Dictionary<EffectStatusIDs, Key>(this.buffMapping);
+
                         for (int i = 1; i < Constants.MAX_BUFF_LIST_INDEX_SIZE; i++)
                         {
-                            uint currentStatus = c.CurrentBuffStatusCode(i);
+                            uint currentStatusValue = c.CurrentBuffStatusCode(i);
 
-                            if (currentStatus == uint.MaxValue) { continue; }
+                            if (currentStatusValue == uint.MaxValue) { continue; }
 
-                            buffs.Add((EffectStatusIDs)currentStatus);
-                            EffectStatusIDs status = (EffectStatusIDs)currentStatus;
+                            EffectStatusIDs status = (EffectStatusIDs)currentStatusValue;
+                            currentBuffs.Add(status);
 
-                            if (status == EffectStatusIDs.WEIGHT50 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight50")
+                            HandleOverweightStatus(c, status);
+
+                            if (status == EffectStatusIDs.OVERTHRUSTMAX && buffsToApply.ContainsKey(EffectStatusIDs.OVERTHRUST))
                             {
-                                if (!string.IsNullOrEmpty(ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString()))
-                                {
-                                    // Set focus to the RO window
-                                    IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
-                                    SetForegroundWindow(handle);
-                                    // send ALT-# by the only way that seems to work
-                                    System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(ProfileSingleton.GetCurrent().UserPreferences.overweightKey));
-                                    DebugLogger.Info("Overweight 50%, sent macro: Alt + " + ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString());
-                                }
-                                var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
-                                frmToggleApplication.toggleStatus();
-                                DebugLogger.Info("Overweight 50%, disable now");
-
-                            }
-
-                            if (status == EffectStatusIDs.WEIGHT90 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight90")
-                            {
-                                if (!string.IsNullOrEmpty(ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString()))
-                                {
-                                    // Set focus to the RO window
-                                    IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
-                                    SetForegroundWindow(handle);
-                                    // send ALT-# by the only way that seems to work
-                                    System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(ProfileSingleton.GetCurrent().UserPreferences.overweightKey));
-                                    DebugLogger.Info("Overweight 90%, sent macro: Alt + " + ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString());
-                                }
-                                DebugLogger.Info("Overweight 90%, disable now");
-                                var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
-                                frmToggleApplication.toggleStatus();
-                            }
-
-                            if (status == EffectStatusIDs.OVERTHRUSTMAX)
-                            {
-                                if (buffMapping.ContainsKey(EffectStatusIDs.OVERTHRUST))
-                                {
-                                    bmClone.Remove(EffectStatusIDs.OVERTHRUST);
-                                }
-                            }
-
-                            if (bmClone.ContainsKey(EffectStatusIDs.EDEN))
-                            {
-                                bmClone.Remove(EffectStatusIDs.EDEN);
+                                buffsToApply.Remove(EffectStatusIDs.OVERTHRUST);
                             }
 
                             if (buffMapping.ContainsKey(status)) //CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
-                            {
-                                bmClone.Remove(status);
+                            {
+                                buffsToApply.Remove(status);
                             }
 
                             if (status == EffectStatusIDs.QUAGMIRE) foundQuag = true;
                             if (status == EffectStatusIDs.DECREASE_AGI) foundDecreaseAgi = true;
                         }
-                        if (!buffs.Contains(EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+
+                        if (!currentBuffs.Contains(EffectStatusIDs.RIDDING))
                         {
-                            if (!buffs.Contains(EffectStatusIDs.RIDDING))
+                            foreach (var buffToApply in buffsToApply)
                             {
-                                foreach (var item in bmClone)
+                                if (ShouldSkipBuffDueToQuag(foundQuag, buffToApply.Key))
                                 {
-                                    if (foundQuag && (item.Key == EffectStatusIDs.CONCENTRATION || item.Key == EffectStatusIDs.INC_AGI || item.Key == EffectStatusIDs.TRUESIGHT || item.Key == EffectStatusIDs.ADRENALINE || item.Key == EffectStatusIDs.SPEARQUICKEN || item.Key == EffectStatusIDs.ONEHANDQUICKEN || item.Key == EffectStatusIDs.WINDWALK || item.Key == EffectStatusIDs.TWOHANDQUICKEN))
-                                    {
-                                        break;
-                                    }
-                                    else if (foundDecreaseAgi && (item.Key == EffectStatusIDs.TWOHANDQUICKEN || item.Key == EffectStatusIDs.ADRENALINE || item.Key == EffectStatusIDs.ADRENALINE2 || item.Key == EffectStatusIDs.ONEHANDQUICKEN || item.Key == EffectStatusIDs.SPEARQUICKEN))
-                                    {
-                                        break;
-                                    }
-                                    else if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
-                                    {
-                                        this.useAutobuff(item.Value);
-                                        Thread.Sleep(delay);
-                                    }
+                                    continue; // Use continue instead of break to check other buffs
+                                }
+
+                                if (ShouldSkipBuffDueToDecreaseAgi(foundDecreaseAgi, buffToApply.Key))
+                                {
+                                    continue; // Use continue instead of break to check other buffs
+                                }
+
+                                if (c.ReadCurrentHp() >= Constants.MINIMUM_HP_TO_RECOVER)
+                                {
+                                    this.useAutobuff(buffToApply.Value);
+                                    Thread.Sleep(delay);
                                 }
                             }
                         }
-                        buffs.Clear();
+                        currentBuffs.Clear();
                     }
-                }
                 Thread.Sleep(300);
                 return 0;
             });
 
             return autobuffItemThread;
+        }
+        private void HandleOverweightStatus(Client c, EffectStatusIDs status)
+        {
+            if (status == EffectStatusIDs.WEIGHT50 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight50")
+            {
+                SendOverweightMacro(c, "50");
+                var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
+                frmToggleApplication.toggleStatus();
+                DebugLogger.Info("Overweight 50%, disable now");
+            }
+            else if (status == EffectStatusIDs.WEIGHT90 && ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "overweight90")
+            {
+                SendOverweightMacro(c, "90");
+                DebugLogger.Info("Overweight 90%, disable now");
+                var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
+                frmToggleApplication.toggleStatus();
+            }
+        }
+
+        private void SendOverweightMacro(Client c, string percentage)
+        {
+            if (!string.IsNullOrEmpty(ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString()))
+            {
+                // Set focus to the RO window
+                IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
+                SetForegroundWindow(handle);
+                // send ALT-# by the only way that seems to work
+                System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(ProfileSingleton.GetCurrent().UserPreferences.overweightKey));
+                DebugLogger.Info($"Overweight {percentage}%, sent macro: Alt + " + ProfileSingleton.GetCurrent().UserPreferences.overweightKey.ToString());
+            }
+        }
+        private bool ShouldSkipBuffDueToQuag(bool foundQuag, EffectStatusIDs buffKey)
+        {
+            return foundQuag && (buffKey == EffectStatusIDs.CONCENTRATION || buffKey == EffectStatusIDs.INC_AGI || buffKey == EffectStatusIDs.TRUESIGHT || buffKey == EffectStatusIDs.ADRENALINE || buffKey == EffectStatusIDs.SPEARQUICKEN || buffKey == EffectStatusIDs.ONEHANDQUICKEN || buffKey == EffectStatusIDs.WINDWALK || buffKey == EffectStatusIDs.TWOHANDQUICKEN);
+        }
+
+        private bool ShouldSkipBuffDueToDecreaseAgi(bool foundDecreaseAgi, EffectStatusIDs buffKey)
+        {
+            return foundDecreaseAgi && (buffKey == EffectStatusIDs.TWOHANDQUICKEN || buffKey == EffectStatusIDs.ADRENALINE || buffKey == EffectStatusIDs.ADRENALINE2 || buffKey == EffectStatusIDs.ONEHANDQUICKEN || buffKey == EffectStatusIDs.SPEARQUICKEN);
         }
         private bool hasBuff(Client c, EffectStatusIDs buff)
         {

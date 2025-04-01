@@ -109,17 +109,7 @@ namespace _4RTools.Model
                     else
                     {
                         var _autoBuffStuff = ProfileSingleton.GetCurrent().AutobuffStuff;
-                        if (statusID == EffectStatusIDs.EDEN)
-                        {
-                            _autoBuffStuff.AddKeyToBuff(EffectStatusIDs.ASSUMPTIO, key);
-                            _autoBuffStuff.AddKeyToBuff(EffectStatusIDs.INC_AGI, key);
-                            _autoBuffStuff.AddKeyToBuff(EffectStatusIDs.BLESSING, key);
-                            _autoBuffStuff.AddKeyToBuff(EffectStatusIDs.EDEN, key);
-                        }
-                        else
-                        {
-                            _autoBuffStuff.AddKeyToBuff(statusID, key);
-                        }
+                        _autoBuffStuff.AddKeyToBuff(statusID, key);
                         ProfileSingleton.SetConfiguration(_autoBuffStuff);
                     }
                 }

@@ -124,11 +124,21 @@ namespace _4RTools.Utils
                             _messageQueue.Enqueue(entry);
                         }
 
-                        // Set the new message as the current one
+                        // Set the new message as the current one and log it immediately
                         _lastMessage = message;
                         _lastLogLevel = level;
                         _lastMessageTime = now;
-                        _duplicateCount = 0;
+                        _duplicateCount = 0; // Reset duplicate count for the new message
+
+                        var newEntry = new LogEntry
+                        {
+                            Message = message,
+                            Level = level,
+                            Timestamp = now,
+                            RepeatCount = 0 // The first occurrence has no repeats yet
+                        };
+                        Console.WriteLine(newEntry.FormatMessage());
+                        _messageQueue.Enqueue(newEntry);
                     }
                 }
             }

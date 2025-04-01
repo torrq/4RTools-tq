@@ -55,48 +55,18 @@ namespace _4RTools.Model
             Client roClient = ClientSingleton.GetClient();
             _4RThread statusEffectsThread = new _4RThread(_ =>
             {
-                if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+                for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
                 {
-                    for (int i = 0; i <= Constants.MAX_BUFF_LIST_INDEX_SIZE - 1; i++)
+                    uint currentStatus = c.CurrentBuffStatusCode(i);
+                    if (currentStatus == uint.MaxValue) { continue; }
+                    EffectStatusIDs status = (EffectStatusIDs)currentStatus;
+                    if (buffMapping.ContainsKey((EffectStatusIDs)currentStatus)) //IF FOR REMOVE STATUS - CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
                     {
-                        uint currentStatus = c.CurrentBuffStatusCode(i);
-                        if (currentStatus == uint.MaxValue) { continue; }
-                        EffectStatusIDs status = (EffectStatusIDs)currentStatus;
-                        if (buffMapping.ContainsKey((EffectStatusIDs)currentStatus)) //IF FOR REMOVE STATUS - CHECK IF STATUS EXISTS IN STATUS LIST AND DO ACTION
+                        //IF CONTAINS CURRENT STATUS ON DICT
+                        Key key = buffMapping[(EffectStatusIDs)currentStatus];
+                        if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
                         {
-                            //IF CONTAINS CURRENT STATUS ON DICT
-                            Key key = buffMapping[(EffectStatusIDs)currentStatus];
-                            if (Enum.IsDefined(typeof(EffectStatusIDs), currentStatus))
-                            {
-                                if (ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "50" &&
-    (currentStatus == (uint)EffectStatusIDs.WEIGHT90) && key != Key.None)
-                                {
-                                    DebugLogger.Info("We are at 90% weight with autostop checkbox enabled, key=" + key.ToString());
-                                    /*
-                                    var frmToggleApplication = (ToggleApplicationStateForm)Application.OpenForms["ToggleApplicationStateForm"];
-                                    frmToggleApplication.toggleStatus();
-     
-                                    if (shouldSendKey)
-                                    {
-
-                                        // Set focus to the RO window
-                                        IntPtr handle = ClientSingleton.GetClient().process.MainWindowHandle;
-                                        SetForegroundWindow(handle);
-                                        // send ALT-# by the only way that seems to work
-                                        System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(key));
-                                    }
-                                    */
-                                }
-                                else if (ProfileSingleton.GetCurrent().UserPreferences.overweightMode == "90" &&
-    (currentStatus == (uint)EffectStatusIDs.WEIGHT50) && key != Key.None)
-                                {
-                                    DebugLogger.Info("We are at 50% weight with autostop checkbox enabled, key=" + key.ToString());
-                                }
-                                else
-                                {
-                                    this.useStatusRecovery(key);
-                                }
-                            }
+                            this.useStatusRecovery(key);
                         }
                     }
                 }
@@ -160,24 +130,6 @@ namespace _4RTools.Model
             if ((key != Key.None) && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
             {
                 Interop.PostMessage(ClientSingleton.GetClient().process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, (Keys)Enum.Parse(typeof(Keys), key.ToString()), 0);
-            }
-        }
-
-        private string ToSendKeysFormat(Key key)
-        {
-            switch (key)
-            {
-                case Key.D0: return "0";
-                case Key.D1: return "1";
-                case Key.D2: return "2";
-                case Key.D3: return "3";
-                case Key.D4: return "4";
-                case Key.D5: return "5";
-                case Key.D6: return "6";
-                case Key.D7: return "7";
-                case Key.D8: return "8";
-                case Key.D9: return "9";
-                default: return key.ToString().ToLower();
             }
         }
 

@@ -97,39 +97,36 @@ namespace _4RTools.Model
 
         private int MacroExecutionThread(Client roClient)
         {
-            if (!hasBuff(roClient, EffectStatusIDs.ANTI_BOT) || !ProfileSingleton.GetCurrent().UserPreferences.stopSpammersBot)
+            foreach (ChainConfig chainConfig in this.chainConfigs)
             {
-                foreach (ChainConfig chainConfig in this.chainConfigs)
+                if (chainConfig.trigger != Key.None && Keyboard.IsKeyDown(chainConfig.trigger))
                 {
-                    if (chainConfig.trigger != Key.None && Keyboard.IsKeyDown(chainConfig.trigger))
+                    Dictionary<string, MacroKey> macro = chainConfig.macroEntries;
+                    for (int i = 1; i <= macro.Count; i++)//Ensure to execute keys in Order
                     {
-                        Dictionary<string, MacroKey> macro = chainConfig.macroEntries;
-                        for (int i = 1; i <= macro.Count; i++)//Ensure to execute keys in Order
+                        MacroKey macroKey = macro["in" + i + "mac" + chainConfig.id];
+                        if (macroKey.key != Key.None)
                         {
-                            MacroKey macroKey = macro["in" + i + "mac" + chainConfig.id];
-                            if (macroKey.key != Key.None)
+                            if (chainConfig.instrumentKey != Key.None)
                             {
-                                if (chainConfig.instrumentKey != Key.None)
-                                {
-                                    //Press instrument key if exists.
-                                    Keys instrumentKey = (Keys)Enum.Parse(typeof(Keys), chainConfig.instrumentKey.ToString());
-                                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, instrumentKey, 0);
-                                    Thread.Sleep(30);
-                                }
-
-                                Keys thisk = (Keys)Enum.Parse(typeof(Keys), macroKey.key.ToString());
-                                Thread.Sleep(macroKey.delay);
-                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
-
-                                if (chainConfig.daggerKey != Key.None)
-                                {
-                                    //Press instrument key if exists.
-                                    Keys daggerKey = (Keys)Enum.Parse(typeof(Keys), chainConfig.daggerKey.ToString());
-                                    Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, daggerKey, 0);
-                                    Thread.Sleep(30);
-                                }
-
+                                //Press instrument key if exists.
+                                Keys instrumentKey = (Keys)Enum.Parse(typeof(Keys), chainConfig.instrumentKey.ToString());
+                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, instrumentKey, 0);
+                                Thread.Sleep(30);
                             }
+
+                            Keys thisk = (Keys)Enum.Parse(typeof(Keys), macroKey.key.ToString());
+                            Thread.Sleep(macroKey.delay);
+                            Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, thisk, 0);
+
+                            if (chainConfig.daggerKey != Key.None)
+                            {
+                                //Press instrument key if exists.
+                                Keys daggerKey = (Keys)Enum.Parse(typeof(Keys), chainConfig.daggerKey.ToString());
+                                Interop.PostMessage(roClient.process.MainWindowHandle, Constants.WM_KEYDOWN_MSG_ID, daggerKey, 0);
+                                Thread.Sleep(30);
+                            }
+
                         }
                     }
                 }
