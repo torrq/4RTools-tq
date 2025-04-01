@@ -13,7 +13,7 @@ namespace _4RTools.Utils
         private static readonly string _logFilePath = "4rtools_debug.txt";
         private static readonly System.Timers.Timer _flushTimer;
         private static readonly Queue<LogEntry> _messageQueue = new Queue<LogEntry>();
-        private static readonly bool _isInitialized = false;
+        private static bool _isInitialized = false;
         private static readonly int _flushIntervalMs = 1000; // Flush to file every second
 
         // Duplicate message tracking
@@ -124,21 +124,11 @@ namespace _4RTools.Utils
                             _messageQueue.Enqueue(entry);
                         }
 
-                        // Set the new message as the current one and log it immediately
+                        // Set the new message as the current one
                         _lastMessage = message;
                         _lastLogLevel = level;
                         _lastMessageTime = now;
-                        _duplicateCount = 0; // Reset duplicate count for the new message
-
-                        var newEntry = new LogEntry
-                        {
-                            Message = message,
-                            Level = level,
-                            Timestamp = now,
-                            RepeatCount = 0 // The first occurrence has no repeats yet
-                        };
-                        Console.WriteLine(newEntry.FormatMessage());
-                        _messageQueue.Enqueue(newEntry);
+                        _duplicateCount = 0;
                     }
                 }
             }
