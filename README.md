@@ -19,3 +19,16 @@
 
 ![6F8UU103zb](https://github.com/user-attachments/assets/3ac0ea1e-54f4-4486-a816-9c41e37bb140)
 ![IGBpfXuDSS](https://github.com/user-attachments/assets/0a7a8d1d-a0d3-42ea-a036-9f0f6f3af396)
+
+## Download & Installation
+
+The latest release can be downloaded here: [4RTools-tq v3.1.3](https://github.com/torrq/4RTools-tq/releases/tag/v3.1.3).
+
+### Installation Steps
+1. Download the `.zip` file from the release page.
+2. Extract the contents to a folder of your choice.
+3. Run `4RTools-tq.exe` as Administrator.
+4. Configure your settings according to your needs.
+5. Ensure your game client is running before enabling macros.
+
+> **Note:** Some antivirus programs may flag the executable as a false positive. If this happens, add an exception for the folder where you extracted the files.
