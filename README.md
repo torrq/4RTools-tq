@@ -33,7 +33,7 @@ The latest release can be downloaded here: [4RTools-tq v3.1.3](https://github.co
 ![6F8UU103zb](https://github.com/user-attachments/assets/3ac0ea1e-54f4-4486-a816-9c41e37bb140)
 ![IGBpfXuDSS](https://github.com/user-attachments/assets/0a7a8d1d-a0d3-42ea-a036-9f0f6f3af396)
 
-### Known Issues
+## Known Issues
 - Turn off when overweight will trigger whether or not the status is "ON" (will fix soon)
 - Macro songs reset buttons won't reset the form (will fix soon)
 - Macro Songs/Macro Switch forms are overloaded with elements. If you switch to one of those tabs and drag the window around, it could lag. This needs either less elements or be form revised to be dynamic (will fix eventually)
