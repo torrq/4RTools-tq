@@ -15,11 +15,6 @@
   - Updated NuGet packages.
   - Upgraded .NET framework from v4.7.2 to v4.8.1 to reduce build warnings.
 
-## Screenshots
-
-![6F8UU103zb](https://github.com/user-attachments/assets/3ac0ea1e-54f4-4486-a816-9c41e37bb140)
-![IGBpfXuDSS](https://github.com/user-attachments/assets/0a7a8d1d-a0d3-42ea-a036-9f0f6f3af396)
-
 ## Download & Installation
 
 The latest release can be downloaded here: [4RTools-tq v3.1.3](https://github.com/torrq/4RTools-tq/releases/tag/v3.1.3).
@@ -32,3 +27,8 @@ The latest release can be downloaded here: [4RTools-tq v3.1.3](https://github.co
 5. Ensure your game client is running before enabling macros.
 
 > **Note:** Some antivirus programs may flag the executable as a false positive. If this happens, add an exception for the folder where you extracted the files.
+
+## Screenshots
+
+![6F8UU103zb](https://github.com/user-attachments/assets/3ac0ea1e-54f4-4486-a816-9c41e37bb140)
+![IGBpfXuDSS](https://github.com/user-attachments/assets/0a7a8d1d-a0d3-42ea-a036-9f0f6f3af396)
