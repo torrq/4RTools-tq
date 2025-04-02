@@ -15,11 +15,7 @@
   - Updated NuGet packages.
   - Upgraded .NET framework from v4.7.2 to v4.8.1 to reduce build warnings.
 
-## Installation & Usage
-There are no GitHub releases available yet. To use 4RTools-tq, you must compile it manually in Microsoft Visual Studio.
+## Screenshots
 
----
-Current Version: **3.1.3**
-
-For any issues or contributions, feel free to submit a pull request or open an issue in the repository.
-
+![6F8UU103zb](https://github.com/user-attachments/assets/3ac0ea1e-54f4-4486-a816-9c41e37bb140)
+![IGBpfXuDSS](https://github.com/user-attachments/assets/0a7a8d1d-a0d3-42ea-a036-9f0f6f3af396)
