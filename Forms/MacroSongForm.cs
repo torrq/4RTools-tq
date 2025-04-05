@@ -555,5 +555,10 @@ namespace _4RTools.Forms
         {
 
         }
+
+        private void panelMacro4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -155,7 +155,7 @@ namespace _4RTools.Model
             }
         }
 
-        private void SendOverweightMacro(Client c, string percentage)
+        private void SendOverweightMacro(Client c, string percentage, int times = 2, int intervalMs = 1000)
         {
             UserPreferences prefs = ProfileSingleton.GetCurrent().UserPreferences;
             if (!string.IsNullOrEmpty(prefs.OverweightKey.ToString()) && prefs.OverweightKey.ToString() != "None")
@@ -163,11 +163,27 @@ namespace _4RTools.Model
                 // Set focus to the RO window
                 IntPtr handle = ClientSingleton.GetClient().Process.MainWindowHandle;
                 SetForegroundWindow(handle);
-                // send ALT-# by the only way that seems to work
-                System.Windows.Forms.SendKeys.SendWait("%" + ToSendKeysFormat(prefs.OverweightKey));
-                DebugLogger.Info($"Overweight {percentage}%, sent macro: Alt + " + prefs.OverweightKey.ToString());
+
+                // Wait 1 second before starting
+                Thread.Sleep(1000);
+
+                // Send the key combination the specified number of times
+                string keyToSend = "%" + ToSendKeysFormat(prefs.OverweightKey);
+                for (int i = 0; i < times; i++)
+                {
+                    // Send the key combination
+                    System.Windows.Forms.SendKeys.SendWait(keyToSend);
+                    DebugLogger.Info($"Sent macro {i + 1}/{times}: Alt + {prefs.OverweightKey} (Overweight {percentage}%)");
+
+                    // Don't sleep after the last iteration
+                    if (i < times - 1)
+                    {
+                        Thread.Sleep(intervalMs);
+                    }
+                }
             }
         }
+
         private bool ShouldSkipBuffDueToQuag(bool foundQuag, EffectStatusIDs buffKey)
         {
             return foundQuag && (buffKey == EffectStatusIDs.CONCENTRATION || buffKey == EffectStatusIDs.INC_AGI || buffKey == EffectStatusIDs.TRUESIGHT || buffKey == EffectStatusIDs.ADRENALINE || buffKey == EffectStatusIDs.SPEARQUICKEN || buffKey == EffectStatusIDs.ONEHANDQUICKEN || buffKey == EffectStatusIDs.WINDWALK || buffKey == EffectStatusIDs.TWOHANDQUICKEN);
