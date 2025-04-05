@@ -35,4 +35,3 @@ The latest release can be downloaded here: [4RTools-tq v3.1.3](https://github.co
 
 ## Known Issues
 - Macro Songs reset buttons won't reset the form (will fix soon)
-- Macro Songs/Macro Switch forms are overloaded with elements. If you switch to one of those tabs and drag the window around, it could lag. This form needs either less elements or be revised to be dynamic (will fix eventually)
