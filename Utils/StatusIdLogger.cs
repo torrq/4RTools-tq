@@ -53,7 +53,6 @@ public static class StatusIdLogger
             if (!reportedNewStatusIds.Contains(statusId))
             {
                 reportedNewStatusIds.Add(statusId);
-                LogNewStatusId(statusId);
             }
             currentUnknownStatuses.Add(statusId);
         }
@@ -92,22 +91,4 @@ public static class StatusIdLogger
         currentUnknownStatuses.Clear();
     }
 
-    private static void LogNewStatusId(uint statusId)
-    {
-        try
-        {
-            string logFilePath = "new_status_ids.txt";
-            string logEntry = $"{DateTime.Now}: Found new status ID: {statusId}";
-
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(logFilePath, true))
-            {
-                file.WriteLine(logEntry);
-            }
-
-        }
-        catch (Exception ex)
-        {
-            DebugLogger.Error($"Failed to log new status ID: {ex.Message}");
-        }
-    }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using _4RTools.Utils;
 
 namespace _4RTools.Forms
 {
@@ -323,7 +324,7 @@ namespace _4RTools.Forms
             this.MaximizeBox = false;
             this.Name = "Container";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "4RTools-tq";
+            this.Text = AppConfig.Name;
             this.Load += new System.EventHandler(this.Container_Load);
             this.Resize += new System.EventHandler(this.ContainerResize);
             atkDefMode.ResumeLayout(false);

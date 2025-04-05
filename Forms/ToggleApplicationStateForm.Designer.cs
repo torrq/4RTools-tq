@@ -1,4 +1,6 @@
-﻿namespace _4RTools.Forms
+﻿using _4RTools.Utils;
+
+namespace _4RTools.Forms
 {
     partial class ToggleApplicationStateForm
     {
@@ -94,7 +96,7 @@
             // notifyIconTray
             // 
             this.notifyIconTray.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconTray.Icon")));
-            this.notifyIconTray.Text = "4RTools-tq";
+            this.notifyIconTray.Text = AppConfig.Name;
             this.notifyIconTray.Visible = true;
             this.notifyIconTray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIconDoubleClick);
             // 

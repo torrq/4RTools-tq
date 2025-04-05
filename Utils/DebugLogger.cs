@@ -94,6 +94,9 @@ namespace _4RTools.Utils
         {
             try
             {
+                if (level == LogLevel.DEBUG && !AppConfig.DebugMode)
+                    return;
+
                 lock (_logLock)
                 {
                     DateTime now = DateTime.Now;
@@ -108,7 +111,7 @@ namespace _4RTools.Utils
                     else
                     {
                         // Process the previous message with potential duplicates
-                        if (_lastMessage != null)
+                        if (_lastMessage != null && AppConfig.DebugMode)
                         {
                             var entry = new LogEntry
                             {

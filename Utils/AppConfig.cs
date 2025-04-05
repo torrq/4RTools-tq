@@ -12,5 +12,7 @@ namespace _4RTools.Utils
         public static string DiscordLink = "";
         public static string _4RLatestVersionURL = "";
         public static string Version = "v3.1.3";
+
+        public static bool DebugMode = true;
     }
 }
