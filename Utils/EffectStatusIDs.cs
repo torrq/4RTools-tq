@@ -338,12 +338,18 @@ namespace _4RTools.Utils
 
         //PADAWAN FOR HIGHRATE
         //
+        [Description("Force Sacrifice")]
+        HR_FORCESACRIFICE = 900,
+        [Description("Force Haste")]
+        HR_FORCEHASTE = 901,
         [Description("Force Persuasion")]
         HR_FORCEPERSUASION = 902,
         [Description("Saber Parry")]
         HR_SABERPARRY = 903,
         [Description("Force Concentration")]
         HR_FORCECONCENTRATE = 905,
+        [Description("Jedi Frenzy")]
+        HR_JEDIFRENZY = 906,
         [Description("Force Projection")]
         HR_PROJECTION = 907,
         //HR_COLDSKIN = 908, // dupe of 908:RESIST_PROPERTY_WATER

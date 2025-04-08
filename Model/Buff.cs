@@ -205,20 +205,20 @@ namespace _4RTools.Model
                     new Buff("Force Element (Earth)", EffectStatusIDs.PROPERTYGROUND, Resources._4RTools.Icons.forceelement_earth),
                     new Buff("Force Element (Wind)", EffectStatusIDs.PROPERTYWIND, Resources._4RTools.Icons.forceelement_wind),
                     new Buff("Force Element (Water)", EffectStatusIDs.PROPERTYWATER, Resources._4RTools.Icons.forceelement_water),
+                    // fire doesn't work as is, so it's commented out
                     //new Buff("Force Element (Fire)", EffectStatusIDs.PROPERTYFIRE, Resources._4RTools.Icons.forceelement_fire),
                     new Buff("Force Element (Ghost)", EffectStatusIDs.PROPERTYTELEKINESIS, Resources._4RTools.Icons.forceelement_ghost),
                     new Buff("Force Element (Shadow)", EffectStatusIDs.PROPERTYDARK, Resources._4RTools.Icons.forceelement_shadow),
                     new Buff("Force Element (Holy)", EffectStatusIDs.ASPERSIO, Resources._4RTools.Icons.forceelement_holy),
-                    new Buff("Force Projection", EffectStatusIDs.HR_PROJECTION, Resources._4RTools.Icons.forceprojection),
-                    new Buff("Cold Skin", EffectStatusIDs.RESIST_PROPERTY_WATER, Resources._4RTools.Icons.coldskin),
-                    new Buff("Saber Parry", EffectStatusIDs.HR_SABERPARRY, Resources._4RTools.Icons.saberparry),
-                    new Buff("Force Concentration", EffectStatusIDs.HR_FORCECONCENTRATE, Resources._4RTools.Icons.forceconcentrate),
-                    new Buff("Saber Thrust", EffectStatusIDs.LKCONCENTRATION, Resources._4RTools.Icons.saberthrust),
-                    new Buff("Force Persuasion", EffectStatusIDs.HR_FORCEPERSUASION, Resources._4RTools.Icons.forcepersuasion),
-                    new Buff("Jedi Stealth", EffectStatusIDs.JEDISTEALTH, Resources._4RTools.Icons.jedistealth),
-                    new Buff("Force Levitate", EffectStatusIDs.FORCELEVITATE, Resources._4RTools.Icons.forcelevitate),
-                    new Buff("Jedi Frenzy", EffectStatusIDs.JEDIFRENZY, Resources._4RTools.Icons.jedifrenzy),
-                    new Buff("Force Sacrifice", EffectStatusIDs.FORCESACRIFICE, Resources._4RTools.Icons.forcesacrifice)
+                    new Buff("Force Projection", EffectStatusIDs.HR_PROJECTION, Resources._4RTools.Icons.hr_forceprojection),
+                    new Buff("Cold Skin", EffectStatusIDs.RESIST_PROPERTY_WATER, Resources._4RTools.Icons.hr_coldskin),
+                    new Buff("Saber Parry", EffectStatusIDs.HR_SABERPARRY, Resources._4RTools.Icons.hr_saberparry),
+                    new Buff("Force Concentration", EffectStatusIDs.HR_FORCECONCENTRATE, Resources._4RTools.Icons.hr_forceconcentrate),
+                    new Buff("Saber Thrust", EffectStatusIDs.LKCONCENTRATION, Resources._4RTools.Icons.hr_saberthrust),
+                    new Buff("Force Persuasion", EffectStatusIDs.HR_FORCEPERSUASION, Resources._4RTools.Icons.hr_forcepersuasion),
+                    new Buff("Force Haste", EffectStatusIDs.HR_FORCEHASTE, Resources._4RTools.Icons.forcehaste),
+                    new Buff("Force Sacrifice", EffectStatusIDs.HR_FORCESACRIFICE, Resources._4RTools.Icons.hr_forcesacrifice),
+                    new Buff("Jedi Frenzy", EffectStatusIDs.HR_JEDIFRENZY, Resources._4RTools.Icons.hr_jedifrenzy)
                 };
             }
             else // OsRO Midrate mode (default for ServerMode == 0)

@@ -783,6 +783,16 @@ namespace _4RTools.Resources._4RTools {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forcehaste {
+            get {
+                object obj = ResourceManager.GetObject("forcehaste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forcelevitate {
             get {
                 object obj = ResourceManager.GetObject("forcelevitate", resourceCulture);
@@ -946,6 +956,86 @@ namespace _4RTools.Resources._4RTools {
         internal static System.Drawing.Bitmap hood {
             get {
                 object obj = ResourceManager.GetObject("hood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_coldskin {
+            get {
+                object obj = ResourceManager.GetObject("hr_coldskin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_forceconcentrate {
+            get {
+                object obj = ResourceManager.GetObject("hr_forceconcentrate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_forcepersuasion {
+            get {
+                object obj = ResourceManager.GetObject("hr_forcepersuasion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_forceprojection {
+            get {
+                object obj = ResourceManager.GetObject("hr_forceprojection", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_forcesacrifice {
+            get {
+                object obj = ResourceManager.GetObject("hr_forcesacrifice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_jedifrenzy {
+            get {
+                object obj = ResourceManager.GetObject("hr_jedifrenzy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_saberparry {
+            get {
+                object obj = ResourceManager.GetObject("hr_saberparry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hr_saberthrust {
+            get {
+                object obj = ResourceManager.GetObject("hr_saberthrust", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
