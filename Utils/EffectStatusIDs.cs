@@ -338,6 +338,8 @@ namespace _4RTools.Utils
 
         //PADAWAN FOR HIGHRATE
         //
+        [Description("Force Persuasion")]
+        HR_FORCEPERSUASION = 902,
         [Description("Saber Parry")]
         HR_SABERPARRY = 903,
         [Description("Force Concentration")]

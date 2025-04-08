@@ -214,7 +214,7 @@ namespace _4RTools.Model
                     new Buff("Saber Parry", EffectStatusIDs.HR_SABERPARRY, Resources._4RTools.Icons.saberparry),
                     new Buff("Force Concentration", EffectStatusIDs.HR_FORCECONCENTRATE, Resources._4RTools.Icons.forceconcentrate),
                     new Buff("Saber Thrust", EffectStatusIDs.LKCONCENTRATION, Resources._4RTools.Icons.saberthrust),
-                    new Buff("Force Persuasion", EffectStatusIDs.FORCEPERSUASION, Resources._4RTools.Icons.forcepersuasion),
+                    new Buff("Force Persuasion", EffectStatusIDs.HR_FORCEPERSUASION, Resources._4RTools.Icons.forcepersuasion),
                     new Buff("Jedi Stealth", EffectStatusIDs.JEDISTEALTH, Resources._4RTools.Icons.jedistealth),
                     new Buff("Force Levitate", EffectStatusIDs.FORCELEVITATE, Resources._4RTools.Icons.forcelevitate),
                     new Buff("Jedi Frenzy", EffectStatusIDs.JEDIFRENZY, Resources._4RTools.Icons.jedifrenzy),
