@@ -196,26 +196,54 @@ namespace _4RTools.Model
 
         public static List<Buff> GetPadawanSkills()
         {
-            List<Buff> skills = new List<Buff>
+            List<Buff> skills;
+
+            if (AppConfig.ServerMode == 1) // OsRO Highrate mode
             {
-                new Buff("Force Element (Earth)", EffectStatusIDs.ELEMENT_EARTH, Resources._4RTools.Icons.forceelement_earth),
-                new Buff("Force Element (Wind)", EffectStatusIDs.ELEMENT_WIND, Resources._4RTools.Icons.forceelement_wind),
-                new Buff("Force Element (Water)", EffectStatusIDs.ELEMENT_WATER, Resources._4RTools.Icons.forceelement_water),
-                new Buff("Force Element (Fire)", EffectStatusIDs.ELEMENT_FIRE, Resources._4RTools.Icons.forceelement_fire),
-                new Buff("Force Element (Ghost)", EffectStatusIDs.ELEMENT_GHOST, Resources._4RTools.Icons.forceelement_ghost),
-                new Buff("Force Element (Shadow)", EffectStatusIDs.ELEMENT_SHADOW, Resources._4RTools.Icons.forceelement_shadow),
-                new Buff("Force Element (Holy)", EffectStatusIDs.ELEMENT_HOLY, Resources._4RTools.Icons.forceelement_holy),
-                new Buff("Force Projection", EffectStatusIDs.PROJECTION, Resources._4RTools.Icons.forceprojection),
-                new Buff("Cold Skin", EffectStatusIDs.COLDSKIN, Resources._4RTools.Icons.coldskin),
-                new Buff("Saber Parry", EffectStatusIDs.SABERPARRY, Resources._4RTools.Icons.saberparry),
-                new Buff("Force Concentration", EffectStatusIDs.FORCECONCENTRATE, Resources._4RTools.Icons.forceconcentrate),
-                new Buff("Saber Thrust", EffectStatusIDs.SABERTHRUST, Resources._4RTools.Icons.saberthrust),
-                new Buff("Force Persuasion", EffectStatusIDs.FORCEPERSUASION, Resources._4RTools.Icons.forcepersuasion),
-                new Buff("Jedi Stealth", EffectStatusIDs.JEDISTEALTH, Resources._4RTools.Icons.jedistealth),
-                new Buff("Force Levitate", EffectStatusIDs.FORCELEVITATE, Resources._4RTools.Icons.forcelevitate),
-                new Buff("Jedi Frenzy", EffectStatusIDs.JEDIFRENZY, Resources._4RTools.Icons.jedifrenzy),
-                new Buff("Force Sacrifice", EffectStatusIDs.FORCESACRIFICE, Resources._4RTools.Icons.forcesacrifice),
-            };
+                skills = new List<Buff>
+                {
+                    new Buff("Force Element (Earth)", EffectStatusIDs.PROPERTYGROUND, Resources._4RTools.Icons.forceelement_earth),
+                    new Buff("Force Element (Wind)", EffectStatusIDs.PROPERTYWIND, Resources._4RTools.Icons.forceelement_wind),
+                    new Buff("Force Element (Water)", EffectStatusIDs.PROPERTYWATER, Resources._4RTools.Icons.forceelement_water),
+                    //new Buff("Force Element (Fire)", EffectStatusIDs.PROPERTYFIRE, Resources._4RTools.Icons.forceelement_fire),
+                    new Buff("Force Element (Ghost)", EffectStatusIDs.PROPERTYTELEKINESIS, Resources._4RTools.Icons.forceelement_ghost),
+                    new Buff("Force Element (Shadow)", EffectStatusIDs.PROPERTYDARK, Resources._4RTools.Icons.forceelement_shadow),
+                    new Buff("Force Element (Holy)", EffectStatusIDs.ASPERSIO, Resources._4RTools.Icons.forceelement_holy),
+                    new Buff("Force Projection", EffectStatusIDs.HR_PROJECTION, Resources._4RTools.Icons.forceprojection),
+                    new Buff("Cold Skin", EffectStatusIDs.RESIST_PROPERTY_WATER, Resources._4RTools.Icons.coldskin),
+                    new Buff("Saber Parry", EffectStatusIDs.HR_SABERPARRY, Resources._4RTools.Icons.saberparry),
+                    new Buff("Force Concentration", EffectStatusIDs.HR_FORCECONCENTRATE, Resources._4RTools.Icons.forceconcentrate),
+                    new Buff("Saber Thrust", EffectStatusIDs.LKCONCENTRATION, Resources._4RTools.Icons.saberthrust),
+                    new Buff("Force Persuasion", EffectStatusIDs.FORCEPERSUASION, Resources._4RTools.Icons.forcepersuasion),
+                    new Buff("Jedi Stealth", EffectStatusIDs.JEDISTEALTH, Resources._4RTools.Icons.jedistealth),
+                    new Buff("Force Levitate", EffectStatusIDs.FORCELEVITATE, Resources._4RTools.Icons.forcelevitate),
+                    new Buff("Jedi Frenzy", EffectStatusIDs.JEDIFRENZY, Resources._4RTools.Icons.jedifrenzy),
+                    new Buff("Force Sacrifice", EffectStatusIDs.FORCESACRIFICE, Resources._4RTools.Icons.forcesacrifice)
+                };
+            }
+            else // OsRO Midrate mode (default for ServerMode == 0)
+            {
+                skills = new List<Buff>
+                {
+                    new Buff("Force Element (Earth)", EffectStatusIDs.ELEMENT_EARTH, Resources._4RTools.Icons.forceelement_earth),
+                    new Buff("Force Element (Wind)", EffectStatusIDs.ELEMENT_WIND, Resources._4RTools.Icons.forceelement_wind),
+                    new Buff("Force Element (Water)", EffectStatusIDs.ELEMENT_WATER, Resources._4RTools.Icons.forceelement_water),
+                    new Buff("Force Element (Fire)", EffectStatusIDs.ELEMENT_FIRE, Resources._4RTools.Icons.forceelement_fire),
+                    new Buff("Force Element (Ghost)", EffectStatusIDs.ELEMENT_GHOST, Resources._4RTools.Icons.forceelement_ghost),
+                    new Buff("Force Element (Shadow)", EffectStatusIDs.ELEMENT_SHADOW, Resources._4RTools.Icons.forceelement_shadow),
+                    new Buff("Force Element (Holy)", EffectStatusIDs.ELEMENT_HOLY, Resources._4RTools.Icons.forceelement_holy),
+                    new Buff("Force Projection", EffectStatusIDs.PROJECTION, Resources._4RTools.Icons.forceprojection),
+                    new Buff("Cold Skin", EffectStatusIDs.COLDSKIN, Resources._4RTools.Icons.coldskin),
+                    new Buff("Saber Parry", EffectStatusIDs.SABERPARRY, Resources._4RTools.Icons.saberparry),
+                    new Buff("Force Concentration", EffectStatusIDs.FORCECONCENTRATE, Resources._4RTools.Icons.forceconcentrate),
+                    new Buff("Saber Thrust", EffectStatusIDs.SABERTHRUST, Resources._4RTools.Icons.saberthrust),
+                    new Buff("Force Persuasion", EffectStatusIDs.FORCEPERSUASION, Resources._4RTools.Icons.forcepersuasion),
+                    new Buff("Jedi Stealth", EffectStatusIDs.JEDISTEALTH, Resources._4RTools.Icons.jedistealth),
+                    new Buff("Force Levitate", EffectStatusIDs.FORCELEVITATE, Resources._4RTools.Icons.forcelevitate),
+                    new Buff("Jedi Frenzy", EffectStatusIDs.JEDIFRENZY, Resources._4RTools.Icons.jedifrenzy),
+                    new Buff("Force Sacrifice", EffectStatusIDs.FORCESACRIFICE, Resources._4RTools.Icons.forcesacrifice)
+                };
+            }
 
             return skills;
         }

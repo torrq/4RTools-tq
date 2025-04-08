@@ -10,7 +10,7 @@ namespace _4RTools.Forms
     public partial class ATKDEFForm : Form, IObserver
     {
         // Constants are fine
-        public static int TOTAL_ATKDEF_LANES = 4;
+        public static int TOTAL_ATKDEF_LANES = 2;
         public static int TOTAL_EQUIPS = 6;
 
         // Subject reference

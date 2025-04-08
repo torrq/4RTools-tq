@@ -22,6 +22,7 @@ namespace _4RTools.Utils
         CLOAKING = 5,
         [Description("Poison React")]
         POISONREACT = 7,
+        [Description("Quagmire")]
         QUAGMIRE = 8,
         [Description("Angelus")]
         ANGELUS = 9,
@@ -45,18 +46,25 @@ namespace _4RTools.Utils
         OVERTHRUST = 25,
         [Description("Maximize")]
         MAXIMIZE = 26,
+        [Description("Peco Riding")]
         PECO_RIDING = 27,
+        [Description("Falcon On")]
         FALCON_ON = 28,
         [Description("Crazy Uproar")]
         CRAZY_UPROAR = 30,
         [Description("Energy Coat")]
         ENERGYCOAT = 31,
+        [Description("Hallucination")]
         HALLUCINATION = 34,
         //POTIONS
+        [Description("Concentration Potion")]
         CONCENTRATION_POTION = 37,
+        [Description("Awakening Potion")]
         AWAKENING_POTION = 38,
+        [Description("Berserk Potion")]
         BERSERK_POTION = 39,
         ASPDPOTIONINFINITY = 40,
+        [Description("Speed Potion")]
         SPEED_POT = 41,
         STRIPWEAPON = 51,
         STRIPSHIELD = 52,
@@ -97,7 +105,7 @@ namespace _4RTools.Utils
         AURABLADE = 103,
         [Description("Parrying")]
         PARRYING = 104,
-        [Description("Concentration")]
+        [Description("Concentration / Saber Thrust (HR)")]
         LKCONCENTRATION = 105,
         [Description("Berserk")]
         BERSERK = 107,
@@ -293,10 +301,15 @@ namespace _4RTools.Utils
         [Description("Eternal Chain")]
         E_CHAIN = 753,
         LIMIT_POWER_BOOSTER = 867,
+
         //Elemental Potions
+        [Description("Coldproof Potion / Cold Skin (HR)")]
         RESIST_PROPERTY_WATER = 908,
+        [Description("Earthproof Potion")]
         RESIST_PROPERTY_GROUND = 909,
+        [Description("Fireproof Potion")]
         RESIST_PROPERTY_FIRE = 910,
+        [Description("Thunderproof Potion")]
         RESIST_PROPERTY_WIND = 911,
         [Description("Infinity Drink")]
         INFINITY_DRINK = 1065,
@@ -322,7 +335,20 @@ namespace _4RTools.Utils
         [Description("Kaite")]
         KAITE = 1402,                                                     
         BOX_OF_STORMS = 1405,
-        //PADAWAN
+
+        //PADAWAN FOR HIGHRATE
+        //
+        [Description("Saber Parry")]
+        HR_SABERPARRY = 903,
+        [Description("Force Concentration")]
+        HR_FORCECONCENTRATE = 905,
+        [Description("Force Projection")]
+        HR_PROJECTION = 907,
+        //HR_COLDSKIN = 908, // dupe of 908:RESIST_PROPERTY_WATER
+        //HR_SABERTHRUST = 105, // dupe of 105:LKCONCENTRATION
+
+        //PADAWAN FOR MIDRATE
+        //
         [Description("Force Element (Earth)")]
         ELEMENT_EARTH = 1423,
         [Description("Force Element (Wind)")]
@@ -359,6 +385,7 @@ namespace _4RTools.Utils
         FORCESACRIFICE = 1434,
         [Description("Force Persuasion")]
         FORCEPERSUASION = 1431,
+
         GREED_PARRY = 1442,
         HALOHALO = 2011,
         STR_Biscuit_Stick = 2035,

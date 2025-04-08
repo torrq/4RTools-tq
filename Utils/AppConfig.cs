@@ -13,6 +13,8 @@ namespace _4RTools.Utils
         public static string _4RLatestVersionURL = "";
         public static string Version = "v3.1.3";
 
+        // ServerMode: 0 = MR (Mid Rate), 1 = HR (High Rate)
+        public static int ServerMode = 1; // Default to MR
         public static bool DebugMode = true;
 
         // Delay defaults in milliseconds
