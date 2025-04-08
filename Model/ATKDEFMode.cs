@@ -19,8 +19,21 @@ namespace _4RTools.Model
     public class EquipConfig
     {
         public int id;
-        public int AHKDelay { get; set; } = 10;
-        public int SwitchDelay { get; set; } = 50;
+
+        private int _AHKDelay = AppConfig.ATKDEFSpammerDefaultDelay;
+        public int AHKDelay
+        {
+            get => _AHKDelay <= 0 ? AppConfig.ATKDEFSpammerDefaultDelay : _AHKDelay;
+            set => _AHKDelay = value;
+        }
+
+        private int _switchdelay = AppConfig.ATKDEFSwitchDefaultDelay;
+        public int SwitchDelay
+        {
+            get => _switchdelay <= 0 ? AppConfig.ATKDEFSwitchDefaultDelay : _switchdelay;
+            set => _switchdelay = value;
+        }
+
         public Key KeySpammer { get; set; }
         public bool KeySpammerWithClick { get; set; } = true;
         public Dictionary<string, Key> DefKeys { get; set; } = new Dictionary<string, Key>();

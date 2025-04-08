@@ -21,8 +21,22 @@ namespace _4RTools.Model
         public int HPPercent { get; set; }
         public Key SPKey { get; set; }
         public int SPPercent { get; set; }
-        public int Delay { get; set; } = 100;
-        public int DelayYgg { get; set; } = 100;
+
+        private int _delay = AppConfig.AutoPotDefaultDelay;
+        public int Delay
+        {
+            get => _delay <= 0 ? AppConfig.AutoPotDefaultDelay : _delay;
+            set => _delay = value;
+        }
+
+        // this is currently unused, should probably be hooked up someday. uses the above value instead for defaults
+        private int _delayYgg = AppConfig.YggDefaultDelay;
+        public int DelayYgg
+        {
+            get => _delayYgg <= 0 ? AppConfig.YggDefaultDelay : _delayYgg;
+            set => _delayYgg = value;
+        }
+
         public bool StopWitchFC { get; set; } = false;
         public string FirstHeal { get; set; } = FIRSTHP;
 

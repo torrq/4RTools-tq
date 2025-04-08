@@ -150,11 +150,42 @@ namespace _4RTools.Forms
 
         private void OnReset(object sender, EventArgs e)
         {
-            Macro SongMacro = ProfileSingleton.GetCurrent().SongMacro;
-            Button delayInput = (Button)sender;
-            int btnResetID = Int16.Parse(delayInput.Name.Split(new[] { "btnResMac" }, StringSplitOptions.None)[1]);
-            ProfileSingleton.SetConfiguration(SongMacro);
-            this.UpdatePanelData(btnResetID);
+            Button resetButton = (Button)sender;
+            int btnResetID = Int16.Parse(resetButton.Name.Split(new[] { "btnResMac" }, StringSplitOptions.None)[1]);
+
+            Macro songMacro = ProfileSingleton.GetCurrent().SongMacro;
+            ChainConfig chainConfig = songMacro.ChainConfigs.Find(config => config.id == btnResetID);
+
+            if (chainConfig != null)
+            {
+                // Reset all chain config properties
+                chainConfig.Trigger = Key.None;
+                chainConfig.DaggerKey = Key.None;
+                chainConfig.InstrumentKey = Key.None;
+                chainConfig.Delay = AppConfig.MacroDefaultDelay; // Assuming there's a default delay constant
+                chainConfig.macroEntries.Clear();
+
+                // Update the UI
+                GroupBox panel = (GroupBox)this.Controls.Find("panelMacro" + btnResetID, true)[0];
+                if (panel != null)
+                {
+                    // Reset all text boxes
+                    foreach (Control c in panel.Controls)
+                    {
+                        if (c is TextBox textBox)
+                        {
+                            textBox.Text = Key.None.ToString();
+                        }
+                        else if (c is NumericUpDown numericUpDown)
+                        {
+                            numericUpDown.Value = AppConfig.MacroDefaultDelay;
+                        }
+                    }
+                }
+
+                // Save the changes
+                ProfileSingleton.SetConfiguration(songMacro);
+            }
         }
 
 
@@ -560,5 +591,7 @@ namespace _4RTools.Forms
         {
 
         }
+
+
     }
 }

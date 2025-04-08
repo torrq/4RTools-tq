@@ -14,5 +14,15 @@ namespace _4RTools.Utils
         public static string Version = "v3.1.3";
 
         public static bool DebugMode = true;
+
+        // Delay defaults in milliseconds
+        public static int AutoPotDefaultDelay = 101; // Autopot Tab
+        public static int YggDefaultDelay = 102; // Yggdrasil tab
+        public static int SkillSpammerDefaultDelay = 103; // Skill Spammer tab
+        public static int AutoBuffSkillsDefaultDelay = 104; // Autobuff Skills tab
+        public static int AutoBuffItemsDefaultDelay = 105; // Autobuff Items tab
+        public static int ATKDEFSpammerDefaultDelay = 11; // ATK x DEF tab, spammer
+        public static int ATKDEFSwitchDefaultDelay = 51; // ATK x DEF tab, switch
+        public static int MacroDefaultDelay = 52; // default for Macro Song + Switch tabs
     }
 }

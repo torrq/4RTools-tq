@@ -39,7 +39,14 @@ namespace _4RTools.Model
         public const string COMPATIBILITY = "ahkCompatibility";
         public const string SPEED_BOOST = "ahkSpeedBoost";
         public Dictionary<string, KeyConfig> AhkEntries { get; set; } = new Dictionary<string, KeyConfig>();
-        public int AhkDelay { get; set; } = 100;
+
+        private int _delay = AppConfig.SkillSpammerDefaultDelay;
+        public int AhkDelay
+        {
+            get => _delay <= 0 ? AppConfig.SkillSpammerDefaultDelay : _delay;
+            set => _delay = value;
+        }
+
         public bool MouseFlick { get; set; } = false;
         public bool NoShift { get; set; } = false;
         public string AHKMode { get; set; } = COMPATIBILITY;

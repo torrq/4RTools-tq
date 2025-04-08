@@ -55,7 +55,7 @@ namespace _4RTools.Forms
             ProfileSingleton.GetCurrent().AutobuffSkill.ClearKeyMapping();
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().AutobuffSkill);
             BuffRenderer.DoUpdate(new Dictionary<EffectStatusIDs, Key>(ProfileSingleton.GetCurrent().AutobuffSkill.buffMapping), this);
-            this.numericDelay.Value = 100;
+            this.numericDelay.Value = AppConfig.AutoBuffSkillsDefaultDelay;
         }
 
         private void numericDelay_TextChanged(object sender, EventArgs e)

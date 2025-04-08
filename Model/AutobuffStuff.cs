@@ -14,7 +14,12 @@ namespace _4RTools.Model
         public static string ACTION_NAME_AUTOBUFFSTUFF = "AutobuffStuff";
         public string ActionName { get; set; }
         private _4RThread thread;
-        public int Delay { get; set; } = 100;
+        private int _delay = AppConfig.AutoBuffItemsDefaultDelay;
+        public int Delay
+        {
+            get => _delay <= 0 ? AppConfig.AutoBuffItemsDefaultDelay : _delay;
+            set => _delay = value;
+        }
         public Dictionary<EffectStatusIDs, Key> buffMapping = new Dictionary<EffectStatusIDs, Key>();
         public List<String> CityList { get; set; }
 

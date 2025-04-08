@@ -11,8 +11,12 @@ namespace _4RTools.Model
     public class MacroKey
     {
         public Key Key { get; set; }
-        public int Delay { get; set; } = 50;
-
+        private int _delay = AppConfig.MacroDefaultDelay;
+        public int Delay
+        {
+            get => _delay <= 0 ? AppConfig.MacroDefaultDelay : _delay;
+            set => _delay = value;
+        }
         public MacroKey(Key key, int delay)
         {
             this.Key = key;
